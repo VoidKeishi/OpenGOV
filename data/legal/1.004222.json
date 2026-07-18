@@ -1,0 +1,132 @@
+{
+  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §5, pending structuring-session review). Legal-source fragments for đăng ký thường trú, converted from notes/knowledge-base/research-01-thuong-tru.md. Every fragment carries source_url + retrieved_at; text is a minimal relevant excerpt, not a full-article dump. doc_code matches legal_basis[].code where the document appears there.",
+  "code": "1.004222",
+  "fragments": [
+    {
+      "id": "cu-tru-d20-k1",
+      "doc_code": "68/2020/QH14",
+      "doc_title": "Luật Cư trú 2020",
+      "article": "Điều 20 khoản 1",
+      "title": "Đăng ký thường trú vào chỗ ở thuộc quyền sở hữu",
+      "text": "Công dân có chỗ ở hợp pháp thuộc quyền sở hữu của mình thì được đăng ký thường trú tại chỗ ở hợp pháp đó.",
+      "topics": ["dieu_kien", "so_huu"],
+      "source_url": "https://hethongphapluat.com/luat-cu-tru-2020/dieu-20",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "cu-tru-d20-k2",
+      "doc_code": "68/2020/QH14",
+      "doc_title": "Luật Cư trú 2020",
+      "article": "Điều 20 khoản 2",
+      "title": "Đăng ký thường trú vào chỗ ở không thuộc quyền sở hữu (quan hệ nhân thân)",
+      "text": "Công dân được đăng ký thường trú tại chỗ ở hợp pháp không thuộc quyền sở hữu của mình khi được chủ hộ và chủ sở hữu chỗ ở hợp pháp đó đồng ý trong các trường hợp: a) Vợ về ở với chồng; chồng về ở với vợ; con về ở với cha, mẹ; cha, mẹ về ở với con; b) Người cao tuổi về ở với anh, chị, em, cháu ruột; người khuyết tật đặc biệt nặng, người khuyết tật nặng, người không có khả năng lao động, người bị bệnh tâm thần hoặc bệnh khác làm mất khả năng nhận thức về ở với người thân; c) Người chưa thành niên được cha, mẹ hoặc người giám hộ đồng ý hoặc không còn cha, mẹ về ở với cụ, ông, bà, anh, chị, em ruột, cô, dì, chú, bác, cậu ruột, người giám hộ.",
+      "topics": ["dieu_kien", "nhan_than", "khong_so_huu"],
+      "source_url": "https://hethongphapluat.com/luat-cu-tru-2020/dieu-20",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "cu-tru-d20-k3",
+      "doc_code": "68/2020/QH14",
+      "doc_title": "Luật Cư trú 2020",
+      "article": "Điều 20 khoản 3",
+      "title": "Điều kiện đăng ký thường trú khi thuê, mượn, ở nhờ",
+      "text": "Trừ trường hợp quy định tại khoản 2 Điều này, công dân được đăng ký thường trú tại chỗ ở hợp pháp do thuê, mượn, ở nhờ khi đáp ứng các điều kiện: a) Được chủ sở hữu chỗ ở hợp pháp đồng ý cho đăng ký thường trú tại địa điểm thuê, mượn, ở nhờ và được chủ hộ đồng ý nếu đăng ký thường trú vào cùng hộ gia đình đó; b) Bảo đảm điều kiện về diện tích nhà ở tối thiểu do Hội đồng nhân dân cấp tỉnh quy định nhưng không thấp hơn 08 m² sàn/người.",
+      "topics": ["dieu_kien", "thue_muon_o_nho", "dien_tich"],
+      "source_url": "https://hethongphapluat.com/luat-cu-tru-2020/dieu-20",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "cu-tru-d20-k4",
+      "doc_code": "68/2020/QH14",
+      "doc_title": "Luật Cư trú 2020",
+      "article": "Điều 20 khoản 4",
+      "title": "Đăng ký thường trú tại cơ sở tín ngưỡng, cơ sở tôn giáo",
+      "text": "Công dân được đăng ký thường trú tại cơ sở tín ngưỡng, cơ sở tôn giáo có công trình phụ trợ là nhà ở khi thuộc một trong các trường hợp: a) Người hoạt động tôn giáo được phong phẩm, bổ nhiệm, bầu cử, suy cử, thuyên chuyển đến hoạt động tôn giáo tại cơ sở tôn giáo; b) Người đại diện cơ sở tín ngưỡng; c) Người được người đại diện hoặc ban quản lý cơ sở tín ngưỡng đồng ý cho đăng ký thường trú để trực tiếp quản lý, tổ chức hoạt động tín ngưỡng tại cơ sở tín ngưỡng; d) Trẻ em, người khuyết tật đặc biệt nặng, người khuyết tật nặng, người không nơi nương tựa được nhận nuôi và sinh sống trong cơ sở tín ngưỡng, cơ sở tôn giáo (khoản 2 Điều 17).",
+      "topics": ["dieu_kien", "tin_nguong_ton_giao"],
+      "source_url": "https://hethongphapluat.com/luat-cu-tru-2020/dieu-20",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "cu-tru-d20-k5-k6",
+      "doc_code": "68/2020/QH14",
+      "doc_title": "Luật Cư trú 2020",
+      "article": "Điều 20 khoản 5, khoản 6",
+      "title": "Đăng ký thường trú tại cơ sở trợ giúp xã hội và trên phương tiện",
+      "text": "5. Người được chăm sóc, nuôi dưỡng, trợ giúp được đăng ký thường trú tại cơ sở trợ giúp xã hội khi được người đứng đầu cơ sở đồng ý hoặc được đăng ký thường trú vào hộ gia đình nhận chăm sóc, nuôi dưỡng khi được chủ hộ và chủ sở hữu chỗ ở hợp pháp đồng ý. 6. Người sinh sống, người làm nghề lưu động trên phương tiện được đăng ký thường trú tại phương tiện đó khi là chủ phương tiện hoặc được chủ phương tiện đồng ý, phương tiện được đăng ký, đăng kiểm và có xác nhận của Ủy ban nhân dân cấp xã về nơi đậu, đỗ thường xuyên.",
+      "topics": ["dieu_kien", "tro_giup_xa_hoi", "phuong_tien"],
+      "source_url": "https://hethongphapluat.com/luat-cu-tru-2020/dieu-20",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "cu-tru-d20-k7-k8",
+      "doc_code": "68/2020/QH14",
+      "doc_title": "Luật Cư trú 2020",
+      "article": "Điều 20 khoản 7, khoản 8",
+      "title": "Ràng buộc bổ sung: người chưa thành niên và địa điểm cấm",
+      "text": "7. Việc đăng ký thường trú của người chưa thành niên phải được sự đồng ý của cha, mẹ hoặc người giám hộ, trừ trường hợp nơi cư trú của người chưa thành niên do Tòa án quyết định. 8. Công dân không được đăng ký thường trú mới tại chỗ ở quy định tại Điều 23 của Luật này, trừ trường hợp quy định tại điểm a khoản 2 Điều này.",
+      "topics": ["chua_thanh_nien", "dia_diem_cam"],
+      "source_url": "https://hethongphapluat.com/luat-cu-tru-2020/dieu-20",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "cu-tru-d23",
+      "doc_code": "68/2020/QH14",
+      "doc_title": "Luật Cư trú 2020",
+      "article": "Điều 23",
+      "title": "Địa điểm không được đăng ký thường trú mới",
+      "text": "Chỗ ở nằm trong địa điểm cấm, khu vực cấm xây dựng hoặc lấn, chiếm hành lang bảo vệ quốc phòng, an ninh, giao thông, thủy lợi, đê điều, năng lượng, mốc giới bảo vệ công trình hạ tầng kỹ thuật, di tích lịch sử - văn hóa đã được xếp hạng, khu vực đã được cảnh báo về nguy cơ lở đất, lũ quét, lũ ống; chỗ ở mà toàn bộ diện tích nhà ở nằm trên đất lấn, chiếm trái phép hoặc chỗ ở xây dựng trên diện tích đất không đủ điều kiện xây dựng; chỗ ở đã có quyết định thu hồi đất và phương án bồi thường, hỗ trợ và tái định cư của cơ quan nhà nước có thẩm quyền; chỗ ở là nhà ở mà một phần hoặc toàn bộ diện tích nhà ở đang có tranh chấp, khiếu nại liên quan đến quyền sở hữu, sử dụng chưa được giải quyết; chỗ ở bị tịch thu theo quyết định của cơ quan nhà nước có thẩm quyền; phương tiện được dùng làm nơi đăng ký thường trú đã bị xóa đăng ký hoặc không có giấy chứng nhận an toàn kỹ thuật và bảo vệ môi trường; chỗ ở là nhà ở đã có quyết định phá dỡ của cơ quan nhà nước có thẩm quyền.",
+      "topics": ["dia_diem_cam", "dieu_23"],
+      "source_url": "https://hethongphapluat.com/luat-cu-tru-2020/dieu-23",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "cu-tru-d17-k2",
+      "doc_code": "68/2020/QH14",
+      "doc_title": "Luật Cư trú 2020",
+      "article": "Điều 17 khoản 2",
+      "title": "Nơi cư trú của người trong cơ sở tín ngưỡng, cơ sở tôn giáo",
+      "text": "Nơi cư trú của trẻ em, người khuyết tật đặc biệt nặng, người khuyết tật nặng, người không nơi nương tựa được nhận nuôi và sinh sống trong cơ sở tín ngưỡng, cơ sở tôn giáo là cơ sở tín ngưỡng, cơ sở tôn giáo.",
+      "topics": ["tin_nguong_ton_giao", "chua_thanh_nien"],
+      "source_url": "https://hethongphapluat.com/luat-cu-tru-2020/dieu-17",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "nd154-2024-d5-k2",
+      "doc_code": "154/2024/NĐ-CP",
+      "doc_title": "Nghị định 154/2024/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Cư trú",
+      "article": "Điều 5 khoản 2",
+      "title": "Giấy tờ chứng minh chỗ ở hợp pháp",
+      "text": "Trường hợp không khai thác được thông tin chứng minh chỗ ở hợp pháp trong các cơ sở dữ liệu, công dân xuất trình một trong các giấy tờ, tài liệu: a) Giấy tờ chứng nhận về quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất; b) Giấy phép xây dựng nhà ở (nếu phải xin phép); c) Giấy tờ mua bán nhà ở thuộc sở hữu nhà nước hoặc hóa giá, thanh lý; d) Hợp đồng mua bán nhà ở hoặc giấy tờ bàn giao/nhận nhà của doanh nghiệp bất động sản; đ) Giấy tờ mua, thuê mua, nhận tặng cho, nhận thừa kế, nhận góp vốn, nhận đổi nhà ở; e) Giấy tờ giao tặng nhà tình nghĩa, tình thương, đại đoàn kết; g) Giấy tờ của Tòa án hoặc cơ quan có thẩm quyền cho được sở hữu nhà ở; h) Giấy tờ chứng minh thế chấp, cầm cố quyền sở hữu chỗ ở; i) Xác nhận của Ủy ban nhân dân cấp xã về nhà ở, đất ở ổn định, không tranh chấp; k) Giấy tờ đăng ký, đăng kiểm phương tiện; l) Hợp đồng cho thuê, cho mượn, cho ở nhờ được công chứng hoặc chứng thực; m) Giấy tờ khác để xem xét cấp giấy chứng nhận quyền sử dụng đất.",
+      "topics": ["chung_minh_cho_o", "giay_to"],
+      "source_url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-dinh-154-2024-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-cua-luat-cu-tru-119241127.htm",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "nd154-2024-d6-k2",
+      "doc_code": "154/2024/NĐ-CP",
+      "doc_title": "Nghị định 154/2024/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Cư trú",
+      "article": "Điều 6 khoản 2",
+      "title": "Giấy tờ chứng minh quan hệ nhân thân (vợ chồng, cha mẹ con)",
+      "text": "Giấy tờ, tài liệu chứng minh quan hệ nhân thân với chủ hộ, thành viên hộ gia đình: đối với vợ, chồng là giấy chứng nhận kết hôn, giấy xác nhận tình trạng hôn nhân, thẻ căn cước; đối với cha, mẹ, con là giấy khai sinh, chứng nhận hoặc quyết định việc nuôi con nuôi, quyết định việc nhận cha, mẹ, con. Trường hợp thông tin đã được khai thác trong Cơ sở dữ liệu hộ tịch điện tử thì không phải xuất trình.",
+      "topics": ["nhan_than", "giay_to"],
+      "source_url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-dinh-154-2024-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-cua-luat-cu-tru-119241127.htm",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "tt75-2022-d4",
+      "doc_code": "75/2022/TT-BTC",
+      "doc_title": "Thông tư 75/2022/TT-BTC quy định mức thu, chế độ thu, nộp và quản lý lệ phí đăng ký cư trú",
+      "article": "Điều 4",
+      "title": "Trường hợp miễn lệ phí đăng ký cư trú",
+      "text": "Miễn lệ phí đăng ký cư trú đối với: trẻ em theo Luật Trẻ em; người cao tuổi theo Luật Người cao tuổi; người khuyết tật theo Luật Người khuyết tật; người có công với cách mạng và thân nhân; đồng bào dân tộc thiểu số ở xã có điều kiện kinh tế - xã hội đặc biệt khó khăn; công dân thường trú tại xã biên giới, huyện đảo; công dân thuộc hộ nghèo; công dân từ đủ 16 tuổi đến dưới 18 tuổi mồ côi cả cha và mẹ.",
+      "topics": ["mien_le_phi", "phi"],
+      "source_url": "https://hethongphapluat.com/thong-tu-75-2022-tt-btc-quy-dinh-muc-thu-che-do-thu-nop-va-quan-ly-le-phi-dang-ky-cu-tru-do-bo-truong-bo-tai-chinh-ban-hanh.html",
+      "retrieved_at": "2026-07-18"
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "method": "Stage A2 KB ingest (agent) — converted from notes/knowledge-base/research-01-thuong-tru.md; pending interactive structuring-session review per tools/etl/STRUCTURING.md"
+  }
+}

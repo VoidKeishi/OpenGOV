@@ -1,0 +1,131 @@
+{
+  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §3, pending structuring-session review). Curated overlay for đăng ký thường trú, converted from notes/knowledge-base/procedure-01-thuong-tru.md + research-01 decision tree, cross-checked against data/procedures/1.004222.json checklist_raw. Every checklist item carries source_component_code (raw component code) or source_quote; every deadline carries source_quote. The 6 hồ sơ cases map to the enum fact truong_hop; phương tiện docs gate on song_tren_phuong_tien; CT01→CT02 switch on viet_kieu_khong_ho_chieu. Conditions use only {fact,eq}/{fact,in}. Missing fact → fail-open display (show with 'tùy trường hợp' badge).",
+  "code": "1.004222",
+  "case_facts_schema": {
+    "kenh_nop": { "type": "enum", "values": ["truc_tiep", "truc_tuyen"],
+      "question": "Anh/chị dự định nộp hồ sơ theo hình thức nào?" },
+    "truong_hop": { "type": "enum",
+      "values": ["so_huu", "nhan_than", "thue_muon_o_nho", "tin_nguong_ton_giao", "tro_giup_xa_hoi", "don_vi_dong_quan"],
+      "question": "Anh/chị đăng ký thường trú vào chỗ ở theo trường hợp nào (thuộc sở hữu của mình / có quan hệ nhân thân với chủ hộ / thuê, mượn, ở nhờ / cơ sở tín ngưỡng, tôn giáo / cơ sở trợ giúp xã hội / đơn vị đóng quân)?" },
+    "song_tren_phuong_tien": { "type": "boolean",
+      "question": "Chỗ ở đăng ký có phải là phương tiện (tàu, thuyền, phương tiện khác dùng vào mục đích để ở) không?" },
+    "chua_thanh_nien": { "type": "boolean",
+      "question": "Người đăng ký thường trú có phải là người chưa thành niên không?" },
+    "viet_kieu_khong_ho_chieu": { "type": "boolean",
+      "question": "Anh/chị là người Việt Nam định cư ở nước ngoài không có hộ chiếu Việt Nam còn giá trị sử dụng phải không?" },
+    "thuoc_dien_mien_phi": { "type": "boolean",
+      "question": null }
+  },
+  "steps": [
+    { "n": 1, "title": "Chuẩn bị hồ sơ", "channel": "all",
+      "text": "Cá nhân chuẩn bị hồ sơ theo quy định của pháp luật, tương ứng với trường hợp chỗ ở của mình." },
+    { "n": 2, "title": "Nộp hồ sơ", "channel": "truc_tiep",
+      "text": "Nộp hồ sơ trực tiếp đến Công an cấp xã nơi đề nghị đăng ký thường trú." },
+    { "n": 2, "title": "Nộp hồ sơ trực tuyến", "channel": "truc_tuyen",
+      "text": "Nộp hồ sơ trực tuyến qua Cổng dịch vụ công quốc gia (dichvucong.gov.vn) hoặc Cổng dịch vụ công Bộ Công an." },
+    { "n": 3, "title": "Tiếp nhận và kiểm tra hồ sơ", "channel": "all",
+      "text": "Cán bộ đăng ký kiểm tra hồ sơ, đối chiếu thông tin với Cơ sở dữ liệu quốc gia về dân cư, Cơ sở dữ liệu về cư trú. Đủ điều kiện theo Điều 20 Luật Cư trú → cấp Phiếu tiếp nhận hồ sơ và hẹn trả kết quả (Mẫu CT04). Không đủ điều kiện → cấp Phiếu từ chối tiếp nhận, giải quyết hồ sơ (Mẫu CT06)." },
+    { "n": 4, "title": "Nộp lệ phí", "channel": "all",
+      "text": "Nộp lệ phí đăng ký thường trú theo quy định (trừ trường hợp được miễn theo Điều 4 Thông tư 75/2022/TT-BTC)." },
+    { "n": 5, "title": "Nhận kết quả", "channel": "all",
+      "text": "Căn cứ ngày hẹn trên Phiếu tiếp nhận hồ sơ và hẹn trả kết quả để nhận thông báo kết quả giải quyết thủ tục đăng ký cư trú." }
+  ],
+  "deadlines": [
+    { "id": "han_dang_ky_tre_chua_thanh_nien", "label": "Thời hạn đăng ký cư trú cho người chưa thành niên",
+      "qty": 60, "unit": "DAY", "from": "ngày được đăng ký khai sinh",
+      "source_quote": "Trong thời hạn tối đa 60 ngày kể từ ngày người chưa thành niên được đăng ký khai sinh thì phải thực hiện thủ tục đăng ký cư trú." }
+  ],
+  "fee_notes": [
+    { "channel": "truc_tuyen",
+      "text": "Nộp hồ sơ qua Cổng dịch vụ công trực tuyến: 10.000 đồng/lần đăng ký (rẻ hơn nộp trực tiếp)." },
+    { "channel": "truc_tiep",
+      "text": "Nộp trực tiếp: 20.000 đồng/lần đăng ký." },
+    { "channel": "all",
+      "text": "Miễn lệ phí đối với các đối tượng quy định tại Điều 4 Thông tư 75/2022/TT-BTC (sửa đổi bởi Thông tư 71/2025/TT-BTC): trẻ em, người cao tuổi, người khuyết tật; người có công với cách mạng và thân nhân; đồng bào dân tộc thiểu số ở xã đặc biệt khó khăn, công dân thường trú xã biên giới/huyện đảo, hộ nghèo; người 16-18 tuổi mồ côi cả cha và mẹ. Phải xuất trình giấy tờ chứng minh, trừ khi thông tin đã có trong Cơ sở dữ liệu quốc gia về dân cư." }
+  ],
+  "checklist": {
+    "groups": [
+      { "id": "to_khai", "type": "ONE_OF", "label": "Tờ khai thay đổi thông tin cư trú",
+        "items": [
+          { "id": "to_khai_ct01", "label": "Tờ khai thay đổi thông tin cư trú (mẫu CT01 ban hành kèm theo Thông tư số 53/2025/TT-BCA)",
+            "when": { "fact": "viet_kieu_khong_ho_chieu", "eq": false },
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003604" },
+          { "id": "to_khai_ct02", "label": "Tờ khai thay đổi thông tin về cư trú dùng cho công dân Việt Nam định cư ở nước ngoài không có hộ chiếu Việt Nam còn giá trị sử dụng (mẫu CT02 ban hành kèm theo Thông tư số 53/2025/TT-BCA)",
+            "when": { "fact": "viet_kieu_khong_ho_chieu", "eq": true },
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003604" }
+        ] },
+      { "id": "ho_so_so_huu", "type": "ALL_OF", "label": "Chỗ ở hợp pháp thuộc quyền sở hữu của mình",
+        "when": { "fact": "truong_hop", "eq": "so_huu" },
+        "items": [
+          { "id": "chung_minh_cho_o", "label": "Thông tin/giấy tờ chứng minh về chỗ ở hợp pháp (khai thác trong CSDL hoặc xuất trình giấy tờ theo khoản 2 Điều 5 Nghị định 154/2024/NĐ-CP)",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "xuat_trinh",
+            "source_component_code": "000.00.00.G01-KQ003605" },
+          { "id": "xac_nhan_noi_dau_do_phuong_tien", "label": "Văn bản xác nhận của Ủy ban nhân dân cấp xã về địa điểm phương tiện đăng ký đậu, đỗ thường xuyên (mục 1 Mẫu số 01 ban hành kèm theo Nghị định số 154/2024/NĐ-CP)",
+            "when": { "fact": "song_tren_phuong_tien", "eq": true },
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003617" },
+          { "id": "dang_ky_dang_kiem_phuong_tien", "label": "Giấy chứng nhận đăng ký phương tiện và giấy chứng nhận an toàn kỹ thuật và bảo vệ môi trường của phương tiện hoặc văn bản xác nhận của Ủy ban nhân dân cấp xã về việc sử dụng phương tiện vào mục đích để ở (mục 2 Mẫu số 01 Nghị định số 154/2024/NĐ-CP)",
+            "when": { "fact": "song_tren_phuong_tien", "eq": true },
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003616" }
+        ] },
+      { "id": "ho_so_nhan_than", "type": "ALL_OF", "label": "Chỗ ở không thuộc quyền sở hữu — có quan hệ nhân thân (khoản 2 Điều 20 Luật Cư trú)",
+        "when": { "fact": "truong_hop", "eq": "nhan_than" },
+        "items": [
+          { "id": "chung_minh_nhan_than", "label": "Thông tin/giấy tờ chứng minh quan hệ nhân thân với chủ hộ, thành viên hộ gia đình (khai thác trong CSDL hoặc xuất trình giấy tờ theo khoản 2, khoản 3 Điều 6 Nghị định 154/2024/NĐ-CP)",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "xuat_trinh",
+            "source_component_code": "000.00.00.G01-KQ003606" }
+        ] },
+      { "id": "ho_so_thue_muon_o_nho", "type": "ALL_OF", "label": "Chỗ ở hợp pháp do thuê, mượn, ở nhờ",
+        "when": { "fact": "truong_hop", "eq": "thue_muon_o_nho" },
+        "items": [
+          { "id": "hop_dong_thue_muon", "label": "Hợp đồng, văn bản về việc cho thuê, cho mượn, cho ở nhờ được công chứng hoặc chứng thực theo quy định của pháp luật",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003607" },
+          { "id": "chung_minh_dien_tich", "label": "Thông tin/giấy tờ chứng minh đủ diện tích nhà ở tối thiểu (khai thác trong CSDL hoặc xác nhận của Ủy ban nhân dân cấp xã theo Mẫu số 02 Nghị định số 154/2024/NĐ-CP)",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "xuat_trinh",
+            "source_component_code": "000.00.00.G01-KQ003608" }
+        ] },
+      { "id": "ho_so_tin_nguong_ton_giao", "type": "ALL_OF", "label": "Cơ sở tín ngưỡng, cơ sở tôn giáo có công trình phụ trợ là nhà ở",
+        "when": { "fact": "truong_hop", "eq": "tin_nguong_ton_giao" },
+        "items": [
+          { "id": "xac_nhan_co_so_co_nha_o", "label": "Văn bản xác nhận của Ủy ban nhân dân cấp xã về việc trong cơ sở tín ngưỡng, cơ sở tôn giáo có công trình phụ trợ là nhà ở",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003611" },
+          { "id": "chung_minh_tu_hanh", "label": "Giấy tờ, tài liệu chứng minh là nhà tu hành, chức sắc, chức việc hoặc người khác hoạt động tôn giáo (điểm a khoản 4 Điều 20); giấy tờ chứng minh là người đại diện cơ sở tín ngưỡng (điểm b khoản 4 Điều 20)",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "xuat_trinh",
+            "source_component_code": "000.00.00.G01-KQ003610" },
+          { "id": "xac_nhan_doi_tuong_d17", "label": "Văn bản xác nhận của Ủy ban nhân dân cấp xã về việc người đăng ký thường trú thuộc đối tượng quy định tại khoản 2 Điều 17 Luật Cư trú và việc trong cơ sở tín ngưỡng, cơ sở tôn giáo có công trình phụ trợ là nhà ở (điểm d khoản 4 Điều 20)",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003613" }
+        ] },
+      { "id": "ho_so_tro_giup_xa_hoi", "type": "ALL_OF", "label": "Cơ sở trợ giúp xã hội hoặc hộ gia đình nhận chăm sóc, nuôi dưỡng, trợ giúp",
+        "when": { "fact": "truong_hop", "eq": "tro_giup_xa_hoi" },
+        "items": [
+          { "id": "xac_nhan_cham_soc", "label": "Giấy tờ, tài liệu xác nhận về việc chăm sóc, nuôi dưỡng, trợ giúp",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003615" },
+          { "id": "van_ban_de_nghi_co_so", "label": "Văn bản đề nghị của người đứng đầu cơ sở trợ giúp xã hội đối với người được cơ sở trợ giúp xã hội nhận chăm sóc, nuôi dưỡng, trợ giúp",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003614" }
+        ] },
+      { "id": "ho_so_don_vi_dong_quan", "type": "ALL_OF", "label": "Nơi đơn vị đóng quân trong Công an nhân dân, Quân đội nhân dân",
+        "when": { "fact": "truong_hop", "eq": "don_vi_dong_quan" },
+        "items": [
+          { "id": "gioi_thieu_quan_doi", "label": "Đối với Quân đội nhân dân: Giấy giới thiệu đăng ký thường trú của cơ quan, đơn vị cấp trung đoàn và tương đương trở lên (ký tên, đóng dấu)",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003620" },
+          { "id": "gioi_thieu_cong_an", "label": "Đối với Công an nhân dân: Giấy giới thiệu của Thủ trưởng đơn vị quản lý trực tiếp ghi rõ nội dung để làm thủ tục đăng ký thường trú và đơn vị có chỗ ở cho cán bộ chiến sĩ (ký tên, đóng dấu)",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G01-KQ003619" }
+        ] }
+    ]
+  },
+  "review": {
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "method": "Stage A2 KB ingest (agent) — Claude Code, converted per tools/etl/STRUCTURING.md; pending interactive human review"
+  }
+}

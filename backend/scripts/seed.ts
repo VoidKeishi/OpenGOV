@@ -69,13 +69,33 @@ function main(): void {
     const proceduresDir = join(DATA, 'procedures');
     const files = readdirSync(proceduresDir).filter((f) => f.endsWith('.json')).sort();
     let full = 0;
+    let withLegal = 0;
     for (const file of files) {
       const base = readJSON(join(proceduresDir, file));
       const code: string = base.code;
+
+      // Curated overlay (human-owned): merged over the base record. `_`-prefixed
+      // draft/metadata keys are dropped so they never leak into the seeded JSON.
       const curatedPath = join(DATA, 'curated', `${code}.json`);
       const hasCurated = existsSync(curatedPath);
-      const record = hasCurated ? { ...base, ...readJSON(curatedPath) } : base;
-      if (hasCurated) full++;
+      let record: Record<string, unknown> = base;
+      if (hasCurated) {
+        const curated = readJSON(curatedPath) as Record<string, unknown>;
+        const overlay = Object.fromEntries(Object.entries(curated).filter(([k]) => isDataKey(k)));
+        record = { ...base, ...overlay };
+        full++;
+      }
+
+      // Legal-source fragments (human-owned): merged into the record as `legal_fragments`
+      // (DATA.md §6 — no extra table); get_procedure returns them with the record.
+      const legalPath = join(DATA, 'legal', `${code}.json`);
+      if (existsSync(legalPath)) {
+        const legal = readJSON(legalPath) as { fragments?: unknown[] };
+        if (Array.isArray(legal.fragments)) {
+          record = { ...record, legal_fragments: legal.fragments };
+          withLegal++;
+        }
+      }
 
       const categoryName: string | null = record.category?.name ?? null;
       const agency: string | null = record.executing_agency ?? null;
@@ -128,7 +148,7 @@ function main(): void {
       }
     }
 
-    return { procedures: files.length, full, aliasRows, provinceRows };
+    return { procedures: files.length, full, withLegal, aliasRows, provinceRows };
   });
 
   const counts = seedAll();
@@ -136,7 +156,7 @@ function main(): void {
 
   console.log(
     `seed: ${counts.procedures} procedures (${counts.full} full, ${counts.procedures - counts.full} raw), ` +
-      `${counts.aliasRows} aliases, ${counts.provinceRows} provinces → backend/var/opengov.db`,
+      `${counts.withLegal} with legal_fragments, ${counts.aliasRows} aliases, ${counts.provinceRows} provinces → backend/var/opengov.db`,
   );
 }
 

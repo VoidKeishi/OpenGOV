@@ -1,5 +1,6 @@
 {
-  "_draft": "SKELETON (DATA.md §4). The five entries E_REQUIRED, E_DINH_DANH_12, E_TINH_SAP_NHAP, E_CAP_HUYEN, E_KS_CHA_ME are copied verbatim from DATA.md and are final. The rest are agent-drafted placeholders pending human review. Messages/suggestions are Vietnamese with {param} interpolation ({label} always available; rule-specific params like {old}/{new}/{min}/{max} from the hit). type ∈ {missing, format, invalid_value, conflict}; severity ∈ {error, warning}. Not seeded — the validation module reads this file directly. The '_draft' key is metadata, not an error code.",
+  "_draft": "DRAFT (agent-drafted from notes/knowledge-base/error-catalog.md, pending human review — DATA.md §4). 35 ERR-* entries (ERR-TT-01..12 thường trú, ERR-DN-01..12 DNTN, ERR-NQ-01..11 nội quy lao động) + the 5 generic E_* codes (E_REQUIRED, E_DINH_DANH_12, E_TINH_SAP_NHAP, E_CAP_HUYEN, E_KS_CHA_ME) copied verbatim from DATA.md §4 and final. Sheet mapping: 'Thông báo lỗi'→message, 'Cách sửa'→suggestion, 🔴→error, 🟡→warning, ℹ️→info, 'Detection rule'→detection (documentation only). Many ERR-* are ADVISORY (detection needs state DBs — CSDL dân cư, danh sách DN toàn quốc, nội dung nội quy…); the rule engine only fires closed-set rules from the schema files, these surface as chat/checklist guidance. Messages/suggestions are Vietnamese with {param} interpolation ({label} always available; other {…} params come from the hit/context). type ∈ {missing, format, invalid_value, conflict}; severity ∈ {error, warning, info}. Not seeded — the validation module reads this file directly. Keys prefixed with '_' are metadata, not error codes.",
+
   "E_REQUIRED": {
     "type": "missing",
     "severity": "error",
@@ -30,34 +31,252 @@
     "message": "Tờ khai phải có thông tin của ít nhất cha hoặc mẹ.",
     "suggestion": "Điền tối thiểu Họ tên của người mẹ hoặc người cha (mục C hoặc D)."
   },
-  "E_NGAY_TUONG_LAI": {
-    "type": "invalid_value",
-    "severity": "error",
-    "message": "{label} không được là ngày trong tương lai.",
-    "suggestion": "Vui lòng kiểm tra lại {label}: ngày phải nhỏ hơn hoặc bằng ngày hiện tại."
-  },
-  "E_NGAY_CHU_LECH": {
-    "type": "conflict",
-    "severity": "error",
-    "message": "{label} ghi bằng chữ không khớp với ngày đã nhập bằng số.",
-    "suggestion": "Đối chiếu lại phần ghi bằng chữ với ngày, tháng, năm đã nhập bằng số."
-  },
-  "E_GCN_KH_THIEU": {
+
+  "ERR-TT-01": {
     "type": "missing",
     "severity": "error",
-    "message": "Thiếu thông tin Giấy chứng nhận kết hôn.",
-    "suggestion": "Cha mẹ đã đăng ký kết hôn thì cần điền Số Giấy chứng nhận kết hôn."
+    "message": "Hồ sơ thiếu Tờ khai thay đổi thông tin cư trú (Mẫu CT01 hoặc CT02). Đây là giấy tờ bắt buộc cho mọi trường hợp đăng ký thường trú.",
+    "suggestion": "Tải Mẫu CT01 (ban hành theo TT 53/2025/TT-BCA). Dùng Mẫu CT02 nếu là NVNĐCNN không có hộ chiếu VN. Điền đầy đủ và ký.",
+    "detection": "documents.filter(d => d.type == \"CT01\" OR d.type == \"CT02\").length == 0"
   },
-  "E_SO_LUONG": {
-    "type": "format",
+  "ERR-TT-02": {
+    "type": "invalid_value",
     "severity": "error",
-    "message": "{label} phải là số nguyên trong khoảng {min}–{max}.",
-    "suggestion": "Nhập lại {label} bằng một số nguyên hợp lệ (từ {min} đến {max})."
+    "message": "Tờ khai đang dùng mẫu cũ. Kể từ 01/7/2025, phải sử dụng Mẫu CT01 theo Thông tư 53/2025/TT-BCA.",
+    "suggestion": "Tải lại mẫu CT01 mới nhất từ cổng DVC hoặc Công an cấp xã. Điền lại thông tin.",
+    "detection": "document.template_version < \"53/2025/TT-BCA\""
   },
-  "E_ME_SINH_SAU_CON": {
+  "ERR-TT-03": {
+    "type": "missing",
+    "severity": "error",
+    "message": "Thiếu giấy tờ chứng minh chỗ ở hợp pháp. Nếu thông tin đã có trong CSDL quốc gia về đất đai thì không cần xuất trình.",
+    "suggestion": "Chuẩn bị một trong: Giấy CN quyền sử dụng đất/sở hữu nhà, Hợp đồng mua bán công chứng, hoặc giấy tờ theo khoản 2 Điều 5 NĐ 154/2024. Kiểm tra trước trên VNeID xem thông tin đã có trong CSDL chưa.",
+    "detection": "case == \"so_huu\" AND documents.filter(d => d.type == \"chung_minh_cho_o\").length == 0 AND !csdl_verified"
+  },
+  "ERR-TT-04": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "Hợp đồng thuê/mượn/ở nhờ phải được công chứng hoặc chứng thực theo quy định. Hợp đồng viết tay không được chấp nhận.",
+    "suggestion": "Mang hợp đồng đến Văn phòng công chứng hoặc UBND xã/phường để công chứng/chứng thực. Hai bên cùng ký trước mặt công chứng viên.",
+    "detection": "case == \"thue_muon\" AND document.notarized == false"
+  },
+  "ERR-TT-05": {
+    "type": "missing",
+    "severity": "warning",
+    "message": "Cần chứng minh đủ diện tích bình quân theo quy định của HĐND tỉnh/TP. Có thể khai thác từ CSDL hoặc xin xác nhận UBND xã.",
+    "suggestion": "Kiểm tra quy định diện tích tối thiểu của tỉnh/TP nơi đăng ký. Xin xác nhận UBND xã theo Mẫu 02 NĐ 154/2024, hoặc xuất trình sổ đỏ thể hiện diện tích.",
+    "detection": "case == \"thue_muon\" AND !dien_tich_verified AND !csdl_verified"
+  },
+  "ERR-TT-06": {
+    "type": "missing",
+    "severity": "error",
+    "message": "Cần ý kiến đồng ý của chủ sở hữu chỗ ở (ít nhất 1 đồng sở hữu).",
+    "suggestion": "Chủ sở hữu ký xác nhận đồng ý trong hợp đồng thuê/mượn hoặc văn bản riêng. Nếu chủ sở hữu đã chết/mất năng lực, lấy ý kiến người đại diện/thừa kế hợp pháp.",
+    "detection": "case == \"khong_so_huu\" AND !chu_so_huu_dong_y AND relationship != \"nhan_than_truc_tiep\""
+  },
+  "ERR-TT-07": {
+    "type": "missing",
+    "severity": "warning",
+    "message": "Cần giấy tờ chứng minh quan hệ nhân thân với chủ hộ hoặc thành viên hộ gia đình.",
+    "suggestion": "Kiểm tra trên VNeID/CSDL dân cư. Nếu không khai thác được, xuất trình: Giấy khai sinh, Giấy CN kết hôn, Giấy xác nhận tình trạng hôn nhân, hoặc giấy tờ theo khoản 2-3 Điều 6 NĐ 154/2024.",
+    "detection": "case == \"nhan_than\" AND !relationship_proof AND !csdl_verified"
+  },
+  "ERR-TT-08": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "Bạn chưa được thu thập, cập nhật thông tin vào CSDL quốc gia về dân cư. Đây là điều kiện tiên quyết.",
+    "suggestion": "Đến Công an xã/phường nơi cư trú để làm thủ tục thu thập thông tin dân cư và cấp CCCD (nếu chưa có).",
+    "detection": "citizen.csdl_status == \"not_found\""
+  },
+  "ERR-TT-09": {
+    "type": "invalid_value",
+    "severity": "warning",
+    "message": "Đã quá thời hạn 60 ngày để đăng ký cư trú cho trẻ em kể từ ngày khai sinh.",
+    "suggestion": "Vẫn có thể nộp hồ sơ nhưng có thể bị nhắc nhở. Nộp ngay tại Công an xã/phường. Không yêu cầu xuất trình Giấy khai sinh cho trẻ mới sinh đăng ký lần đầu.",
+    "detection": "applicant.age_days > 60 AND applicant.birth_registered == true AND applicant.residence_registered == false"
+  },
+  "ERR-TT-10": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "Địa chỉ \"{dia_chi_cu}\" không còn tồn tại trong hệ thống địa giới hành chính hiện hành. Xã/huyện này đã sáp nhập/đổi tên theo nghị quyết sắp xếp đơn vị hành chính.",
+    "suggestion": "Tra cứu tên đơn vị hành chính mới tại danhmuchanhchinh.gso.gov.vn. Ghi đúng tên xã/phường, quận/huyện, tỉnh/TP theo địa giới hiện hành.",
+    "detection": "!valid_administrative_units.includes(input.dia_chi.xa) OR !valid_administrative_units.includes(input.dia_chi.huyen)"
+  },
+  "ERR-TT-11": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "Chỗ ở tại địa chỉ này thuộc địa điểm không được đăng ký thường trú mới theo Điều 23 Luật Cư trú 2020 (khu vực cấm xây dựng, đất lấn chiếm, nhà có quyết định phá dỡ/thu hồi, chỗ ở đang tranh chấp...).",
+    "suggestion": "Kiểm tra lại tình trạng pháp lý của chỗ ở tại UBND xã/phường. Nếu chỗ ở thuộc Điều 23 thì không thể đăng ký mới, trừ vợ/chồng theo điểm a khoản 2 Điều 20.",
+    "detection": "restricted_areas.includes(input.dia_chi) OR input.dia_chi.has_demolition_order OR input.dia_chi.has_land_recovery_decision"
+  },
+  "ERR-TT-12": {
     "type": "conflict",
     "severity": "error",
-    "message": "Năm sinh của mẹ phải trước ngày sinh của người được khai sinh.",
-    "suggestion": "Kiểm tra lại năm sinh của mẹ và ngày sinh của con."
+    "message": "Thông tin trên tờ khai không khớp dữ liệu trong CSDL quốc gia về dân cư: {truong_khong_khop}. Ví dụ: quê quán ghi theo địa giới cũ, ngày sinh sai format, họ tên viết thiếu đệm.",
+    "suggestion": "Kiểm tra thông tin trên CCCD/VNeID, ghi chính xác theo CSDL. Nếu thông tin trong CSDL sai, đến Công an xã/phường làm thủ tục điều chỉnh thông tin dân cư trước khi nộp hồ sơ cư trú.",
+    "detection": "input.ho_ten != csdl.ho_ten OR input.ngay_sinh != csdl.ngay_sinh OR input.que_quan != csdl.que_quan"
+  },
+
+  "ERR-DN-01": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "Tên doanh nghiệp \"{ten_dn}\" trùng hoặc gây nhầm lẫn với doanh nghiệp đã đăng ký. Xem Điều 37-39 Luật Doanh nghiệp 2020 (sửa đổi bởi Luật 76/2025/QH15).",
+    "suggestion": "Tra cứu tên DN tại dangkykinhdoanh.gov.vn. Chọn tên khác biệt rõ ràng. Tránh chỉ thay đổi viết hoa/thường, dấu \"&\", \"và\", số đếm.",
+    "detection": "search_dn_name(input.ten_dn).similarity_score > 0.85"
+  },
+  "ERR-DN-02": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "Tên DN không được sử dụng tên cơ quan nhà nước, lực lượng vũ trang, tổ chức chính trị, hoặc từ ngữ vi phạm truyền thống, thuần phong mỹ tục.",
+    "suggestion": "Đổi tên DN. Tránh các từ: \"Việt Nam\", \"quốc gia\" (trừ trường hợp được phép), tên bộ/ngành, đảng/đoàn thể.",
+    "detection": "input.ten_dn.matches(banned_name_patterns)"
+  },
+  "ERR-DN-03": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Mỗi cá nhân chỉ được làm chủ 1 doanh nghiệp tư nhân. Bạn đã là chủ DNTN \"{ten_dn_hien_tai}\".",
+    "suggestion": "Giải thể DNTN hiện tại trước khi thành lập DNTN mới, HOẶC chuyển sang loại hình khác (Công ty TNHH 1 thành viên).",
+    "detection": "search_owner(input.cccd).existing_dntn.length > 0"
+  },
+  "ERR-DN-04": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Chủ DNTN không được đồng thời là thành viên hợp danh của công ty hợp danh.",
+    "suggestion": "Rút khỏi công ty hợp danh trước, hoặc chọn loại hình DN khác.",
+    "detection": "search_owner(input.cccd).hop_danh_member == true"
+  },
+  "ERR-DN-05": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "Ngành nghề \"{nganh_nghe}\" thuộc danh mục cấm đầu tư kinh doanh theo Luật Đầu tư 2020.",
+    "suggestion": "Chọn ngành nghề khác. Danh mục cấm: ma túy, mại dâm, mua bán người, mua bán mô/bộ phận cơ thể, sinh sản vô tính, pháo nổ... (Phụ lục I Luật Đầu tư).",
+    "detection": "input.nganh_nghe.intersect(banned_industries).length > 0"
+  },
+  "ERR-DN-06": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "Mã ngành nghề kinh doanh không hợp lệ hoặc chưa điền. Phải ghi theo Hệ thống ngành kinh tế Việt Nam.",
+    "suggestion": "Tra cứu mã ngành tại dangkykinhdoanh.gov.vn → \"Tra cứu ngành nghề kinh doanh\". Ghi đúng mã ngành cấp 4.",
+    "detection": "!valid_industry_codes.includes(input.ma_nganh)"
+  },
+  "ERR-DN-07": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "CCCD/CMND/Hộ chiếu đã hết hạn hoặc không hợp lệ. Giấy tờ phải còn hiệu lực tại thời điểm nộp hồ sơ.",
+    "suggestion": "Đổi CCCD mới tại Công an quận/huyện. Thời gian cấp lại: 7-15 ngày làm việc.",
+    "detection": "input.cccd.expiry_date < today OR !valid_cccd(input.cccd)"
+  },
+  "ERR-DN-08": {
+    "type": "missing",
+    "severity": "error",
+    "message": "Địa chỉ trụ sở chính phải ghi rõ: số nhà, tên đường/phố, phường/xã, quận/huyện, tỉnh/TP. Không chấp nhận địa chỉ chung chung.",
+    "suggestion": "Ghi đầy đủ địa chỉ theo đúng địa giới hành chính. Địa chỉ phải thực sự tồn tại và có thể liên lạc được.",
+    "detection": "!input.tru_so.has(so_nha, duong, phuong, quan, tinh)"
+  },
+  "ERR-DN-09": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Bạn thuộc đối tượng không được thành lập doanh nghiệp theo Điều 17 Luật Doanh nghiệp 2020.",
+    "suggestion": "Đối tượng bị cấm gồm: cán bộ/công chức/viên chức (trừ quy định khác), sĩ quan/quân nhân chuyên nghiệp, người chưa thành niên, người bị hạn chế năng lực hành vi, người đang bị truy cứu TNHS, đang chấp hành hình phạt tù.",
+    "detection": "check_banned_person(input.cccd)"
+  },
+  "ERR-DN-10": {
+    "type": "missing",
+    "severity": "error",
+    "message": "Chưa nộp phí công bố nội dung đăng ký doanh nghiệp: 100.000 đồng/lần (Thông tư số 47/2019/TT-BTC). Phí công bố là bắt buộc, phải nộp cùng lúc nộp hồ sơ.",
+    "suggestion": "Nộp phí công bố 100.000đ tại Cơ quan đăng ký kinh doanh cấp tỉnh. Nếu DN không được cấp đăng ký, phí sẽ được hoàn trả.",
+    "detection": "!payment.includes(\"phi_cong_bo\") AND submit_channel != \"online\""
+  },
+  "ERR-DN-11": {
+    "type": "missing",
+    "severity": "error",
+    "message": "Người ủy quyền và người được ủy quyền phải xác thực điện tử để được cấp đăng ký doanh nghiệp (NĐ 168/2025/NĐ-CP).",
+    "suggestion": "Cả hai bên thực hiện xác thực điện tử qua tài khoản định danh điện tử trên Cổng thông tin quốc gia về đăng ký doanh nghiệp. Nếu xác thực bị gián đoạn, người ủy quyền có thể xác thực sau khi được cấp đăng ký. Nếu chưa có tài khoản định danh điện tử, kèm bản sao CCCD/hộ chiếu của người ủy quyền.",
+    "detection": "submit_channel == \"online\" AND has_uy_quyen == true AND (!nguoi_uy_quyen.xac_thuc_dien_tu OR !nguoi_duoc_uy_quyen.xac_thuc_dien_tu)"
+  },
+  "ERR-DN-12": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "Giấy đề nghị đăng ký doanh nghiệp đang dùng biểu mẫu cũ. Kể từ 01/07/2025, phải sử dụng biểu mẫu theo Thông tư 68/2025/TT-BTC (thay thế TT 01/2021/TT-BKHĐT).",
+    "suggestion": "Tải biểu mẫu mới từ Cổng thông tin quốc gia về đăng ký doanh nghiệp (dangkykinhdoanh.gov.vn). Điền lại theo Phụ lục I TT 68/2025/TT-BTC.",
+    "detection": "document.template_source == \"01/2021/TT-BKHDT\" AND submit_date >= \"2025-07-01\""
+  },
+
+  "ERR-NQ-01": {
+    "type": "invalid_value",
+    "severity": "info",
+    "message": "Đăng ký nội quy lao động chỉ bắt buộc với DN sử dụng từ 10 NLĐ trở lên (Điều 118 BLLĐ 2019). DN của bạn có {so_lao_dong} NLĐ.",
+    "suggestion": "Không cần đăng ký nội quy. Thay vào đó, thỏa thuận kỷ luật lao động trực tiếp trong HĐLĐ với từng NLĐ.",
+    "detection": "input.so_lao_dong < 10"
+  },
+  "ERR-NQ-02": {
+    "type": "missing",
+    "severity": "error",
+    "message": "Thiếu văn bản góp ý của tổ chức đại diện người lao động tại cơ sở. Yêu cầu bắt buộc đối với nơi có tổ chức đại diện NLĐ tại cơ sở (Điều 118 BLLĐ 2019).",
+    "suggestion": "Gửi dự thảo nội quy cho Ban chấp hành công đoàn cơ sở hoặc tổ chức đại diện NLĐ lấy ý kiến bằng văn bản.",
+    "detection": "input.co_to_chuc_dai_dien == true AND documents.filter(d => d.type == \"y_kien_cong_doan\").length == 0"
+  },
+  "ERR-NQ-03": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Nội quy có điều khoản phạt tiền người lao động. Điều 127 BLLĐ 2019 cấm phạt tiền, cắt lương thay xử lý kỷ luật.",
+    "suggestion": "Xóa mọi điều khoản phạt tiền. Chỉ được áp dụng 4 hình thức kỷ luật: khiển trách, kéo dài nâng lương (≤6 tháng), cách chức, sa thải. Bồi thường thiệt hại là quy định riêng, không phải kỷ luật.",
+    "detection": "noi_quy.content.matches(/phạt tiền|trừ lương|khấu trừ.*kỷ luật/)"
+  },
+  "ERR-NQ-04": {
+    "type": "missing",
+    "severity": "error",
+    "message": "Nội quy thiếu nội dung bắt buộc: {danh_sach_thieu}. Theo Điều 118 khoản 2 BLLĐ 2019 (hướng dẫn tại Điều 69 NĐ 145/2020/NĐ-CP), nội quy phải có đủ 9 nội dung.",
+    "suggestion": "Bổ sung các mục còn thiếu. 9 nội dung bắt buộc: (1) Thời giờ làm việc, nghỉ ngơi, (2) Trật tự tại nơi làm việc, (3) An toàn, vệ sinh lao động, (4) Phòng chống quấy rối tình dục, (5) Bảo vệ tài sản, bí mật kinh doanh, (6) Chuyển NLĐ làm việc khác, (7) Hành vi vi phạm kỷ luật lao động và hình thức xử lý, (8) Trách nhiệm vật chất, (9) Người có thẩm quyền xử lý kỷ luật lao động.",
+    "detection": "required_sections.filter(s => !noi_quy.has(s)).length > 0"
+  },
+  "ERR-NQ-05": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Thời hạn kéo dài nâng lương không được quá 6 tháng (Điều 124 BLLĐ 2019). Nội quy quy định {so_thang} tháng.",
+    "suggestion": "Sửa thời hạn tối đa là 6 tháng. Lưu ý: đây là mức tối đa, có thể quy định thấp hơn.",
+    "detection": "noi_quy.keo_dai_nang_luong.thoi_han > 6"
+  },
+  "ERR-NQ-06": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Mỗi hành vi vi phạm chỉ được áp dụng 1 hình thức kỷ luật (Điều 122 BLLĐ 2019). Không được vừa khiển trách vừa kéo dài nâng lương cho cùng 1 vi phạm.",
+    "suggestion": "Quy định rõ 1 hình thức kỷ luật duy nhất cho mỗi hành vi vi phạm, theo thứ tự tăng dần: khiển trách → kéo dài nâng lương → cách chức → sa thải.",
+    "detection": "noi_quy.ky_luat.has_multiple_sanctions_per_violation == true"
+  },
+  "ERR-NQ-07": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Không được xử lý kỷ luật đối với NLĐ đang mang thai, nghỉ thai sản, nuôi con dưới 12 tháng tuổi, hoặc đang nghỉ ốm (Điều 122 BLLĐ 2019).",
+    "suggestion": "Xóa/sửa điều khoản. NLĐ thuộc nhóm này phải được tạm hoãn xử lý kỷ luật đến khi hết thời hạn bảo vệ.",
+    "detection": "noi_quy.content.matches(/kỷ luật.*mang thai|kỷ luật.*nuôi con|kỷ luật.*nghỉ ốm/)"
+  },
+  "ERR-NQ-08": {
+    "type": "invalid_value",
+    "severity": "warning",
+    "message": "Đã quá thời hạn 10 ngày kể từ ngày ban hành nội quy để nộp đăng ký. Nội quy ban hành ngày {ngay_ban_hanh}, hôm nay là ngày {ngay_hien_tai}.",
+    "suggestion": "Vẫn nộp đăng ký ngay. Việc nộp trễ có thể bị nhắc nhở nhưng không mất quyền đăng ký. Lần sau ban hành nội quy xong nên nộp ngay trong 10 ngày.",
+    "detection": "(submit_date - noi_quy.ban_hanh_date).days > 10"
+  },
+  "ERR-NQ-09": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "Nội quy lao động phải đăng ký tại cơ quan chuyên môn về nội vụ thuộc UBND cấp tỉnh (hoặc cấp xã nếu được ủy quyền) nơi đăng ký kinh doanh, không phải nơi NLĐ làm việc. DN đăng ký tại {tinh_dkkd}.",
+    "suggestion": "Nộp hồ sơ tại cơ quan chuyên môn về nội vụ thuộc UBND tỉnh/TP nơi DN có trụ sở chính (theo GCNĐKDN).",
+    "detection": "input.co_quan_noi_vu.province != dn.dkkd_province"
+  },
+  "ERR-NQ-10": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Nội quy quy định sa thải cho trường hợp \"{truong_hop}\" nhưng Điều 125 BLLĐ 2019 chỉ cho phép sa thải trong 4 trường hợp cụ thể.",
+    "suggestion": "Chỉ được sa thải khi: (1) trộm cắp, tham ô, đánh bạc, cố ý gây thương tích, sử dụng ma túy tại nơi làm việc; (2) tiết lộ bí mật kinh doanh/công nghệ, xâm phạm quyền SHTT, gây thiệt hại nghiêm trọng hoặc đe dọa gây thiệt hại đặc biệt nghiêm trọng; (3) quấy rối tình dục tại nơi làm việc theo quy định trong nội quy; (4) tự ý bỏ việc 5 ngày cộng dồn/30 ngày hoặc 20 ngày cộng dồn/365 ngày không có lý do chính đáng.",
+    "detection": "noi_quy.sa_thai_cases.filter(c => !dieu_125_cases.includes(c)).length > 0"
+  },
+  "ERR-NQ-11": {
+    "type": "invalid_value",
+    "severity": "warning",
+    "message": "DN có chi nhánh tại {tinh_chi_nhanh} nhưng chưa gửi nội quy lao động đã đăng ký đến cơ quan chuyên môn về nội vụ nơi đặt chi nhánh (Điều 119 khoản 4 BLLĐ 2019).",
+    "suggestion": "Sau khi nội quy được đăng ký tại trụ sở chính, gửi bản nội quy đã đăng ký đến cơ quan chuyên môn về nội vụ thuộc UBND cấp tỉnh nơi đặt chi nhánh. Đây là nghĩa vụ thông báo, không phải đăng ký lại.",
+    "detection": "dn.chi_nhanh.filter(cn => cn.province != dn.tru_so_province AND !cn.noi_quy_sent).length > 0"
   }
 }

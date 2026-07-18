@@ -1,0 +1,132 @@
+{
+  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §5, pending structuring-session review). Legal-source fragments for đăng ký nội quy lao động, converted from notes/knowledge-base/research-03-noi-quy.md plus web gap-fill for BLLĐ 2019 Điều 122/124/125/127 (kỷ luật lao động — cited by the error catalog / golden QA but absent from the research file). Every fragment carries source_url + retrieved_at; text is a minimal relevant excerpt.",
+  "code": "2.001955",
+  "fragments": [
+    {
+      "id": "bllđ-d117",
+      "doc_code": "45/2019/QH14",
+      "doc_title": "Bộ luật Lao động 2019",
+      "article": "Điều 117",
+      "title": "Kỷ luật lao động (định nghĩa)",
+      "text": "Kỷ luật lao động là những quy định về việc tuân theo thời gian, công nghệ và điều hành sản xuất, kinh doanh do người sử dụng lao động ban hành trong nội quy lao động và do pháp luật quy định.",
+      "topics": ["ky_luat_lao_dong", "dinh_nghia"],
+      "source_url": "https://hethongphapluat.com/bo-luat-lao-dong-2019/dieu-117",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "bllđ-d118",
+      "doc_code": "45/2019/QH14",
+      "doc_title": "Bộ luật Lao động 2019",
+      "article": "Điều 118",
+      "title": "Nội quy lao động — yêu cầu bằng văn bản và 9 nội dung chủ yếu",
+      "text": "1. Người sử dụng lao động phải ban hành nội quy lao động, nếu sử dụng từ 10 người lao động trở lên thì nội quy lao động phải bằng văn bản. 2. Nội dung nội quy lao động không được trái với pháp luật về lao động và quy định khác của pháp luật có liên quan; nội dung chủ yếu gồm: thời giờ làm việc, thời giờ nghỉ ngơi; trật tự tại nơi làm việc; an toàn, vệ sinh lao động; phòng, chống quấy rối tình dục tại nơi làm việc, trình tự, thủ tục xử lý hành vi quấy rối tình dục; bảo vệ tài sản và bí mật kinh doanh, bí mật công nghệ, sở hữu trí tuệ; trường hợp được tạm thời chuyển người lao động làm việc khác so với hợp đồng lao động; các hành vi vi phạm kỷ luật lao động và các hình thức xử lý kỷ luật lao động; trách nhiệm vật chất; người có thẩm quyền xử lý kỷ luật lao động. 3. Trước khi ban hành nội quy lao động hoặc sửa đổi, bổ sung, người sử dụng lao động phải tham khảo ý kiến của tổ chức đại diện người lao động tại cơ sở đối với nơi có tổ chức đại diện người lao động tại cơ sở.",
+      "topics": ["noi_dung_bat_buoc", "van_ban", "tham_khao_y_kien"],
+      "source_url": "https://hethongphapluat.com/bo-luat-lao-dong-2019/dieu-118",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "bllđ-d119",
+      "doc_code": "45/2019/QH14",
+      "doc_title": "Bộ luật Lao động 2019",
+      "article": "Điều 119",
+      "title": "Đăng ký nội quy lao động",
+      "text": "1. Người sử dụng lao động sử dụng từ 10 người lao động trở lên phải đăng ký nội quy lao động tại cơ quan chuyên môn về lao động thuộc Ủy ban nhân dân cấp tỉnh nơi người sử dụng lao động đăng ký kinh doanh. 2. Trong thời hạn 10 ngày kể từ ngày ban hành nội quy lao động, người sử dụng lao động phải nộp hồ sơ đăng ký nội quy lao động. 3. Trong thời hạn 07 ngày làm việc kể từ ngày nhận được hồ sơ, nếu phát hiện nội quy lao động có quy định trái pháp luật thì cơ quan có thẩm quyền thông báo, hướng dẫn sửa đổi, bổ sung và đăng ký lại. 4. Người sử dụng lao động có chi nhánh, đơn vị, cơ sở sản xuất, kinh doanh đặt ở nhiều địa bàn khác nhau thì gửi nội quy lao động đã được đăng ký đến cơ quan chuyên môn về lao động nơi đặt chi nhánh. 5. Cơ quan chuyên môn cấp tỉnh có thể ủy quyền cho cơ quan chuyên môn về lao động cấp huyện thực hiện việc đăng ký.",
+      "topics": ["dang_ky", "nguong_10", "thoi_han", "chi_nhanh"],
+      "source_url": "https://hethongphapluat.com/bo-luat-lao-dong-2019/dieu-119",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "bllđ-d120",
+      "doc_code": "45/2019/QH14",
+      "doc_title": "Bộ luật Lao động 2019",
+      "article": "Điều 120",
+      "title": "Hồ sơ đăng ký nội quy lao động",
+      "text": "Hồ sơ đăng ký nội quy lao động bao gồm: 1. Văn bản đề nghị đăng ký nội quy lao động; 2. Nội quy lao động; 3. Văn bản góp ý của tổ chức đại diện người lao động tại cơ sở đối với nơi có tổ chức đại diện người lao động tại cơ sở; 4. Các văn bản của người sử dụng lao động có quy định liên quan đến kỷ luật lao động và trách nhiệm vật chất (nếu có).",
+      "topics": ["ho_so", "van_ban_gop_y"],
+      "source_url": "https://thuvienphapluat.vn/van-ban/Lao-dong-Tien-luong/Bo-Luat-lao-dong-2019-333670.aspx",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "bllđ-d121",
+      "doc_code": "45/2019/QH14",
+      "doc_title": "Bộ luật Lao động 2019",
+      "article": "Điều 121",
+      "title": "Hiệu lực của nội quy lao động",
+      "text": "1. Nội quy lao động có hiệu lực sau 15 ngày kể từ ngày cơ quan nhà nước có thẩm quyền quy định tại Điều 119 của Bộ luật này nhận được đầy đủ hồ sơ đăng ký nội quy lao động. 2. Trường hợp người sử dụng lao động sử dụng dưới 10 người lao động ban hành nội quy lao động bằng văn bản thì hiệu lực do người sử dụng lao động quyết định trong nội quy lao động.",
+      "topics": ["hieu_luc", "15_ngay"],
+      "source_url": "https://hethongphapluat.com/bo-luat-lao-dong-2019/dieu-121",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "bllđ-d122",
+      "doc_code": "45/2019/QH14",
+      "doc_title": "Bộ luật Lao động 2019",
+      "article": "Điều 122 khoản 2, khoản 3, khoản 4",
+      "title": "Nguyên tắc xử lý kỷ luật lao động",
+      "text": "2. Không được áp dụng nhiều hình thức xử lý kỷ luật lao động đối với một hành vi vi phạm kỷ luật lao động. 3. Khi một người lao động đồng thời có nhiều hành vi vi phạm kỷ luật lao động thì chỉ áp dụng hình thức kỷ luật cao nhất tương ứng với hành vi vi phạm nặng nhất. 4. Không được xử lý kỷ luật lao động đối với người lao động đang trong thời gian: nghỉ ốm đau, điều dưỡng; nghỉ việc được sự đồng ý của người sử dụng lao động; đang bị tạm giữ, tạm giam; đang chờ kết quả điều tra, xác minh của cơ quan có thẩm quyền đối với hành vi quy định tại khoản 1 và khoản 2 Điều 125; người lao động nữ mang thai; người lao động nghỉ thai sản, nuôi con dưới 12 tháng tuổi.",
+      "topics": ["ky_luat_lao_dong", "nguyen_tac", "mot_hanh_vi_mot_hinh_thuc"],
+      "source_url": "https://hethongphapluat.com/bo-luat-lao-dong-2019/dieu-122",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "bllđ-d124",
+      "doc_code": "45/2019/QH14",
+      "doc_title": "Bộ luật Lao động 2019",
+      "article": "Điều 124",
+      "title": "Hình thức xử lý kỷ luật lao động",
+      "text": "Hình thức xử lý kỷ luật lao động: 1. Khiển trách. 2. Kéo dài thời hạn nâng lương không quá 06 tháng. 3. Cách chức. 4. Sa thải.",
+      "topics": ["ky_luat_lao_dong", "hinh_thuc", "keo_dai_nang_luong"],
+      "source_url": "https://hethongphapluat.com/bo-luat-lao-dong-2019/dieu-124",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "bllđ-d125",
+      "doc_code": "45/2019/QH14",
+      "doc_title": "Bộ luật Lao động 2019",
+      "article": "Điều 125",
+      "title": "Áp dụng hình thức xử lý kỷ luật sa thải",
+      "text": "Hình thức xử lý kỷ luật sa thải được người sử dụng lao động áp dụng trong trường hợp sau đây: 1. Người lao động có hành vi trộm cắp, tham ô, đánh bạc, cố ý gây thương tích, sử dụng ma túy tại nơi làm việc; 2. Người lao động có hành vi tiết lộ bí mật kinh doanh, bí mật công nghệ, xâm phạm quyền sở hữu trí tuệ của người sử dụng lao động, có hành vi gây thiệt hại nghiêm trọng hoặc đe dọa gây thiệt hại đặc biệt nghiêm trọng về tài sản, lợi ích của người sử dụng lao động hoặc quấy rối tình dục tại nơi làm việc được quy định trong nội quy lao động; 3. Người lao động bị xử lý kỷ luật kéo dài thời hạn nâng lương hoặc cách chức mà tái phạm trong thời gian chưa xóa kỷ luật; 4. Người lao động tự ý bỏ việc 05 ngày cộng dồn trong thời hạn 30 ngày hoặc 20 ngày cộng dồn trong thời hạn 365 ngày tính từ ngày đầu tiên tự ý bỏ việc mà không có lý do chính đáng.",
+      "topics": ["ky_luat_lao_dong", "sa_thai"],
+      "source_url": "https://hethongphapluat.com/bo-luat-lao-dong-2019/dieu-125",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "bllđ-d127",
+      "doc_code": "45/2019/QH14",
+      "doc_title": "Bộ luật Lao động 2019",
+      "article": "Điều 127",
+      "title": "Các hành vi bị nghiêm cấm khi xử lý kỷ luật lao động",
+      "text": "1. Xâm phạm sức khỏe, danh dự, tính mạng, uy tín, nhân phẩm của người lao động. 2. Phạt tiền, cắt lương thay việc xử lý kỷ luật lao động. 3. Xử lý kỷ luật lao động đối với người lao động có hành vi vi phạm không được quy định trong nội quy lao động hoặc không thỏa thuận trong hợp đồng lao động đã giao kết hoặc pháp luật về lao động không có quy định.",
+      "topics": ["ky_luat_lao_dong", "cam_phat_tien"],
+      "source_url": "https://hethongphapluat.com/bo-luat-lao-dong-2019/dieu-127",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "nd145-2020-d69",
+      "doc_code": "145/2020/NĐ-CP",
+      "doc_title": "Nghị định 145/2020/NĐ-CP hướng dẫn Bộ luật Lao động về điều kiện lao động và quan hệ lao động",
+      "article": "Điều 69 khoản 2",
+      "title": "Hướng dẫn chi tiết nội dung chủ yếu của nội quy lao động",
+      "text": "Nội dung nội quy lao động theo khoản 2 Điều 118 Bộ luật Lao động được quy định chi tiết, trong đó: hành vi vi phạm kỷ luật lao động và hình thức xử lý phải quy định cụ thể hành vi vi phạm tương ứng với từng hình thức xử lý kỷ luật; phòng, chống quấy rối tình dục thực hiện theo Điều 84, 85 Nghị định này; trách nhiệm vật chất quy định các trường hợp, mức bồi thường và người có thẩm quyền.",
+      "topics": ["noi_dung_bat_buoc", "huong_dan"],
+      "source_url": "https://vanban.chinhphu.vn/?pageid=27160&docid=201967",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "nd45-2025-so-noi-vu",
+      "doc_code": "45/2025/NĐ-CP",
+      "doc_title": "Nghị định 45/2025/NĐ-CP quy định tổ chức các cơ quan chuyên môn thuộc UBND cấp tỉnh, cấp huyện",
+      "article": "Sắp xếp bộ máy (hiệu lực 01/3/2025)",
+      "title": "Cơ quan tiếp nhận đăng ký nội quy lao động sau sắp xếp bộ máy",
+      "text": "Từ 01/3/2025, Sở Lao động - Thương binh và Xã hội kết thúc hoạt động; chức năng quản lý nhà nước về lao động, tiền lương, việc làm chuyển sang Sở Nội vụ. \"Cơ quan chuyên môn về nội vụ thuộc Ủy ban nhân dân cấp tỉnh\" là Sở Nội vụ — đây là cơ quan tiếp nhận đăng ký nội quy lao động; cấp xã chỉ thực hiện nếu được cấp tỉnh ủy quyền.",
+      "topics": ["co_quan_thuc_hien", "so_noi_vu", "sap_xep_bo_may"],
+      "source_url": "https://vanban.chinhphu.vn/?pageid=27160&docid=212973",
+      "retrieved_at": "2026-07-18"
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "method": "Stage A2 KB ingest (agent) — converted from notes/knowledge-base/research-03-noi-quy.md + web gap-fill (BLLĐ 2019 Đ.122/124/125/127); pending interactive structuring-session review per tools/etl/STRUCTURING.md"
+  }
+}

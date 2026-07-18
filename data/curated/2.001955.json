@@ -1,0 +1,61 @@
+{
+  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §3, pending structuring-session review). Curated overlay for đăng ký nội quy lao động, converted from notes/knowledge-base/procedure-03-noi-quy-lao-dong.md + research-03 decision tree, cross-checked against data/procedures/2.001955.json checklist_raw. The one flat raw group's conditionality comes from the statute (Điều 119/120 BLLĐ 2019), not group names: registration is required only from 10 NLĐ (fact tu_10_lao_dong_tro_len), văn bản góp ý only where there is a tổ chức đại diện (co_to_chuc_dai_dien), văn bản kỷ luật riêng only if the employer has one (co_van_ban_ky_luat_rieng). The KB decision tree's numeric so_lao_dong is modeled as a boolean here because the condition mini-language (DATA.md §3) has no ≥ operator. Conditions use only {fact,eq}/{fact,in}.",
+  "code": "2.001955",
+  "case_facts_schema": {
+    "tu_10_lao_dong_tro_len": { "type": "boolean",
+      "question": "Doanh nghiệp sử dụng từ 10 người lao động trở lên phải không? (Dưới 10 NLĐ thì không bắt buộc đăng ký nội quy lao động — Điều 119 BLLĐ 2019)" },
+    "co_to_chuc_dai_dien": { "type": "boolean",
+      "question": "Tại doanh nghiệp có tổ chức đại diện người lao động tại cơ sở (công đoàn cơ sở) không?" },
+    "co_van_ban_ky_luat_rieng": { "type": "boolean",
+      "question": "Người sử dụng lao động có văn bản riêng quy định về kỷ luật lao động và trách nhiệm vật chất không?" },
+    "co_chi_nhanh_khac_tinh": { "type": "boolean",
+      "question": "Doanh nghiệp có chi nhánh, đơn vị, cơ sở đặt ở tỉnh/thành phố khác không?" },
+    "kenh_nop": { "type": "enum", "values": ["truc_tuyen", "buu_chinh", "truc_tiep"],
+      "question": "Anh/chị dự định nộp hồ sơ theo hình thức nào?" }
+  },
+  "steps": [
+    { "n": 1, "title": "Chuẩn bị và nộp hồ sơ", "channel": "all",
+      "text": "Trong thời hạn 10 ngày kể từ ngày ban hành nội quy lao động, người sử dụng lao động chuẩn bị hồ sơ và nộp cho cơ quan chuyên môn về nội vụ thuộc Ủy ban nhân dân cấp tỉnh (Sở Nội vụ) hoặc cơ quan chuyên môn về nội vụ thuộc Ủy ban nhân dân cấp xã nếu được ủy quyền, nơi người sử dụng lao động đăng ký kinh doanh." },
+    { "n": 2, "title": "Cơ quan xem xét hồ sơ", "channel": "all",
+      "text": "Trong thời hạn 07 ngày làm việc kể từ ngày nhận được hồ sơ đăng ký nội quy lao động, nếu phát hiện nội quy lao động có quy định trái pháp luật thì cơ quan thông báo và hướng dẫn người sử dụng lao động sửa đổi, bổ sung, đăng ký lại. Nếu không có thông báo, nội quy có hiệu lực sau 15 ngày kể từ ngày cơ quan nhận đủ hồ sơ." }
+  ],
+  "deadlines": [
+    { "id": "thoi_han_nop_ho_so", "label": "Thời hạn nộp hồ sơ đăng ký nội quy lao động",
+      "qty": 10, "unit": "DAY", "from": "ngày ban hành nội quy lao động",
+      "source_quote": "Trong thời hạn 10 ngày kể từ ngày ban hành nội quy lao động, người sử dụng lao động chuẩn bị hồ sơ theo quy định của pháp luật và nộp cho cơ quan chuyên môn về nội vụ..." },
+    { "id": "thoi_han_hieu_luc", "label": "Thời hạn nội quy lao động có hiệu lực",
+      "qty": 15, "unit": "DAY", "from": "ngày cơ quan nhận được đầy đủ hồ sơ đăng ký",
+      "source_quote": "Nội quy lao động có hiệu lực sau 15 ngày kể từ ngày cơ quan nhà nước có thẩm quyền quy định tại Điều 119 của Bộ luật này nhận được đầy đủ hồ sơ đăng ký nội quy lao động." }
+  ],
+  "fee_notes": [
+    { "channel": "all",
+      "text": "Miễn phí (không thu phí, lệ phí) đối với thủ tục đăng ký nội quy lao động, áp dụng cho cả ba hình thức nộp: trực tuyến, dịch vụ bưu chính và trực tiếp." }
+  ],
+  "checklist": {
+    "groups": [
+      { "id": "ho_so_dang_ky", "type": "ALL_OF", "label": "Hồ sơ đăng ký nội quy lao động",
+        "when": { "fact": "tu_10_lao_dong_tro_len", "eq": true },
+        "items": [
+          { "id": "noi_quy_lao_dong", "label": "Nội quy lao động",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G09-KQ002548" },
+          { "id": "van_ban_de_nghi", "label": "Văn bản đề nghị đăng ký nội quy lao động",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "G09-KQ003210" },
+          { "id": "van_ban_ky_luat_rieng", "label": "Các văn bản của người sử dụng lao động có quy định liên quan đến kỷ luật lao động và trách nhiệm vật chất",
+            "when": { "fact": "co_van_ban_ky_luat_rieng", "eq": true },
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G09-KQ002550" },
+          { "id": "van_ban_gop_y", "label": "Văn bản góp ý của tổ chức đại diện người lao động tại cơ sở đối với nơi có tổ chức đại diện người lao động tại cơ sở",
+            "when": { "fact": "co_to_chuc_dai_dien", "eq": true },
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G09-KQ002549" }
+        ] }
+    ]
+  },
+  "review": {
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "method": "Stage A2 KB ingest (agent) — Claude Code, converted per tools/etl/STRUCTURING.md; pending interactive human review"
+  }
+}

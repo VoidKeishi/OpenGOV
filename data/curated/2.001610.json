@@ -1,0 +1,162 @@
+{
+  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §3, pending structuring-session review). Curated overlay for đăng ký thành lập doanh nghiệp tư nhân, converted from notes/knowledge-base/procedure-02-dntn.md + research-02 decision tree, cross-checked against data/procedures/2.001610.json checklist_raw. The 9 raw groups split into registration variants (fact loai_dang_ky) and ủy quyền addenda (fact uy_quyen). co_so_dinh_danh=true drops bản sao giấy tờ pháp lý (khoản 1 Điều 11 NĐ 168/2025). Người ủy quyền chưa có tài khoản ĐDĐT (co_tai_khoan_dddt=false) → thêm bản sao giấy tờ pháp lý người ủy quyền. Conditions use only {fact,eq}/{fact,in}. Quantities copied from checklist_raw original_qty/copy_qty.",
+  "code": "2.001610",
+  "case_facts_schema": {
+    "loai_dang_ky": { "type": "enum",
+      "values": ["co_ban", "dn_xa_hoi", "chuyen_doi_hkd", "chuyen_doi_btxh_quy"],
+      "question": "Anh/chị đăng ký theo loại nào (doanh nghiệp tư nhân cơ bản / doanh nghiệp xã hội / chuyển đổi từ hộ kinh doanh / chuyển đổi từ cơ sở bảo trợ xã hội, quỹ xã hội, quỹ từ thiện)?" },
+    "co_so_dinh_danh": { "type": "boolean",
+      "question": "Chủ doanh nghiệp tư nhân có kê khai số định danh cá nhân trong hồ sơ không? (Có → không cần nộp bản sao giấy tờ pháp lý cá nhân)" },
+    "uy_quyen": { "type": "enum",
+      "values": ["khong", "ca_nhan", "to_chuc", "buu_chinh_cong_ich", "buu_chinh_khac"],
+      "question": "Ai nộp hồ sơ (tự nộp / ủy quyền cho cá nhân / ủy quyền cho tổ chức / qua bưu chính công ích / qua bưu chính không công ích)?" },
+    "co_tai_khoan_dddt": { "type": "boolean",
+      "question": "Người ủy quyền đã có tài khoản định danh điện tử để xác thực điện tử chưa?" },
+    "kenh_nop": { "type": "enum", "values": ["truc_tuyen", "truc_tiep", "buu_chinh"],
+      "question": "Anh/chị dự định nộp hồ sơ theo hình thức nào?" }
+  },
+  "steps": [
+    { "n": 1, "title": "Nộp hồ sơ trực tuyến", "channel": "truc_tuyen",
+      "text": "Sử dụng tài khoản định danh điện tử đăng nhập Cổng thông tin quốc gia về đăng ký doanh nghiệp, kê khai thông tin, tải văn bản điện tử, ký số hoặc ký xác thực và thanh toán phí, lệ phí. Người ủy quyền và người được ủy quyền phải xác thực điện tử để được cấp đăng ký doanh nghiệp." },
+    { "n": 1, "title": "Nộp hồ sơ trực tiếp", "channel": "truc_tiep",
+      "text": "Nộp hồ sơ tại Cơ quan Đăng ký kinh doanh cấp tỉnh (Sở Tài chính) nơi doanh nghiệp đặt trụ sở chính." },
+    { "n": 1, "title": "Nộp hồ sơ qua dịch vụ bưu chính", "channel": "buu_chinh",
+      "text": "Gửi hồ sơ qua dịch vụ bưu chính đến Cơ quan Đăng ký kinh doanh cấp tỉnh nơi doanh nghiệp đặt trụ sở chính." },
+    { "n": 2, "title": "Thẩm định và cấp đăng ký doanh nghiệp", "channel": "all",
+      "text": "Trong thời hạn 03 ngày làm việc kể từ ngày nhận hồ sơ, Cơ quan đăng ký kinh doanh xem xét tính hợp lệ và cấp đăng ký doanh nghiệp. Hồ sơ chưa hợp lệ → thông báo bằng văn bản nội dung cần sửa đổi, bổ sung. Từ chối → thông báo bằng văn bản và nêu rõ lý do." },
+    { "n": 3, "title": "Công bố nội dung đăng ký doanh nghiệp", "channel": "all",
+      "text": "Sau khi được cấp Giấy chứng nhận đăng ký doanh nghiệp, doanh nghiệp thông báo công khai trên Cổng thông tin quốc gia về đăng ký doanh nghiệp và nộp phí công bố. Việc đề nghị công bố và nộp phí được thực hiện tại thời điểm nộp hồ sơ đăng ký doanh nghiệp." }
+  ],
+  "deadlines": [
+    { "id": "thoi_han_cong_bo", "label": "Thời hạn thông báo công khai thông tin doanh nghiệp",
+      "qty": 30, "unit": "DAY", "from": "ngày được công khai",
+      "source_quote": "Thời hạn thông báo công khai thông tin về doanh nghiệp là 30 ngày kể từ ngày được công khai." }
+  ],
+  "fee_notes": [
+    { "channel": "truc_tuyen",
+      "text": "Đăng ký trực tuyến: miễn lệ phí đăng ký doanh nghiệp 50.000đ (Điều 5 Thông tư 47/2019/TT-BTC), chỉ nộp phí công bố nội dung đăng ký doanh nghiệp 100.000đ. Tổng thực tế: 100.000đ." },
+    { "channel": "truc_tiep",
+      "text": "Đăng ký trực tiếp: 50.000đ lệ phí đăng ký doanh nghiệp + 100.000đ phí công bố = 150.000đ." },
+    { "channel": "buu_chinh",
+      "text": "Đăng ký qua dịch vụ bưu chính: 50.000đ lệ phí đăng ký doanh nghiệp + 100.000đ phí công bố = 150.000đ." },
+    { "channel": "all",
+      "text": "Doanh nghiệp nhỏ và vừa chuyển đổi từ hộ kinh doanh được miễn lệ phí đăng ký doanh nghiệp lần đầu (Điều 5 Thông tư 47/2019/TT-BTC). Nếu doanh nghiệp không được cấp đăng ký, phí công bố được hoàn trả." }
+  ],
+  "checklist": {
+    "groups": [
+      { "id": "ho_so_co_ban", "type": "ALL_OF", "label": "Hồ sơ đăng ký thành lập doanh nghiệp tư nhân (cơ bản)",
+        "when": { "fact": "loai_dang_ky", "eq": "co_ban" },
+        "items": [
+          { "id": "giay_de_nghi_co_ban", "label": "Giấy đề nghị đăng ký doanh nghiệp",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3233" },
+          { "id": "gtpl_co_ban", "label": "Bản sao giấy tờ pháp lý của cá nhân đối với chủ doanh nghiệp tư nhân",
+            "when": { "fact": "co_so_dinh_danh", "eq": false },
+            "quantity": { "original": 0, "copy": 1 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3234" }
+        ] },
+      { "id": "ho_so_dn_xa_hoi", "type": "ALL_OF", "label": "Hồ sơ đăng ký doanh nghiệp xã hội",
+        "when": { "fact": "loai_dang_ky", "eq": "dn_xa_hoi" },
+        "items": [
+          { "id": "giay_de_nghi_dnxh", "label": "Giấy đề nghị đăng ký doanh nghiệp",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3239" },
+          { "id": "cam_ket_mtxh_dnxh", "label": "Cam kết thực hiện mục tiêu xã hội, môi trường của chủ doanh nghiệp tư nhân có chữ ký của chủ doanh nghiệp tư nhân",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G12-KQ014026" },
+          { "id": "gtpl_dnxh", "label": "Bản sao giấy tờ pháp lý của cá nhân đối với chủ doanh nghiệp tư nhân",
+            "when": { "fact": "co_so_dinh_danh", "eq": false },
+            "quantity": { "original": 0, "copy": 1 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3240" }
+        ] },
+      { "id": "ho_so_chuyen_doi_hkd", "type": "ALL_OF", "label": "Hồ sơ đăng ký thành lập trên cơ sở chuyển đổi từ hộ kinh doanh",
+        "when": { "fact": "loai_dang_ky", "eq": "chuyen_doi_hkd" },
+        "items": [
+          { "id": "giay_de_nghi_hkd", "label": "Giấy đề nghị đăng ký doanh nghiệp",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3235" },
+          { "id": "ban_sao_gcn_hkd", "label": "Bản sao Giấy chứng nhận đăng ký hộ kinh doanh",
+            "quantity": { "original": 0, "copy": 1 }, "kind": "nop",
+            "source_component_code": "000.00.00.G12-KQ014025" },
+          { "id": "gtpl_hkd", "label": "Bản sao giấy tờ pháp lý của cá nhân đối với chủ doanh nghiệp tư nhân",
+            "when": { "fact": "co_so_dinh_danh", "eq": false },
+            "quantity": { "original": 0, "copy": 1 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3236" }
+        ] },
+      { "id": "ho_so_chuyen_doi_btxh_quy", "type": "ALL_OF", "label": "Hồ sơ đăng ký doanh nghiệp xã hội chuyển đổi từ cơ sở bảo trợ xã hội, quỹ xã hội, quỹ từ thiện",
+        "when": { "fact": "loai_dang_ky", "eq": "chuyen_doi_btxh_quy" },
+        "items": [
+          { "id": "giay_de_nghi_btxh", "label": "Giấy đề nghị đăng ký doanh nghiệp",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3242" },
+          { "id": "cam_ket_mtxh_btxh", "label": "Cam kết thực hiện mục tiêu xã hội, môi trường của chủ doanh nghiệp tư nhân (phải có chữ ký của chủ doanh nghiệp tư nhân)",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3244" },
+          { "id": "gcn_thanh_lap_btxh", "label": "Giấy chứng nhận đăng ký thành lập đối với cơ sở bảo trợ xã hội, giấy phép thành lập và công nhận điều lệ quỹ đối với quỹ xã hội, quỹ từ thiện",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3246" },
+          { "id": "quyet_dinh_chuyen_doi_btxh", "label": "Quyết định cho phép chuyển đổi thành doanh nghiệp xã hội bằng văn bản của cơ quan có thẩm quyền đã cấp giấy phép thành lập cơ sở bảo trợ xã hội, quỹ xã hội, quỹ từ thiện",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3245" },
+          { "id": "ban_sao_gcn_thue_btxh", "label": "Bản sao Giấy chứng nhận đăng ký thuế",
+            "quantity": { "original": 0, "copy": 1 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3247" },
+          { "id": "ban_sao_vb_dau_tu_btxh", "label": "Bản sao văn bản của Cơ quan đăng ký đầu tư chấp thuận về việc góp vốn, mua cổ phần, mua phần vốn góp của nhà đầu tư nước ngoài, tổ chức kinh tế có vốn đầu tư nước ngoài (đối với trường hợp phải thực hiện thủ tục đăng ký góp vốn theo Luật Đầu tư)",
+            "quantity": { "original": 0, "copy": 1 }, "kind": "nop",
+            "source_component_code": "000.00.00.G12-KQ014029" },
+          { "id": "gtpl_btxh", "label": "Bản sao giấy tờ pháp lý của cá nhân đối với chủ doanh nghiệp tư nhân",
+            "when": { "fact": "co_so_dinh_danh", "eq": false },
+            "quantity": { "original": 0, "copy": 1 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ3243" }
+        ] },
+      { "id": "uy_quyen_ca_nhan", "type": "ALL_OF", "label": "Ủy quyền cho cá nhân thực hiện thủ tục",
+        "when": { "fact": "uy_quyen", "eq": "ca_nhan" },
+        "items": [
+          { "id": "vb_uy_quyen_ca_nhan", "label": "Văn bản ủy quyền cho cá nhân thực hiện thủ tục liên quan đến đăng ký doanh nghiệp. Văn bản ủy quyền này không bắt buộc phải công chứng, chứng thực",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ4427" },
+          { "id": "gtpl_nguoi_uy_quyen_cn", "label": "Bản sao thẻ Căn cước/Căn cước công dân/hộ chiếu còn hiệu lực của người ủy quyền (khi chưa có tài khoản định danh điện tử để xác thực điện tử)",
+            "when": { "fact": "co_tai_khoan_dddt", "eq": false }, "kind": "nop",
+            "source_component_code": "000.00.00.G12-KQ014033" }
+        ] },
+      { "id": "uy_quyen_to_chuc", "type": "ALL_OF", "label": "Ủy quyền cho tổ chức thực hiện thủ tục",
+        "when": { "fact": "uy_quyen", "eq": "to_chuc" },
+        "items": [
+          { "id": "giay_gioi_thieu_to_chuc", "label": "Giấy giới thiệu hoặc văn bản phân công nhiệm vụ của tổ chức đó cho cá nhân trực tiếp thực hiện thủ tục liên quan đến đăng ký doanh nghiệp",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G12-KQ014031" },
+          { "id": "ban_sao_hd_dich_vu", "label": "Bản sao hợp đồng cung cấp dịch vụ với tổ chức làm dịch vụ thực hiện thủ tục liên quan đến đăng ký doanh nghiệp",
+            "quantity": { "original": 0, "copy": 1 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ4422" },
+          { "id": "gtpl_nguoi_uy_quyen_tc", "label": "Bản sao thẻ Căn cước/Căn cước công dân/hộ chiếu còn hiệu lực của người ủy quyền (khi chưa có tài khoản định danh điện tử để xác thực điện tử)",
+            "when": { "fact": "co_tai_khoan_dddt", "eq": false }, "kind": "nop",
+            "source_component_code": "000.00.00.G12-KQ014033" }
+        ] },
+      { "id": "uy_quyen_buu_chinh_cong_ich", "type": "ALL_OF", "label": "Ủy quyền cho đơn vị cung cấp dịch vụ bưu chính công ích",
+        "when": { "fact": "uy_quyen", "eq": "buu_chinh_cong_ich" },
+        "items": [
+          { "id": "ban_sao_phieu_gui", "label": "Bản sao phiếu gửi hồ sơ theo mẫu do doanh nghiệp cung ứng dịch vụ bưu chính công ích phát hành có chữ ký xác nhận của nhân viên bưu chính và người có thẩm quyền ký văn bản đề nghị đăng ký doanh nghiệp",
+            "quantity": { "original": 0, "copy": 1 }, "kind": "nop",
+            "source_component_code": "000.00.00.G05-KQ4429" }
+        ] },
+      { "id": "uy_quyen_buu_chinh_khac", "type": "ALL_OF", "label": "Ủy quyền cho đơn vị cung cấp dịch vụ bưu chính không phải là bưu chính công ích (khoản 2 Điều 12 Nghị định 168/2025/NĐ-CP)",
+        "when": { "fact": "uy_quyen", "eq": "buu_chinh_khac" },
+        "items": [
+          { "id": "giay_gioi_thieu_buu_chinh_khac", "label": "Giấy giới thiệu hoặc văn bản phân công nhiệm vụ của tổ chức đó cho cá nhân trực tiếp thực hiện thủ tục liên quan đến đăng ký doanh nghiệp",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G12-KQ014031" },
+          { "id": "ban_sao_hd_uy_quyen_to_chuc", "label": "Bản sao hợp đồng ủy quyền cho tổ chức thực hiện thủ tục liên quan đến đăng ký doanh nghiệp",
+            "quantity": { "original": 1, "copy": 0 }, "kind": "nop",
+            "source_component_code": "000.00.00.G12-KQ014032" },
+          { "id": "gtpl_nguoi_uy_quyen_bc", "label": "Bản sao thẻ Căn cước/Căn cước công dân/hộ chiếu còn hiệu lực của người ủy quyền (khi chưa có tài khoản định danh điện tử để xác thực điện tử)",
+            "when": { "fact": "co_tai_khoan_dddt", "eq": false }, "kind": "nop",
+            "source_component_code": "000.00.00.G12-KQ014033" }
+        ] }
+    ]
+  },
+  "review": {
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "method": "Stage A2 KB ingest (agent) — Claude Code, converted per tools/etl/STRUCTURING.md; pending interactive human review"
+  }
+}

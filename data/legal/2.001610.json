@@ -1,0 +1,132 @@
+{
+  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §5, pending structuring-session review). Legal-source fragments for đăng ký thành lập doanh nghiệp tư nhân, converted from notes/knowledge-base/research-02-dntn.md plus web gap-fill for Luật DN 2020 Điều 17/37/38/39/188 and Luật Đầu tư 2020 Điều 6 (cited by the error catalog / golden QA but absent from the research file). Every fragment carries source_url + retrieved_at; text is a minimal relevant excerpt.",
+  "code": "2.001610",
+  "fragments": [
+    {
+      "id": "dn-d4-k16",
+      "doc_code": "59/2020/QH14",
+      "doc_title": "Luật Doanh nghiệp 2020",
+      "article": "Điều 4 khoản 16",
+      "title": "Giấy tờ pháp lý của cá nhân",
+      "text": "Giấy tờ pháp lý của cá nhân là một trong các loại giấy tờ sau đây: thẻ Căn cước công dân, Giấy chứng minh nhân dân, Hộ chiếu, giấy tờ chứng thực cá nhân hợp pháp khác.",
+      "topics": ["giay_to_phap_ly", "ho_so"],
+      "source_url": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427301.aspx",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "dn-d17-k2",
+      "doc_code": "59/2020/QH14",
+      "doc_title": "Luật Doanh nghiệp 2020",
+      "article": "Điều 17 khoản 2",
+      "title": "Đối tượng không được thành lập và quản lý doanh nghiệp",
+      "text": "Tổ chức, cá nhân sau đây không có quyền thành lập và quản lý doanh nghiệp tại Việt Nam: cán bộ, công chức, viên chức theo quy định của Luật Cán bộ, công chức và Luật Viên chức; sĩ quan, hạ sĩ quan, quân nhân chuyên nghiệp, công nhân, viên chức quốc phòng trong các cơ quan, đơn vị thuộc Quân đội nhân dân Việt Nam, Công an nhân dân, trừ người được cử làm đại diện theo ủy quyền để quản lý phần vốn góp của Nhà nước; người chưa thành niên; người bị hạn chế hoặc mất năng lực hành vi dân sự; người có khó khăn trong nhận thức, làm chủ hành vi; người đang bị truy cứu trách nhiệm hình sự, bị tạm giam, đang chấp hành hình phạt tù, đang chấp hành biện pháp xử lý hành chính hoặc bị Tòa án cấm đảm nhiệm chức vụ, cấm hành nghề.",
+      "topics": ["doi_tuong_cam", "dieu_kien"],
+      "source_url": "https://hethongphapluat.com/luat-doanh-nghiep-2020/dieu-17",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "dn-d19",
+      "doc_code": "59/2020/QH14",
+      "doc_title": "Luật Doanh nghiệp 2020",
+      "article": "Điều 19",
+      "title": "Hồ sơ đăng ký doanh nghiệp tư nhân",
+      "text": "Hồ sơ đăng ký doanh nghiệp tư nhân gồm: 1. Giấy đề nghị đăng ký doanh nghiệp; 2. Bản sao giấy tờ pháp lý của cá nhân đối với chủ doanh nghiệp tư nhân.",
+      "topics": ["ho_so", "co_ban"],
+      "source_url": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427301.aspx",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "dn-d37-k1",
+      "doc_code": "59/2020/QH14",
+      "doc_title": "Luật Doanh nghiệp 2020",
+      "article": "Điều 37 khoản 1",
+      "title": "Tên doanh nghiệp",
+      "text": "Tên tiếng Việt của doanh nghiệp bao gồm hai thành tố theo thứ tự sau đây: a) Loại hình doanh nghiệp; b) Tên riêng.",
+      "topics": ["ten_doanh_nghiep"],
+      "source_url": "https://hethongphapluat.com/luat-doanh-nghiep-2020/dieu-37",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "dn-d38",
+      "doc_code": "59/2020/QH14",
+      "doc_title": "Luật Doanh nghiệp 2020",
+      "article": "Điều 38",
+      "title": "Những điều cấm trong đặt tên doanh nghiệp",
+      "text": "1. Đặt tên trùng hoặc tên gây nhầm lẫn với tên của doanh nghiệp đã đăng ký được quy định tại Điều 41 của Luật này. 2. Sử dụng tên cơ quan nhà nước, đơn vị lực lượng vũ trang nhân dân, tên của tổ chức chính trị, tổ chức chính trị - xã hội, tổ chức chính trị xã hội - nghề nghiệp, tổ chức xã hội, tổ chức xã hội - nghề nghiệp để làm toàn bộ hoặc một phần tên riêng của doanh nghiệp, trừ trường hợp có sự chấp thuận của cơ quan, đơn vị hoặc tổ chức đó. 3. Sử dụng từ ngữ, ký hiệu vi phạm truyền thống lịch sử, văn hóa, đạo đức và thuần phong mỹ tục của dân tộc.",
+      "topics": ["ten_doanh_nghiep", "cam"],
+      "source_url": "https://hethongphapluat.com/luat-doanh-nghiep-2020/dieu-38",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "dn-d39-k1",
+      "doc_code": "59/2020/QH14",
+      "doc_title": "Luật Doanh nghiệp 2020",
+      "article": "Điều 39 khoản 1",
+      "title": "Tên doanh nghiệp bằng tiếng nước ngoài và tên viết tắt",
+      "text": "Tên doanh nghiệp bằng tiếng nước ngoài là tên được dịch từ tên tiếng Việt sang một trong những tiếng nước ngoài hệ chữ La-tinh. Khi dịch sang tiếng nước ngoài, tên riêng của doanh nghiệp có thể giữ nguyên hoặc dịch theo nghĩa tương ứng sang tiếng nước ngoài.",
+      "topics": ["ten_doanh_nghiep"],
+      "source_url": "https://hethongphapluat.com/luat-doanh-nghiep-2020/dieu-39",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "dn-d188",
+      "doc_code": "59/2020/QH14",
+      "doc_title": "Luật Doanh nghiệp 2020",
+      "article": "Điều 188 khoản 1, khoản 3",
+      "title": "Doanh nghiệp tư nhân — trách nhiệm và giới hạn một DNTN",
+      "text": "Doanh nghiệp tư nhân là doanh nghiệp do một cá nhân làm chủ và tự chịu trách nhiệm bằng toàn bộ tài sản của mình về mọi hoạt động của doanh nghiệp. Mỗi cá nhân chỉ được quyền thành lập một doanh nghiệp tư nhân. Chủ doanh nghiệp tư nhân không được đồng thời là chủ hộ kinh doanh, thành viên hợp danh của công ty hợp danh.",
+      "topics": ["dntn", "trach_nhiem", "gioi_han"],
+      "source_url": "https://hethongphapluat.com/luat-doanh-nghiep-2020/dieu-188",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "nd168-2025-d11-k1",
+      "doc_code": "168/2025/NĐ-CP",
+      "doc_title": "Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp",
+      "article": "Điều 11 khoản 1",
+      "title": "Miễn bản sao giấy tờ pháp lý khi kê khai số định danh cá nhân",
+      "text": "Trường hợp đã có số định danh cá nhân, người thực hiện thủ tục đăng ký doanh nghiệp kê khai các thông tin về họ, chữ đệm và tên, ngày, tháng, năm sinh, số định danh cá nhân, giới tính của mình và của cá nhân có yêu cầu kê khai thông tin cá nhân trong hồ sơ đăng ký doanh nghiệp; khi đó hồ sơ không bao gồm bản sao giấy tờ pháp lý của cá nhân. Trường hợp không có số định danh cá nhân thì hồ sơ đăng ký doanh nghiệp phải kèm theo bản sao hộ chiếu hoặc hộ chiếu nước ngoài.",
+      "topics": ["dinh_danh_ca_nhan", "ho_so", "cat_giam"],
+      "source_url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214334",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "nd168-2025-d12",
+      "doc_code": "168/2025/NĐ-CP",
+      "doc_title": "Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp",
+      "article": "Điều 12",
+      "title": "Ủy quyền thực hiện thủ tục đăng ký doanh nghiệp",
+      "text": "1. Ủy quyền cho cá nhân: kèm theo hồ sơ phải có văn bản ủy quyền, không bắt buộc công chứng, chứng thực. 2. Ủy quyền cho tổ chức: kèm theo bản sao hợp đồng cung cấp dịch vụ và giấy giới thiệu hoặc văn bản phân công cho cá nhân trực tiếp thực hiện. 3. Ủy quyền cho đơn vị cung cấp dịch vụ bưu chính công ích: nhân viên bưu chính nộp bản sao phiếu gửi hồ sơ có chữ ký xác nhận. 5. Người ủy quyền và người được ủy quyền phải xác thực điện tử để được cấp đăng ký doanh nghiệp; trường hợp chưa có tài khoản định danh điện tử thì hồ sơ phải kèm theo bản sao thẻ Căn cước/Căn cước công dân/hộ chiếu còn hiệu lực của người ủy quyền.",
+      "topics": ["uy_quyen", "xac_thuc_dien_tu"],
+      "source_url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214334",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "tt47-2019-phi",
+      "doc_code": "47/2019/TT-BTC",
+      "doc_title": "Thông tư 47/2019/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí cung cấp thông tin doanh nghiệp, lệ phí đăng ký doanh nghiệp",
+      "article": "Biểu phí + Điều 5",
+      "title": "Lệ phí đăng ký doanh nghiệp và phí công bố",
+      "text": "Lệ phí đăng ký doanh nghiệp: 50.000 đồng/lần. Phí công bố nội dung đăng ký doanh nghiệp: 100.000 đồng/lần. Miễn lệ phí đăng ký doanh nghiệp đối với: doanh nghiệp bổ sung, thay đổi thông tin do thay đổi địa giới hành chính; đăng ký giải thể, tạm ngừng kinh doanh; đăng ký doanh nghiệp qua mạng thông tin điện tử; doanh nghiệp nhỏ và vừa chuyển đổi từ hộ kinh doanh (miễn lệ phí lần đầu).",
+      "topics": ["phi", "le_phi", "mien_le_phi"],
+      "source_url": "https://vanban.chinhphu.vn/default.aspx?pageid=27160&docid=197642",
+      "retrieved_at": "2026-07-18"
+    },
+    {
+      "id": "dau-tu-d6",
+      "doc_code": "61/2020/QH14",
+      "doc_title": "Luật Đầu tư 2020",
+      "article": "Điều 6 khoản 1",
+      "title": "Ngành, nghề cấm đầu tư kinh doanh",
+      "text": "Cấm các hoạt động đầu tư kinh doanh sau đây: a) Kinh doanh các chất ma túy quy định tại Phụ lục I của Luật này; b) Kinh doanh các loại hóa chất, khoáng vật quy định tại Phụ lục II của Luật này; c) Kinh doanh mẫu vật các loài thực vật, động vật hoang dã có nguồn gốc khai thác từ tự nhiên quy định tại Phụ lục I của Công ước về buôn bán quốc tế các loài thực vật, động vật hoang dã nguy cấp; mẫu vật các loài thực vật rừng, động vật rừng, thủy sản nguy cấp, quý, hiếm Nhóm I có nguồn gốc khai thác từ tự nhiên quy định tại Phụ lục III của Luật này; d) Kinh doanh mại dâm; đ) Mua, bán người, mô, xác, bộ phận cơ thể người, bào thai người; e) Hoạt động kinh doanh liên quan đến sinh sản vô tính trên người; g) Kinh doanh pháo nổ; h) Kinh doanh dịch vụ đòi nợ.",
+      "topics": ["nganh_nghe_cam", "dau_tu"],
+      "source_url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2020/06/61.signed.pdf",
+      "retrieved_at": "2026-07-18"
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "method": "Stage A2 KB ingest (agent) — converted from notes/knowledge-base/research-02-dntn.md + web gap-fill (Luật DN 2020 Đ.17/37/38/39/188, Luật Đầu tư 2020 Đ.6); pending interactive structuring-session review per tools/etl/STRUCTURING.md"
+  }
+}
