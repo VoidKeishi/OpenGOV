@@ -12,6 +12,7 @@ export type ThuTucInfo = {
   linhVuc: string;
   doiTuongThucHien: string;
   coQuanCoThamQuyen: string;
+  coQuanBanHanh?: string;
   diaChiTiepNhanHS: string;
   coQuanDuocUyQuyen: string;
   coQuanPhoiHop: string;
@@ -39,6 +40,7 @@ export type ThuTucIndexItem = {
   linhVuc: string;
   nhom: "cong-dan" | "doanh-nghiep";
   coChiTiet: boolean;
+  toanTrinh?: boolean;
 };
 
 export type FormFieldType =
@@ -75,9 +77,18 @@ export type FormField = {
   inputMode?: string;
   placeholder?: string;
   defaultValue?: string;
-  prefill?: "user.hoTen" | "user.soDinhDanh" | "user.ngaySinh" | "today" | "phuongXa" | "tinh";
+  prefill?:
+    | "user.hoTen"
+    | "user.hoTenHoa"
+    | "user.soDinhDanh"
+    | "user.ngaySinh"
+    | "today"
+    | "phuongXa"
+    | "tinh";
   step?: string;
   columns?: MemberColumn[];
+  /** Với optionsRef "phuongXa": tên field tỉnh mà select này phụ thuộc */
+  dependsOn?: string;
 };
 
 export type FormSection = {
@@ -91,7 +102,9 @@ export type FormSchema = {
   tenToKhai: string;
   canCuMau: string;
   maHoSoPrefix: string;
-  coQuanPrefix: "UBND" | "Công an";
+  coQuanPrefix: "UBND" | "Công an" | "Sở Tài chính" | "Sở Nội vụ";
+  /** Bước 1 chỉ chọn Tỉnh/TP (cơ quan cấp tỉnh) — không có select Phường/Xã */
+  chonCapTinh?: boolean;
   sections: FormSection[];
 };
 

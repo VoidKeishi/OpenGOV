@@ -1,0 +1,121 @@
+{
+  "slug": "dang-ky-thanh-lap-dntn",
+  "tenToKhai": "Giấy đề nghị đăng ký doanh nghiệp — Doanh nghiệp tư nhân",
+  "canCuMau": "Mẫu số 1, Phụ lục I, Thông tư 68/2025/TT-BTC",
+  "maHoSoPrefix": "DN",
+  "coQuanPrefix": "Sở Tài chính",
+  "chonCapTinh": true,
+  "sections": [
+    {
+      "legend": "A. Thông tin chủ doanh nghiệp tư nhân",
+      "fields": [
+        { "name": "ho_ten_chu_dntn", "label": "Họ và tên (chữ in hoa)", "type": "text", "required": true, "prefill": "user.hoTenHoa" },
+        { "name": "ngay_sinh_chu_dntn", "label": "Ngày, tháng, năm sinh", "type": "date", "required": true, "prefill": "user.ngaySinh" },
+        { "name": "gioi_tinh_chu_dntn", "label": "Giới tính", "type": "select", "required": true, "optionsRef": "gioiTinh" },
+        { "name": "so_dinh_danh_ca_nhan", "label": "Số định danh cá nhân", "type": "text", "required": true, "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric", "prefill": "user.soDinhDanh" },
+        { "name": "dia_chi_lien_lac", "label": "Địa chỉ liên lạc (số nhà, đường/phố, thôn/xóm)", "type": "text", "required": true },
+        { "name": "dia_chi_lien_lac_xa", "label": "Xã/Phường/Đặc khu", "type": "select", "required": true, "optionsRef": "phuongXa", "dependsOn": "dia_chi_lien_lac_tinh" },
+        { "name": "dia_chi_lien_lac_tinh", "label": "Tỉnh/Thành phố", "type": "select", "required": true, "optionsRef": "tinh" },
+        { "name": "dien_thoai_chu_dntn", "label": "Điện thoại (nếu có)", "type": "tel" },
+        { "name": "email_chu_dntn", "label": "Thư điện tử (nếu có)", "type": "email" }
+      ]
+    },
+    {
+      "legend": "Trường hợp không có số định danh cá nhân",
+      "note": "Chỉ kê khai khi chủ doanh nghiệp tư nhân không có số định danh cá nhân.",
+      "fields": [
+        { "name": "dan_toc", "label": "Dân tộc", "type": "select", "optionsRef": "danToc" },
+        { "name": "quoc_tich", "label": "Quốc tịch", "type": "select", "optionsRef": "quocTich", "defaultValue": "Việt Nam" },
+        { "name": "so_ho_chieu", "label": "Số hộ chiếu", "type": "text" },
+        { "name": "ngay_cap_ho_chieu", "label": "Ngày cấp", "type": "date" },
+        { "name": "noi_cap_ho_chieu", "label": "Nơi cấp", "type": "text" },
+        { "name": "noi_thuong_tru", "label": "Nơi thường trú", "type": "text" }
+      ]
+    },
+    {
+      "legend": "B. Tình trạng thành lập",
+      "note": "Khối thông tin hộ kinh doanh chỉ kê khai khi chuyển đổi từ hộ kinh doanh.",
+      "fields": [
+        { "name": "tinh_trang_thanh_lap", "label": "Tình trạng thành lập", "type": "radio", "required": true, "options": ["Thành lập mới", "Chuyển đổi từ hộ kinh doanh", "Chuyển đổi từ cơ sở bảo trợ xã hội, quỹ xã hội, quỹ từ thiện"] },
+        { "name": "ten_hkd", "label": "Tên hộ kinh doanh", "type": "text" },
+        { "name": "so_gcn_hkd", "label": "Số Giấy chứng nhận đăng ký hộ kinh doanh", "type": "text" },
+        { "name": "ngay_cap_gcn_hkd", "label": "Ngày cấp", "type": "date" },
+        { "name": "mst_hkd", "label": "Mã số thuế hộ kinh doanh", "type": "text", "pattern": "[0-9]{10}", "maxLength": 10, "inputMode": "numeric" },
+        { "name": "dia_chi_hkd", "label": "Địa chỉ trụ sở hộ kinh doanh", "type": "text" },
+        { "name": "ho_ten_chu_hkd", "label": "Họ tên chủ hộ kinh doanh", "type": "text" },
+        { "name": "doanh_nghiep_xa_hoi", "label": "Doanh nghiệp xã hội", "type": "checkbox" },
+        { "name": "du_an_dau_tu_dac_biet", "label": "Thực hiện dự án đầu tư theo thủ tục đầu tư đặc biệt", "type": "checkbox" }
+      ]
+    },
+    {
+      "legend": "C. Tên doanh nghiệp",
+      "fields": [
+        { "name": "ten_doanh_nghiep", "label": "Tên doanh nghiệp viết bằng tiếng Việt (chữ in hoa)", "type": "text", "required": true },
+        { "name": "ten_doanh_nghiep_nuoc_ngoai", "label": "Tên doanh nghiệp viết bằng tiếng nước ngoài", "type": "text" },
+        { "name": "ten_doanh_nghiep_viet_tat", "label": "Tên doanh nghiệp viết tắt", "type": "text" }
+      ]
+    },
+    {
+      "legend": "D. Địa chỉ trụ sở chính",
+      "fields": [
+        { "name": "tru_so_chi_tiet", "label": "Số nhà, ngách/hẻm/ngõ, đường/phố, thôn/xóm/ấp", "type": "text", "required": true },
+        { "name": "tru_so_xa", "label": "Xã/Phường/Đặc khu", "type": "select", "required": true, "optionsRef": "phuongXa", "dependsOn": "tru_so_tinh" },
+        { "name": "tru_so_tinh", "label": "Tỉnh/Thành phố", "type": "select", "required": true, "optionsRef": "tinh" },
+        { "name": "dien_thoai_tru_so", "label": "Điện thoại", "type": "tel", "required": true },
+        { "name": "fax", "label": "Fax (nếu có)", "type": "text" },
+        { "name": "email_doanh_nghiep", "label": "Email (nếu có)", "type": "email" },
+        { "name": "website", "label": "Website (nếu có)", "type": "text" },
+        { "name": "nam_trong_khu", "label": "Doanh nghiệp nằm trong", "type": "select", "options": ["Khu công nghiệp", "Khu chế xuất", "Khu kinh tế", "Khu công nghệ cao"] }
+      ]
+    },
+    {
+      "legend": "E. Ngành, nghề kinh doanh",
+      "fields": [
+        { "name": "nganh_nghe_1_ten", "label": "Ngành, nghề 1: Tên ngành", "type": "text", "required": true },
+        { "name": "nganh_nghe_1_ma", "label": "Ngành, nghề 1: Mã ngành cấp 4", "type": "text", "required": true, "pattern": "[0-9]{4}", "maxLength": 4, "inputMode": "numeric" },
+        { "name": "nganh_nghe_2_ten", "label": "Ngành, nghề 2: Tên ngành", "type": "text" },
+        { "name": "nganh_nghe_2_ma", "label": "Ngành, nghề 2: Mã ngành cấp 4", "type": "text", "pattern": "[0-9]{4}", "maxLength": 4, "inputMode": "numeric" },
+        { "name": "nganh_nghe_3_ten", "label": "Ngành, nghề 3: Tên ngành", "type": "text" },
+        { "name": "nganh_nghe_3_ma", "label": "Ngành, nghề 3: Mã ngành cấp 4", "type": "text", "pattern": "[0-9]{4}", "maxLength": 4, "inputMode": "numeric" },
+        { "name": "nganh_chinh", "label": "Ngành, nghề kinh doanh chính", "type": "select", "required": true, "options": ["Ngành 1", "Ngành 2", "Ngành 3"] }
+      ]
+    },
+    {
+      "legend": "F. Vốn đầu tư",
+      "fields": [
+        { "name": "von_dau_tu_bang_so", "label": "Vốn đầu tư bằng số (đồng)", "type": "number", "required": true },
+        { "name": "von_dau_tu_bang_chu", "label": "Vốn đầu tư bằng chữ", "type": "text", "required": true, "placeholder": "Ví dụ: Một tỷ đồng" },
+        { "name": "gop_von_dong_vn", "label": "Tài sản góp vốn: Đồng Việt Nam (đồng)", "type": "number" },
+        { "name": "gop_von_ngoai_te", "label": "Tài sản góp vốn: Ngoại tệ tự do chuyển đổi (đồng)", "type": "number" },
+        { "name": "gop_von_vang", "label": "Tài sản góp vốn: Vàng (đồng)", "type": "number" },
+        { "name": "gop_von_quyen_su_dung_dat", "label": "Tài sản góp vốn: Quyền sử dụng đất (đồng)", "type": "number" },
+        { "name": "gop_von_so_huu_tri_tue", "label": "Tài sản góp vốn: Quyền sở hữu trí tuệ (đồng)", "type": "number" },
+        { "name": "gop_von_tai_san_khac", "label": "Tài sản góp vốn: Tài sản khác (đồng)", "type": "number" }
+      ]
+    },
+    {
+      "legend": "G. Thông tin đăng ký thuế",
+      "fields": [
+        { "name": "ho_ten_giam_doc", "label": "Họ và tên Giám đốc/Tổng giám đốc (nếu có)", "type": "text" },
+        { "name": "so_dinh_danh_giam_doc", "label": "Số định danh cá nhân của Giám đốc/Tổng giám đốc", "type": "text", "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric" },
+        { "name": "dien_thoai_giam_doc", "label": "Điện thoại của Giám đốc/Tổng giám đốc", "type": "tel" },
+        { "name": "ho_ten_ke_toan", "label": "Họ và tên Kế toán trưởng/Phụ trách kế toán (nếu có)", "type": "text" },
+        { "name": "so_dinh_danh_ke_toan", "label": "Số định danh cá nhân của Kế toán trưởng/Phụ trách kế toán", "type": "text", "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric" },
+        { "name": "dia_chi_nhan_thong_bao_thue", "label": "Địa chỉ nhận thông báo thuế (chỉ kê khai nếu khác địa chỉ trụ sở chính)", "type": "text" },
+        { "name": "ngay_bat_dau_hoat_dong", "label": "Ngày bắt đầu hoạt động", "type": "date" },
+        { "name": "hinh_thuc_hach_toan", "label": "Hình thức hạch toán", "type": "radio", "required": true, "options": ["Độc lập", "Phụ thuộc"] },
+        { "name": "nam_tai_chinh_tu", "label": "Năm tài chính: từ ngày (dd/mm)", "type": "text", "required": true, "defaultValue": "01/01" },
+        { "name": "nam_tai_chinh_den", "label": "Năm tài chính: đến ngày (dd/mm)", "type": "text", "required": true, "defaultValue": "31/12" },
+        { "name": "tong_so_lao_dong", "label": "Tổng số lao động (dự kiến)", "type": "number", "required": true },
+        { "name": "du_an_bot", "label": "Hoạt động theo dự án BOT/BTO/BT/BOO, BLT, BTL, O&M", "type": "radio", "required": true, "options": ["Có", "Không"], "defaultValue": "Không" },
+        { "name": "phuong_phap_thue_gtgt", "label": "Phương pháp tính thuế GTGT", "type": "radio", "required": true, "options": ["Khấu trừ", "Trực tiếp trên GTGT", "Trực tiếp trên doanh số", "Không phải nộp thuế GTGT"] }
+      ]
+    },
+    {
+      "legend": "H. Bảo hiểm xã hội",
+      "fields": [
+        { "name": "phuong_thuc_dong_bhxh", "label": "Phương thức đóng BHXH", "type": "radio", "required": true, "options": ["Hàng tháng", "03 tháng một lần", "06 tháng một lần"], "defaultValue": "Hàng tháng" }
+      ]
+    }
+  ]
+}

@@ -11,7 +11,8 @@
     "ten": "Đăng ký thường trú",
     "linhVuc": "Đăng ký, quản lý cư trú",
     "nhom": "cong-dan",
-    "coChiTiet": true
+    "coChiTiet": true,
+    "toanTrinh": true
   },
   {
     "slug": "cap-gpxd-nha-o-rieng-le",
@@ -19,6 +20,22 @@
     "linhVuc": "Hoạt động xây dựng",
     "nhom": "cong-dan",
     "coChiTiet": true
+  },
+  {
+    "slug": "dang-ky-thanh-lap-dntn",
+    "ten": "Đăng ký thành lập doanh nghiệp tư nhân",
+    "linhVuc": "Thành lập và hoạt động của doanh nghiệp",
+    "nhom": "doanh-nghiep",
+    "coChiTiet": true,
+    "toanTrinh": true
+  },
+  {
+    "slug": "dang-ky-noi-quy-lao-dong",
+    "ten": "Đăng ký nội quy lao động của doanh nghiệp",
+    "linhVuc": "Lao động, tiền lương",
+    "nhom": "doanh-nghiep",
+    "coChiTiet": true,
+    "toanTrinh": true
   },
   { "ten": "Liên thông các thủ tục hành chính về đăng ký khai sinh, cấp Thẻ bảo hiểm y tế cho trẻ em dưới 6 tuổi", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },
   { "ten": "Liên thông thủ tục hành chính về đăng ký khai sinh, đăng ký thường trú, cấp thẻ bảo hiểm y tế cho trẻ em dưới 6 tuổi", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },

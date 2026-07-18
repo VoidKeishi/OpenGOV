@@ -1,0 +1,40 @@
+{
+  "slug": "dang-ky-noi-quy-lao-dong",
+  "tenToKhai": "Văn bản đề nghị đăng ký nội quy lao động",
+  "canCuMau": "Hồ sơ theo Điều 120 Bộ luật Lao động 2019 (45/2019/QH14); thủ tục theo Quyết định 628/QĐ-BNV — không có mẫu tờ khai chuẩn quốc gia",
+  "maHoSoPrefix": "NQ",
+  "coQuanPrefix": "Sở Nội vụ",
+  "chonCapTinh": true,
+  "sections": [
+    {
+      "legend": "A. Thông tin doanh nghiệp",
+      "fields": [
+        { "name": "ten_doanh_nghiep", "label": "Tên doanh nghiệp", "type": "text", "required": true },
+        { "name": "ma_so_doanh_nghiep", "label": "Mã số doanh nghiệp/Mã số thuế", "type": "text", "required": true, "pattern": "[0-9]{10}", "maxLength": 10, "inputMode": "numeric" },
+        { "name": "ngay_cap_gcn_dkdn", "label": "Ngày cấp Giấy chứng nhận đăng ký doanh nghiệp", "type": "date" },
+        { "name": "noi_cap_gcn_dkdn", "label": "Nơi cấp", "type": "text" },
+        { "name": "dia_chi_tru_so", "label": "Địa chỉ trụ sở chính", "type": "textarea", "required": true },
+        { "name": "linh_vuc_hoat_dong", "label": "Lĩnh vực hoạt động", "type": "text", "required": true },
+        { "name": "tong_so_lao_dong", "label": "Tổng số lao động", "type": "number", "required": true },
+        { "name": "co_to_chuc_dai_dien", "label": "Có tổ chức đại diện người lao động tại cơ sở", "type": "radio", "required": true, "options": ["Có", "Không"] }
+      ]
+    },
+    {
+      "legend": "B. Người đại diện theo pháp luật & liên hệ",
+      "fields": [
+        { "name": "ho_ten_nguoi_dai_dien", "label": "Họ và tên người đại diện theo pháp luật", "type": "text", "required": true, "prefill": "user.hoTen" },
+        { "name": "chuc_vu_nguoi_dai_dien", "label": "Chức vụ", "type": "text", "required": true },
+        { "name": "dien_thoai_lien_he", "label": "Điện thoại liên hệ", "type": "tel", "required": true },
+        { "name": "email_lien_he", "label": "Email", "type": "email", "required": true }
+      ]
+    },
+    {
+      "legend": "C. Nội dung đề nghị",
+      "fields": [
+        { "name": "ngay_ban_hanh_noi_quy", "label": "Ngày ban hành nội quy lao động", "type": "date", "required": true },
+        { "name": "so_van_ban_de_nghi", "label": "Số văn bản đề nghị", "type": "text", "placeholder": "Ví dụ: 01/2026/CV-ĐKNQLĐ" },
+        { "name": "hinh_thuc_nhan_ket_qua", "label": "Hình thức nhận kết quả", "type": "radio", "options": ["Trực tiếp", "Qua dịch vụ bưu chính công ích"] }
+      ]
+    }
+  ]
+}
