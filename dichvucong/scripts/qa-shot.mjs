@@ -23,7 +23,10 @@ for (const [label, viewport] of [
       errors.push(`[${label}] console.${msg.type()}: ${msg.text()}`);
   });
   page.on("pageerror", (err) => errors.push(`[${label}] pageerror: ${err.message}`));
-  await page.goto(BASE + path, { waitUntil: "networkidle" });
+  // "load" + đợi ngắn thay vì networkidle: Next prefetch (_rsc) trên trang
+  // nhiều link khiến network không bao giờ idle
+  await page.goto(BASE + path, { waitUntil: "load" });
+  await page.waitForTimeout(1200);
   await page.screenshot({ path: `.qa/${name}.${label}.png`, fullPage: full });
   await page.close();
 }
