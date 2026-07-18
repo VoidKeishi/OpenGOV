@@ -22,9 +22,9 @@ từ dữ liệu đã commit (xem `docs/ARCHITECTURE.md` §6).
 |---|---|---|---|
 | `OPENROUTER_API_KEY` | Không* | — | Khóa OpenRouter (`sk-or-v1-...`). Thiếu key: server vẫn chạy nhưng `/chat` trả lời fail-closed (báo "không có trong dữ liệu" + link cổng) và `/validate` bỏ qua tầng `llm_check`. |
 | `PORT` | Không | `3001` | Cổng lắng nghe (Railway/Fly/Render tự set biến này). |
-| `OPENROUTER_STRONG_MODEL` | Không | `anthropic/claude-sonnet-4.5` | Model tầng mạnh (trả lời, gợi ý sửa). |
-| `OPENROUTER_CHEAP_MODEL` | Không | `google/gemini-2.5-flash` | Model tầng rẻ (định tuyến, rerank, trích facts, llm_check). |
-| `OPENROUTER_FALLBACK_MODEL` | Không | `google/gemini-2.5-flash` | Dùng khi model chính lỗi. |
+| `OPENROUTER_STRONG_MODEL` | Không | `anthropic/claude-sonnet-5` | Model tầng mạnh (trả lời, gợi ý sửa). |
+| `OPENROUTER_CHEAP_MODEL` | Không | `google/gemini-3.5-flash` | Model tầng rẻ (định tuyến, rerank, trích facts, llm_check). |
+| `OPENROUTER_FALLBACK_MODEL` | Không | `openai/gpt-5-mini` | Dùng khi model chính lỗi — cố ý khác provider với cả hai tầng để sống qua sự cố một nhà cung cấp. |
 | `OPENGOV_DB_PATH`, `OPENGOV_DATA_DIR` | Không | theo cwd | Ghi đè đường dẫn DB / thư mục data nếu bố cục khác. |
 
 \* Không bắt buộc để **khởi động**, nhưng bắt buộc để `/chat` trả lời thật và để

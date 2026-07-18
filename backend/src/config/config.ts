@@ -36,9 +36,10 @@ export function loadConfig(): AppConfig {
     openRouter: {
       apiKey: process.env.OPENROUTER_API_KEY || undefined,
       baseUrl: process.env.OPENROUTER_BASE_URL ?? 'https://openrouter.ai/api/v1',
-      cheapModel: process.env.OPENROUTER_CHEAP_MODEL ?? 'google/gemini-2.5-flash',
-      strongModel: process.env.OPENROUTER_STRONG_MODEL ?? 'anthropic/claude-sonnet-4.5',
-      fallbackModel: process.env.OPENROUTER_FALLBACK_MODEL ?? 'google/gemini-2.5-flash',
+      cheapModel: process.env.OPENROUTER_CHEAP_MODEL ?? 'google/gemini-3.5-flash',
+      strongModel: process.env.OPENROUTER_STRONG_MODEL ?? 'anthropic/claude-sonnet-5',
+      // Different provider from both tiers so a provider outage doesn't take down chat entirely.
+      fallbackModel: process.env.OPENROUTER_FALLBACK_MODEL ?? 'openai/gpt-5-mini',
       referer: process.env.OPENROUTER_REFERER,
       title: process.env.OPENROUTER_TITLE ?? 'OpenGOV',
     },
