@@ -1,4 +1,2 @@
 # Chốt workspace tại đây — không hoist lên monorepo cha
 packages: []
-allowBuilds:
-  sharp: false

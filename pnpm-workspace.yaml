@@ -1,5 +1,6 @@
+# dichvucong KHÔNG nằm trong workspace này — nó là workspace pnpm độc lập
+# (có pnpm-workspace.yaml + pnpm-lock.yaml riêng) để deploy Vercel với root = dichvucong/.
 packages:
   - backend
   - widget
-  - dichvucong
   - tools/*
