@@ -9,7 +9,7 @@ import DataTable from "@/components/detail/DataTable";
 import HoSoGroups from "@/components/detail/HoSoGroups";
 import CoQuanPanel from "@/components/detail/CoQuanPanel";
 import RelatedPanel from "@/components/detail/RelatedPanel";
-import { getThuTuc, PILOT_SLUGS } from "@/lib/data";
+import { getThuTuc, PILOT_SLUGS, THU_TUC_INDEX } from "@/lib/data";
 
 export const dynamicParams = false;
 
@@ -39,6 +39,7 @@ export default async function ChiTietThuTucPage({
         other.coQuanThucHien !== "Không có thông tin" && other.coQuanThucHien
           ? other.coQuanThucHien
           : "UBND cấp xã",
+      toanTrinh: THU_TUC_INDEX.find((t) => t.slug === s)?.toanTrinh,
     };
   });
 
@@ -102,7 +103,11 @@ export default async function ChiTietThuTucPage({
               <DataTable
                 columns={tt.canCuPhapLy.columns}
                 rows={tt.canCuPhapLy.rows}
-                widths={["78%", "22%"]}
+                widths={
+                  tt.canCuPhapLy.columns[0] === "Số ký hiệu"
+                    ? ["22%", "78%"]
+                    : ["78%", "22%"]
+                }
               />
             </Section>
 
@@ -116,10 +121,12 @@ export default async function ChiTietThuTucPage({
 
             <Section title="Kết quả xử lý">
               <div className="space-y-2">
-                {tt.ketQua.map((kq) => (
-                  <div key={kq.ma} className="rounded-r bg-gray-50 py-1.5 pl-3">
+                {tt.ketQua.map((kq, i) => (
+                  <div key={i} className="rounded-r bg-gray-50 py-1.5 pl-3">
                     <div className="font-medium break-words">{kq.ten}</div>
-                    <div className="mt-1 text-sm text-muted">Mã: {kq.ma}</div>
+                    {kq.ma && (
+                      <div className="mt-1 text-sm text-muted">Mã: {kq.ma}</div>
+                    )}
                   </div>
                 ))}
               </div>

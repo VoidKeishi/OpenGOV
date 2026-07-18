@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { ToanTrinhChip } from "@/components/ProcedureList";
 
-export type RelatedItem = { slug: string; ten: string; coQuan: string };
+export type RelatedItem = {
+  slug: string;
+  ten: string;
+  coQuan: string;
+  toanTrinh?: boolean;
+};
 
 export default function RelatedPanel({ items }: { items: RelatedItem[] }) {
   if (!items.length) return null;
@@ -20,6 +26,7 @@ export default function RelatedPanel({ items }: { items: RelatedItem[] }) {
               <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
               <span>
                 {item.ten}
+                {item.toanTrinh && <ToanTrinhChip />}
                 <span className="mt-1 block text-sm font-normal text-muted">
                   {item.coQuan}
                 </span>

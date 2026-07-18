@@ -47,8 +47,12 @@ export default function InfoGrid({ info }: { info: ThuTucInfo }) {
     <div className="grid border-r border-t border-line md:grid-cols-2">
       <Cell full label="Tên thủ tục" value={info.tenThuTuc} />
       {PAIR_ROWS.map(([key, label]) => (
-        <Cell key={key} label={label} value={info[key]} />
+        <Cell key={key} label={label} value={info[key] ?? ""} />
       ))}
+      {/* Chỉ 2 thủ tục nguồn .md có trường này (CLONE_SPEC.md 3.4) */}
+      {info.coQuanBanHanh && (
+        <Cell label="Cơ quan ban hành" value={info.coQuanBanHanh} />
+      )}
     </div>
   );
 }

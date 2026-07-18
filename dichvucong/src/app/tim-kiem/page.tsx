@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 import { ListSearchBar } from "@/components/SearchBar";
 import ProcedureList from "@/components/ProcedureList";
 import PaginationBar from "@/components/PaginationBar";
-import { THU_TUC_INDEX } from "@/lib/data";
+import { sortThuTuc, THU_TUC_INDEX } from "@/lib/data";
 import { matches } from "@/lib/search";
 
 export const metadata: Metadata = {
@@ -20,9 +20,9 @@ export default async function TimKiemPage({
 }) {
   const { keyword = "" } = await searchParams;
   const kw = keyword.trim();
-  const results = kw
-    ? THU_TUC_INDEX.filter((t) => matches(t.ten, kw))
-    : THU_TUC_INDEX;
+  const results = sortThuTuc(
+    kw ? THU_TUC_INDEX.filter((t) => matches(t.ten, kw)) : THU_TUC_INDEX,
+  );
 
   return (
     <>
