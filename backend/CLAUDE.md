@@ -11,7 +11,7 @@ Hard rules:
 - `data/curated/`, `data/schemas/`, `data/errors/`, `data/aliases.json`, `data/golden-qa.json`, `data/provinces.json` `defunct[]` are human-reviewed — never regenerate or bulk-rewrite them.
 - `backend/data/crawl/` is read-only raw input. `backend/var/` is a build artifact (gitignored).
 - PII: values sent to external LLM APIs for `llm_check` are masked first.
-- **LLM budget**: never run automated LLM loops (golden-qa, batch evals, retries-in-a-loop) without the user's explicit go-ahead — a full golden-qa run is ~100 strong-model calls and has exhausted the OpenRouter credit once (19/07). Tune on the failing subset first; models default to Gemini Flash + a `:free` fallback for this reason.
+- **LLM budget**: never run automated LLM loops (golden-qa, batch evals, retries-in-a-loop) without the user's explicit go-ahead — a full golden-qa run is ~100 strong-model calls and has exhausted the OpenRouter credit once (19/07). Tune on the failing subset first; models default to `deepseek/deepseek-v4-pro` + a `:free` fallback chain (`tencent/hy3:free` → `nvidia/nemotron-3-ultra-550b-a55b:free`) for this reason.
 
 ## Deploying backend updates (VPS — opengov.duckdns.org)
 

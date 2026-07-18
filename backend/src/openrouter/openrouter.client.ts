@@ -12,8 +12,8 @@ import {
 
 /**
  * OpenRouter chat-completions client (OpenAI-compatible). Two tiers behind one
- * interface; on a primary-model error each call retries once with the fallback
- * model. Key-optional: with no API key `available=false` and complete() throws
+ * interface; on a primary-model error each call walks the fallback chain in
+ * order. Key-optional: with no API key `available=false` and complete() throws
  * LlmUnavailableError so the chat layer can fail closed.
  */
 export class OpenRouterClient implements LlmClient {
@@ -27,15 +27,19 @@ export class OpenRouterClient implements LlmClient {
   async complete(req: LlmRequest): Promise<LlmAssistantMessage> {
     if (!this.available) throw new LlmUnavailableError();
     const primary = req.tier === 'strong' ? this.cfg.strongModel : this.cfg.cheapModel;
-    try {
-      return await this.call(primary, req);
-    } catch (err) {
-      if (this.cfg.fallbackModel && this.cfg.fallbackModel !== primary) {
-        this.log.warn(`model ${primary} failed (${(err as Error).message}); falling back to ${this.cfg.fallbackModel}`);
-        return await this.call(this.cfg.fallbackModel, req);
+    const chain = [primary, ...(this.cfg.fallbackModels ?? []).filter((m) => m && m !== primary)];
+    let lastErr: unknown;
+    for (let i = 0; i < chain.length; i++) {
+      try {
+        return await this.call(chain[i]!, req);
+      } catch (err) {
+        lastErr = err;
+        if (i < chain.length - 1) {
+          this.log.warn(`model ${chain[i]} failed (${(err as Error).message}); falling back to ${chain[i + 1]}`);
+        }
       }
-      throw err;
     }
+    throw lastErr;
   }
 
   async smokeTestToolCalling(): Promise<{ ok: boolean; detail: string }> {

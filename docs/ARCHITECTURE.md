@@ -81,8 +81,8 @@ Widget keeps `session_id` in `sessionStorage` → survives page navigation.
 
 ### OpenRouter layer
 Two tiers behind one provider-agnostic interface:
-- Cheap model (Gemini Flash class): routing, rerank, facts extraction, llm_check.
-- Strong model: answering, fix suggestions. Budget decision 19/07: both tiers default to Gemini Flash (Claude Sonnet-class answering exhausted the OpenRouter credit) with a `:free` fallback (`tencent/hy3:free`) so chat survives an empty balance; Sonnet-class remains an env override (`OPENROUTER_STRONG_MODEL`) when budget allows.
+- Cheap model: routing, rerank, facts extraction, llm_check.
+- Strong model: answering, fix suggestions. Budget decision 19/07: both tiers default to `deepseek/deepseek-v4-pro` (Claude Sonnet-class answering exhausted the OpenRouter credit) with a fallback **chain** tried in order — `tencent/hy3:free`, `nvidia/nemotron-3-ultra-550b-a55b:free` — so chat survives an empty balance; stronger models remain env overrides (`OPENROUTER_STRONG_MODEL`, comma-separated `OPENROUTER_FALLBACK_MODEL`) when budget allows.
 Tool-calling support varies per model on OpenRouter — smoke-test the chosen main model's function calling at startup; configure a fallback model. PII rule from DESIGN.md §5 applies: values reaching external APIs for llm_check are masked first.
 
 ## 5. API surface

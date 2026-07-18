@@ -20,12 +20,15 @@ export interface OpenRouterConfig {
   cheapModel: string;
   /**
    * Strong tier: answering, fix suggestions. Budget rule (19/07): both tiers run on
-   * Gemini Flash — Claude Sonnet-class models burned the OpenRouter credit; the
-   * fallback is a :free model so chat survives an empty balance.
+   * a low-cost model — Claude Sonnet-class answering burned the OpenRouter credit;
+   * the fallback chain ends in :free models so chat survives an empty balance.
    */
   strongModel: string;
-  /** Used when a tier's primary model errors (network / http / no tool support / no credit). */
-  fallbackModel: string;
+  /**
+   * Tried in order when the primary model errors (network / http / no tool support /
+   * no credit). Env OPENROUTER_FALLBACK_MODEL takes a comma-separated list.
+   */
+  fallbackModels: string[];
   referer?: string;
   title: string;
 }
@@ -43,10 +46,13 @@ export function loadConfig(): AppConfig {
     openRouter: {
       apiKey: process.env.OPENROUTER_API_KEY || undefined,
       baseUrl: process.env.OPENROUTER_BASE_URL ?? 'https://openrouter.ai/api/v1',
-      cheapModel: process.env.OPENROUTER_CHEAP_MODEL ?? 'google/gemini-3.5-flash',
-      strongModel: process.env.OPENROUTER_STRONG_MODEL ?? 'google/gemini-3.5-flash',
-      // :free tier — keeps chat alive on zero balance and provider-diverse from Google.
-      fallbackModel: process.env.OPENROUTER_FALLBACK_MODEL ?? 'tencent/hy3:free',
+      cheapModel: process.env.OPENROUTER_CHEAP_MODEL ?? 'deepseek/deepseek-v4-pro',
+      strongModel: process.env.OPENROUTER_STRONG_MODEL ?? 'deepseek/deepseek-v4-pro',
+      // Tried in order; :free tier keeps chat alive on zero balance, provider-diverse.
+      fallbackModels: (process.env.OPENROUTER_FALLBACK_MODEL ?? 'tencent/hy3:free,nvidia/nemotron-3-ultra-550b-a55b:free')
+        .split(',')
+        .map((m) => m.trim())
+        .filter(Boolean),
       referer: process.env.OPENROUTER_REFERER,
       title: process.env.OPENROUTER_TITLE ?? 'OpenGOV',
     },
