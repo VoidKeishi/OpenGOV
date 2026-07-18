@@ -1,6 +1,6 @@
 # DESIGN.md — Giải pháp OpenGOV: use case, luồng dữ liệu, quyết định thiết kế
 
-> Tài liệu spec cao nhất của giải pháp. Đọc [PROBLEM.md](../PROBLEM.md) trước để nắm đề bài + tiêu chí. Kiến trúc backend chi tiết: [ARCHITECTURE.md](ARCHITECTURE.md). Contract dữ liệu: [DATA.md](DATA.md). Spec widget: [WIDGET.md](WIDGET.md).
+> Spec chi tiết của giải pháp. Đọc [PROBLEM.md](../PROBLEM.md) (đề bài + tiêu chí) và [SOLUTION.md](../SOLUTION.md) (tổng quan 3 trụ cột) trước. Kiến trúc backend chi tiết: [ARCHITECTURE.md](ARCHITECTURE.md). Contract dữ liệu: [DATA.md](DATA.md). Spec widget: [WIDGET.md](WIDGET.md).
 
 ## 1. Định vị
 
@@ -31,7 +31,7 @@ Người dùng: người dân đang ở trên cổng dịch vụ công (không r
 
 ### UC-4 — (Pha 2) Kiểm tra inline trên chính form của cổng
 - **Luồng**: cổng tích hợp chủ động bằng web components: `<opengov-field-hint>` gắn cạnh field (hint + lỗi inline khi blur), `<opengov-check-button>` đặt cạnh nút nộp của cổng. Cùng backend `/validate`, khác cách hiển thị: lỗi nằm **ngay trên form**, không trong chat.
-- Kèm prefill: facts thu thập trong hội thoại (UC-1) đổ ngược vào form qua session.
+- Kèm **thao tác giao diện hộ người dùng** theo ba mức (overlay chỉ dẫn → điền hộ có xác nhận từ case facts → dẫn thao tác từng bước), với nguyên tắc an toàn: thao tác đọc tự động, thao tác ghi phải được người dùng duyệt, không bao giờ tự nộp hồ sơ — chi tiết [SOLUTION.md](../SOLUTION.md) §3.
 
 ### UC-5 — Demo "dữ liệu hành chính luôn hiện hành": cải cách 01/07/2025
 - **Kịch bản demo đắt giá**: người dân điền địa chỉ dùng tên tỉnh đã sáp nhập ("Hà Giang") hoặc còn cấp huyện ("huyện X") → engine bắt bằng rule `province_not_defunct` / `no_district_level` đối chiếu `data/provinces.json` (34 tỉnh hiện hành + 29 tỉnh giải thể theo NQ 202/2025/QH15) → lỗi kèm gợi ý tên đơn vị mới ("Hà Giang đã hợp nhất vào Tỉnh Tuyên Quang").

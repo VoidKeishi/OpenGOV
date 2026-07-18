@@ -2,7 +2,7 @@
 
 OpenGOV là trợ lý AI **nhúng thẳng vào cổng dịch vụ công hiện có** (qua widget/API, không cần cài app mới), giúp người dân nộp hồ sơ hành chính **đúng và đủ ngay lần đầu**: hướng dẫn theo tình huống cụ thể, trả lời có trích dẫn pháp lý, và **kiểm tra hồ sơ trước khi nộp** bằng luật kiểm tra máy-đọc-được thay vì để cán bộ trả hồ sơ về sửa.
 
-Đề bài và tiêu chí đánh giá gốc: [PROBLEM.md](PROBLEM.md). Trạng thái và việc còn lại: [PLAN.md](PLAN.md).
+Đề bài và tiêu chí đánh giá gốc: [PROBLEM.md](PROBLEM.md). Tổng quan ba trụ cột giải pháp (dữ liệu · widget chatbot · overlay sâu): [SOLUTION.md](SOLUTION.md). Trạng thái và việc còn lại: [PLAN.md](PLAN.md).
 
 ## Vấn đề
 
@@ -72,6 +72,7 @@ Trạng thái hiện tại: dữ liệu + backend + cổng demo chạy được 
 
 ```
 PROBLEM.md            # đề bài + tiêu chí gốc (bất biến)
+SOLUTION.md           # tổng quan 3 trụ giải pháp: dữ liệu · widget chatbot · overlay sâu
 PLAN.md               # trạng thái từng giai đoạn + việc còn lại
 docs/DESIGN.md        # giải pháp, use case widget, quyết định thiết kế + trade-off
 docs/ARCHITECTURE.md  # kiến trúc backend, đặc thù dữ liệu crawl
@@ -84,4 +85,4 @@ dichvucong/           # clone cổng DVC làm môi trường demo (độc lập,
 tools/                # crawler dichvucong.gov.vn + ETL parse
 ```
 
-Đọc theo mục đích: hiểu bài toán → `PROBLEM.md`; hiểu giải pháp/thuyết trình → `docs/DESIGN.md`; làm backend/dữ liệu → `docs/DATA.md` + `docs/ARCHITECTURE.md` + `backend/CLAUDE.md`; làm widget → `docs/WIDGET.md`; xem tiến độ → `PLAN.md`.
+Đọc theo mục đích: hiểu bài toán → `PROBLEM.md`; hiểu giải pháp/thuyết trình → `SOLUTION.md` (tổng quan) rồi `docs/DESIGN.md` (chi tiết); làm backend/dữ liệu → `docs/DATA.md` + `docs/ARCHITECTURE.md` + `backend/CLAUDE.md`; làm widget → `docs/WIDGET.md`; xem tiến độ → `PLAN.md`.
