@@ -554,6 +554,39 @@ async function scCardsMocked(browser) {
     await page.locator('.og-check-item input').first().isChecked(),
     'checklist tick survives reload',
   );
+
+  // Turn 2: the wire re-sends the identical procedure + fragments cards (every
+  // answer is self-contained) plus a NEW processing card — identical repeats
+  // must not render twice, the new card must.
+  const EVENTS2 = [
+    '{"type":"session","session_id":"e2e-cards"}',
+    EVENTS[2], // same procedure card, byte-identical
+    EVENTS[4], // same legal_fragments card
+    '{"type":"card","payload":{"type":"processing","payload":{"code":"1.004222","channels":[{"method":"ONLINE","processing":{"qty":7,"unit":"WORKING_DAY"}}]}}}',
+    '{"type":"token","text":"Thời gian giải quyết ở thẻ bên dưới."}',
+    '{"type":"done","cards_count":3}',
+  ];
+  const body2 = EVENTS2.map((j) => `data: ${j}\n\n`).join('') + 'event: end\ndata: {}\n\n';
+  await context.route('**/chat', (route) =>
+    route.fulfill({ contentType: 'text/event-stream', body: body2 }),
+  );
+  await sendChat(page, 'mất bao lâu?'); // panel already open (state survives reload)
+  await waitFor(async () => (await page.locator('.og-cards').count()) === 2);
+  check(
+    (await page.locator('.og-card', { hasText: 'Cơ quan thực hiện' }).count()) === 1,
+    'identical procedure card not repeated on the next turn',
+  );
+  check((await page.locator('.og-collapse-head').count()) === 1, 'identical fragments card not repeated');
+  const turn2Cards = page.locator('.og-cards').last();
+  check(
+    (await turn2Cards.locator('.og-card', { hasText: 'Thời gian xử lý' }).count()) === 1 &&
+      (await turn2Cards.locator('.og-card').count()) === 1,
+    'new processing card is the only card of turn 2',
+  );
+  check(
+    (await turn2Cards.textContent()).includes('Nộp trực tuyến: 7 ngày làm việc'),
+    'processing channel humanized',
+  );
   await context.close();
 }
 

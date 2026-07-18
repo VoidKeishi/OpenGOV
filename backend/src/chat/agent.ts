@@ -46,8 +46,10 @@ export async function runChatTurn(p: RunTurnParams): Promise<RunTurnResult> {
       tools: p.toolDefs,
       tool_choice: 'auto',
       temperature: 0.2,
-      // Safety net only — the prompt's ~120-word budget is the primary length control.
-      maxTokens: 700,
+      // Safety net only — the prompt's ~120-word budget is the primary length
+      // control. Must leave headroom for the [[CARDS:]] tail: a length-cut
+      // answer loses card selection (700 proved too tight on deepseek).
+      maxTokens: 1200,
     });
 
     if (!res.tool_calls || res.tool_calls.length === 0) {
@@ -69,7 +71,7 @@ export async function runChatTurn(p: RunTurnParams): Promise<RunTurnResult> {
   }
 
   // Ran out of iterations — ask once more for a final answer with no tools.
-  const final = await p.llm.complete({ tier: 'strong', messages, temperature: 0.2, maxTokens: 700 });
+  const final = await p.llm.complete({ tier: 'strong', messages, temperature: 0.2, maxTokens: 1200 });
   return { answer: final.content ?? '', toolTrace };
 }
 

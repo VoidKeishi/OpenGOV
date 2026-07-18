@@ -111,6 +111,8 @@ Nhãn tiếng Việt cho event `tool` (hiện trong bubble chờ, thay thế nha
 | `legal_fragments` | `{code, fragments: [{id, article, doc_code, doc_title, title, source_url, retrieved_at}]}` | **Thu gọn mặc định** ("Căn cứ pháp lý — n trích đoạn ▸"); mở ra từng đoạn có nút mở `source_url` |
 | `checklist` (R2) | `{code, groups: [...]}` — xem §10 R2 | Checklist tick được (§5.4) |
 
+**Dedup khi render** (`src/core/dedup.ts`): backend force-include card `procedure` (+ `legal_fragments`) mỗi lượt để answer trên wire tự chứa; widget **không render lại** card giống hệt (so sánh JSON) card ở lượt assistant gần nhất phía trước — hết cảnh procedure card lặp sau mỗi câu hỏi. Lượt assistant không có card (lỗi, fail-closed) reset cửa sổ so sánh → hỏi lại sau một quãng thì card hiện lại. Card có payload khác (vd checklist lọc lại theo case_facts mới) luôn render. Index card gốc được giữ khi lọc để khóa tick `"<cardIndex>:<itemId>"` không lệch. Wire + transcript cache không đổi.
+
 ### 3.5 `POST /validate`
 
 Body `{ "procedure_code": string, "fields": Record<string,string>, "case_facts": Record<string,unknown> }`. `case_facts` lấy từ `GET /sessions/:id` ngay trước khi validate (có session) hoặc `{}`.

@@ -71,6 +71,10 @@ export class OpenRouterClient implements LlmClient {
       model,
       messages: req.messages.map(toOpenAIMessage),
       temperature: req.temperature ?? 0.2,
+      // All chain models are reasoning-capable; reasoning tokens count toward
+      // max_tokens and were truncating answers mid-sentence (and eating the
+      // [[CARDS:]] tail). Chat needs terse answers, not chain-of-thought.
+      reasoning: { effort: 'none' },
     };
     if (req.maxTokens) body.max_tokens = req.maxTokens;
     if (req.tools?.length) {
@@ -101,6 +105,9 @@ export class OpenRouterClient implements LlmClient {
     const json = (await resp.json()) as any;
     const msg = json?.choices?.[0]?.message;
     if (!msg) throw new Error(`OpenRouter returned no message: ${JSON.stringify(json).slice(0, 200)}`);
+    if (json.choices[0]?.finish_reason === 'length') {
+      this.log.warn(`answer truncated by max_tokens (model ${model}) — downstream [[CARDS:]] tail is likely lost`);
+    }
     return {
       role: 'assistant',
       content: msg.content ?? null,

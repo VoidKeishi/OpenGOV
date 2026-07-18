@@ -1,8 +1,9 @@
 // One transcript turn — the single render model for live streaming AND cache
 // restore (same serializable Turn record, WIDGET.md §8). Prose above, cards
 // revealed below after the stream ends (decision #8).
-import type { CheckTurnResult, Turn, ValidationError } from '../types';
+import type { Card, CheckTurnResult, Turn, ValidationError } from '../types';
 import { miniMarkdown } from '../core/markdown';
+import { visibleCards } from '../core/dedup';
 import { CardView } from './cards';
 
 export interface TurnActions {
@@ -108,12 +109,15 @@ export function TurnView({
   turnIndex,
   streaming,
   actions,
+  prevCards = [],
 }: {
   turn: Turn;
   turnIndex: number;
   /** true only for the live turn while tokens are arriving. */
   streaming: boolean;
   actions: TurnActions;
+  /** Cards of the nearest earlier assistant turn — identical cards are not re-rendered. */
+  prevCards?: Card[];
 }) {
   if (turn.role === 'user') {
     return <div class="og-turn-user">{turn.prose}</div>;
@@ -133,6 +137,7 @@ export function TurnView({
   // noRetry (422) turns carry their message in `prose` but render it inside
   // the error box only.
   const hasProse = turn.prose.length > 0 && !turn.noRetry;
+  const shownCards = visibleCards(prevCards, turn.cards);
   return (
     <div class="og-turn-assistant">
       {hasProse && (
@@ -153,9 +158,9 @@ export function TurnView({
           )}
         </div>
       )}
-      {turn.revealed && turn.cards.length > 0 && (
+      {turn.revealed && shownCards.length > 0 && (
         <div class="og-cards">
-          {turn.cards.map((card, ci) => (
+          {shownCards.map(({ card, ci }) => (
             <CardView
               key={ci}
               card={card}

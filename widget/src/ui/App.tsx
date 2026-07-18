@@ -32,6 +32,7 @@ import {
   fetchSession,
   postValidate,
 } from '../core/api';
+import { prevAssistantCards } from '../core/dedup';
 import { TurnView, type TurnActions } from './Turn';
 
 const TOOL_LABELS: Record<string, string> = {
@@ -448,6 +449,7 @@ function App({ config }: { config: EmbedConfig }) {
             turnIndex={i}
             streaming={phase === 'streaming' && i === turns.length - 1}
             actions={actions}
+            prevCards={prevAssistantCards(turns, i)}
           />
         ))}
         {turns.length === 0 && idle && (
