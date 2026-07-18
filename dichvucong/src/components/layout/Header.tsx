@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, Menu, UserRound, X } from "lucide-react";
-import QuocHuy from "@/components/icons/QuocHuy";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { NAV_ITEMS } from "./nav-data";
 
@@ -14,16 +13,13 @@ export default function Header() {
   return (
     <header className="bg-white">
       <div className="mx-auto flex max-w-[1168px] items-center justify-between gap-3 px-4 py-2.5 md:py-3">
-        <Link href="/" className="flex min-w-0 items-center gap-2.5 md:gap-4">
-          <QuocHuy className="h-11 w-11 shrink-0 md:h-16 md:w-16" />
-          <span className="min-w-0">
-            <span className="block font-serif text-[17px] font-bold leading-tight text-brand-dark md:text-[26px]">
-              CỔNG DỊCH VỤ CÔNG QUỐC GIA
-            </span>
-            <span className="mt-0.5 block truncate text-[11px] italic text-brand md:text-[15px]">
-              Kết nối, cung cấp thông tin và dịch vụ công mọi lúc, mọi nơi
-            </span>
-          </span>
+        <Link href="/" className="flex min-w-0 items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-dvc.png"
+            alt="Cổng Dịch vụ công Quốc gia — Kết nối, cung cấp thông tin và dịch vụ công mọi lúc, mọi nơi"
+            className="h-11 w-auto max-w-full md:h-[84px]"
+          />
         </Link>
 
         <div className="hidden shrink-0 md:block">
