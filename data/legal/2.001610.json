@@ -1,5 +1,5 @@
 {
-  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §5, pending structuring-session review). Legal-source fragments for đăng ký thành lập doanh nghiệp tư nhân, converted from notes/knowledge-base/research-02-dntn.md plus web gap-fill for Luật DN 2020 Điều 17/37/38/39/188 and Luật Đầu tư 2020 Điều 6 (cited by the error catalog / golden QA but absent from the research file). Every fragment carries source_url + retrieved_at; text is a minimal relevant excerpt.",
+  "_note": "(DATA.md §5 — reviewed & approved 18/07/2026, B-lite session; các trích đoạn Luật DN/Luật Đầu tư đối chiếu nội dung khớp.) Legal-source fragments for đăng ký thành lập doanh nghiệp tư nhân, converted from notes/knowledge-base/research-02-dntn.md plus web gap-fill for Luật DN 2020 Điều 17/37/38/39/188 and Luật Đầu tư 2020 Điều 6 (cited by the error catalog / golden QA but absent from the research file). Every fragment carries source_url + retrieved_at; text is a minimal relevant excerpt.",
   "code": "2.001610",
   "fragments": [
     {
@@ -125,8 +125,8 @@
     }
   ],
   "review": {
-    "reviewed_by": null,
-    "reviewed_at": null,
-    "method": "Stage A2 KB ingest (agent) — converted from notes/knowledge-base/research-02-dntn.md + web gap-fill (Luật DN 2020 Đ.17/37/38/39/188, Luật Đầu tư 2020 Đ.6); pending interactive structuring-session review per tools/etl/STRUCTURING.md"
+    "reviewed_by": "Lê Anh",
+    "reviewed_at": "2026-07-18",
+    "method": "Stage A2 KB ingest (agent, from notes/knowledge-base/research-02-dntn.md + web gap-fill) + B-lite review 18/07/2026 (đối chiếu nội dung từng trích đoạn Luật DN Đ.4/17/19/37/38/39/188, Luật Đầu tư Đ.6)"
   }
 }

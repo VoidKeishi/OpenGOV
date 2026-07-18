@@ -1,5 +1,5 @@
 {
-  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §5, pending structuring-session review). Legal-source fragments for đăng ký thường trú, converted from notes/knowledge-base/research-01-thuong-tru.md. Every fragment carries source_url + retrieved_at; text is a minimal relevant excerpt, not a full-article dump. doc_code matches legal_basis[].code where the document appears there.",
+  "_note": "(DATA.md §5 — reviewed & approved 18/07/2026, B-lite session; spot-check Điều 20 trên hethongphapluat khớp nguyên văn.) Legal-source fragments for đăng ký thường trú, converted from notes/knowledge-base/research-01-thuong-tru.md. Every fragment carries source_url + retrieved_at; text is a minimal relevant excerpt, not a full-article dump. doc_code matches legal_basis[].code where the document appears there.",
   "code": "1.004222",
   "fragments": [
     {
@@ -125,8 +125,8 @@
     }
   ],
   "review": {
-    "reviewed_by": null,
-    "reviewed_at": null,
-    "method": "Stage A2 KB ingest (agent) — converted from notes/knowledge-base/research-01-thuong-tru.md; pending interactive structuring-session review per tools/etl/STRUCTURING.md"
+    "reviewed_by": "Lê Anh",
+    "reviewed_at": "2026-07-18",
+    "method": "Stage A2 KB ingest (agent, from notes/knowledge-base/research-01-thuong-tru.md) + B-lite review 18/07/2026 (spot-check web Điều 20 + đối chiếu nội dung từng trích đoạn)"
   }
 }

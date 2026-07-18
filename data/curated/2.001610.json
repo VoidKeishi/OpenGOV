@@ -1,5 +1,5 @@
 {
-  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §3, pending structuring-session review). Curated overlay for đăng ký thành lập doanh nghiệp tư nhân, converted from notes/knowledge-base/procedure-02-dntn.md + research-02 decision tree, cross-checked against data/procedures/2.001610.json checklist_raw. The 9 raw groups split into registration variants (fact loai_dang_ky) and ủy quyền addenda (fact uy_quyen). co_so_dinh_danh=true drops bản sao giấy tờ pháp lý (khoản 1 Điều 11 NĐ 168/2025). Người ủy quyền chưa có tài khoản ĐDĐT (co_tai_khoan_dddt=false) → thêm bản sao giấy tờ pháp lý người ủy quyền. Conditions use only {fact,eq}/{fact,in}. Quantities copied from checklist_raw original_qty/copy_qty.",
+  "_note": "(DATA.md §3 — reviewed & approved 18/07/2026, B-lite session.) Curated overlay for đăng ký thành lập doanh nghiệp tư nhân, converted from notes/knowledge-base/procedure-02-dntn.md + research-02 decision tree, cross-checked against data/procedures/2.001610.json checklist_raw. The 9 raw groups split into registration variants (fact loai_dang_ky) and ủy quyền addenda (fact uy_quyen). co_so_dinh_danh=true drops bản sao giấy tờ pháp lý (khoản 1 Điều 11 NĐ 168/2025). Người ủy quyền chưa có tài khoản ĐDĐT (co_tai_khoan_dddt=false) → thêm bản sao giấy tờ pháp lý người ủy quyền. Conditions use only {fact,eq}/{fact,in}. Quantities copied from checklist_raw original_qty/copy_qty.",
   "code": "2.001610",
   "case_facts_schema": {
     "loai_dang_ky": { "type": "enum",
@@ -155,8 +155,8 @@
     ]
   },
   "review": {
-    "reviewed_by": null,
-    "reviewed_at": null,
-    "method": "Stage A2 KB ingest (agent) — Claude Code, converted per tools/etl/STRUCTURING.md; pending interactive human review"
+    "reviewed_by": "Lê Anh",
+    "reviewed_at": "2026-07-18",
+    "method": "Stage A2 KB ingest (agent) + B-lite interactive review (Claude Code per tools/etl/STRUCTURING.md §2, bảng gộp per-procedure; script đối chiếu source_component_code/quantity + schema-vs-form pass)"
   }
 }

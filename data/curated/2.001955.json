@@ -1,5 +1,5 @@
 {
-  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §3, pending structuring-session review). Curated overlay for đăng ký nội quy lao động, converted from notes/knowledge-base/procedure-03-noi-quy-lao-dong.md + research-03 decision tree, cross-checked against data/procedures/2.001955.json checklist_raw. The one flat raw group's conditionality comes from the statute (Điều 119/120 BLLĐ 2019), not group names: registration is required only from 10 NLĐ (fact tu_10_lao_dong_tro_len), văn bản góp ý only where there is a tổ chức đại diện (co_to_chuc_dai_dien), văn bản kỷ luật riêng only if the employer has one (co_van_ban_ky_luat_rieng). The KB decision tree's numeric so_lao_dong is modeled as a boolean here because the condition mini-language (DATA.md §3) has no ≥ operator. Conditions use only {fact,eq}/{fact,in}.",
+  "_note": "(DATA.md §3 — reviewed & approved 18/07/2026, B-lite session.) Curated overlay for đăng ký nội quy lao động, converted from notes/knowledge-base/procedure-03-noi-quy-lao-dong.md + research-03 decision tree, cross-checked against data/procedures/2.001955.json checklist_raw. The one flat raw group's conditionality comes from the statute (Điều 119/120 BLLĐ 2019), not group names: registration is required only from 10 NLĐ (fact tu_10_lao_dong_tro_len), văn bản góp ý only where there is a tổ chức đại diện (co_to_chuc_dai_dien), văn bản kỷ luật riêng only if the employer has one (co_van_ban_ky_luat_rieng). The KB decision tree's numeric so_lao_dong is modeled as a boolean here because the condition mini-language (DATA.md §3) has no ≥ operator. Conditions use only {fact,eq}/{fact,in}.",
   "code": "2.001955",
   "case_facts_schema": {
     "tu_10_lao_dong_tro_len": { "type": "boolean",
@@ -54,8 +54,8 @@
     ]
   },
   "review": {
-    "reviewed_by": null,
-    "reviewed_at": null,
-    "method": "Stage A2 KB ingest (agent) — Claude Code, converted per tools/etl/STRUCTURING.md; pending interactive human review"
+    "reviewed_by": "Lê Anh",
+    "reviewed_at": "2026-07-18",
+    "method": "Stage A2 KB ingest (agent) + B-lite interactive review (Claude Code per tools/etl/STRUCTURING.md §2, bảng gộp per-procedure; script đối chiếu source_component_code/quantity + schema-vs-form pass)"
   }
 }

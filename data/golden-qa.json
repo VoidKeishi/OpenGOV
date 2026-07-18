@@ -1,187 +1,603 @@
 {
-  "_draft": "DRAFT (agent-drafted from notes/knowledge-base/golden-qa-set.md, pending human review — DATA.md §5). 30 authored Q&A (10 thường trú 1.004222, 10 DNTN 2.001610, 10 nội quy lao động 2.001955), converted to the eval shape. must_mention_any: outer array = AND, inner array = OR (diacritics-normalized substring match, deterministic — no LLM judge). must_cite_any: legal document codes that must appear in citations (OR); empty when the source is only the portal record. must_include_source_url: answers must link a source. Runner: backend/scripts/golden-qa.ts POSTs each question to /chat. The '_draft' key is metadata, not a QA item.",
+  "_note": "(30 items convert từ notes/knowledge-base/golden-qa-set.md, kiểm số lượng + shape 18/07/2026. Tinh chỉnh expect từng câu thuộc bước strengthen sau khi chạy backend/scripts/golden-qa.ts.)",
   "items": [
-    { "id": "qa-001", "category": "checklist",
+    {
+      "id": "qa-001",
+      "category": "checklist",
       "question": "Tôi vừa mua nhà mới, muốn chuyển hộ khẩu về đó thì cần giấy tờ gì?",
-      "expect": { "procedure_code": "1.004222",
-                  "must_mention_any": [["CT01"], ["chứng minh chỗ ở", "sổ đỏ", "quyền sử dụng đất", "hợp đồng mua bán"]],
-                  "must_cite_any": ["68/2020/QH14", "154/2024/NĐ-CP"],
-                  "must_include_source_url": true } },
-    { "id": "qa-002", "category": "checklist",
+      "expect": {
+        "procedure_code": "1.004222",
+        "must_mention_any": [
+          [
+            "CT01"
+          ],
+          [
+            "chứng minh chỗ ở",
+            "sổ đỏ",
+            "quyền sử dụng đất",
+            "hợp đồng mua bán"
+          ]
+        ],
+        "must_cite_any": [
+          "68/2020/QH14",
+          "154/2024/NĐ-CP"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-002",
+      "category": "checklist",
       "question": "Tôi thuê phòng trọ, có đăng ký thường trú được không?",
-      "expect": { "procedure_code": "1.004222",
-                  "must_mention_any": [["công chứng", "chứng thực"], ["diện tích"]],
-                  "must_cite_any": ["68/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-003", "category": "deadline",
+      "expect": {
+        "procedure_code": "1.004222",
+        "must_mention_any": [
+          [
+            "công chứng",
+            "chứng thực"
+          ],
+          [
+            "diện tích"
+          ]
+        ],
+        "must_cite_any": [
+          "68/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-003",
+      "category": "deadline",
       "question": "Con tôi mới sinh, bao lâu phải đăng ký thường trú?",
-      "expect": { "procedure_code": "1.004222",
-                  "must_mention_any": [["60 ngày"], ["Giấy khai sinh"]],
-                  "must_cite_any": ["68/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-004", "category": "eligibility",
+      "expect": {
+        "procedure_code": "1.004222",
+        "must_mention_any": [
+          [
+            "60 ngày"
+          ],
+          [
+            "Giấy khai sinh"
+          ]
+        ],
+        "must_cite_any": [
+          "68/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-004",
+      "category": "eligibility",
       "question": "Nhà tôi có 2 đồng sở hữu. Muốn đăng ký thường trú có cần cả 2 người đồng ý không?",
-      "expect": { "procedure_code": "1.004222",
-                  "must_mention_any": [["đồng sở hữu"]],
-                  "must_cite_any": ["68/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-005", "category": "fee",
+      "expect": {
+        "procedure_code": "1.004222",
+        "must_mention_any": [
+          [
+            "đồng sở hữu"
+          ]
+        ],
+        "must_cite_any": [
+          "68/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-005",
+      "category": "fee",
       "question": "Phí đăng ký thường trú bao nhiêu? Nộp online có rẻ hơn không?",
-      "expect": { "procedure_code": "1.004222",
-                  "must_mention_any": [["10.000", "10000"], ["20.000", "20000"]],
-                  "must_cite_any": ["75/2022/TT-BTC"],
-                  "must_include_source_url": true } },
-    { "id": "qa-006", "category": "eligibility",
+      "expect": {
+        "procedure_code": "1.004222",
+        "must_mention_any": [
+          [
+            "10.000",
+            "10000"
+          ],
+          [
+            "20.000",
+            "20000"
+          ]
+        ],
+        "must_cite_any": [
+          "75/2022/TT-BTC"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-006",
+      "category": "eligibility",
       "question": "Tôi là Việt kiều muốn về VN đăng ký thường trú, cần gì?",
-      "expect": { "procedure_code": "1.004222",
-                  "must_mention_any": [["hộ chiếu"], ["CT02"]],
-                  "must_cite_any": ["68/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-007", "category": "deadline",
+      "expect": {
+        "procedure_code": "1.004222",
+        "must_mention_any": [
+          [
+            "hộ chiếu"
+          ],
+          [
+            "CT02"
+          ]
+        ],
+        "must_cite_any": [
+          "68/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-007",
+      "category": "deadline",
       "question": "Đăng ký thường trú mất bao lâu?",
-      "expect": { "procedure_code": "1.004222",
-                  "must_mention_any": [["7 ngày"]],
-                  "must_cite_any": [],
-                  "must_include_source_url": true } },
-    { "id": "qa-008", "category": "eligibility",
+      "expect": {
+        "procedure_code": "1.004222",
+        "must_mention_any": [
+          [
+            "7 ngày"
+          ]
+        ],
+        "must_cite_any": [],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-008",
+      "category": "eligibility",
       "question": "Tôi muốn đăng ký thường trú tại chùa/nhà thờ, có được không?",
-      "expect": { "procedure_code": "1.004222",
-                  "must_mention_any": [["tín ngưỡng", "tôn giáo"], ["xác nhận"]],
-                  "must_cite_any": ["68/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-009", "category": "result",
+      "expect": {
+        "procedure_code": "1.004222",
+        "must_mention_any": [
+          [
+            "tín ngưỡng",
+            "tôn giáo"
+          ],
+          [
+            "xác nhận"
+          ]
+        ],
+        "must_cite_any": [
+          "68/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-009",
+      "category": "result",
       "question": "Kết quả đăng ký thường trú là gì? Có được cấp sổ hộ khẩu không?",
-      "expect": { "procedure_code": "1.004222",
-                  "must_mention_any": [["sổ hộ khẩu"], ["VNeID", "Cơ sở dữ liệu", "dân cư"]],
-                  "must_cite_any": ["68/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-010", "category": "discovery",
+      "expect": {
+        "procedure_code": "1.004222",
+        "must_mention_any": [
+          [
+            "sổ hộ khẩu"
+          ],
+          [
+            "VNeID",
+            "Cơ sở dữ liệu",
+            "dân cư"
+          ]
+        ],
+        "must_cite_any": [
+          "68/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-010",
+      "category": "discovery",
       "question": "Nộp hồ sơ ở đâu? Tôi ở quận Bình Thạnh, TP.HCM.",
-      "expect": { "procedure_code": "1.004222",
-                  "must_mention_any": [["Công an phường", "Công an xã"]],
-                  "must_cite_any": ["68/2020/QH14"],
-                  "must_include_source_url": true } },
-
-    { "id": "qa-011", "category": "checklist",
+      "expect": {
+        "procedure_code": "1.004222",
+        "must_mention_any": [
+          [
+            "Công an phường",
+            "Công an xã"
+          ]
+        ],
+        "must_cite_any": [
+          "68/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-011",
+      "category": "checklist",
       "question": "Tôi muốn mở doanh nghiệp tư nhân bán quần áo, cần chuẩn bị gì?",
-      "expect": { "procedure_code": "2.001610",
-                  "must_mention_any": [["Giấy đề nghị đăng ký"], ["100.000", "100000"]],
-                  "must_cite_any": ["168/2025/NĐ-CP", "47/2019/TT-BTC"],
-                  "must_include_source_url": true } },
-    { "id": "qa-012", "category": "eligibility",
+      "expect": {
+        "procedure_code": "2.001610",
+        "must_mention_any": [
+          [
+            "Giấy đề nghị đăng ký"
+          ],
+          [
+            "100.000",
+            "100000"
+          ]
+        ],
+        "must_cite_any": [
+          "168/2025/NĐ-CP",
+          "47/2019/TT-BTC"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-012",
+      "category": "eligibility",
       "question": "Vốn tối thiểu để mở DNTN là bao nhiêu?",
-      "expect": { "procedure_code": "2.001610",
-                  "must_mention_any": [["vốn tối thiểu"], ["toàn bộ tài sản"]],
-                  "must_cite_any": ["59/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-013", "category": "eligibility",
+      "expect": {
+        "procedure_code": "2.001610",
+        "must_mention_any": [
+          [
+            "vốn tối thiểu"
+          ],
+          [
+            "toàn bộ tài sản"
+          ]
+        ],
+        "must_cite_any": [
+          "59/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-013",
+      "category": "eligibility",
       "question": "Tôi đã có 1 DNTN rồi, có mở thêm DNTN thứ 2 được không?",
-      "expect": { "procedure_code": "2.001610",
-                  "must_mention_any": [["1 doanh nghiệp tư nhân", "một doanh nghiệp tư nhân", "1 DNTN"]],
-                  "must_cite_any": ["59/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-014", "category": "discovery",
+      "expect": {
+        "procedure_code": "2.001610",
+        "must_mention_any": [
+          [
+            "1 doanh nghiệp tư nhân",
+            "một doanh nghiệp tư nhân",
+            "1 DNTN"
+          ]
+        ],
+        "must_cite_any": [
+          "59/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-014",
+      "category": "discovery",
       "question": "Làm sao biết tên doanh nghiệp tôi muốn đặt có bị trùng không?",
-      "expect": { "procedure_code": "2.001610",
-                  "must_mention_any": [["dangkykinhdoanh.gov.vn", "tra cứu"]],
-                  "must_cite_any": ["59/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-015", "category": "fee",
+      "expect": {
+        "procedure_code": "2.001610",
+        "must_mention_any": [
+          [
+            "dangkykinhdoanh.gov.vn",
+            "tra cứu"
+          ]
+        ],
+        "must_cite_any": [
+          "59/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-015",
+      "category": "fee",
       "question": "Nộp hồ sơ online có lợi gì hơn nộp trực tiếp?",
-      "expect": { "procedure_code": "2.001610",
-                  "must_mention_any": [["50.000", "50000", "miễn lệ phí"], ["định danh điện tử"]],
-                  "must_cite_any": ["47/2019/TT-BTC"],
-                  "must_include_source_url": true } },
-    { "id": "qa-016", "category": "legal",
+      "expect": {
+        "procedure_code": "2.001610",
+        "must_mention_any": [
+          [
+            "50.000",
+            "50000",
+            "miễn lệ phí"
+          ],
+          [
+            "định danh điện tử"
+          ]
+        ],
+        "must_cite_any": [
+          "47/2019/TT-BTC"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-016",
+      "category": "legal",
       "question": "DNTN khác gì Công ty TNHH 1 thành viên?",
-      "expect": { "procedure_code": "2.001610",
-                  "must_mention_any": [["pháp nhân"], ["toàn bộ tài sản", "trách nhiệm"]],
-                  "must_cite_any": ["59/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-017", "category": "eligibility",
+      "expect": {
+        "procedure_code": "2.001610",
+        "must_mention_any": [
+          [
+            "pháp nhân"
+          ],
+          [
+            "toàn bộ tài sản",
+            "trách nhiệm"
+          ]
+        ],
+        "must_cite_any": [
+          "59/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-017",
+      "category": "eligibility",
       "question": "Tôi là công chức nhà nước, có mở DNTN được không?",
-      "expect": { "procedure_code": "2.001610",
-                  "must_mention_any": [["cán bộ", "công chức", "viên chức"], ["Điều 17", "không được thành lập"]],
-                  "must_cite_any": ["59/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-018", "category": "process",
+      "expect": {
+        "procedure_code": "2.001610",
+        "must_mention_any": [
+          [
+            "cán bộ",
+            "công chức",
+            "viên chức"
+          ],
+          [
+            "Điều 17",
+            "không được thành lập"
+          ]
+        ],
+        "must_cite_any": [
+          "59/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-018",
+      "category": "process",
       "question": "Sau khi có giấy phép, tôi cần làm thủ tục gì tiếp?",
-      "expect": { "procedure_code": "2.001610",
-                  "must_mention_any": [["con dấu", "tài khoản ngân hàng", "hóa đơn", "thuế"]],
-                  "must_cite_any": ["59/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-019", "category": "eligibility",
+      "expect": {
+        "procedure_code": "2.001610",
+        "must_mention_any": [
+          [
+            "con dấu",
+            "tài khoản ngân hàng",
+            "hóa đơn",
+            "thuế"
+          ]
+        ],
+        "must_cite_any": [
+          "59/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-019",
+      "category": "eligibility",
       "question": "Tôi muốn kinh doanh thực phẩm, có cần giấy phép riêng không?",
-      "expect": { "procedure_code": "2.001610",
-                  "must_mention_any": [["có điều kiện"], ["an toàn thực phẩm", "ATTP"]],
-                  "must_cite_any": ["61/2020/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-020", "category": "process",
+      "expect": {
+        "procedure_code": "2.001610",
+        "must_mention_any": [
+          [
+            "có điều kiện"
+          ],
+          [
+            "an toàn thực phẩm",
+            "ATTP"
+          ]
+        ],
+        "must_cite_any": [
+          "61/2020/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-020",
+      "category": "process",
       "question": "Nhờ người khác nộp hồ sơ thay được không?",
-      "expect": { "procedure_code": "2.001610",
-                  "must_mention_any": [["ủy quyền"], ["công chứng"]],
-                  "must_cite_any": ["168/2025/NĐ-CP"],
-                  "must_include_source_url": true } },
-
-    { "id": "qa-021", "category": "eligibility",
+      "expect": {
+        "procedure_code": "2.001610",
+        "must_mention_any": [
+          [
+            "ủy quyền"
+          ],
+          [
+            "công chứng"
+          ]
+        ],
+        "must_cite_any": [
+          "168/2025/NĐ-CP"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-021",
+      "category": "eligibility",
       "question": "Công ty tôi có 8 nhân viên, có cần đăng ký nội quy lao động không?",
-      "expect": { "procedure_code": "2.001955",
-                  "must_mention_any": [["10 người lao động", "10 NLĐ", "từ 10"]],
-                  "must_cite_any": ["45/2019/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-022", "category": "checklist",
+      "expect": {
+        "procedure_code": "2.001955",
+        "must_mention_any": [
+          [
+            "10 người lao động",
+            "10 NLĐ",
+            "từ 10"
+          ]
+        ],
+        "must_cite_any": [
+          "45/2019/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-022",
+      "category": "checklist",
       "question": "Nội quy lao động cần có những nội dung gì?",
-      "expect": { "procedure_code": "2.001955",
-                  "must_mention_any": [["9 nội dung"], ["quấy rối tình dục"]],
-                  "must_cite_any": ["45/2019/QH14", "145/2020/NĐ-CP"],
-                  "must_include_source_url": true } },
-    { "id": "qa-023", "category": "legal",
+      "expect": {
+        "procedure_code": "2.001955",
+        "must_mention_any": [
+          [
+            "9 nội dung"
+          ],
+          [
+            "quấy rối tình dục"
+          ]
+        ],
+        "must_cite_any": [
+          "45/2019/QH14",
+          "145/2020/NĐ-CP"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-023",
+      "category": "legal",
       "question": "Có được phạt tiền nhân viên khi vi phạm nội quy không?",
-      "expect": { "procedure_code": "2.001955",
-                  "must_mention_any": [["phạt tiền"], ["khiển trách", "sa thải"]],
-                  "must_cite_any": ["45/2019/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-024", "category": "checklist",
+      "expect": {
+        "procedure_code": "2.001955",
+        "must_mention_any": [
+          [
+            "phạt tiền"
+          ],
+          [
+            "khiển trách",
+            "sa thải"
+          ]
+        ],
+        "must_cite_any": [
+          "45/2019/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-024",
+      "category": "checklist",
       "question": "Hồ sơ đăng ký nội quy lao động gồm những gì?",
-      "expect": { "procedure_code": "2.001955",
-                  "must_mention_any": [["nội quy lao động"], ["văn bản đề nghị"]],
-                  "must_cite_any": ["45/2019/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-025", "category": "deadline",
+      "expect": {
+        "procedure_code": "2.001955",
+        "must_mention_any": [
+          [
+            "nội quy lao động"
+          ],
+          [
+            "văn bản đề nghị"
+          ]
+        ],
+        "must_cite_any": [
+          "45/2019/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-025",
+      "category": "deadline",
       "question": "Nội quy có hiệu lực từ lúc nào?",
-      "expect": { "procedure_code": "2.001955",
-                  "must_mention_any": [["15 ngày"]],
-                  "must_cite_any": ["45/2019/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-026", "category": "eligibility",
+      "expect": {
+        "procedure_code": "2.001955",
+        "must_mention_any": [
+          [
+            "15 ngày"
+          ]
+        ],
+        "must_cite_any": [
+          "45/2019/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-026",
+      "category": "eligibility",
       "question": "Công ty chưa có công đoàn, vẫn phải lấy ý kiến công đoàn à?",
-      "expect": { "procedure_code": "2.001955",
-                  "must_mention_any": [["tổ chức đại diện"]],
-                  "must_cite_any": ["45/2019/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-027", "category": "process",
+      "expect": {
+        "procedure_code": "2.001955",
+        "must_mention_any": [
+          [
+            "tổ chức đại diện"
+          ]
+        ],
+        "must_cite_any": [
+          "45/2019/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-027",
+      "category": "process",
       "question": "Nộp đăng ký nội quy ở đâu? Công ty đăng ký ở Hà Nội nhưng nhà máy ở Bắc Ninh.",
-      "expect": { "procedure_code": "2.001955",
-                  "must_mention_any": [["đăng ký kinh doanh", "trụ sở"], ["nội vụ", "Hà Nội"]],
-                  "must_cite_any": [],
-                  "must_include_source_url": true } },
-    { "id": "qa-028", "category": "deadline",
+      "expect": {
+        "procedure_code": "2.001955",
+        "must_mention_any": [
+          [
+            "đăng ký kinh doanh",
+            "trụ sở"
+          ],
+          [
+            "nội vụ",
+            "Hà Nội"
+          ]
+        ],
+        "must_cite_any": [],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-028",
+      "category": "deadline",
       "question": "Ban hành nội quy xong, bao lâu phải nộp đăng ký?",
-      "expect": { "procedure_code": "2.001955",
-                  "must_mention_any": [["10 ngày"]],
-                  "must_cite_any": ["45/2019/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-029", "category": "process",
+      "expect": {
+        "procedure_code": "2.001955",
+        "must_mention_any": [
+          [
+            "10 ngày"
+          ]
+        ],
+        "must_cite_any": [
+          "45/2019/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-029",
+      "category": "process",
       "question": "Cơ quan nội vụ nói nội quy có điều khoản trái pháp luật, phải làm sao?",
-      "expect": { "procedure_code": "2.001955",
-                  "must_mention_any": [["sửa đổi"], ["đăng ký lại"]],
-                  "must_cite_any": ["45/2019/QH14"],
-                  "must_include_source_url": true } },
-    { "id": "qa-030", "category": "process",
+      "expect": {
+        "procedure_code": "2.001955",
+        "must_mention_any": [
+          [
+            "sửa đổi"
+          ],
+          [
+            "đăng ký lại"
+          ]
+        ],
+        "must_cite_any": [
+          "45/2019/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    },
+    {
+      "id": "qa-030",
+      "category": "process",
       "question": "Sau khi nội quy có hiệu lực, có cần thông báo cho nhân viên không?",
-      "expect": { "procedure_code": "2.001955",
-                  "must_mention_any": [["thông báo"], ["niêm yết"]],
-                  "must_cite_any": ["45/2019/QH14"],
-                  "must_include_source_url": true } }
+      "expect": {
+        "procedure_code": "2.001955",
+        "must_mention_any": [
+          [
+            "thông báo"
+          ],
+          [
+            "niêm yết"
+          ]
+        ],
+        "must_cite_any": [
+          "45/2019/QH14"
+        ],
+        "must_include_source_url": true
+      }
+    }
   ]
 }

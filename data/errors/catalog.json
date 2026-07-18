@@ -1,5 +1,5 @@
 {
-  "_draft": "DRAFT (agent-drafted from notes/knowledge-base/error-catalog.md, pending human review — DATA.md §4). 35 ERR-* entries (ERR-TT-01..12 thường trú, ERR-DN-01..12 DNTN, ERR-NQ-01..11 nội quy lao động) + the 5 generic E_* codes (E_REQUIRED, E_DINH_DANH_12, E_TINH_SAP_NHAP, E_CAP_HUYEN, E_KS_CHA_ME) copied verbatim from DATA.md §4 and final. Sheet mapping: 'Thông báo lỗi'→message, 'Cách sửa'→suggestion, 🔴→error, 🟡→warning, ℹ️→info, 'Detection rule'→detection (documentation only). Many ERR-* are ADVISORY (detection needs state DBs — CSDL dân cư, danh sách DN toàn quốc, nội dung nội quy…); the rule engine only fires closed-set rules from the schema files, these surface as chat/checklist guidance. Messages/suggestions are Vietnamese with {param} interpolation ({label} always available; other {…} params come from the hit/context). type ∈ {missing, format, invalid_value, conflict}; severity ∈ {error, warning, info}. Not seeded — the validation module reads this file directly. Keys prefixed with '_' are metadata, not error codes.",
+  "_note": "(DATA.md §4 — reviewed & approved 18/07/2026, B-lite session; +4 generic codes E_NGAY_TUONG_LAI/E_MST_10/E_SO_CHU_LECH/E_GOP_VON_VUOT_TONG added for the schema rule set.) 35 ERR-* entries (ERR-TT-01..12 thường trú, ERR-DN-01..12 DNTN, ERR-NQ-01..11 nội quy lao động) + the 5 generic E_* codes (E_REQUIRED, E_DINH_DANH_12, E_TINH_SAP_NHAP, E_CAP_HUYEN, E_KS_CHA_ME) copied verbatim from DATA.md §4 and final. Sheet mapping: 'Thông báo lỗi'→message, 'Cách sửa'→suggestion, 🔴→error, 🟡→warning, ℹ️→info, 'Detection rule'→detection (documentation only). Many ERR-* are ADVISORY (detection needs state DBs — CSDL dân cư, danh sách DN toàn quốc, nội dung nội quy…); the rule engine only fires closed-set rules from the schema files, these surface as chat/checklist guidance. Messages/suggestions are Vietnamese with {param} interpolation ({label} always available; other {…} params come from the hit/context). type ∈ {missing, format, invalid_value, conflict}; severity ∈ {error, warning, info}. Not seeded — the validation module reads this file directly. Keys prefixed with '_' are metadata, not error codes.",
 
   "E_REQUIRED": {
     "type": "missing",
@@ -30,6 +30,30 @@
     "severity": "error",
     "message": "Tờ khai phải có thông tin của ít nhất cha hoặc mẹ.",
     "suggestion": "Điền tối thiểu Họ tên của người mẹ hoặc người cha (mục C hoặc D)."
+  },
+  "E_NGAY_TUONG_LAI": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "\"{label}\" không được là ngày trong tương lai.",
+    "suggestion": "Kiểm tra lại ngày đã nhập ở trường {label}."
+  },
+  "E_MST_10": {
+    "type": "format",
+    "severity": "error",
+    "message": "{label} phải gồm đúng 10 chữ số.",
+    "suggestion": "Kiểm tra lại mã số thuế/mã số doanh nghiệp: đủ 10 chữ số, không có khoảng trắng hay ký tự khác."
+  },
+  "E_SO_CHU_LECH": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Giá trị bằng chữ của \"{label}\" không khớp với giá trị bằng số.",
+    "suggestion": "Kiểm tra và ghi lại phần bằng chữ cho khớp với số tiền đã kê khai bằng số."
+  },
+  "E_GOP_VON_VUOT_TONG": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "\"{label}\" vượt quá tổng vốn đầu tư đã kê khai.",
+    "suggestion": "Giá trị từng loại tài sản góp vốn không được lớn hơn tổng vốn đầu tư (mục F của Giấy đề nghị)."
   },
 
   "ERR-TT-01": {

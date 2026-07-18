@@ -1,5 +1,5 @@
 {
-  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §5, pending structuring-session review). Legal-source fragments for đăng ký nội quy lao động, converted from notes/knowledge-base/research-03-noi-quy.md plus web gap-fill for BLLĐ 2019 Điều 122/124/125/127 (kỷ luật lao động — cited by the error catalog / golden QA but absent from the research file). Every fragment carries source_url + retrieved_at; text is a minimal relevant excerpt.",
+  "_note": "(DATA.md §5 — reviewed & approved 18/07/2026, B-lite session; spot-check Điều 119 trên hethongphapluat khớp nguyên văn; 2 fragment được chú thích title: bllđ-d119 [cấp huyện→cấp xã sau 01/7/2025], nd45-2025-so-noi-vu [tóm tắt].) Legal-source fragments for đăng ký nội quy lao động, converted from notes/knowledge-base/research-03-noi-quy.md plus web gap-fill for BLLĐ 2019 Điều 122/124/125/127 (kỷ luật lao động — cited by the error catalog / golden QA but absent from the research file). Every fragment carries source_url + retrieved_at; text is a minimal relevant excerpt.",
   "code": "2.001955",
   "fragments": [
     {
@@ -29,7 +29,7 @@
       "doc_code": "45/2019/QH14",
       "doc_title": "Bộ luật Lao động 2019",
       "article": "Điều 119",
-      "title": "Đăng ký nội quy lao động",
+      "title": "Đăng ký nội quy lao động (lưu ý: từ 01/7/2025 mô hình chính quyền 2 cấp — thẩm quyền 'cấp huyện' tại khoản 5 do cấp xã đảm nhận nếu được ủy quyền)",
       "text": "1. Người sử dụng lao động sử dụng từ 10 người lao động trở lên phải đăng ký nội quy lao động tại cơ quan chuyên môn về lao động thuộc Ủy ban nhân dân cấp tỉnh nơi người sử dụng lao động đăng ký kinh doanh. 2. Trong thời hạn 10 ngày kể từ ngày ban hành nội quy lao động, người sử dụng lao động phải nộp hồ sơ đăng ký nội quy lao động. 3. Trong thời hạn 07 ngày làm việc kể từ ngày nhận được hồ sơ, nếu phát hiện nội quy lao động có quy định trái pháp luật thì cơ quan có thẩm quyền thông báo, hướng dẫn sửa đổi, bổ sung và đăng ký lại. 4. Người sử dụng lao động có chi nhánh, đơn vị, cơ sở sản xuất, kinh doanh đặt ở nhiều địa bàn khác nhau thì gửi nội quy lao động đã được đăng ký đến cơ quan chuyên môn về lao động nơi đặt chi nhánh. 5. Cơ quan chuyên môn cấp tỉnh có thể ủy quyền cho cơ quan chuyên môn về lao động cấp huyện thực hiện việc đăng ký.",
       "topics": ["dang_ky", "nguong_10", "thoi_han", "chi_nhanh"],
       "source_url": "https://hethongphapluat.com/bo-luat-lao-dong-2019/dieu-119",
@@ -117,7 +117,7 @@
       "doc_code": "45/2025/NĐ-CP",
       "doc_title": "Nghị định 45/2025/NĐ-CP quy định tổ chức các cơ quan chuyên môn thuộc UBND cấp tỉnh, cấp huyện",
       "article": "Sắp xếp bộ máy (hiệu lực 01/3/2025)",
-      "title": "Cơ quan tiếp nhận đăng ký nội quy lao động sau sắp xếp bộ máy",
+      "title": "Cơ quan tiếp nhận đăng ký nội quy lao động sau sắp xếp bộ máy (tóm tắt — không phải trích nguyên văn)",
       "text": "Từ 01/3/2025, Sở Lao động - Thương binh và Xã hội kết thúc hoạt động; chức năng quản lý nhà nước về lao động, tiền lương, việc làm chuyển sang Sở Nội vụ. \"Cơ quan chuyên môn về nội vụ thuộc Ủy ban nhân dân cấp tỉnh\" là Sở Nội vụ — đây là cơ quan tiếp nhận đăng ký nội quy lao động; cấp xã chỉ thực hiện nếu được cấp tỉnh ủy quyền.",
       "topics": ["co_quan_thuc_hien", "so_noi_vu", "sap_xep_bo_may"],
       "source_url": "https://vanban.chinhphu.vn/?pageid=27160&docid=212973",
@@ -125,8 +125,8 @@
     }
   ],
   "review": {
-    "reviewed_by": null,
-    "reviewed_at": null,
-    "method": "Stage A2 KB ingest (agent) — converted from notes/knowledge-base/research-03-noi-quy.md + web gap-fill (BLLĐ 2019 Đ.122/124/125/127); pending interactive structuring-session review per tools/etl/STRUCTURING.md"
+    "reviewed_by": "Lê Anh",
+    "reviewed_at": "2026-07-18",
+    "method": "Stage A2 KB ingest (agent, from notes/knowledge-base/research-03-noi-quy.md + web gap-fill) + B-lite review 18/07/2026 (spot-check web Điều 119 + đối chiếu nội dung BLLĐ Đ.117–127, NĐ 145/2020)"
   }
 }

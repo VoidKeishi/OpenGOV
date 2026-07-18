@@ -1,5 +1,5 @@
 {
-  "_draft": "DRAFT (agent-drafted, pending human approval — DATA.md §5). Colloquial search phrases per pilot procedure; seed loads these into the aliases table + FTS aliases column (normalized). Keys prefixed with '_' are ignored by the seeder. The 2.001610 row must include the literal official name so the exact-match fast path pins 'thành lập doanh nghiệp tư nhân' to 2.001610 (plain FTS ranks province-specific SPECIFIC variants above the STANDARD record — verified 18/07/2026).",
+  "_note": "(reviewed & approved 18/07/2026, B-lite session — pin 2.001610 trước biến thể SPECIFIC cấp tỉnh.)",
   "1.004222": [
     "nhập hộ khẩu",
     "đăng ký hộ khẩu",

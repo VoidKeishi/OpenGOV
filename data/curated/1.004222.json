@@ -1,5 +1,5 @@
 {
-  "_draft": "DRAFT (Stage A2 KB ingest — DATA.md §3, pending structuring-session review). Curated overlay for đăng ký thường trú, converted from notes/knowledge-base/procedure-01-thuong-tru.md + research-01 decision tree, cross-checked against data/procedures/1.004222.json checklist_raw. Every checklist item carries source_component_code (raw component code) or source_quote; every deadline carries source_quote. The 6 hồ sơ cases map to the enum fact truong_hop; phương tiện docs gate on song_tren_phuong_tien; CT01→CT02 switch on viet_kieu_khong_ho_chieu. Conditions use only {fact,eq}/{fact,in}. Missing fact → fail-open display (show with 'tùy trường hợp' badge).",
+  "_note": "(DATA.md §3 — reviewed & approved 18/07/2026, B-lite session.) Curated overlay for đăng ký thường trú, converted from notes/knowledge-base/procedure-01-thuong-tru.md + research-01 decision tree, cross-checked against data/procedures/1.004222.json checklist_raw. Every checklist item carries source_component_code (raw component code) or source_quote; every deadline carries source_quote. The 6 hồ sơ cases map to the enum fact truong_hop; phương tiện docs gate on song_tren_phuong_tien; CT01→CT02 switch on viet_kieu_khong_ho_chieu. Conditions use only {fact,eq}/{fact,in}. Missing fact → fail-open display (show with 'tùy trường hợp' badge).",
   "code": "1.004222",
   "case_facts_schema": {
     "kenh_nop": { "type": "enum", "values": ["truc_tiep", "truc_tuyen"],
@@ -124,8 +124,8 @@
     ]
   },
   "review": {
-    "reviewed_by": null,
-    "reviewed_at": null,
-    "method": "Stage A2 KB ingest (agent) — Claude Code, converted per tools/etl/STRUCTURING.md; pending interactive human review"
+    "reviewed_by": "Lê Anh",
+    "reviewed_at": "2026-07-18",
+    "method": "Stage A2 KB ingest (agent) + B-lite interactive review (Claude Code per tools/etl/STRUCTURING.md §2, bảng gộp per-procedure; script đối chiếu source_component_code/quantity + schema-vs-form pass)"
   }
 }

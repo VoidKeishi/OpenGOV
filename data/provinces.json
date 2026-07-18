@@ -137,6 +137,123 @@
       "name": "Tỉnh Cà Mau"
     }
   ],
-  "defunct": [],
-  "_draft": "DRAFT: defunct[] is the human-verified pre-merger province → merged_into map (~29 names from the 01/07/2025 merger). Empty pending review — see docs/DATA.md §5. Powers the province_not_defunct / E_TINH_SAP_NHAP validation rule."
+  "defunct": [
+    {
+      "name": "Hà Giang",
+      "merged_into": "Tỉnh Tuyên Quang"
+    },
+    {
+      "name": "Yên Bái",
+      "merged_into": "Tỉnh Lào Cai"
+    },
+    {
+      "name": "Bắc Kạn",
+      "merged_into": "Tỉnh Thái Nguyên"
+    },
+    {
+      "name": "Vĩnh Phúc",
+      "merged_into": "Tỉnh Phú Thọ"
+    },
+    {
+      "name": "Hòa Bình",
+      "merged_into": "Tỉnh Phú Thọ"
+    },
+    {
+      "name": "Bắc Giang",
+      "merged_into": "Tỉnh Bắc Ninh"
+    },
+    {
+      "name": "Thái Bình",
+      "merged_into": "Tỉnh Hưng Yên"
+    },
+    {
+      "name": "Hải Dương",
+      "merged_into": "Thành phố Hải Phòng"
+    },
+    {
+      "name": "Hà Nam",
+      "merged_into": "Tỉnh Ninh Bình"
+    },
+    {
+      "name": "Nam Định",
+      "merged_into": "Tỉnh Ninh Bình"
+    },
+    {
+      "name": "Quảng Bình",
+      "merged_into": "Tỉnh Quảng Trị"
+    },
+    {
+      "name": "Quảng Nam",
+      "merged_into": "Thành phố Đà Nẵng"
+    },
+    {
+      "name": "Kon Tum",
+      "merged_into": "Tỉnh Quảng Ngãi"
+    },
+    {
+      "name": "Bình Định",
+      "merged_into": "Tỉnh Gia Lai"
+    },
+    {
+      "name": "Ninh Thuận",
+      "merged_into": "Tỉnh Khánh Hòa"
+    },
+    {
+      "name": "Đắk Nông",
+      "merged_into": "Tỉnh Lâm Đồng"
+    },
+    {
+      "name": "Bình Thuận",
+      "merged_into": "Tỉnh Lâm Đồng"
+    },
+    {
+      "name": "Phú Yên",
+      "merged_into": "Tỉnh Đắk Lắk"
+    },
+    {
+      "name": "Bà Rịa - Vũng Tàu",
+      "merged_into": "Thành phố Hồ Chí Minh"
+    },
+    {
+      "name": "Bình Dương",
+      "merged_into": "Thành phố Hồ Chí Minh"
+    },
+    {
+      "name": "Bình Phước",
+      "merged_into": "Thành phố Đồng Nai"
+    },
+    {
+      "name": "Long An",
+      "merged_into": "Tỉnh Tây Ninh"
+    },
+    {
+      "name": "Sóc Trăng",
+      "merged_into": "Thành phố Cần Thơ"
+    },
+    {
+      "name": "Hậu Giang",
+      "merged_into": "Thành phố Cần Thơ"
+    },
+    {
+      "name": "Bến Tre",
+      "merged_into": "Tỉnh Vĩnh Long"
+    },
+    {
+      "name": "Trà Vinh",
+      "merged_into": "Tỉnh Vĩnh Long"
+    },
+    {
+      "name": "Tiền Giang",
+      "merged_into": "Tỉnh Đồng Tháp"
+    },
+    {
+      "name": "Bạc Liêu",
+      "merged_into": "Tỉnh Cà Mau"
+    },
+    {
+      "name": "Kiên Giang",
+      "merged_into": "Tỉnh An Giang"
+    }
+  ],
+  "_note": "(current[] máy sinh từ crawl; defunct[] human-verified 18/07/2026 theo Nghị quyết 202/2025/QH15 — 29 tỉnh hợp nhất từ 01/7/2025, cross-check: mọi merged_into khớp đúng 1 tên trong current[], 34+29=63.)"
 }
