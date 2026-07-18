@@ -1,6 +1,6 @@
 # ARCHITECTURE.md — OpenGOV Backend
 
-> System doc for coding agents and judges. Read `CONTEXT.md` (repo root) first for the problem and judging criteria. All committed data shapes live in `docs/DATA.md` — that file is the schema contract; this file explains the system around it.
+> System doc for coding agents and judges. Read `PROBLEM.md` (repo root) first for the problem and judging criteria, then `docs/DESIGN.md` for the solution, use cases, and design decisions. All committed data shapes live in `docs/DATA.md` — that file is the schema contract; this file explains the system around it.
 
 ## 1. Source data reality (drives everything below)
 
@@ -83,7 +83,7 @@ Widget keeps `session_id` in `sessionStorage` → survives page navigation.
 Two tiers behind one provider-agnostic interface:
 - Cheap model (Gemini Flash class): routing, rerank, facts extraction, llm_check.
 - Strong Vietnamese-capable model (Claude Sonnet class): answering, fix suggestions.
-Tool-calling support varies per model on OpenRouter — smoke-test the chosen main model's function calling at startup; configure a fallback model. PII rule from CONTEXT.md applies: values reaching external APIs for llm_check are masked first.
+Tool-calling support varies per model on OpenRouter — smoke-test the chosen main model's function calling at startup; configure a fallback model. PII rule from DESIGN.md §5 applies: values reaching external APIs for llm_check are masked first.
 
 ## 5. API surface
 

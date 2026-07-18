@@ -1,6 +1,6 @@
 # backend — OpenGOV service & data pipeline
 
-Read order before any work here: `/CONTEXT.md` → `/docs/ARCHITECTURE.md` → `/docs/DATA.md`. DATA.md is the schema contract — if code disagrees with it, fix the code.
+Read order before any work here: `/PROBLEM.md` → `/docs/DESIGN.md` → `/docs/ARCHITECTURE.md` → `/docs/DATA.md`. DATA.md is the schema contract — if code disagrees with it, fix the code.
 
 Hard rules:
 

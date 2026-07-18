@@ -1,79 +1,34 @@
-# PLAN.md — OpenGOV monorepo, high-level plan
+# PLAN.md — Trạng thái & việc còn lại
 
-> Read `context.md` first. This file defines the repo structure, build order, and how the git history itself becomes demo evidence.
+> Đề bài + tiêu chí: [PROBLEM.md](PROBLEM.md). Giải pháp + quyết định thiết kế: [docs/DESIGN.md](docs/DESIGN.md). File này là nguồn sự thật về **tiến độ** — cập nhật ngay khi một hạng mục đổi trạng thái.
 
-## Repo structure
+## Đã xong
 
-```
-opengov/
-├── PLAN.md                  # this file
-├── context.md               # problem, judging criteria, positioning
-├── backend/                 # OpenGOV Backend — KB, chatbot, validation API
-├── widget/                  # OpenGOV Widget — embeddable script + web components
-├── dichvucong/              # portal clone (see dichvucong/plan.md)
-├── tools/capture/           # Playwright scripts to screenshot the real portal
-├── data/                    # procedure sheets, error catalogs, golden Q&A (non-tech team owns content)
-└── docs/                    # deliverables: ARCHITECTURE.md, one-pager, integration guide
-```
+| Giai đoạn | Nội dung | Commit mốc |
+|---|---|---|
+| Clone cổng DVC | `dichvucong/` — clone tự chứa, 5 luồng nộp toàn trình (3 thủ tục pilot + 2 giữ lại), badge "Toàn trình", QA harness, deploy Vercel (Root Directory = `dichvucong/`) | `53c036f`, `dcdc726` |
+| Crawl dữ liệu | Catalog 5.670 thủ tục + 502 chi tiết từ dichvucong.gov.vn, 34 tỉnh hiện hành | (xem `backend/data/crawl/manifest.json`) |
+| ETL chuẩn hóa | `tools/etl/parse.ts` tất định, rerun được → `data/procedures/` 502 file; seed SQLite FTS5 | `bc881f1` |
+| Chốt pilot + nguồn pháp lý | Pivot sang 1.004222 / 2.001610 / 2.001955; layer `data/legal/` bắt buộc `source_url` | `b4fb3dc` |
+| Ingest tri thức | `data/curated/` ×3 + `data/legal/` ×3 (33 trích đoạn) + catalog lỗi + golden QA 30 câu + aliases | `1fc0d1e` |
+| Review dữ liệu | Duyệt từng điều kiện `when`/ONE_OF (43 item truy vết được về nguồn); viết `data/schemas/` ×3; catalog 44 mã lỗi; điền 29 tỉnh giải thể (NQ 202/2025/QH15) → rule sáp nhập tỉnh hoạt động | `18ebbdd` |
+| Backend service | NestJS + better-sqlite3: `POST /chat` (SSE, agent loop 4 tool, card số liệu không qua LLM), `POST /validate` (engine 10 rule + llm_check che PII), `/sessions`, `/health`; unit tests; runner golden-QA. Key LLM là tùy chọn (degrade có chủ đích) | `1c4c97b` → `170b1b3` |
+| Hệ thống tài liệu | README, PROBLEM (đề bài gốc), docs/DESIGN, docs/WIDGET, CLAUDE.md gốc | (commit này) |
 
-One repo, three deployables. Suggested tooling: pnpm workspaces, TypeScript everywhere.
+## Còn lại (thứ tự phụ thuộc)
 
-## Packages
+1. **Widget Pha 1** — build `widget/` theo spec [docs/WIDGET.md](docs/WIDGET.md); acceptance: chạy với backend local trên trang HTML trắng.
+2. **Deploy backend public** (Railway/Fly…) + cấu hình `OPENROUTER_API_KEY` → `/chat` chạy live; chạy `pnpm --dir backend golden-qa`, tune prompt/alias tới khi pass-rate ≥ 90% (30 câu trong `data/golden-qa.json`).
+3. **Tích hợp Pha 1** — commit **một dòng** thẻ script vào `dichvucong/` (bằng chứng chi phí tích hợp — xem [docs/DESIGN.md](docs/DESIGN.md) §4); chụp diff cho tài liệu.
+4. **Tích hợp Pha 2** — web components + mapping field→schema trên ít nhất 1 trang form; toggle "Phase 2 preview" trong clone để xem cả hai mức.
+5. **One-pager** — `docs/ONE_PAGER.md` (vấn đề, giải pháp, người dùng mục tiêu, lộ trình triển khai) + kịch bản demo; viết sau khi chốt URL public.
+6. **Gia cố dữ liệu** (không chặn demo): review từng item theo checklist đầy đủ `tools/etl/STRUCTURING.md` §4; tinh chỉnh `expect` từng câu golden-QA; tách sub-fact nhóm giấy tờ tín ngưỡng (thường trú).
 
-### 1. `backend/` — OpenGOV Backend
+## Definition of done (map "What We Need to Deliver" trong PROBLEM.md)
 
-All data processing and LLM API calls live here. Nothing model-related in the frontend packages.
-
-- **Stack:** NestJS + better-sqlite3 (SQLite FTS5 for discovery; the DB is rebuilt from committed `data/` at deploy — decided, see docs/ARCHITECTURE.md §6).
-- **Core modules:**
-  - `procedures` — procedure schemas loaded from `data/` (conditions, documents, required fields, constraints). Data-driven: adding a procedure = adding data, not code.
-  - `validation` — rule engine. `POST /validate` takes `{procedure_id, fields}` → returns `{errors: [{field, type, message, suggestion}]}`. Deterministic rules first; LLM only for free-text/semantic conflicts and phrasing suggestions.
-  - `chat` — guided intake + Q&A. LLM grounded in the structured KB, every answer cites its source. Streaming responses.
-  - `sessions` — conversation ↔ form context sync (enables Phase 2 prefill).
-- **LLM integration:** single provider-agnostic interface. The SLM tier from `context.md` is stubbed with the same LLM API behind a separate interface — swap-ready, documented in ARCHITECTURE.md.
-
-### 2. `widget/` — OpenGOV Widget
-
-Everything a portal embeds. Two artifacts from one codebase:
-
-- **Phase 1 artifact:** single JS bundle. `<script src=".../opengov.js" data-scope="hotich,cutru">` → chat bubble, chat window with generative UI (procedure cards, tickable checklists, step-by-step guides, deep-link buttons), and a "Kiểm tra hồ sơ" action that reads the host page's form DOM and renders results in-chat.
-- **Phase 2 artifact:** web components (`<opengov-field-hint>`, `<opengov-check-button>`) + a small client SDK wrapping the backend API, for portals that integrate deliberately.
-- **Stack:** Preact (or vanilla TS) + Vite, single-file IIFE bundle, Shadow DOM for style isolation. No framework assumptions about the host page.
-
-### 3. `dichvucong/` — portal clone
-
-Detailed plan in `dichvucong/plan.md`. Summary: a faithful clone of the relevant dichvucong.gov.vn screens, **built blind — zero knowledge of the widget** — then integrated in later commits to prove the zero-touch integration story.
-
-## Build order
-
-```
-Step 0  Monorepo setup (workspaces, TS config, CI-less; deploy configs later)
-Step 1  data/: procedure sheets + error catalogs for pilot procedures   ← blocks Step 2
-Step 2  backend/: schemas + rule engine + /validate + chat (KB-grounded)
-Step 3  widget/: Phase 1 bundle against the live backend
-Step 4  dichvucong/: blind clone (parallelizable with 2–3 once capture is done)
-Step 5  Integration commits (see below)
-Step 6  Deploy: dichvucong + widget bundle on Vercel, backend on Railway/Fly → public URL
-Step 7  docs/: ARCHITECTURE.md (system diagram, models, APIs), one-pager, demo script
-```
-
-Steps 2–3 and Step 4 can run in parallel; the clone must not import from or reference `widget/`.
-
-## Integration commits — the narrative is evidence
-
-The git history demonstrates integration feasibility for judges:
-
-1. **Commit "blind clone complete"** — portal works standalone, no OpenGOV code anywhere.
-2. **Commit "Phase 1: embed"** — diff is *one script tag*. This single-line diff is the proof of the "~1 hour portal-dev effort" claim. Screenshot the diff for the architecture doc.
-3. **Commit(s) "Phase 2: deep integration"** — field-ID → schema mapping config + web components on the form pages + inline highlight rendering. Shows what deliberate integration costs (small, contained).
-
-Demo toggle: the clone ships with a "Phase 2 preview" switch so judges see both depths live.
-
-## Definition of done (maps to deliverables)
-
-- [ ] Public URL: clone + widget + live backend, full flow (intake → guidance → check) works for all pilot procedures
-- [ ] Phase 1 one-line-diff commit exists and is screenshotted
-- [ ] Phase 2 inline highlighting works on at least one procedure form
-- [ ] `docs/ARCHITECTURE.md` with system diagram + models/APIs
-- [ ] One-pager (problem, solution, target users, deployment roadmap)
-- [ ] Golden Q&A set passes against the chat endpoint (accuracy evidence)
+- [ ] URL public: clone + widget + backend live; luồng tối thiểu *nêu nhu cầu → nhận hướng dẫn từng bước → kiểm tra thông tin đã điền* chạy trọn với 3 thủ tục pilot.
+- [x] Tài liệu kiến trúc: sơ đồ hệ thống + model/API — [docs/DESIGN.md](docs/DESIGN.md) §3 + [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+- [ ] One-pager: vấn đề, giải pháp, người dùng mục tiêu, lộ trình triển khai.
+- [x] Dữ liệu từ nguồn công khai: dichvucong.gov.vn (crawl + trích dẫn) + biểu mẫu hành chính theo lĩnh vực.
+- [ ] Commit tích hợp Pha 1 (diff một dòng) tồn tại và được chụp lại.
+- [ ] Golden QA ≥ 90% trên `/chat` live (bằng chứng độ chính xác).

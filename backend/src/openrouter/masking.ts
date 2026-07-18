@@ -1,5 +1,5 @@
 /**
- * PII masking for values sent to external LLM APIs (CONTEXT.md rule; ARCHITECTURE.md §4).
+ * PII masking for values sent to external LLM APIs (DESIGN.md §5 rule; ARCHITECTURE.md §4).
  * Conservative redaction: long digit runs (CCCD/định danh/phone), emails. The llm_check
  * stage only needs the *shape* of free text, not the raw identifiers.
  */
