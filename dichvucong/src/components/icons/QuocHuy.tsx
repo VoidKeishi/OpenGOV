@@ -12,8 +12,9 @@ export default function QuocHuy({ className }: { className?: string }) {
       <circle cx="50" cy="50" r="34" fill="none" stroke="#F7C948" strokeWidth="1.2" />
       {GRAIN_ANGLES.map((deg) => {
         const t = (deg * Math.PI) / 180;
-        const cx = 50 + 40 * Math.cos(t);
-        const cy = 50 + 40 * Math.sin(t);
+        // làm tròn để chuỗi SSR và client khớp nhau tuyệt đối (tránh lệch hydration)
+        const cx = +(50 + 40 * Math.cos(t)).toFixed(2);
+        const cy = +(50 + 40 * Math.sin(t)).toFixed(2);
         return (
           <ellipse
             key={deg}

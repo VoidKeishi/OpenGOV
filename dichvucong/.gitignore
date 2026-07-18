@@ -4,3 +4,4 @@ out/
 .vercel
 *.tsbuildinfo
 .DS_Store
+.qa/
