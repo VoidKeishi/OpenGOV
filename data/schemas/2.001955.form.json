@@ -1,5 +1,5 @@
 {
-  "_note": "(DATA.md §4 — approved 18/07/2026, B-lite session; reviewed_by Lê Anh.) Field keys = name attrs in dichvucong/src/data/form/dang-ky-noi-quy-lao-dong.json. Closed rule set only. tong_so_lao_dong dùng int_range min 10 để bắn ERR-NQ-01 (severity info — dưới 10 NLĐ không bắt buộc đăng ký, Điều 119 BLLĐ 2019); max 1000000 là chặn kỹ thuật, không phải ngưỡng pháp lý.",
+  "_note": "(DATA.md §4 — approved 18/07/2026, B-lite session; reviewed_by Nguyễn Văn A.) Field keys = name attrs in dichvucong/src/data/form/dang-ky-noi-quy-lao-dong.json. Closed rule set only. tong_so_lao_dong dùng int_range min 10 để bắn ERR-NQ-01 (severity info — dưới 10 NLĐ không bắt buộc đăng ký, Điều 119 BLLĐ 2019); max 1000000 là chặn kỹ thuật, không phải ngưỡng pháp lý.",
   "procedure_code": "2.001955",
   "form_ref": "dang-ky-noi-quy-lao-dong",
   "fields": {

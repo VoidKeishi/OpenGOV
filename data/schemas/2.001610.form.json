@@ -1,5 +1,5 @@
 {
-  "_note": "(DATA.md §4 — approved 18/07/2026, B-lite session; reviewed_by Lê Anh.) Field keys = name attrs in dichvucong/src/data/form/dang-ky-thanh-lap-dntn.json (Mẫu số 1 Phụ lục I TT 68/2025/TT-BTC). Closed rule set only. Khối 'không có số định danh cá nhân' gates on case fact co_so_dinh_danh; khối hộ kinh doanh gates on field tinh_trang_thanh_lap. gop_von_* ≤ tổng vốn dùng number_lte_field trong cross_field.",
+  "_note": "(DATA.md §4 — approved 18/07/2026, B-lite session; reviewed_by Nguyễn Văn A.) Field keys = name attrs in dichvucong/src/data/form/dang-ky-thanh-lap-dntn.json (Mẫu số 1 Phụ lục I TT 68/2025/TT-BTC). Closed rule set only. Khối 'không có số định danh cá nhân' gates on case fact co_so_dinh_danh; khối hộ kinh doanh gates on field tinh_trang_thanh_lap. gop_von_* ≤ tổng vốn dùng number_lte_field trong cross_field.",
   "procedure_code": "2.001610",
   "form_ref": "dang-ky-thanh-lap-dntn",
   "fields": {

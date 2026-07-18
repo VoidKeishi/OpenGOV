@@ -1,5 +1,5 @@
 {
-  "_note": "(DATA.md §4 — approved 18/07/2026, B-lite session; reviewed_by Lê Anh.) Field keys = name attrs in dichvucong/src/data/form/dang-ky-thuong-tru.json. Closed rule set only. member-table thanh_vien and checkbox-only fields without rules are omitted; y_kien_chu_so_huu_dong_y required gates on case fact truong_hop (Điều 20 khoản 2, khoản 3 Luật Cư trú: cần sự đồng ý của chủ sở hữu chỗ ở).",
+  "_note": "(DATA.md §4 — approved 18/07/2026, B-lite session; reviewed_by Nguyễn Văn A.) Field keys = name attrs in dichvucong/src/data/form/dang-ky-thuong-tru.json. Closed rule set only. member-table thanh_vien and checkbox-only fields without rules are omitted; y_kien_chu_so_huu_dong_y required gates on case fact truong_hop (Điều 20 khoản 2, khoản 3 Luật Cư trú: cần sự đồng ý của chủ sở hữu chỗ ở).",
   "procedure_code": "1.004222",
   "form_ref": "dang-ky-thuong-tru",
   "fields": {

@@ -155,7 +155,7 @@
     ]
   },
   "review": {
-    "reviewed_by": "Lê Anh",
+    "reviewed_by": "Nguyễn Văn A",
     "reviewed_at": "2026-07-18",
     "method": "Stage A2 KB ingest (agent) + B-lite interactive review (Claude Code per tools/etl/STRUCTURING.md §2, bảng gộp per-procedure; script đối chiếu source_component_code/quantity + schema-vs-form pass)"
   }
