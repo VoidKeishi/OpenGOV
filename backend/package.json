@@ -3,12 +3,24 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "seed": "node --experimental-strip-types scripts/seed.ts"
+    "seed": "node --experimental-strip-types scripts/seed.ts",
+    "build": "tsc && node -e \"require('fs').writeFileSync('dist/package.json','{\\\"type\\\":\\\"commonjs\\\"}')\"",
+    "start": "node dist/src/main.js",
+    "dev": "node --watch dist/src/main.js",
+    "test": "pnpm build && node --test dist/test/*.test.js",
+    "golden-qa": "node --experimental-strip-types scripts/golden-qa.ts"
   },
   "dependencies": {
-    "better-sqlite3": "^12.2.0"
+    "@nestjs/common": "^11.1.28",
+    "@nestjs/core": "^11.1.28",
+    "@nestjs/platform-express": "^11.1.28",
+    "better-sqlite3": "^12.2.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
   },
   "devDependencies": {
-    "@types/better-sqlite3": "^7.6.11"
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^24.13.3",
+    "typescript": "^5.9.3"
   }
 }
