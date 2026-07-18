@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "@/components/auth/AuthProvider";
+import Header from "@/components/layout/Header";
+import MainNav from "@/components/layout/MainNav";
+import DemoBanner from "@/components/layout/DemoBanner";
+import Footer from "@/components/layout/Footer";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin", "vietnamese"],
@@ -19,7 +24,17 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="vi" className={nunitoSans.variable}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <AuthProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <MainNav />
+            <main className="flex-1">{children}</main>
+            <DemoBanner />
+            <Footer />
+          </div>
+        </AuthProvider>
+      </body>
     </html>
   );
 }
