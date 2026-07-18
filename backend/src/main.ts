@@ -12,11 +12,7 @@ async function bootstrap(): Promise<void> {
   const log = new Logger('Bootstrap');
   const app = await NestFactory.create(AppModule, { cors: true });
   const cfg = app.get(AppConfigService).config;
-
-  // Smoke-test the main model's function calling at startup (ARCHITECTURE.md §4).
   const llm = app.get<LlmClient>(LLM_CLIENT);
-  const smoke = await llm.smokeTestToolCalling();
-  log.log(`function-calling smoke test: ${smoke.ok ? 'PASS' : 'SKIP/FAIL'} — ${smoke.detail}`);
   if (!llm.available) {
     log.warn('OPENROUTER_API_KEY not set — /chat runs in fail-closed degraded mode; /validate llm_check disabled.');
   }
@@ -24,6 +20,13 @@ async function bootstrap(): Promise<void> {
   // Bind all interfaces so hosted platforms (Railway/Fly/Render) can route to it.
   await app.listen(cfg.port, '0.0.0.0');
   log.log(`OpenGOV backend listening on http://0.0.0.0:${cfg.port}`);
+
+  // Smoke-test the main model's function calling AFTER listen (ARCHITECTURE.md §4) so a
+  // slow or down LLM never blocks startup / the platform health check.
+  void llm
+    .smokeTestToolCalling()
+    .then((s) => log.log(`function-calling smoke test: ${s.ok ? 'PASS' : 'SKIP/FAIL'} — ${s.detail}`))
+    .catch((e) => log.warn(`function-calling smoke test error: ${(e as Error).message}`));
 }
 
 bootstrap().catch((err) => {
