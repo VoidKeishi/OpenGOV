@@ -15,7 +15,10 @@
 | Backend service | NestJS + better-sqlite3: `POST /chat` (SSE, agent loop 4 tool, card số liệu không qua LLM), `POST /validate` (engine 10 rule + llm_check che PII), `/sessions`, `/health`; unit tests; runner golden-QA. Key LLM là tùy chọn (degrade có chủ đích) | `1c4c97b` → `170b1b3` |
 | Hệ thống tài liệu | README, PROBLEM (đề bài gốc), docs/DESIGN, docs/WIDGET, CLAUDE.md gốc | `9e1a58b` |
 | Thiết kế chi tiết widget | docs/WIDGET.md thành spec build-ready (capture DOM bước hiện tại, detect DOM-match, card checklist, UX states, acceptance, yêu cầu backend R1–R4); đồng bộ SOLUTION/DESIGN | `cb03fcd` |
-| **Widget Pha 1** | `widget/` — Preact + Vite, 1 file IIFE `dist/opengov.js` **14.8KB gzip** (gate 60KB trong build), Shadow DOM, SSE client + 6 card + checklist, detect DOM-match, validate + scroll-to-field, transcript cache; 46 unit (vitest) + 69 check e2e (Playwright, tự spawn backend degraded) ALL PASS; harness `widget/test/` gồm shim `GET /schemas` = reference cho R1 | (commit này) |
+| **Widget Pha 1** | `widget/` — Preact + Vite, 1 file IIFE `dist/opengov.js` **14.8KB gzip** (gate 60KB trong build), Shadow DOM, SSE client + 6 card + checklist, detect DOM-match, validate + scroll-to-field, transcript cache; 46 unit (vitest) + 72 check e2e (Playwright, tự spawn backend degraded) ALL PASS | `80b4a76` |
+| Backend R1 + R3 | `GET /schemas` (index cho detect DOM-match) + serve `GET /widget/opengov.js` từ `widget/dist` (build trong Docker image) — 1 deploy cho cả API + bundle; 25 unit test | `c71dc4e` |
+| **Tích hợp Pha 1** | Commit **1 file, +1 dòng** thẻ script vào `dichvucong/src/app/layout.tsx` — bằng chứng chi phí tích hợp theo DESIGN.md §4; verify e2e trên clone dev với backend prod (`opengov.duckdns.org`): detect NOFIELDS→READY theo bước wizard, validate form thật (E_DINH_DANH_12 + E_TINH_SAP_NHAP), scroll-to-field, chat LLM live + cards | `5a8d40f` |
+| Deploy backend VPS | `https://opengov.duckdns.org` — Docker sau aaPanel, LLM live (`llm_available:true`), đủ /health /chat /validate /sessions /schemas /widget/opengov.js; runbook vận hành trong `notes/` (local) | (hạ tầng ngoài repo) |
 
 ### Tự chấm acceptance widget §11 (docs/WIDGET.md)
 
@@ -34,9 +37,9 @@
 
 ## Còn lại (thứ tự phụ thuộc)
 
-1. **Backend bổ sung cho widget** — R1 `GET /schemas` (reference implementation sẵn trong `widget/test/serve.mjs`), R2 card `checklist` từ curated lọc theo case_facts, R3 serve `/widget/opengov.js` từ `widget/dist/` (contract: [docs/WIDGET.md](docs/WIDGET.md) §10; R4 stream token thật = backlog, không chặn). Xong R1–R3 → chạy lại `pnpm --dir widget e2e` + chấm nốt dòng ◐ acceptance §11.
-2. **Deploy backend public** (Railway/Fly…) + cấu hình `OPENROUTER_API_KEY` → `/chat` chạy live; chạy `pnpm --dir backend golden-qa`, tune prompt/alias tới khi pass-rate ≥ 90% (30 câu trong `data/golden-qa.json`).
-3. **Tích hợp Pha 1** — commit **một dòng** thẻ script vào `dichvucong/` (bằng chứng chi phí tích hợp — xem [docs/DESIGN.md](docs/DESIGN.md) §4); chụp diff cho tài liệu.
+1. **Push + Vercel deploy clone** — `git push` để Vercel build lại `dichvucong/` (giờ đã có thẻ script); kiểm tra widget trên URL Vercel công khai.
+2. **Backend R2** — card `checklist` trong `/chat` từ curated lọc theo case_facts (contract: [docs/WIDGET.md](docs/WIDGET.md) §10; R4 stream token thật = backlog). Xong → chấm nốt dòng ◐ acceptance §11.
+3. **Golden QA live** — `BASE_URL=https://opengov.duckdns.org pnpm --dir backend golden-qa`, tune prompt/alias tới khi pass-rate ≥ 90% (30 câu trong `data/golden-qa.json`).
 4. **Tích hợp Pha 2** — web components + prefill có xác nhận (map `prefill` trong `data/schemas/`, preview tick từng dòng) trên ít nhất 1 trang form; mức 3 = chỉ dẫn lời + scroll/highlight; toggle "Phase 2 preview" trong clone để xem cả hai mức ([docs/WIDGET.md](docs/WIDGET.md) §12).
 5. **One-pager** — `docs/ONE_PAGER.md` (vấn đề, giải pháp, người dùng mục tiêu, lộ trình triển khai) + kịch bản demo (khung 5 hồi: [docs/WIDGET.md](docs/WIDGET.md) §9); viết sau khi chốt URL public.
 6. **Gia cố dữ liệu** (không chặn demo): review từng item theo checklist đầy đủ `tools/etl/STRUCTURING.md` §4; tinh chỉnh `expect` từng câu golden-QA; tách sub-fact nhóm giấy tờ tín ngưỡng (thường trú).
@@ -47,5 +50,5 @@
 - [x] Tài liệu kiến trúc: sơ đồ hệ thống + model/API — [docs/DESIGN.md](docs/DESIGN.md) §3 + [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 - [ ] One-pager: vấn đề, giải pháp, người dùng mục tiêu, lộ trình triển khai.
 - [x] Dữ liệu từ nguồn công khai: dichvucong.gov.vn (crawl + trích dẫn) + biểu mẫu hành chính theo lĩnh vực.
-- [ ] Commit tích hợp Pha 1 (diff một dòng) tồn tại và được chụp lại.
+- [x] Commit tích hợp Pha 1 (diff một dòng) tồn tại và được chụp lại — `5a8d40f` (`dichvucong/src/app/layout.tsx`, 1 file +1 dòng).
 - [ ] Golden QA ≥ 90% trên `/chat` live (bằng chứng độ chính xác).
