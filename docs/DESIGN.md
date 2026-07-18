@@ -16,7 +16,7 @@ Người dùng: người dân đang ở trên cổng dịch vụ công (không r
 
 ### UC-1 — Guided intake: từ nhu cầu mơ hồ → checklist đúng tình huống
 - **Luồng**: người dân gõ nhu cầu đời thường ("tôi muốn chuyển hộ khẩu về nhà vợ") → backend tìm đúng thủ tục (alias + FTS + rerank) → AI hỏi làm rõ tình huống (nhà thuộc sở hữu ai? có sổ đỏ chưa?…) → mỗi câu trả lời được ghi thành **case fact** có cấu trúc → checklist giấy tờ và các bước **lọc theo đúng tình huống đó**, kèm ví dụ.
-- **Endpoint**: `POST /chat` (SSE); facts ghi qua tool `update_case_facts`, checklist render từ card.
+- **Endpoint**: `POST /chat` (SSE); facts ghi qua tool `update_case_facts`; checklist render từ card `checklist` tất định — backend lọc item theo case_facts, thiếu fact → giữ item kèm badge "tùy trường hợp", widget cho tick từng mục ([WIDGET.md](WIDGET.md) §5.4, §10 R2).
 - **UX states**: đang gõ (token stream), thiếu fact → nhóm giấy tờ điều kiện vẫn hiển thị kèm badge "tùy trường hợp" (fail-open cho hiển thị — thà thừa còn hơn thiếu), ngoài phạm vi dữ liệu → nói thẳng + link cổng chính thức (fail-closed cho nội dung).
 
 ### UC-2 — Hỏi đáp có trích dẫn
@@ -25,7 +25,7 @@ Người dùng: người dân đang ở trên cổng dịch vụ công (không r
 - **UX states**: mọi trích đoạn pháp lý có nút mở `source_url`; câu ngoài KB → thông điệp "không có trong dữ liệu" + link.
 
 ### UC-3 — Kiểm tra hồ sơ trước khi nộp (điểm khác biệt chính)
-- **Luồng**: người dân đang điền form trên cổng → bấm **"Kiểm tra hồ sơ"** trong widget → widget đọc DOM form của trang (field name `snake_case` trùng khóa schema — xem contract trong [WIDGET.md](WIDGET.md)) → `POST /validate {procedure_code, fields, case_facts}` → danh sách lỗi theo từng trường: thông điệp tiếng Việt + gợi ý sửa, phân mức `error/warning/info`.
+- **Luồng**: người dân đang điền form trên cổng → bấm **"Kiểm tra hồ sơ"** trong widget → widget đọc DOM của **bước form đang mở** (field name `snake_case` trùng khóa schema; thủ tục của trang tự phát hiện bằng DOM-match với `GET /schemas`, nút ẩn/disabled/enabled theo mức phát hiện — contract trong [WIDGET.md](WIDGET.md) §6) → `POST /validate {procedure_code, fields, case_facts}` → danh sách lỗi theo từng trường: thông điệp tiếng Việt + gợi ý sửa, phân mức `error/warning/info`.
 - **Hai tầng kiểm tra**: (1) rule engine tất định — 10 loại rule đóng theo [DATA.md](DATA.md) §4; (2) kiểm tra ngữ nghĩa bằng LLM cho free-text (tên doanh nghiệp vi phạm Điều 38, số tiền bằng chữ khớp bằng số) — dữ liệu **che PII trước khi rời máy chủ**, kết quả chỉ được *thêm* lỗi, không bao giờ gỡ lỗi tầng 1.
 - **UX states**: 0 lỗi → xác nhận xanh; có lỗi → nhóm theo trường, click cuộn tới field; backend thiếu LLM key → vẫn trả đủ lỗi tất định + ghi chú đã bỏ bước kiểm tra ngữ nghĩa.
 
@@ -96,6 +96,9 @@ Cách chứng minh tính khả thi không phải bằng lời hứa mà bằng *
 | **Cấu trúc hóa offline có người duyệt** | Parse tự động khi chạy | Mỗi `when`/điều kiện có người chịu trách nhiệm (khối `review`); tốc độ đổi bằng độ tin — chấp nhận công curation cho pilot, đã có đường scale bán tự động |
 | **OPENROUTER_API_KEY tùy chọn, degrade có chủ đích** | Bắt buộc key mới chạy | Demo/CI chạy không cần secret: `/validate` vẫn đủ rule tất định, `/chat` degrade + link cổng. Đổi lại: thiếu key thì không demo được ngữ nghĩa |
 | **Clone cổng DVC dựng blind rồi mới tích hợp** | Dựng demo có sẵn widget | Câu chuyện tích hợp có bằng chứng git (diff 1 dòng); clone còn là môi trường demo trung thực (giao diện người dân quen). Đổi lại: tốn công dựng clone |
+| **Checklist là card tất định, không phải prose LLM** | Để LLM tự viết danh sách giấy tờ | Số lượng bản chính/bản sao + điều kiện lọc đến từ dữ liệu đã duyệt, tick được, không dính guard số liệu. Đổi lại: thêm card type thứ 7 phía backend (build từ curated) |
+| **Widget tự phát hiện thủ tục bằng DOM-match qua `GET /schemas`** | Cấu hình map slug→mã trong thẻ embed | Embed zero-config — giữ đúng lời hứa tích hợp 1 dòng; portal-agnostic. Đổi lại: thêm 1 endpoint read-only |
+| **Khôi phục hội thoại bằng cache transcript phía client** | Persist cards/kết quả check vào DB server | Khôi phục đầy đủ (cards, tick, kết quả check) sau điều hướng mà không đổi schema DB; sessionStorage per-tab vốn không có ca đa thiết bị. Đổi lại: transcript hiển thị sống ở client, server chỉ giữ text làm ngữ cảnh chat |
 
 ## 7. Non-goals
 
