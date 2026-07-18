@@ -24,7 +24,7 @@ One repo, three deployables. Suggested tooling: pnpm workspaces, TypeScript ever
 
 All data processing and LLM API calls live here. Nothing model-related in the frontend packages.
 
-- **Stack:** NestJS + Prisma + PostgreSQL (or SQLite for hackathon speed — decide once, early).
+- **Stack:** NestJS + better-sqlite3 (SQLite FTS5 for discovery; the DB is rebuilt from committed `data/` at deploy — decided, see docs/ARCHITECTURE.md §6).
 - **Core modules:**
   - `procedures` — procedure schemas loaded from `data/` (conditions, documents, required fields, constraints). Data-driven: adding a procedure = adding data, not code.
   - `validation` — rule engine. `POST /validate` takes `{procedure_id, fields}` → returns `{errors: [{field, type, message, suggestion}]}`. Deterministic rules first; LLM only for free-text/semantic conflicts and phrasing suggestions.
