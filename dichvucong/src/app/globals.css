@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  /* Design tokens — CLONE_SPEC.md mục 1, map từ captures/tokens.json */
+  --color-ink: #1e2f41;
+  --color-brand: #ce7a58;
+  --color-brand-dark: #903938;
+  --color-accent: #ffc251;
+  --color-muted: #495057;
+  --color-line: #e2e2e2;
+  --color-surface: #f5f5f5;
+  --color-hero-from: #c0603e;
+
+  --font-sans: var(--font-nunito-sans), Inter, system-ui, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+body {
+  color: var(--color-ink);
+  background: #fff;
+  font-size: 16px;
+}
