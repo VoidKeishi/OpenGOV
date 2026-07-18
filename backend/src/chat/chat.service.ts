@@ -5,7 +5,8 @@ import type { LlmClient, LlmMessage } from '../openrouter/types';
 import { ProceduresService } from '../procedures/procedures.service';
 import { SessionsService } from '../sessions/sessions.service';
 import { AgentTools, runChatTurn } from './agent';
-import { buildCards, Card, numbersCoveredByCards } from './cards';
+import { Card, numbersCoveredByCards, parseCardsTail, selectCards } from './cards';
+import { projectRecordForLlm } from './projection';
 import { PORTAL_URL, SYSTEM_PROMPT, TOOL_DEFS } from './prompt';
 import type { Emit } from './types';
 
@@ -52,14 +53,17 @@ export class ChatService {
         (await this.procedures.search(query, 5)).map((h) => ({ code: h.code, name: h.name, via: h.via })),
       get_procedure: async ({ code }) => {
         const rec = this.procedures.getProcedure(code);
-        if (rec) visited.set(code, rec);
-        return rec ?? { error: 'not_found', code };
+        if (!rec) return { error: 'not_found', code };
+        // Cards read the full record; the LLM context gets the slimmed projection.
+        visited.set(code, rec);
+        return projectRecordForLlm(rec);
       },
       get_form_schema: async ({ code }) => this.procedures.getFormSchema(code) ?? { available: false, code },
       update_case_facts: async ({ facts }) => this.sessions.updateCaseFacts(session.id, facts),
     };
 
     let answer: string;
+    let selections: ReturnType<typeof parseCardsTail>['selections'];
     try {
       const res = await runChatTurn({
         llm: this.llm,
@@ -70,7 +74,10 @@ export class ChatService {
         userMessage: message,
         onToolCall: (name, args) => emit({ type: 'tool', name, args }),
       });
-      answer = res.answer || DEGRADED_MSG;
+      // Strip the [[CARDS:]] tail before the guard, the stream, and persistence.
+      const parsed = parseCardsTail(res.answer ?? '');
+      answer = parsed.cleaned || DEGRADED_MSG;
+      selections = parsed.selections;
     } catch (err) {
       this.log.error(`chat turn failed: ${(err as Error).message}`);
       this.streamProse(ERROR_MSG, emit);
@@ -79,8 +86,16 @@ export class ChatService {
       return;
     }
 
-    const cards: Card[] = [];
-    for (const rec of visited.values()) cards.push(...buildCards(rec));
+    // Re-read case_facts so update_case_facts calls from this very turn filter the checklist.
+    const caseFacts = this.sessions.get(session.id)?.case_facts ?? {};
+    // Resolver covers follow-up turns answered from history (no get_procedure this turn).
+    const cards: Card[] = selectCards(visited, selections, caseFacts, (code) =>
+      this.procedures.getProcedure(code),
+    );
+    if (!selections && visited.size) {
+      this.log.warn('model omitted the [[CARDS:]] tail — lean fail-safe cards emitted');
+      emit({ type: 'warning', message: 'cards_tail_missing' });
+    }
 
     const guard = numbersCoveredByCards(answer, cards);
     if (!guard.ok) {

@@ -33,10 +33,15 @@ export class Dao {
   }
 
   getProcedureRecord(code: string): ProcedureRecord | null {
-    const row = this.db.prepare(`SELECT record FROM procedures WHERE code = ?`).get(code) as
-      | { record: string }
-      | undefined;
-    return row ? (JSON.parse(row.record) as ProcedureRecord) : null;
+    const row = this.db
+      .prepare(`SELECT record, structuring_level FROM procedures WHERE code = ?`)
+      .get(code) as { record: string; structuring_level: 'raw' | 'full' } | undefined;
+    if (!row) return null;
+    // The level lives in its own column; consumers (projection, card selection)
+    // read it off the record, so inject it into the merged JSON here.
+    const record = JSON.parse(row.record) as ProcedureRecord;
+    record.structuring_level = row.structuring_level;
+    return record;
   }
 
   /** Exact-match fast path: colloquial phrase → pinned procedure code(s). */

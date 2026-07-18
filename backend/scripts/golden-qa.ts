@@ -4,7 +4,14 @@
  * POSTs each question in data/golden-qa.json to /chat, collects the full SSE stream
  * (prose tokens + card payloads), and asserts expectations by diacritics-normalized
  * substring match — deterministic, no LLM judge. Prints a per-category pass/fail table.
- * REPORTS the pass-rate; it does NOT gate (tuning is a separate step).
+ * REPORTS the pass-rate by default; set GOLDEN_QA_MIN=<percent> to gate (exit 1 below it).
+ *
+ * Questions run in one chat SESSION per procedure block (expect.procedure_code): the
+ * golden set is authored as conversational blocks (qa-001..010 thường trú, 011..020
+ * DNTN, 021..030 nội quy) where follow-ups like "sau khi có giấy phép..." only make
+ * sense with the preceding turns — exactly how a citizen uses the chat. Assertions
+ * still evaluate ONLY the current turn's prose + cards. Out-of-scope items run in
+ * fresh sessions.
  *
  * Usage: start the server (pnpm -C backend start), then `pnpm -C backend golden-qa`.
  * Set BASE_URL to point elsewhere (default http://localhost:3001).
@@ -31,15 +38,19 @@ interface QaItem {
   expect: Expect;
 }
 
-async function askChat(message: string): Promise<{ prose: string; cards: any[] }> {
+async function askChat(
+  message: string,
+  sessionId?: string,
+): Promise<{ prose: string; cards: any[]; sessionId?: string }> {
   const res = await fetch(`${BASE}/chat`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message }),
+    body: JSON.stringify(sessionId ? { message, session_id: sessionId } : { message }),
   });
   if (!res.ok || !res.body) throw new Error(`/chat HTTP ${res.status}`);
 
   let prose = '';
+  let sid = sessionId;
   const cards: any[] = [];
   const decoder = new TextDecoder();
   let buf = '';
@@ -55,13 +66,14 @@ async function askChat(message: string): Promise<{ prose: string; cards: any[] }
           const ev = JSON.parse(line.slice(6));
           if (ev.type === 'token') prose += ev.text;
           else if (ev.type === 'card') cards.push(ev.payload);
+          else if (ev.type === 'session') sid = ev.session_id;
         } catch {
           /* ignore non-JSON frames (e.g. the trailing end event) */
         }
       }
     }
   }
-  return { prose, cards };
+  return { prose, cards, sessionId: sid };
 }
 
 interface CheckResult {
@@ -81,7 +93,8 @@ function evaluate(item: QaItem, prose: string, cards: any[]): CheckResult {
     const mention = (e.must_mention_any ?? []).every((group) => group.some(has));
     if (!mention) failed.push('out_of_scope mention');
   } else {
-    if (e.procedure_code && !cards.some((c) => c?.code === e.procedure_code)) {
+    // A card is {type, payload}; the procedure code lives in the payload.
+    if (e.procedure_code && !cards.some((c) => (c?.payload?.code ?? c?.code) === e.procedure_code)) {
       failed.push(`procedure_code ${e.procedure_code} not identified in cards`);
     }
     for (const group of e.must_mention_any ?? []) {
@@ -100,9 +113,10 @@ function evaluate(item: QaItem, prose: string, cards: any[]): CheckResult {
 }
 
 function hasSourceUrl(card: any): boolean {
-  if (!card || typeof card !== 'object') return false;
-  if (typeof card.source_url === 'string' && card.source_url) return true;
-  if (Array.isArray(card.fragments) && card.fragments.some((f: any) => f?.source_url)) return true;
+  const p = card?.payload ?? card;
+  if (!p || typeof p !== 'object') return false;
+  if (typeof p.source_url === 'string' && p.source_url) return true;
+  if (Array.isArray(p.fragments) && p.fragments.some((f: any) => f?.source_url)) return true;
   return false;
 }
 
@@ -123,10 +137,15 @@ async function main(): Promise<void> {
   let passCount = 0;
   const failures: { id: string; question: string; failed: string[] }[] = [];
 
+  // One conversational session per procedure block (see header note).
+  const sessionByBlock = new Map<string, string>();
+
   for (const item of items) {
     let result: CheckResult;
+    const block = item.expect.out_of_scope ? undefined : item.expect.procedure_code;
     try {
-      const { prose, cards } = await askChat(item.question);
+      const { prose, cards, sessionId } = await askChat(item.question, block ? sessionByBlock.get(block) : undefined);
+      if (block && sessionId) sessionByBlock.set(block, sessionId);
       result = evaluate(item, prose, cards);
     } catch (err) {
       result = { pass: false, failed: [`request error: ${(err as Error).message}`] };
@@ -153,9 +172,19 @@ async function main(): Promise<void> {
   console.log(`  OVERALL        ${passCount}/${items.length}  (${pct(passCount, items.length)})`);
 
   if (failures.length) {
-    console.log(`\n${failures.length} failing — see ↳ reasons above. (Reporting only; not a gate.)`);
+    console.log(`\n${failures.length} failing — see ↳ reasons above.`);
   }
-  // Never gate on pass-rate: exit 0 so this can run in any pipeline.
+  // Opt-in gate (DoD evidence runs): GOLDEN_QA_MIN=90 → exit 1 below that pass-rate.
+  // Default stays exit 0 so the runner can report in any pipeline.
+  const min = Number(process.env.GOLDEN_QA_MIN);
+  if (Number.isFinite(min) && min > 0) {
+    const rate = (passCount / items.length) * 100;
+    if (rate < min) {
+      console.log(`\n✖ Pass-rate ${rate.toFixed(0)}% is below GOLDEN_QA_MIN=${min}%.`);
+      process.exit(1);
+    }
+    console.log(`\n✔ Pass-rate meets GOLDEN_QA_MIN=${min}%.`);
+  }
   process.exit(0);
 }
 
