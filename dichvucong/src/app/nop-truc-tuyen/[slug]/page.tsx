@@ -31,7 +31,13 @@ function giayToChoForm(tt: ThuTuc): GiayTo[] {
     groups = groups.slice(0, 1);
   } else if (tt.slug === "cap-gpxd-nha-o-rieng-le") {
     groups = groups.filter((g) => g.nhom.includes("nhà ở riêng lẻ"));
+  } else if (tt.slug === "dang-ky-thanh-lap-dntn") {
+    // Nhóm cơ bản; dòng "—" là ghi chú, không phải giấy tờ đính kèm
+    groups = groups
+      .filter((g) => g.nhom.startsWith("Đăng ký thành lập doanh nghiệp tư nhân"))
+      .map((g) => ({ ...g, rows: g.rows.filter((r) => r.soLuong !== "—") }));
   }
+  // dang-ky-noi-quy-lao-dong: 1 nhóm duy nhất, lấy nguyên văn cả 4 dòng
   return groups.flatMap((g) =>
     g.rows.map((r) => ({ ten: r.tenGiayTo, soLuong: r.soLuong })),
   );

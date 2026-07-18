@@ -61,6 +61,7 @@ export default function Wizard({ slug, tenThuTuc, schema, giayTo }: Props) {
         if (next[f.name]) continue;
         let v = "";
         if (f.prefill === "user.hoTen") v = user.hoTen;
+        else if (f.prefill === "user.hoTenHoa") v = user.hoTen.toUpperCase();
         else if (f.prefill === "user.soDinhDanh") v = user.soDinhDanh;
         else if (f.prefill === "user.ngaySinh") v = user.ngaySinh;
         else if (f.prefill === "today") v = new Date().toISOString().slice(0, 10);
@@ -79,11 +80,11 @@ export default function Wizard({ slug, tenThuTuc, schema, giayTo }: Props) {
   );
 
   const resolveOptions = useCallback(
-    (f: { options?: string[]; optionsRef?: string }) => {
+    (f: { options?: string[]; optionsRef?: string; dependsOn?: string }) => {
       if (f.options) return f.options;
       if (f.optionsRef === "tinh") return coQuan.map((t) => t.ten);
       if (f.optionsRef === "phuongXa") {
-        const t = data["tinh_thanh_pho"] || tinh;
+        const t = (f.dependsOn ? data[f.dependsOn] : data["tinh_thanh_pho"]) || tinh;
         return coQuan.find((x) => x.ten === t)?.phuongXa ?? [];
       }
       return OPTIONS[f.optionsRef ?? ""] ?? [];
@@ -91,9 +92,14 @@ export default function Wizard({ slug, tenThuTuc, schema, giayTo }: Props) {
     [data, tinh],
   );
 
-  const coQuanDisplay = phuongXa
-    ? `${schema.coQuanPrefix} ${phuongXa}${tinh ? `, ${tinh}` : ""}`
-    : "";
+  // Cơ quan tiếp nhận: cấp tỉnh (Sở) chỉ cần Tỉnh/TP, còn lại cần Phường/Xã
+  const coQuanDisplay = schema.chonCapTinh
+    ? tinh
+      ? `${schema.coQuanPrefix} ${tinh}`
+      : ""
+    : phuongXa
+      ? `${schema.coQuanPrefix} ${phuongXa}${tinh ? `, ${tinh}` : ""}`
+      : "";
 
   if (!ready) {
     return <div className="py-20 text-center text-muted">Đang tải…</div>;
@@ -176,27 +182,29 @@ export default function Wizard({ slug, tenThuTuc, schema, giayTo }: Props) {
                     ))}
                   </select>
                 </div>
-                <div>
-                  <label htmlFor="chon_phuong_xa" className="mb-1.5 block text-[15px] font-medium">
-                    Phường/Xã
-                    <RequiredMark />
-                  </label>
-                  <select
-                    id="chon_phuong_xa"
-                    name="chon_phuong_xa"
-                    required
-                    value={phuongXa}
-                    onChange={(e) => setPhuongXa(e.target.value)}
-                    className={INPUT_CLS}
-                  >
-                    <option value="">-- Chọn Phường/ Xã --</option>
-                    {(coQuan.find((t) => t.ten === tinh)?.phuongXa ?? []).map((w) => (
-                      <option key={w} value={w}>
-                        {w}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                {!schema.chonCapTinh && (
+                  <div>
+                    <label htmlFor="chon_phuong_xa" className="mb-1.5 block text-[15px] font-medium">
+                      Phường/Xã
+                      <RequiredMark />
+                    </label>
+                    <select
+                      id="chon_phuong_xa"
+                      name="chon_phuong_xa"
+                      required
+                      value={phuongXa}
+                      onChange={(e) => setPhuongXa(e.target.value)}
+                      className={INPUT_CLS}
+                    >
+                      <option value="">-- Chọn Phường/ Xã --</option>
+                      {(coQuan.find((t) => t.ten === tinh)?.phuongXa ?? []).map((w) => (
+                        <option key={w} value={w}>
+                          {w}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
               </div>
               {coQuanDisplay && (
                 <p className="mt-4 rounded bg-surface px-3 py-2.5 text-[15px]">

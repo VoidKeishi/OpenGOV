@@ -9,7 +9,11 @@ export type FieldProps = {
   field: FormField;
   value: string;
   onChange: (name: string, value: string) => void;
-  resolveOptions: (field: { options?: string[]; optionsRef?: string }) => string[];
+  resolveOptions: (field: {
+    options?: string[];
+    optionsRef?: string;
+    dependsOn?: string;
+  }) => string[];
 };
 
 export function RequiredMark() {
@@ -33,7 +37,7 @@ export default function FieldInput({ field, value, onChange, resolveOptions }: F
           {field.label}
           {field.required && <RequiredMark />}
         </legend>
-        <div className="flex items-center gap-6 py-1.5">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 py-1.5">
           {(field.options ?? []).map((opt) => (
             <label key={opt} className="flex items-center gap-2 text-[15px]">
               <input
