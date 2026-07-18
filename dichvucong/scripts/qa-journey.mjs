@@ -1,0 +1,152 @@
+// QA hành trình đầy đủ (CLONE_SPEC.md mục 8): trang chủ → tìm kiếm → chi tiết
+// → nộp trực tuyến → đăng nhập giả → wizard 4 bước → xác nhận. Chạy cho cả 3 thủ
+// tục, ở cả 1440px và 390px, fail nếu có lỗi console/pageerror.
+// Dùng: node scripts/qa-journey.mjs (dev server phải đang chạy)
+import { chromium } from "playwright-core";
+import { writeFileSync } from "node:fs";
+
+const BASE = process.env.QA_BASE ?? "http://localhost:3000";
+
+const JOURNEYS = [
+  { keyword: "đăng ký khai sinh", slug: "dang-ky-khai-sinh", prefix: "DVC-KS-" },
+  { keyword: "đăng ký thường trú", slug: "dang-ky-thuong-tru", prefix: "DVC-TT-" },
+  { keyword: "giấy phép xây dựng", slug: "cap-gpxd-nha-o-rieng-le", prefix: "DVC-XD-" },
+];
+
+const VIEWPORTS = [
+  ["desktop", { width: 1440, height: 900 }],
+  ["mobile", { width: 390, height: 844 }],
+];
+
+// Tệp giả để đính kèm ở bước 3
+const FAKE_FILE = "/tmp/dvc-demo-giay-to.pdf";
+writeFileSync(FAKE_FILE, "%PDF-1.4 demo");
+
+const browser = await chromium.launch({ channel: "chrome", headless: true });
+let failures = 0;
+
+for (const [vpName, viewport] of VIEWPORTS) {
+  for (const j of JOURNEYS) {
+    const label = `${vpName}/${j.slug}`;
+    const errors = [];
+    const context = await browser.newContext({ viewport });
+    const page = await context.newPage();
+    page.on("console", (msg) => {
+      if (msg.type() === "error") errors.push(`console.error: ${msg.text()}`);
+    });
+    page.on("pageerror", (err) => errors.push(`pageerror: ${err.message}`));
+
+    try {
+      // 1. Trang chủ → tìm kiếm
+      await page.goto(BASE + "/", { waitUntil: "networkidle" });
+      await page.fill('input[name="keyword"]', j.keyword);
+      await page.press('input[name="keyword"]', "Enter");
+      await page.waitForURL("**/tim-kiem**");
+      // 2. Kết quả → chi tiết
+      await page.click(`a[href="/thu-tuc/${j.slug}"]`);
+      await page.waitForURL(`**/thu-tuc/${j.slug}`);
+      // 3. Nộp trực tuyến → modal đăng nhập tự bật (chưa đăng nhập)
+      await page.click(`a[href="/nop-truc-tuyen/${j.slug}"]`);
+      await page.waitForURL(`**/nop-truc-tuyen/${j.slug}`);
+      await page.waitForSelector('[role="dialog"]', { timeout: 5000 });
+      await page.click('[role="dialog"] button:has-text("Đăng nhập")');
+      // 4. Bước 1: chọn tỉnh + phường/xã
+      await page.waitForSelector("#chon_tinh");
+      await page.selectOption("#chon_tinh", "Thành phố Hà Nội");
+      await page.selectOption("#chon_phuong_xa", "Phường Hoàn Kiếm");
+      const clickNext = () => page.click('button[form="wizard-form"]');
+      await clickNext();
+      // 5. Bước 2: thử validate native (submit thiếu trường bắt buộc phải bị chặn)
+      await page.waitForSelector("form#wizard-form h2");
+      await clickNext();
+      const stillStep2 = await page
+        .locator('form#wizard-form h2')
+        .first()
+        .textContent();
+      if (!stillStep2 || stillStep2.includes("Giấy tờ"))
+        throw new Error("native required không chặn submit ở bước 2");
+      // Điền mọi field required còn trống của bước 2
+      await page.evaluate(() => {
+        const form = document.querySelector("form#wizard-form");
+        for (const el of form.querySelectorAll("[required]")) {
+          if (el.type === "radio") {
+            const group = [...form.querySelectorAll(`input[name="${el.name}"]`)];
+            if (!group.some((r) => r.checked)) el.click();
+            continue;
+          }
+          if (el.type === "checkbox") {
+            if (!el.checked) el.click();
+            continue;
+          }
+          if (el.value) continue;
+          const set = (val) => {
+            const proto =
+              el instanceof HTMLTextAreaElement
+                ? HTMLTextAreaElement.prototype
+                : el instanceof HTMLSelectElement
+                  ? HTMLSelectElement.prototype
+                  : HTMLInputElement.prototype;
+            Object.getOwnPropertyDescriptor(proto, "value").set.call(el, val);
+            el.dispatchEvent(new Event("input", { bubbles: true }));
+            el.dispatchEvent(new Event("change", { bubbles: true }));
+          };
+          if (el instanceof HTMLSelectElement) {
+            const opt = [...el.options].find((o) => o.value);
+            if (opt) set(opt.value);
+          } else if (el.type === "date") {
+            set("2026-03-15");
+          } else if (el.type === "number") {
+            set("3");
+          } else if (el.type === "tel") {
+            set("0912345678");
+          } else if (el.type === "email") {
+            set("demo@example.com");
+          } else if (el.pattern === "[0-9]{12}") {
+            set("001099012345");
+          } else {
+            set("Demo " + el.name);
+          }
+        }
+      });
+      // Riêng CT01: thử bảng thành viên động (thêm 2 dòng, điền, xoá 1)
+      if (j.slug === "dang-ky-thuong-tru") {
+        await page.click('button:has-text("Thêm thành viên")');
+        await page.click('button:has-text("Thêm thành viên")');
+        await page.fill('[name="thanh_vien_0_ho_ten"]', "Nguyễn Thị B");
+        await page.fill('[name="thanh_vien_0_so_dinh_danh_ca_nhan"]', "001120098765");
+        await page.click('[aria-label="Xoá thành viên 2"]');
+        const rows = await page.locator('[name^="thanh_vien_"][name$="_ho_ten"]').count();
+        if (rows !== 1) throw new Error(`bảng thành viên còn ${rows} dòng, muốn 1`);
+      }
+      if (vpName === "desktop") await page.screenshot({ path: `.qa/wizard-b2-${j.slug}.png`, fullPage: true });
+      await clickNext();
+      // 6. Bước 3: đính kèm tệp dòng đầu + bản sao điện tử
+      await page.waitForSelector('input[type="file"]');
+      await page.setInputFiles('input[type="file"] >> nth=0', FAKE_FILE);
+      await page.click('input[name="giay_to_0_ban_sao"]');
+      await clickNext();
+      // 7. Bước 4: cam kết + nộp
+      await page.waitForSelector('input[name="cam_ket"]');
+      if (vpName === "desktop")
+        await page.screenshot({ path: `.qa/wizard-b4-${j.slug}.png`, fullPage: true });
+      await page.click('input[name="cam_ket"]');
+      await clickNext();
+      // 8. Xác nhận
+      await page.waitForURL(`**/nop-truc-tuyen/${j.slug}/hoan-thanh`);
+      await page.waitForSelector(`text=Nộp hồ sơ thành công`);
+      const ma = await page.locator("dd").first().textContent();
+      if (!ma?.startsWith(j.prefix))
+        throw new Error(`mã hồ sơ "${ma}" không đúng prefix ${j.prefix}`);
+      if (errors.length) throw new Error("console:\n" + errors.join("\n"));
+      console.log(`PASS ${label} — ${ma}`);
+    } catch (err) {
+      failures++;
+      console.error(`FAIL ${label}: ${err.message}`);
+      await page.screenshot({ path: `.qa/fail-${vpName}-${j.slug}.png` });
+    }
+    await context.close();
+  }
+}
+
+await browser.close();
+process.exit(failures ? 1 : 0);
