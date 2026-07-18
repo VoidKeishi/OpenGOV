@@ -80,6 +80,17 @@
       "retrieved_at": "2026-07-18"
     },
     {
+      "id": "dn-d74-k2",
+      "doc_code": "59/2020/QH14",
+      "doc_title": "Luật Doanh nghiệp 2020",
+      "article": "Điều 74 khoản 1, khoản 2",
+      "title": "Công ty TNHH một thành viên — trách nhiệm hữu hạn và tư cách pháp nhân (đối chiếu với DNTN)",
+      "text": "Công ty trách nhiệm hữu hạn một thành viên là doanh nghiệp do một tổ chức hoặc một cá nhân làm chủ sở hữu; chủ sở hữu công ty chịu trách nhiệm về các khoản nợ và nghĩa vụ tài sản khác của công ty trong phạm vi số vốn điều lệ của công ty. Công ty trách nhiệm hữu hạn một thành viên có tư cách pháp nhân kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp. (Đối chiếu: doanh nghiệp tư nhân không có tư cách pháp nhân, chủ DNTN chịu trách nhiệm bằng toàn bộ tài sản — Điều 188.)",
+      "topics": ["so_sanh_loai_hinh", "tu_cach_phap_nhan", "trach_nhiem"],
+      "source_url": "https://hethongphapluat.com/luat-doanh-nghiep-2020/dieu-74",
+      "retrieved_at": "2026-07-19"
+    },
+    {
       "id": "nd168-2025-d11-k1",
       "doc_code": "168/2025/NĐ-CP",
       "doc_title": "Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp",
@@ -127,6 +138,6 @@
   "review": {
     "reviewed_by": "Nguyễn Văn A",
     "reviewed_at": "2026-07-18",
-    "method": "Stage A2 KB ingest (agent, from notes/knowledge-base/research-02-dntn.md + web gap-fill) + B-lite review 18/07/2026 (đối chiếu nội dung từng trích đoạn Luật DN Đ.4/17/19/37/38/39/188, Luật Đầu tư Đ.6)"
+    "method": "Stage A2 KB ingest (agent, from notes/knowledge-base/research-02-dntn.md + web gap-fill) + B-lite review 18/07/2026 (đối chiếu nội dung từng trích đoạn Luật DN Đ.4/17/19/37/38/39/188, Luật Đầu tư Đ.6); 19/07/2026 gap-fill dn-d74-k2 (Điều 74 k1-k2 — tư cách pháp nhân TNHH MTV để đối chiếu DNTN, phục vụ golden-qa qa-016; đối chiếu web nguồn source_url)"
   }
 }
