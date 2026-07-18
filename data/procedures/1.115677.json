@@ -1,0 +1,129 @@
+{
+  "code": "1.115677",
+  "source_id": "019f4a22-ac14-71af-916a-1a44c778a795",
+  "name": "Xác nhận tiếp tục sử dụng đất nông nghiệp",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Lào Cai",
+  "executing_agency": "Chi nhánh Văn phòng đăng ký đất đai khu vực",
+  "subject_types": [
+    "Công dân Việt Nam"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "Người sử dụng đất nông nghiệp đã được cấp Giấy chứng nhận nhưng hết thời hạn trên Giấy chứng nhận đã cấp.",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 7,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công.\nKhông quá 07 ngày làm việc. \nĐối với các xã miền núi, biên giới; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 7,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công.\nKhông quá 07 ngày làm việc. \nĐối với các xã miền núi, biên giới; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 7,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công.\nKhông quá 07 ngày làm việc. \nĐối với các xã miền núi, biên giới; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115677.01",
+      "qty": 7,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "47/2026/QĐ-UBND",
+      "name": "Quyết định số 47/2026/QĐ-UBND ngày 28/6/2026 của Ủy ban nhân dân tỉnh Lào Cai về ban hành Quy định trình tự, thủ tục hành chính về đất đai trên địa bàn tỉnh Lào Cai"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Bước 1:",
+      "text": "Người sử dụng đất nông nghiệp có nhu cầu nộp hồ sơ trực tiếp tại Trung tâm Phục vụ hành chính công cấp tỉnh (hoặc cấp xã) hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công.\nCơ quan tiếp nhận kiểm tra ngay tính đầy đủ, hợp lệ của hồ sơ và chuyển đến Văn phòng Đăng ký đất đai hoặc Chi nhánh Văn phòng Đăng ký đất đai."
+    },
+    {
+      "name": "Bước 2:",
+      "text": "Văn phòng Đăng ký đất đai hoặc Chi nhánh Văn phòng Đăng ký đất đai có trách nhiệm kiểm tra hồ sơ; xác nhận thời hạn được tiếp tục sử dụng đất vào Giấy chứng nhận đã cấp hoặc cấp mới Giấy chứng nhận nếu người sử dụng đất có nhu cầu; cập nhật, chỉnh lý cơ sở dữ liệu đất đai, hồ sơ địa chính; trao Giấy chứng nhận hoặc gửi cơ quan tiếp nhận hồ sơ để trao cho người được cấp"
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Văn bản đề nghị xác nhận lại thời hạn sử dụng đất theo Mẫu số 39 ban hành kèm theo Quyết định số 47/2026/QĐ-UBND",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000474",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f5ad2-1ca0-758b-b5a1-beb4215f52e2",
+              "fileName": "mẫu số 39.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f5ad2-1ca0-758b-b5a1-beb4215f52e2/mẫu số 39.docx"
+            }
+          ]
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000475",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f4a22-ac14-71af-916a-1a44c778a795",
+    "updated_at": "2026-07-14T03:09:23.690Z",
+    "created_at": "2026-07-14T03:09:23.690Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

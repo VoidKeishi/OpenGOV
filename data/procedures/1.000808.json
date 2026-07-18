@@ -1,0 +1,205 @@
+{
+  "code": "1.000808",
+  "source_id": "019d2bf9-e9cc-71bb-bce1-c01b68788909",
+  "name": "Thủ tục đăng ký việc nhận nuôi con nuôi giữa người nhận nuôi là công dân Việt Nam tạm trú ở nước ngoài với trẻ em được nhận nuôi là công dân Việt Nam tạm trú ở nước ngoài",
+  "category": null,
+  "promulgating_agency": "Bộ Ngoại giao",
+  "executing_agency": "Cơ quan đại diện Việt Nam ở nước ngoài",
+  "subject_types": [
+    "Người Việt Nam định cư ở nước ngoài",
+    "Công dân Việt Nam"
+  ],
+  "results": [
+    "Giấy chứng nhận nuôi con nuôi"
+  ],
+  "requirements": "- Người nhận con nuôi phải có năng lực hành vi dân sự đầy đủ; hơn con nuôi từ 20 tuổi trở lên; có điều kiện về sức khỏe, kinh tế, chỗ ở đảm bảo việc chăm sóc, nuôi dưỡng và giáo dục con nuôi; có tư cách đạo đức tốt.\n- Trẻ em được nhận làm con nuôi phải là người dưới 16 tuổi; người từ đủ 16 tuổi đến dưới 18 tuổi nếu thuộc một trong các trường hợp sau: được cha dượng, mẹ kế nhận làm con nuôi, hoặc được cô, cậu, dì, chú, bác ruột nhận làm con nuôi.\n- Một người chỉ được nhận làm con nuôi của một người độc thân hoặc của cả hai người là vợ chồng.",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 150,
+          "text": "Đăng ký nuôi con nuôi"
+        }
+      ],
+      "processing": {
+        "qty": 30,
+        "unit": "DAY"
+      },
+      "note": "Người nhận con nuôi phải trực tiếp nộp hồ sơ nhận con nuôi tại trụ sở của cơ quan đại diện nơi đăng ký việc nuôi con nuôi. Khi đăng ký việc nuôi con nuôi, bên cho, bên nhận con nuôi phải có mặt; nếu người được nhận làm con nuôi từ đủ 9 tuổi trở lên, thì cũng phải có mặt\n30 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ, 60 ngày làm việc trong trường hợp phải xác minh"
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.000808.01",
+      "qty": 30,
+      "unit": "DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "33/2009/QH12",
+      "name": "Luật 33/2009/QH12"
+    },
+    {
+      "code": "33/2009/QH12",
+      "name": "Luật 33/2009/QH12"
+    },
+    {
+      "code": "264/2016/TT-BTC",
+      "name": "Quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí, lệ phí trong lĩnh vực ngoại giao áp dụng tại các Cơ quan đại diện Việt Nam ở nước ngoài"
+    },
+    {
+      "code": "12/2011/TT-BTP",
+      "name": "Thông tư 12/2011/TT-BTP"
+    },
+    {
+      "code": "91/2015/QH2013",
+      "name": "Bộ Luật Dân sự"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Người đề nghị nhận con nuôi và người được nhận làm con nuôi trực tiếp nộp hồ sơ tại Cơ quan đại diện ở khu vực lãnh sự nơi người nhận nuôi con nuôi hoặc trẻ em được nhận làm con nuôi cư trú (Cơ quan đại diện có thẩm quyền)\nTrong thời hạn 10 ngày kể từ ngày nhận đủ hồ sơ hợp lệ, cán bộ lãnh sự kiểm tra hồ sơ, lập biên bản lấy ý kiến của những người liên quan về việc nuôi con nuôi. Trong thời hạn 15 ngày kể từ ngày được lấy ý kiến, những người liên quan phải thông báo bằng văn bản cho cơ quan đại diện, hết thời hạn nói trên, mọi ý kiến thay đổi về việc cho trẻ em làm con nuôi sẽ không có giá trị\nTrường hợp người được nhận làm con nuôi có cha mẹ đẻ, cán bộ lãnh sự kiểm tra việc cha mẹ đẻ và người nhận nuôi có hay không có thỏa thuận bằng văn bản để giữ lại quyền, nghĩa vụ đối với con và cách thức thực hiện quyền, nghĩa vụ đó sau khi đã cho làm con nuôi. Nếu người được nhận làm con nuôi từ đủ 9 tuổi trở lên, thì trong Giấy thoả thuận phải có ý kiến của người đó về việc đồng ý làm con nuôi, trừ trường hợp người đó bị mất năng lực hành vi dân sự hoặc hạn chế năng lực hành vi dân sự\nNếu xét thấy các bên có đủ điều kiện theo quy định, trong thời hạn 20 ngày làm việc kể từ ngày hoàn tất việc lấy ý kiến những người liên quan, cơ quan đại diện có thẩm quyền thực hiện thủ tục đăng ký nuôi con nuôi. Cán bộ lãnh sự ghi vào Sổ đăng ký nuôi con nuôi và trao Giấy chứng nhận nuôi con nuôi cho các bên, đồng thời gửi văn bản thông báo cho Cục Con nuôi, Bộ Tư pháp và Cục Lãnh sự, Bộ Ngoại giao kèm theo bản sao của giấy tờ này\nTrường hợp phải xác minh, trong vòng 60 ngày kể từ ngày nhận hồ sơ, cơ quan đại diện trả kết quả cho người đề nghị\nTrường hợp từ chối đăng ký, cơ quan đại diện thông báo lý do bằng văn bản cho người đề nghị\nTrường hợp người nhận con nuôi và người được nhận làm con nuôi tạm trú ở nước không có Cơ quan đại diện Việt Nam thì người nhận con nuôi nộp hồ sơ đăng ký việc nuôi con nuôi tại Cơ quan đại diện nào thuận tiện nhất đối với họ\n"
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "Giấy tờ phải nộp (Hồ sơ của người nhận nuôi con nuôi)",
+      "items": [
+        {
+          "name": "Bản sao Hộ chiếu, Giấy chứng minh nhân dân hoặc giấy tờ có giá trị thay thế",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "000.00.00.G08-KQ0404",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản xác nhận tình trạng hôn nhân",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G08-KQ0406",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Giấy khám sức khỏe do cơ quan y tế cấp huyện trở lên cấp; văn bản xác nhận hoàn cảnh gia đình (mẫu TP/CN-2011/CN.06), tình trạng chỗ ở, điều kiện kinh tế do Ủy ban nhân dân cấp xã nơi người nhận con nuôi thường trú cấp, trừ trường hợp cha dượng nhận con riêng của vợ, mẹ kế nhận con riêng của chồng làm con nuôi hoặc cô, cậu, dì, chú, bác ruột nhận cháu làm con nuôi thì không áp dụng quy định phải “hơn con nuôi từ 20 tuổi trở lên và có điều kiện về sức khỏe, kinh tế, chỗ ở bảo đảm việc chăm sóc, nuôi dưỡng, giáo dục con nuôi”",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G08-KQ0407",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019d9212-c62b-7104-90e2-adc5966a7a6d",
+              "fileName": "10. To khai hoan canh gia dinh cua nguoi nhan con nuoi.doc",
+              "bucketName": "dvc",
+              "filePath": "configuring/019d9212-c62b-7104-90e2-adc5966a7a6d/10. To khai hoan canh gia dinh cua nguoi nhan con nuoi.doc"
+            }
+          ]
+        },
+        {
+          "name": "Phiếu lý lịch tư pháp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G08-KQ0405",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Đơn xin nhận con nuôi (mẫu TP/CN-2011/CN.02)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G08-KQ0403",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019d9212-6062-753e-9a50-bab78bf9af1c",
+              "fileName": "Mẫu TP-CN-2011-CN.02.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019d9212-6062-753e-9a50-bab78bf9af1c/Mẫu TP-CN-2011-CN.02.docx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Giấy tờ phải nộp (Hồ sơ của người được nhận làm con nuôi)",
+      "items": [
+        {
+          "name": "Ảnh toàn thân, nhìn thẳng, chụp không quá 06 tháng",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G08-KQ0410",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Quyết định tiếp nhận đối với trẻ em ở cơ sở nuôi dưỡng",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G08-KQ0412",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Tùy từng trường hợp cụ thể mà hồ sơ của người được nhận làm con nuôi cần phải có các giấy tờ sau: Văn bản thỏa thuận về việc cho và nhận con nuôi; Biên bản xác nhận tình trạng trẻ bị bỏ rơi, nếu người được nhận làm con nuôi là trẻ bị bỏ rơi; Giấy chứng tử của cha đẻ, mẹ đẻ hoặc quyết định của Tòa án tuyên bố cha đẻ, mẹ đẻ của trẻ em đã chết đối với trẻ em mồ côi; quyết định của Tòa án tuyên bố cha đẻ, mẹ đẻ của người được giới thiệu làm con nuôi mất tích hoặc mất năng lực hành vi dân sự",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G08-KQ0411",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Giấy khám sức khỏe do cơ quan y tế cấp huyện trở lên cấp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G08-KQ0409",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Giấy khai sinh",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G08-KQ0408",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "group": "Giấy tờ phải xuất trình",
+      "items": [
+        {
+          "name": "Hộ chiếu, Giấy chứng minh nhân dân hoặc giấy tờ có giá trị thay thế",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G08-KQ0402",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019d2bf9-e9cc-71bb-bce1-c01b68788909",
+    "updated_at": "2026-04-15T17:26:18.657Z",
+    "created_at": "2026-04-15T17:26:18.657Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "code": "1.115715",
+  "source_id": "019f652a-237c-70c9-bcf9-fa00ed38c746",
+  "name": "Xóa ghi nợ tiền sử dụng đất, lệ phí trước bạ trên Giấy chứng nhận đã cấp",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Lạng Sơn",
+  "executing_agency": "Chi nhánh Văn phòng đăng ký đất đai khu vực",
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Công dân Việt Nam"
+  ],
+  "results": [
+    "Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất."
+  ],
+  "requirements": "Không quy định",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân cấp tỉnh quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân cấp tỉnh quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân cấp tỉnh quy định"
+        }
+      ],
+      "processing": {
+        "qty": "Thực hiện trong ngày làm việc nhận được đủ hồ sơ xóa nợ; nếu thời điểm nhận đủ hồ sơ, sau 15 giờ cùng ngày thì có thể giải quyết việc xóa nợ trong ngày làm việc tiếp theo",
+        "unit": "OTHER"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công tỉnh/xã"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân cấp tỉnh quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân cấp tỉnh quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân cấp tỉnh quy định"
+        }
+      ],
+      "processing": {
+        "qty": "Thực hiện trong ngày làm việc nhận được đủ hồ sơ xóa nợ; nếu thời điểm nhận đủ hồ sơ, sau 15 giờ cùng ngày thì có thể giải quyết việc xóa nợ trong ngày làm việc tiếp theo",
+        "unit": "OTHER"
+      },
+      "note": "Nộp trực tuyến tại địa chỉ https://dichvucong.gov.vn"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân cấp tỉnh quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân cấp tỉnh quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân cấp tỉnh quy định"
+        }
+      ],
+      "processing": {
+        "qty": "Thực hiện trong ngày làm việc nhận được đủ hồ sơ xóa nợ; nếu thời điểm nhận đủ hồ sơ, sau 15 giờ cùng ngày thì có thể giải quyết việc xóa nợ trong ngày làm việc tiếp theo",
+        "unit": "OTHER"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích."
+    }
+  ],
+  "processing_cases": [],
+  "legal_basis": [
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "28/2026/QĐ-UBND.",
+      "name": "Quy định về phân cấp trong lĩnh vực đất đai theo quy định tại khoản 1 Điều 14 và quy định trình tự, thủ tục hành chính quy định tại khoản 1 Điều 15 Nghị định số 49/2026/NĐ-CP ngày 31 tháng 01 năm 2026 của Chính phủ"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến Trung tâm phục vụ hành chính công cấp tỉnh, xã",
+      "text": "Khi nộp hồ sơ, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\n\tĐối với trường hợp thực hiện xác nhận thay đổi trên Giấy chứng nhận đã cấp thì người yêu cầu đăng ký nộp bản gốc Giấy chứng nhận đã cấp.\n\tTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định."
+    },
+    {
+      "name": "Bước 2: Cơ quan tiếp nhận hồ sơ thực hiện",
+      "text": "- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\n\tTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n\tGiấy tiếp nhận hồ sơ và hẹn trả kết quả và Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ thực hiện theo mẫu quy định tại Nghị định của Chính phủ quy định về thực hiện cơ chế một cửa, một cửa liên thông trong giải quyết thủ tục hành chính;\n\t- Tiếp nhận hồ sơ số hóa hồ sơ, ký số hồ sơ theo quy định và chuyển hồ sơ điện tử về cho cơ quan chủ trì giải quyết thủ tục hành chính theo quy trình nội bộ, quy trình điện tử; đồng thời chuyển hồ sơ giấy về cho cơ quan chủ trì giải quyết thủ tục hành chính."
+    },
+    {
+      "name": "Bước 3: Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện.",
+      "text": "Chỉnh lý, cập nhật biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai; cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc xác nhận thay đổi trên Giấy chứng nhận đã cấp đối với trường hợp không phải thực hiện nghĩa vụ tài chính; chuyển Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất đến cơ quan tiếp nhận hồ sơ theo quy định tại khoản 1 Mục I nội dung A Phần IV Phụ lục I kèm theo Quyết định số 28/2026/QĐ-UBND ngày 20/6/2026 để trao cho người được cấp.\n\tĐối với trường hợp phải thực hiện nghĩa vụ tài chính thì Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện các công việc quy định tại điểm này sau khi nhận được thông báo của cơ quan thuế về việc hoàn thành nghĩa vụ tài chính."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Mẫu số 24. Đơn đăng ký biến động đất đai, tài sản gắn liền với đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.000024",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f5f7f-576f-720f-b10f-bf423df71c4f",
+              "fileName": "Mẫu số 24.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f5f7f-576f-720f-b10f-bf423df71c4f/Mẫu số 24.docx"
+            }
+          ]
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.0000032",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Giấy tờ chứng minh đã hoàn thành việc thanh toán nợ tiền sử dụng đất, lệ phí trước bạ theo quy định của pháp luật về thu tiền sử dụng đất, tiền thuê đất.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.0000069",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản về việc đại diện theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất thông qua người đại diện.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.0000003",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f652a-237c-70c9-bcf9-fa00ed38c746",
+    "updated_at": "2026-07-17T02:13:09.140Z",
+    "created_at": "2026-07-17T02:13:09.140Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

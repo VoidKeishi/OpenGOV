@@ -1,0 +1,139 @@
+{
+  "code": "1.115780",
+  "source_id": "019f5a26-8bec-74c9-9db8-b052f435698e",
+  "name": "Thu hồi Giấy chứng nhận đã cấp không đúng quy định của pháp luật đất đai do người sử dụng đất, chủ sở hữu tài sản gắn liền với đất phát hiện và cấp lại Giấy chứng nhận sau khi thu hồi",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Đồng Tháp",
+  "executing_agency": "Sở Nông nghiệp và Môi trường tỉnh Đồng Tháp",
+  "subject_types": [
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 12,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 12 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 12,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 12 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 12,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 12 ngày làm việc."
+    }
+  ],
+  "processing_cases": [],
+  "legal_basis": [
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "73/2026/QĐ-UBND",
+      "name": "Về quy định trình tự, thủ tục hành chính lĩnh vực đất đai trên địa bàn tỉnh Đồng Tháp"
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    },
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai ngày 18/01/2024;"
+    },
+    {
+      "code": "367/2025/NĐ-CP",
+      "name": "sửa đổi, bổ\nsung một số điều của Nghị định 118/2025/NĐ-CP thực hiện thủ tục hành chính\ntheo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ\ncông quốc gia"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "a) Bước 1:",
+      "text": "Người yêu cầu đăng ký nộp 1 bộ hồ sơ đến Trung tâm Phục vụ hành chính công các cấp hoặc Chi nhánh Văn phòng Đăng ký đất đai."
+    },
+    {
+      "name": "b) Bước 2: Cơ quan tiếp nhận hồ sơ thực hiện:",
+      "text": "- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\n- Trường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Trường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì:\n+ Chuyển hồ sơ đến cơ quan có chức năng quản lý đất đai cấp tỉnh đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu.\n+ Chuyển hồ sơ đến Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai đối với trường hợp thu hồi Giấy chứng nhận đã cấp khi thực hiện thủ tục đăng ký biến động đất đai, tài sản gắn liền với đất."
+    },
+    {
+      "name": "c) Bước 3:",
+      "text": "Cơ quan có chức năng quản lý đất đai cấp tỉnh, Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai kiểm tra, xem xét, quyết định thu hồi Giấy chứng nhận đã cấp không đúng quy định của pháp luật đất đai (trừ trường hợp người được cấp Giấy chứng nhận đã thực hiện thủ tục chuyển quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất theo quy định của pháp luật)."
+    },
+    {
+      "name": "d) Bước 4: Cơ quan có thẩm quyền thực hiện việc cấp Giấy chứng nhận sau khi thu hồi Giấy chứng nhận:",
+      "text": "d1) Trường hợp Giấy chứng nhận bị thu hồi là Giấy chứng nhận cấp lần đầu thì cơ quan có chức năng quản lý đất đai thực hiện:\n- Thông báo cho Văn phòng đăng ký đất đai chuyển hồ sơ cấp Giấy chứng nhận để kiểm tra hồ sơ, xác định lại thông tin quy định tại điểm d khoản 2 Điều 152 của Luật Đất đai theo đúng quy định của pháp luật đất đai tại thời điểm cấp Giấy chứng nhận.\n- Chuyển hồ sơ đã giải quyết đến Văn phòng đăng ký đất đai để thực hiện chỉnh lý hồ sơ địa chính, cơ sở dữ liệu đất đai; chuyển Quyết định về việc thu hồi Giấy chứng nhận đã cấp để trao cho người sử dụng đất thực hiện thủ tục cấp lại Giấy chứng nhận đúng trình tự thủ tục sau khi thu hồi Giấy chứng nhận đã cấp."
+    },
+    {
+      "name": "",
+      "text": "d2) Trường hợp Giấy chứng nhận bị thu hồi là Giấy chứng nhận được cấp trong trường hợp đăng ký biến động đất đai, tài sản gắn liền với đất thì Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện:\n- Kiểm tra hồ sơ đã cấp Giấy chứng nhận để xác định lại thông tin quy định tại điểm d khoản 2 Điều 152 của Luật Đất đai theo đúng quy định của pháp luật đất đai tại thời điểm cấp Giấy chứng nhận.\n- Chỉnh lý hồ sơ địa chính, cơ sở dữ liệu đất đai; trao Quyết định về việc thu hồi Giấy chứng nhận đã cấp hoặc chuyển cơ quan tiếp nhận hồ sơ để trao cho người sử dụng đất thực hiện thủ tục cấp lại Giấy chứng nhận đúng trình tự thủ tục sau khi thu hồi Giấy chứng nhận đã cấp."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Văn bản kiến nghị việc cấp Giấy chứng nhận không đúng quy định của pháp luật đất đai (bản chính)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS_TT20_1.1_73_DD",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp (bản gốc)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "Giaychungnhanbangoc_73_DD",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f5a26-8bec-74c9-9db8-b052f435698e",
+    "updated_at": "2026-07-17T07:28:58.230Z",
+    "created_at": "2026-07-17T07:28:58.230Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

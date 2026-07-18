@@ -1,0 +1,63 @@
+{
+  "_draft": "SKELETON (DATA.md §4). The five entries E_REQUIRED, E_DINH_DANH_12, E_TINH_SAP_NHAP, E_CAP_HUYEN, E_KS_CHA_ME are copied verbatim from DATA.md and are final. The rest are agent-drafted placeholders pending human review. Messages/suggestions are Vietnamese with {param} interpolation ({label} always available; rule-specific params like {old}/{new}/{min}/{max} from the hit). type ∈ {missing, format, invalid_value, conflict}; severity ∈ {error, warning}. Not seeded — the validation module reads this file directly. The '_draft' key is metadata, not an error code.",
+  "E_REQUIRED": {
+    "type": "missing",
+    "severity": "error",
+    "message": "Trường \"{label}\" là bắt buộc.",
+    "suggestion": "Vui lòng điền {label} trước khi nộp."
+  },
+  "E_DINH_DANH_12": {
+    "type": "format",
+    "severity": "error",
+    "message": "{label} phải gồm đúng 12 chữ số.",
+    "suggestion": "Kiểm tra lại số định danh cá nhân/CCCD: đủ 12 số, không có khoảng trắng hay ký tự khác."
+  },
+  "E_TINH_SAP_NHAP": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "\"{old}\" không còn là tỉnh/thành phố hiện hành.",
+    "suggestion": "Từ 01/7/2025, {old} đã sáp nhập vào {new}. Vui lòng ghi \"{new}\"."
+  },
+  "E_CAP_HUYEN": {
+    "type": "invalid_value",
+    "severity": "warning",
+    "message": "Địa chỉ hành chính hiện chỉ còn 2 cấp (tỉnh/thành phố và phường/xã).",
+    "suggestion": "Bỏ cấp quận/huyện/thị xã; ghi theo mẫu: phường/xã, tỉnh/thành phố."
+  },
+  "E_KS_CHA_ME": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Tờ khai phải có thông tin của ít nhất cha hoặc mẹ.",
+    "suggestion": "Điền tối thiểu Họ tên của người mẹ hoặc người cha (mục C hoặc D)."
+  },
+  "E_NGAY_TUONG_LAI": {
+    "type": "invalid_value",
+    "severity": "error",
+    "message": "{label} không được là ngày trong tương lai.",
+    "suggestion": "Vui lòng kiểm tra lại {label}: ngày phải nhỏ hơn hoặc bằng ngày hiện tại."
+  },
+  "E_NGAY_CHU_LECH": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "{label} ghi bằng chữ không khớp với ngày đã nhập bằng số.",
+    "suggestion": "Đối chiếu lại phần ghi bằng chữ với ngày, tháng, năm đã nhập bằng số."
+  },
+  "E_GCN_KH_THIEU": {
+    "type": "missing",
+    "severity": "error",
+    "message": "Thiếu thông tin Giấy chứng nhận kết hôn.",
+    "suggestion": "Cha mẹ đã đăng ký kết hôn thì cần điền Số Giấy chứng nhận kết hôn."
+  },
+  "E_SO_LUONG": {
+    "type": "format",
+    "severity": "error",
+    "message": "{label} phải là số nguyên trong khoảng {min}–{max}.",
+    "suggestion": "Nhập lại {label} bằng một số nguyên hợp lệ (từ {min} đến {max})."
+  },
+  "E_ME_SINH_SAU_CON": {
+    "type": "conflict",
+    "severity": "error",
+    "message": "Năm sinh của mẹ phải trước ngày sinh của người được khai sinh.",
+    "suggestion": "Kiểm tra lại năm sinh của mẹ và ngày sinh của con."
+  }
+}

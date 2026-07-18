@@ -1,0 +1,191 @@
+{
+  "code": "1.115663",
+  "source_id": "019f45cd-7bc5-708e-97bf-5a3902edb6b1",
+  "name": "Cấp lại Giấy chứng nhận do bị mất",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Lào Cai",
+  "executing_agency": "Chi nhánh Văn phòng đăng ký đất đai khu vực",
+  "subject_types": [
+    "Công dân Việt Nam",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "Không",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí"
+        }
+      ],
+      "processing": {
+        "qty": 10,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công hoặc tại địa điểm theo thỏa thuận giữa người yêu cầu đăng ký và Văn phòng Đăng ký đất đai, Chi nhánh Văn phòng Đăng ký đất đai.\nKhông quá 10 ngày làm việc.\nĐối với các xã miền núi, biên giới; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí"
+        }
+      ],
+      "processing": {
+        "qty": 10,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 10 ngày làm việc.\nĐối với các xã miền núi, biên giới; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí"
+        }
+      ],
+      "processing": {
+        "qty": 10,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 10 ngày làm việc.\nĐối với các xã miền núi, biên giới; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115663.01",
+      "qty": 10,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "47/2026/QĐ-UBND",
+      "name": "Quyết định số 47/2026/QĐ-UBND ngày 28/6/2026 của Ủy ban nhân dân tỉnh Lào Cai về ban hành Quy định trình tự, thủ tục hành chính về đất đai trên địa bàn tỉnh Lào Cai"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Bước 1:",
+      "text": "Người sử dụng đất có nhu cầu nộp hồ sơ trực tiếp tại Trung tâm Phục vụ hành chính công cấp tỉnh (hoặc cấp xã) hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công hoặc tại địa điểm theo thỏa thuận giữa người yêu cầu đăng ký và Văn phòng Đăng ký đất đai, Chi nhánh Văn phòng Đăng ký đất đai."
+    },
+    {
+      "name": "Bước 2: Tiếp nhận hồ sơ",
+      "text": "- Trường hợp nộp hồ sơ trực tiếp tại Trung tâm Phục vụ hành chính công, cán bộ tiếp nhận kiểm tra ngay tính đầy đủ, hợp lệ của hồ sơ và chuyển đến Văn phòng Đăng ký đất đai hoặc Chi nhánh Văn phòng Đăng ký đất đai.\n- Trường hợp nộp hồ sơ qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công hoặc tại địa điểm theo thỏa thuận giữa người yêu cầu đăng ký và Văn phòng Đăng ký đất đai, Chi nhánh Văn phòng Đăng ký đất đai, cơ quan tiếp nhận hồ sơ kiểm tra tính đầy đủ, hợp lệ của hồ sơ. Trường hợp hồ sơ đầy đủ, hợp lệ tiếp nhận hồ sơ theo quy định. Trường hợp hồ sơ chưa đầy đủ, hợp lệ thì cơ quan tiếp nhận trả lại hồ sơ, đồng thời, hướng dẫn bổ sung, hoàn thiện hồ sơ theo mẫu Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ."
+    },
+    {
+      "name": "Bước 3: Văn phòng Đăng ký đất đai, Chi nhánh Văn phòng Đăng ký đất đai thực hiện:",
+      "text": "- Kiểm tra thông tin về Giấy chứng nhận đã cấp mà người sử dụng đất, chủ sở hữu tài sản gắn liền với đất khai báo bị mất trong hồ sơ địa chính, cơ sở dữ liệu đất đai.\n- Trường hợp phát hiện thửa đất, tài sản gắn liền với đất được cấp Giấy chứng nhận đã được chuyển quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc đang thế chấp tại các tổ chức tín dụng, tổ chức kinh tế khác hoặc cá nhân theo quy định của pháp luật thì thông báo, trả lại hồ sơ cho người sử dụng đất, chủ sở hữu tài sản gắn liền với đất.\n- Đăng tin 03 lần trên phương tiện thông tin đại chúng ở địa phương trong thời gian 15 ngày đối với trường hợp mất Giấy chứng nhận của tổ chức, người gốc Việt Nam định cư ở nước ngoài, tổ chức nước ngoài, cá nhân nước ngoài; chi phí đăng tin do người sử dụng đất, chủ sở hữu tài sản gắn liền với đất chi trả.\n- Chuyển thông tin đến Ủy ban nhân dân cấp xã nơi có đất đối với trường hợp mất Giấy chứng nhận của cá nhân, cộng đồng dân cư."
+    },
+    {
+      "name": "Bước 4: Ủy ban nhân dân cấp xã nơi có đất thực hiện:",
+      "text": "- Niêm yết công khai về việc mất Giấy chứng nhận đã cấp tại trụ sở Ủy ban nhân dân cấp xã và điểm dân cư nơi có đất trong thời gian 15 ngày; đồng thời tiếp nhận phản ánh trong thời gian niêm yết công khai về việc mất Giấy chứng nhận đã cấp.\n - Lập biên bản kết thúc niêm yết trong thời hạn không quá 05 ngày kể từ ngày kết thúc thời gian niêm yết và gửi đến Văn phòng Đăng ký đất đai, Chi nhánh Văn phòng Đăng ký đất đai."
+    },
+    {
+      "name": "Bước 5:",
+      "text": "Văn phòng Đăng ký đất đai, Chi nhánh Văn phòng Đăng ký đất đai thực hiện hủy Giấy chứng nhận đã cấp; cập nhật, chỉnh lý hồ sơ địa chính, cơ sở dữ liệu đất đai; cấp lại Giấy chứng nhận cho người được cấp. Kiểm tra, ký duyệt mảnh trích đo bản đồ địa chính do người sử dụng đất nộp đối với trường hợp người sử dụng đất có nhu cầu đo đạc lại để xác định lại kích thước các cạnh, diện tích của thửa đất.\n* Trường hợp Trang bổ sung của Giấy chứng nhận đã cấp theo quy định của pháp luật đất đai trước ngày Nghị định này có hiệu lực thi hành bị mất thì người sử dụng đất, chủ sở hữu tài sản gắn liền với đất nộp Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 24 ban hành kèm theo Quyết  định này và bản gốc Giấy chứng nhận đã cấp. Văn phòng Đăng ký đất đai kiểm tra thông tin của Trang bổ sung trong hồ sơ địa chính, cơ sở dữ liệu đất đai; thực hiện cấp lại Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất với các thông tin cập nhật của Giấy chứng nhận đã cấp và thông tin trên Trang bổ sung."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "a) Đối với trường hợp cấp lại Giấy chứng nhận bị mất:",
+      "items": [
+        {
+          "name": "Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 24 ban hành kèm theo Quyết định số 47/2026/QĐ-UBND",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000333",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f5a48-fc8c-743e-93cb-1c77462090ee",
+              "fileName": "mẫu số 24.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f5a48-fc8c-743e-93cb-1c77462090ee/mẫu số 24.docx"
+            }
+          ]
+        },
+        {
+          "name": "Mảnh trích đo bản đồ địa chính thửa đất hoặc Phiếu đo đạc chỉnh lý thửa đất đối với trường hợp người sử dụng đất có nhu cầu đo đạc để xác định lại kích thước các cạnh, diện tích của thửa đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000334",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "group": "b) Đối với trường hợp mất Trang bổ sung:",
+      "items": [
+        {
+          "name": "Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 24 ban hành kèm theo Quyết định số 47/2026/QĐ-UBND",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000335",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f5a49-c2ad-73cc-a58e-86739be947d4",
+              "fileName": "mẫu số 24.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f5a49-c2ad-73cc-a58e-86739be947d4/mẫu số 24.docx"
+            }
+          ]
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000336",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Mảnh trích đo bản đồ địa chính thửa đất hoặc Phiếu đo đạc chỉnh lý thửa đất đối với trường hợp người sử dụng đất có nhu cầu đo đạc để xác định lại kích thước các cạnh, diện tích của thửa đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000337",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f45cd-7bc5-708e-97bf-5a3902edb6b1",
+    "updated_at": "2026-07-14T03:09:21.787Z",
+    "created_at": "2026-07-14T03:09:21.787Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

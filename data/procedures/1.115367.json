@@ -1,0 +1,168 @@
+{
+  "code": "1.115367",
+  "source_id": "019f1355-bbb0-71da-8844-97a0a4e657bc",
+  "name": "Tổ chức kinh tế nhận chuyển nhượng, thuê quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất để thực hiện dự án đầu tư",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Gia Lai",
+  "executing_agency": "Sở Nông nghiệp và Môi trường; Ủy ban nhân dân cấp xã",
+  "subject_types": [
+    "Doanh nghiệp Việt Nam",
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài",
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Cán bộ, công chức, viên chức",
+    "Tổ chức nước ngoài",
+    "Hợp tác xã"
+  ],
+  "results": [
+    "Văn bản chấp thuận tổ chức kinh tế được nhận chuyển nhượng, thuê quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất để thực hiện dự án đầu tư đối với trường hợp được chấp thuận.",
+    "Văn bản không chấp thuận tổ chức kinh tế được nhận chuyển nhượng, thuê quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất để thực hiện dự án đầu tư đối với trường hợp không được chấp thuận."
+  ],
+  "requirements": "-\tĐiều kiện 1: Phù hợp với quy hoạch sử dụng đất cấp xã hoặc quy hoạch chung hoặc quy hoạch phân khu hoặc quy hoạch xây dựng hoặc quy hoạch nông thôn đã được phê duyệt và công bố.\n-\tĐiều kiện 2: Không vi phạm quy định của pháp luật về đất đai hoặc có vi phạm quy định của pháp luật về đất đai nhưng đã chấp hành xong quyết định, bản án đã có hiệu lực pháp luật của cơ quan có thẩm quyền tại thời điểm đề nghị giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất. Việc xác định người sử dụng đất vi phạm quy định của pháp luật về đất đai áp dụng đối với tất cả các thửa đất đang sử dụng trên địa bàn cả nước.\n-\tĐiều kiện 3: Việc sử dụng đất thực hiện dự án phát triển kinh tế - xã hội thông qua thỏa thuận về nhận quyền sử dụng đất được thực hiện trong các trường hợp sau đây:\n+ Các trường hợp thực hiện dự án không thuộc trường hợp thu hồi đất để phát triển kinh tế - xã hội vì lợi ích quốc gia, công cộng.\n+ Đối với trường hợp sử dụng đất để thực hiện dự án đầu tư xây dựng nhà ở thương mại thì chỉ được thỏa thuận về nhận quyền sử dụng đất ở.\n+ Các trường hợp không sử dụng vốn ngân sách nhà nước và thuộc trường hợp thu hồi đất để phát triển kinh tế - xã hội vì lợi ích quốc gia, công cộng mà nhà đầu tư lựa chọn phương án thỏa thuận về nhận quyền sử dụng đất, không đề xuất thu hồi đất.",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Nghị quyết số 09/2025/NQ-HĐND ngày 27/10/2025 của Hội đồng nhân dân tỉnh Gia Lai"
+        }
+      ],
+      "processing": {
+        "qty": 30,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian thực hiện: không quá 20 ngày làm việc.\nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Nghị quyết số 09/2025/NQ-HĐND ngày 27/10/2025 của Hội đồng nhân dân tỉnh Gia Lai"
+        }
+      ],
+      "processing": {
+        "qty": 30,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian thực hiện: không quá 20 ngày làm việc.\nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Nghị quyết số 09/2025/NQ-HĐND ngày 27/10/2025 của Hội đồng nhân dân tỉnh Gia Lai"
+        }
+      ],
+      "processing": {
+        "qty": 30,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian thực hiện: không quá 20 ngày làm việc.\nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày làm việc."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115367.01",
+      "qty": 20,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "102/2024/NĐ-CP",
+      "name": "Nghị định 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai."
+    },
+    {
+      "code": "151/2025/NĐ-CP",
+      "name": "Quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai"
+    },
+    {
+      "code": "Nghị định số 50/2026/NĐ-CP",
+      "name": "Quy định chi tiết một số điều của Nghị quyết số 254/2025/QH15 ngày 11 tháng 12 năm 2025 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn, vướng mắc trong tổ chức thi hành Luật Đất đai về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "816/QĐ-UBND",
+      "name": "về việc ủy quyền cho Chủ tịch Ủy ban nhân dân cấp xã thực hiện một số nhiệm vụ trong lĩnh vực đất đai trên địa bàn tỉnh Gia Lai"
+    },
+    {
+      "code": "104/2026/QĐ-UBND",
+      "name": "Quy định trình tự, thủ tục hành chính về đất đai  trên địa bàn tỉnh Gia Lai"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "2385/QĐ-UBND",
+      "name": "về việc điều chỉnh, bổ sung Quyết định số 816/QĐ-UBND ngày 05 tháng 3 năm 2026 của Ủy ban nhân dân tỉnh về việc ủy quyền cho Chủ tịch Ủy ban nhân dân cấp xã thực hiện một số nhiệm vụ trong lĩnh vực đất đai trên địa bàn tỉnh Gia Lai."
+    },
+    {
+      "code": "2097/QĐ-UBND",
+      "name": "Về việc ủy quyền cho Trưởng ban Ban Quản lý Khu kinh tế tỉnh Gia Lai thực hiện một số nhiệm vụ trong lĩnh vực đất đai trong khu kinh tế trên địa bàn tỉnh Gia Lai"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Tổ chức kinh tế nhận chuyển nhượng, thuê quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất để thực hiện dự án đầu tư",
+      "text": "Bước 1: Người đề nghị nộp hồ sơ đến Trung tâm Phục vụ hành chính công. Trung tâm Phục vụ hành chính công chuyển hồ sơ đến Cơ quan chuyên môn về nông nghiệp và môi trường.\nKhi nộp hồ sơ, tổ chức kinh tế được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra, đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực. Trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nBước 2: Trong thời hạn 15 ngày làm việc kể từ ngày nhận được hồ sơ hợp lệ, cơ quan có chức năng quản lý đất đai phải có văn bản thẩm định trình Ủy ban nhân dân tỉnh/Chủ tịch Ủy ban nhân dân cấp xã. Văn bản thẩm định gồm các nội dung sau:\na) Điều kiện về sự phù hợp với quy hoạch sử dụng đất cấp xã hoặc quy hoạch được lập theo pháp luật về quy hoạch đô thị và nông thôn đã được phê duyệt và công bố;\nb) Việc đáp ứng các điều kiện quy định tại điểm c khoản 2 Điều 122 Luật số 31/2024/QH15;\nc) Việc đáp ứng các trường hợp quy định tại khoản 1 Điều 127 Luật số 31/2024/QH15;\nd) Các thông tin trong hồ sơ địa chính của thửa đất, khu đất mà nhà đầu tư đề xuất thực hiện dự án;\nđ) Kết luận về việc đủ điều kiện cho phép tổ chức kinh tế nhận chuyển nhượng, thuê quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất để thực hiện dự án đầu tư; trường hợp không đủ điều kiện thì nêu rõ lý do và thông báo cho tổ chức kinh tế có văn bản đề nghị;\ne) Đề xuất việc chấp thuận cho nhà đầu tư nhận chuyển nhượng, thuê quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất.\nBước 4: Trong thời hạn không quá 05 ngày làm việc kể từ ngày nhận được văn bản thẩm định do cơ quan có chức năng quản lý đất đai trình, Ủy ban nhân dân tỉnh/Chủ tịch Ủy ban nhân dân cấp xã xem xét và có văn bản chấp thuận tổ chức kinh tế được nhận chuyển nhượng, thuê quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất để thực hiện dự án gửi tổ chức kinh tế có văn bản đề nghị. Nội dung của văn bản chấp thuận phải nêu rõ quy mô, diện tích, vị trí, thời hạn phải hoàn thành việc thỏa thuận và các nội dung khác có liên quan.\nBước 5: Tổ chức kinh tế thực hiện việc nhận chuyển nhượng, thuê quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất để thực hiện dự án đầu tư.\nTrường hợp chuyển mục đích sử dụng đất để thực hiện dự án đầu tư thì trình tự, thủ tục thực hiện theo trình tự chuyển mục đích sử dụng đất."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Mẫu số 11 ban hành kèm theo Quyết định số 104/2026/QĐ-UBND ngày 29/6/2026",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.H21.000026",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f1592-068e-7037-aae1-85b92d38b44b",
+              "fileName": "Mẫu số 11.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f1592-068e-7037-aae1-85b92d38b44b/Mẫu số 11.docx"
+            }
+          ]
+        },
+        {
+          "name": "Trích lục vị trí khu đất mà nhà đầu tư đề xuất thực hiện dự án",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "TPHS.H21.000030",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f1355-bbb0-71da-8844-97a0a4e657bc",
+    "updated_at": "2026-07-01T05:58:57.361Z",
+    "created_at": "2026-06-30T08:17:08.441Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

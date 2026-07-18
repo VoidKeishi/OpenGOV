@@ -1,0 +1,174 @@
+{
+  "code": "1.115680",
+  "source_id": "019f4ae0-1462-7649-ae49-45273eda7b56",
+  "name": "Điều chỉnh quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Lào Cai",
+  "executing_agency": "Ủy ban nhân dân cấp xã",
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Công dân Việt Nam"
+  ],
+  "results": [
+    "Giấy chứng nhận",
+    "Quyết định điều chỉnh quyết định giao đất/cho thuê đất/cho phép chuyển mục đích sử dụng đất theo Quyết định số 47/2026/QĐ-UBND"
+  ],
+  "requirements": "a) Điều kiện đối với trường hợp điều chỉnh quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất:\n- Đang sử dụng đất đã có quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất.\n- Thay đổi căn cứ để ban hành quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất quy định tại các khoản 1, 2, 3, 4 và 5 Điều 116 Luật Đất đai.\nb) Điều kiện đối với trường hợp đề nghị điều chỉnh thời hạn sử dụng đất đối với dự án đầu tư có sử dụng đất khi chưa hết thời hạn sử dụng đất:\n- Phù hợp với quy hoạch sử dụng đất.\n- Có văn bản đề nghị điều chỉnh thời hạn sử dụng đất của dự án đầu tư.\n- Đã hoàn thành nghĩa vụ tài chính về đất đai đối với Nhà nước theo quy định của pháp luật.\n- Không thuộc trường hợp thu hồi đất do vi phạm pháp luật về đất đai quy định tại Điều 81 của Luật này.\n- Có văn bản của cơ quan có thẩm quyền về việc điều chỉnh dự án đầu tư theo quy định của pháp luật mà có thay đổi thời hạn hoạt động của dự án đầu tư.\n- Đáp ứng các điều kiện về môi trường theo quy định của pháp luật về bảo vệ môi trường.",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí"
+        }
+      ],
+      "processing": {
+        "qty": 15,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công\nKhông quá 15 ngày làm việc.\n- Thời gian thực hiện tại cơ quan có chức năng quản lý đất đai: Tổng thời gian thực hiện các bước không quá 12 ngày làm việc.\n- Thời gian thực hiện tại Ủy ban nhân dân cấp xã: Không quá 03 ngày làm việc\nĐối với các xã miền núi, biên giới; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí"
+        }
+      ],
+      "processing": {
+        "qty": 15,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công\nKhông quá 15 ngày làm việc.\n- Thời gian thực hiện tại cơ quan có chức năng quản lý đất đai: Tổng thời gian thực hiện các bước không quá 12 ngày làm việc.\n- Thời gian thực hiện tại Ủy ban nhân dân cấp xã: Không quá 03 ngày làm việc\nĐối với các xã miền núi, biên giới; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí"
+        }
+      ],
+      "processing": {
+        "qty": 15,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công\nKhông quá 15 ngày làm việc.\n- Thời gian thực hiện tại cơ quan có chức năng quản lý đất đai: Tổng thời gian thực hiện các bước không quá 12 ngày làm việc.\n- Thời gian thực hiện tại Ủy ban nhân dân cấp xã: Không quá 03 ngày làm việc\nĐối với các xã miền núi, biên giới; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115680.01",
+      "qty": 15,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "40/2026/QĐ-UBND",
+      "name": "QUYẾT ĐỊNH PHÂN CẤP THẨM QUYỀN THỰC HIỆN MỘT SỐ NHIỆM VỤ TRONG LĨNH VỰC ĐẤT ĐAI TRÊN ĐỊA BÀN TỈNH LÀO CAI"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "47/2026/QĐ-UBND",
+      "name": "Quyết định số 47/2026/QĐ-UBND ngày 28/6/2026 của Ủy ban nhân dân tỉnh Lào Cai về ban hành Quy định trình tự, thủ tục hành chính về đất đai trên địa bàn tỉnh Lào Cai"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "102/2024/NĐ-CP",
+      "name": "Nghị định 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai."
+    },
+    {
+      "code": "Nghị định số 50/2026/NĐ-CP",
+      "name": "Quy định chi tiết một số điều của Nghị quyết số 254/2025/QH15 ngày 11 tháng 12 năm 2025 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn, vướng mắc trong tổ chức thi hành Luật Đất đai về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Bước 1:",
+      "text": "Người đề nghị điều chỉnh quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất nộp 01 bộ hồ sơ  trực tiếp tại Trung tâm Phục vụ hành chính công cấp xã (hoặc cấp tỉnh) hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công.\nCơ quan tiếp nhận kiểm tra ngay tính đầy đủ, hợp lệ của hồ sơ, chuyển hồ sơ đến cơ quan có chức năng quản lý đất đai cấp xã."
+    },
+    {
+      "name": "Bước 2: Cơ quan có chức năng quản lý đất đai cấp xã thực hiện:",
+      "text": "- Rà soát, kiểm tra hồ sơ; lập trích lục địa chính với nơi đã có bản đồ địa chính. Hướng dẫn người nộp hồ sơ làm lại hồ sơ hoặc bổ sung hồ sơ đối với trường hợp hồ sơ không đầy đủ, không hợp lệ, bổ sung trích đo địa chính tại nơi chưa có bản đồ địa chính;\n- Kiểm tra thực địa thửa đất đối với những trường hợp thay đổi diện tích, vị trí, ranh giới thửa đất;\n- Chuyển thông tin đến các cơ quan chuyên môn có liên quan để thực hiện thủ tục xác định trường hợp được miễn tiền sử dụng đất, tiền thuê đất theo quy định của pháp luật về tiền sử dụng đất, tiền thuê đất (nếu có);\n- Hoàn thiện hồ sơ, trình Chủ tịch Ủy ban nhân dân cấp xã ban hành Quyết định, hồ sơ gồm:\n+ Đơn và giấy tờ quy định tại mục 3.3;\n+ Trích lục bản đồ địa chính thửa đất hoặc trích đo địa chính thửa đất,\n+ Tờ trình theo Mẫu số 05 kèm theo Quyết định số 47/2026/QĐ-UBND; \n+ Dự thảo quyết định điều chỉnh quyết định giao đất/cho thuê đất/cho phép chuyển mục đích sử dụng đất theo Mẫu số 09 kèm theo Quyết định số 47/2026/QĐ-UBND."
+    },
+    {
+      "name": "Bước 3:",
+      "text": "Chủ tịch Ủy ban nhân dân cấp xã xem xét ban hành Quyết định điều chỉnh quyết định giao đất/cho thuê đất/cho phép chuyển mục đích sử dụng đất theo thẩm quyền."
+    },
+    {
+      "name": "Bước 4: Các cơ quan chuyên môn thực hiện như sau (nếu có):",
+      "text": "- Cơ quan có chức năng về quản lý đất đai cấp xã chuyển thông tin theo Mẫu số 11 ban hành kèm theo Quyết định số 47/2026/QĐ-UBND đến cơ quan tài chính cùng cấp đối với trường hợp phải nộp tiền để Nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa. Cơ quan tài chính xác định và ban hành Thông báo số tiền phải nộp theo Mẫu số 12 kèm theo Quyết định số 47/2026/QĐ-UBND, xác nhận hoàn thành nghĩa vụ tài chính và gửi thông báo kết quả cho cơ quan có chức năng quản lý đất đai sau khi người sử dụng đất nộp nghĩa vụ tài chính theo thông báo.\n- Cơ quan xây dựng xác định chi phí xây dựng hạ tầng theo quy định của pháp luật về xây dựng và chuyển thông tin đến cơ quan có chức năng quản lý đất đai đối với trường hợp phải xác định chi phí xây dựng hạ tầng;\n- Cơ quan có chức năng về quản lý đất đai cấp xã tổ chức việc xác định giá đất theo quy định đối với trường hợp phải nộp tiền sử dụng đất, tiền thuê đất và chuyển thông tin theo Mẫu số 10 kèm theo Quyết định số 47/2026/QĐ-UBND đến cơ quan thuế;\n- Cơ quan thuế xác định tiền sử dụng đất/tiền thuê đất phải nộp theo quy định; ban hành thông báo nộp tiền sử dụng đất/tiền thuê đất gửi cho người sử dụng đất. \n- Người sử dụng đất nộp tiền sử dụng đất/tiền thuê đất theo quy định của pháp luật về tiền sử dụng đất, tiền thuê đất (nếu có). \n- Cơ quan thuế xác nhận hoàn thành việc nộp tiền sử dụng đất/tiền thuê đất và gửi thông báo kết quả cho cơ quan có chức năng quản lý đất đai (nếu có)."
+    },
+    {
+      "name": "Bước 5: Cơ quan có chức năng quản lý đất đai thực hiện:",
+      "text": "- Cơ quan có chức năng về quản lý đất đai cấp xã ký hợp đồng thuê đất theo Mẫu số 14 hoặc điều chỉnh hợp đồng thuê đất theo Mẫu số 40 ban hành kèm theo Quyết định số 47/2026/QĐ-UBND; \n- Chuyển hồ sơ đến Văn phòng Đăng ký đất đai hoặc Chi nhánh Văn phòng Đăng ký đất đai để thực hiện việc đăng ký biến động, cập nhật, chỉnh lý cơ sở dữ liệu đất đai, hồ sơ địa chính; bàn giao đất trên thực địa thực hiện theo Mẫu số 13 ban hành kèm theo Quyết định số 47/2026/QĐ-UBND (đối với trường hợp không thay đổi về vị trí, diện tích thửa đất thì không thực hiện bàn giao thực địa)."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Đơn theo Mẫu số 04 kèm theo Quyết định số 47/2026/QĐ-UBND",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000499",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f5e46-77a9-76ef-a39e-07a40a44b3aa",
+              "fileName": "mẫu số 04 cấp xã.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f5e46-77a9-76ef-a39e-07a40a44b3aa/mẫu số 04 cấp xã.docx"
+            }
+          ]
+        },
+        {
+          "name": "Một trong các giấy chứng nhận quy định tại khoản 21 Điều 3, khoản 3 Điều 256 Luật Đất đai hoặc một trong các loại giấy tờ quy định tại Điều 137 Luật Đất đai hoặc quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất của cơ quan nhà nước có thẩm quyền theo quy định của pháp luật về đất đai qua các thời kỳ",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000500",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản của cơ quan nhà nước có thẩm quyền có nội dung làm thay đổi căn cứ quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất (đối với trường hợp thay đổi căn cứ quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000501",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f4ae0-1462-7649-ae49-45273eda7b56",
+    "updated_at": "2026-07-14T03:09:21.784Z",
+    "created_at": "2026-07-14T03:09:21.784Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

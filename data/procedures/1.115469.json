@@ -1,0 +1,199 @@
+{
+  "code": "1.115469",
+  "source_id": "019f1679-83ee-71de-90ac-b011551fdd54",
+  "name": "Đăng ký biến động thay đổi quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất do chia, tách, hợp nhất, sáp nhập tổ chức hoặc chuyển đổi mô hình tổ chức, chuyển đổi loại hình doanh nghiệp theo quy định của pháp luật về doanh nghiệp; điều chỉnh quy hoạch xây dựng chi tiết; cấp Giấy chứng nhận cho từng thửa đất theo quy hoạch xây dựng chi tiết cho chủ đầu tư dự án có nhu cầu",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Bắc Ninh",
+  "executing_agency": "Văn phòng đăng ký đất đai Bắc Ninh",
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Tổ chức nước ngoài",
+    "Hợp tác xã"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "Trường hợp thực hiện thủ tục dẫn đến tách thửa đất, hợp thửa đất thì phải đảm bảo điều kiện quy định tại Điều 220 Luật Đất đai, Nghị quyết số 254/2025/NQ-QH và Quy định cỉa UBND tỉnh Bắc Ninh.",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian giải quyết thủ tục thay đổi quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất do chia, tách, hợp nhất, sáp nhập, chuyển đổi mô hình tổ chức,chuyển đổi loại hình doanh nghiệp là không quá 08 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian giải quyết thủ tục thay đổi quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất do chia, tách, hợp nhất, sáp nhập, chuyển đổi mô hình tổ chức,chuyển đổi loại hình doanh nghiệp là không quá 08 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian giải quyết thủ tục thay đổi quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất do chia, tách, hợp nhất, sáp nhập, chuyển đổi mô hình tổ chức,chuyển đổi loại hình doanh nghiệp là không quá 08 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    },
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian giải quyết thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất theo quy hoạch xây dựng chi tiết hoặc điều chỉnh quy hoạch xây dựng chi tiết là không quá 05 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 15 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian giải quyết thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất theo quy hoạch xây dựng chi tiết hoặc điều chỉnh quy hoạch xây dựng chi tiết là không quá 05 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 15 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian giải quyết thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất theo quy hoạch xây dựng chi tiết hoặc điều chỉnh quy hoạch xây dựng chi tiết là không quá 05 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 15 ngày làm việc."
+    }
+  ],
+  "processing_cases": [],
+  "legal_basis": [],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến một trong các địa điểm trên địa bàn cấp tỉnh: Trung tâm Phục vụ hành chính công hoặc Văn phòng đăng ký đất đai.",
+      "text": "Khi nộp hồ sơ, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nĐối với trường hợp thực hiện xác nhận thay đổi trên Giấy chứng nhận đã cấp thì người yêu cầu đăng ký nộp bản gốc Giấy chứng nhận đã cấp.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định, trừ các giấy tờ là quyết định phê duyệt hoặc quyết định phê duyệt điều chỉnh quy hoạch xây dựng chi tiết, bản đồ điều chỉnh quy hoạch xây dựng chi tiết."
+    },
+    {
+      "name": "Bước 2: Cơ quan tiếp nhận hồ sơ thực hiện:",
+      "text": "- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\n Trường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Trường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến Văn phòng đăng ký đất đai.\n  Bước 3: Văn phòng đăng ký đất đai thực hiện:\n- Kiểm tra, ký duyệt mảnh trích đo bản đồ địa chính đối với trường hợp người sử dụng đất có nhu cầu xác định lại kích thước các cạnh, diện tích của thửa đất.\n- Trích lục bản đồ địa chính hoặc trích đo bản đồ địa chính thửa đất đối với nơi chưa có bản đồ địa chính hoặc chỉ có bản đồ địa chính dạng giấy đã rách nát, hư hỏng đối với trường hợp Giấy chứng nhận đã cấp chưa sử dụng bản đồ địa chính hoặc chưa sử dụng trích đo bản đồ địa chính thửa đất và người sử dụng đất có nhu cầu cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc thuộc trường hợp phải cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất.\n- Gửi Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai theo Mẫu số 19 đến cơ quan thuế để xác định và thông báo thu nghĩa vụ tài chính đối với trường hợp phải thực hiện nghĩa vụ tài chính theo quy định của pháp luật.\n- Chỉnh lý, cập nhật biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai; Cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc xác nhận thay đổi trên Giấy chứng nhận đã cấp đối với trường hợp không phải thực hiện nghĩa vụ tài chính; trao Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc gửi cơ quan tiếp nhận hồ sơ để trao cho người được cấp.\nTrường hợp phải thực hiện nghĩa vụ tài chính thì thực hiện các công việc quy định tại điểm này khi có thông tin từ cơ sở dữ liệu được liên thông hoặc chứng từ hoặc giấy tờ chứng minh đã hoàn thành nghĩa vụ tài chính.\nTrường hợp giấy chứng nhận cấp trước ngày 01 tháng 7 năm 2004 chưa xác định cụ thể diện tích đất ở (bao gồm giấy chứng nhận quyền sử dụng đất đã được xác nhận thay đổi trên giấy chứng nhận hoặc trường hợp người nhận chuyển quyền sử dụng toàn bộ thửa đất đã được cấp giấy chứng nhận mới từ ngày 01 tháng 7 năm 2004 trở về sau nhưng trên giấy chứng nhận chưa xác định cụ thể diện tích đất ở) thì Văn phòng Đăng ký đất đai gửi văn bản xin ý kiến và thực hiện các công việc trên sau khi có ý kiến về việc xác định lại diện tích đất ở trên giấy chứng nhận đã cấp của cơ quan có thẩm quyền cấp giấy chứng nhận lần đầu."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "a) Đối với trường hợp thay đổi quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất do chia, tách, hợp nhất, sáp nhập tổ chức hoặc chuyển đổi mô hình tổ chức, chuyển đổi loại hình doanh nghiệp theo quy định của pháp luật về doanh nghiệp: - Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 18. - Giấy chứng nhận đã cấp, trừ trường hợp thực hiện quyết định hoặc bản án của Toà án nhân dân, quyết định thi hành án của cơ quan thi hành án đã có hiệu lực thi hành hoặc trường hợp đấu giá, giao quyền sử dụng đất, tài sản gắn liền với đất theo yêu cầu của Toà án, cơ quan thi hành án mà không thu hồi được Giấy chứng nhận đã cấp. - Giấy chứng nhận đăng ký doanh nghiệp hoặc văn bản về việc thành lập tổ chức sau khi thay đổi (trường hợp không khai thác được thông tin trên Cơ sở dữ liệu quốc gia về đăng ký doanh nghiệp). - Quyết định của cơ quan, tổ chức có thẩm quyền hoặc văn bản về việc chia, tách, hợp nhất, sáp nhập, chuyển đổi mô hình tổ chức, chuyển đổi loại hình doanh nghiệp theo quy định của pháp luật về doanh nghiệp phù hợp với quy định của pháp luật, trong đó phải xác định rõ tổ chức được sử dụng đất, sở hữu tài sản gắn liền với đất sau khi chia, tách, hợp nhất, sáp nhập, chuyển đổi mô hình tổ chức, chuyển đổi loại hình doanh nghiệp. - Bản vẽ tách thửa đất, hợp thửa đất theo Mẫu số 22a đối với trường hợp phải tách thửa đất, hợp thửa đất. - Mảnh trích đo bản đồ địa chính thửa đất đối với trường hợp người sử dụng đất có nhu cầu đo đạc để xác định lại kích thước các cạnh, diện tích của thửa đất. - Văn bản về việc đại diện theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất thông qua người đại diện.",
+      "items": [
+        {
+          "name": "- Đơn đề nghị hỗ trợ (Mẫu 1).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H05-KQ000330",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019d7c7a-31b7-7628-8e4b-794b4077d21f",
+              "fileName": "Mẫu 1..docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019d7c7a-31b7-7628-8e4b-794b4077d21f/Mẫu 1..docx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "b) Đối với trường hợp điều chỉnh quy hoạch xây dựng chi tiết: - Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 18. - Giấy chứng nhận đã cấp, trừ trường hợp thực hiện quyết định hoặc bản án của Toà án nhân dân, quyết định thi hành án của cơ quan thi hành án đã có hiệu lực thi hành hoặc trường hợp đấu giá, giao quyền sử dụng đất, tài sản gắn liền với đất theo yêu cầu của Toà án, cơ quan thi hành án mà không thu hồi được Giấy chứng nhận đã cấp. - Quyết định phê duyệt điều chỉnh quy hoạch xây dựng chi tiết của cơ quan có thẩm quyền kèm theo bản đồ điều chỉnh quy hoạch xây dựng chi tiết và bản đồ địa chính hoặc mảnh trích đo bản đồ địa chính; trường hợp phải xác định lại giá đất thì nộp thêm giấy tờ chứng minh đã hoàn thành nghĩa vụ tài chính về đất đai. - Văn bản về việc đại diện theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất thông qua người đại diện.",
+      "items": [
+        {
+          "name": "- Đơn đề nghị hỗ trợ (Mẫu 1).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H05-KQ000330",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019d7c7a-31b7-7628-8e4b-794b4077d21f",
+              "fileName": "Mẫu 1..docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019d7c7a-31b7-7628-8e4b-794b4077d21f/Mẫu 1..docx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "c) Đối với trường hợp cấp Giấy chứng nhận cho từng thửa đất theo quy hoạch xây dựng chi tiết cho chủ đầu tư dự án có nhu cầu: - Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 18. - Giấy chứng nhận đã cấp, trừ trường hợp thực hiện quyết định hoặc bản án của Toà án nhân dân, quyết định thi hành án của cơ quan thi hành án đã có hiệu lực thi hành hoặc trường hợp đấu giá, giao quyền sử dụng đất, tài sản gắn liền với đất theo yêu cầu của Toà án, cơ quan thi hành án mà không thu hồi được Giấy chứng nhận đã cấp. - Quyết định phê duyệt quy hoạch xây dựng chi tiết của cơ quan có thẩm quyền kèm theo bản đồ quy hoạch xây dựng chi tiết và bản đồ địa chính hoặc mảnh trích đo bản đồ địa chính. - Văn bản về việc đại diện theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất thông qua người đại diện.",
+      "items": [
+        {
+          "name": "- Đơn đề nghị hỗ trợ (Mẫu 1).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H05-KQ000330",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019d7c7a-31b7-7628-8e4b-794b4077d21f",
+              "fileName": "Mẫu 1..docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019d7c7a-31b7-7628-8e4b-794b4077d21f/Mẫu 1..docx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f1679-83ee-71de-90ac-b011551fdd54",
+    "updated_at": "2026-07-06T01:35:07.030Z",
+    "created_at": "2026-07-06T01:35:07.030Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "code": "1.115452",
+  "source_id": "019f119a-8c91-7618-8c17-5589b0a758de",
+  "name": "Giải quyết tranh chấp đất đai thuộc thẩm quyền của Chủ tịch Ủy ban nhân dân cấp xã",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Bắc Ninh",
+  "executing_agency": "Cơ quan chuyên môn về Nông nghiệp và Môi trường thuộc UBND cấp xã",
+  "subject_types": [
+    "Người Việt Nam định cư ở nước ngoài",
+    "Công dân Việt Nam",
+    "Người nước ngoài"
+  ],
+  "results": [
+    "Quyết định giải quyết tranh chấp đất đai"
+  ],
+  "requirements": "Không quy định",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 45,
+        "unit": "DAY"
+      },
+      "note": "Không quá 45 ngày kể từ ngày thụ lý đơn yêu cầu giải quyết tranh chấp đất đai. \nĐối với các xã miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn không quá 60 ngày."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 45,
+        "unit": "DAY"
+      },
+      "note": "Không quá 45 ngày kể từ ngày thụ lý đơn yêu cầu giải quyết tranh chấp đất đai. \nĐối với các xã miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn không quá 60 ngày."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 45,
+        "unit": "DAY"
+      },
+      "note": "Không quá 45 ngày kể từ ngày thụ lý đơn yêu cầu giải quyết tranh chấp đất đai. \nĐối với các xã miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn không quá 60 ngày."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115452.01",
+      "qty": 45,
+      "unit": "DAY"
+    }
+  ],
+  "legal_basis": [],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Nộp hồ sơ",
+      "text": "Người có đơn yêu cầu giải quyết tranh chấp đất đai nộp đơn đến Trung tâm Phục vụ hành chính công.\nTrung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến Ủy ban nhân dân cấp xã."
+    },
+    {
+      "name": "Bước 2: Chủ tịch Ủy ban nhân dân cấp xã có trách nhiệm:",
+      "text": "- Trong thời hạn 05 ngày làm việc kể từ ngày nhận được đơn phải thông báo bằng văn bản cho các bên tranh chấp đất đai và Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai về việc thụ lý đơn yêu cầu giải quyết tranh chấp đất đai, trường hợp không thụ lý thì phải thông báo bằng văn bản và nêu rõ lý do. \n- Giao trách nhiệm cho cơ quan tham mưu giải quyết. \nBước 3: Cơ quan tham mưu có nhiệm vụ thẩm tra, xác minh vụ việc, tổ chức hòa giải giữa các bên tranh chấp, tổ chức cuộc họp các ban, ngành có liên quan để tư vấn giải quyết tranh chấp đất đai (nếu cần thiết) và hoàn chỉnh hồ sơ trình Chủ tịch Ủy ban nhân dân cấp xã ban hành quyết định giải quyết tranh chấp đất đai."
+    },
+    {
+      "name": "Bước 3:",
+      "text": "Chủ tịch Ủy ban nhân dân cấp xã ban hành quyết định giải quyết tranh chấp và gửi cho các bên tranh chấp, các tổ chức, cá nhân có quyền và nghĩa vụ liên quan."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "- Đơn đề nghị hỗ trợ (Mẫu 1).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H05-KQ000330",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019d7c7a-31b7-7628-8e4b-794b4077d21f",
+              "fileName": "Mẫu 1..docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019d7c7a-31b7-7628-8e4b-794b4077d21f/Mẫu 1..docx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f119a-8c91-7618-8c17-5589b0a758de",
+    "updated_at": "2026-07-06T01:35:07.082Z",
+    "created_at": "2026-07-06T01:35:07.082Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

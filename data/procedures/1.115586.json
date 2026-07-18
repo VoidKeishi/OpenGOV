@@ -1,0 +1,250 @@
+{
+  "code": "1.115586",
+  "source_id": "019f3a63-b50b-760d-9bba-ab74a5f62482",
+  "name": "Thu hồi Giấy chứng nhận đã cấp lần đầu không đúng quy định của pháp luật đất đai do người sử dụng đất, chủ sở hữu tài sản gắn liền với đất phát hiện và cấp lại Giấy chứng nhận sau khi thu hồi",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Lai Châu",
+  "executing_agency": "Phòng Kinh tế",
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Công dân Việt Nam",
+    "Doanh nghiệp"
+  ],
+  "results": [
+    "Giấy chứng nhận."
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 45,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu."
+    },
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 65,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu.\n* Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn."
+    },
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 42,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó đăng ký đất đai, tài sản gắn liền với đất lần đầu."
+    },
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 62,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó đăng ký đất đai, tài sản gắn liền với đất lần đầu.\n* * Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn."
+    },
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 28,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó cấp Giấy chứng nhận."
+    },
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 48,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó đăng ký đất đai, tài sản gắn liền với đất lần đầu.\n* * Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 45,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tuyến trên Cổng dịch vụ công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 65,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tuyến trên Cổng dịch vụ công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu.\n* Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 42,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tuyến trên Cổng dịch vụ công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó đăng ký đất đai, tài sản gắn liền với đất lần đầu."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 62,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tuyến trên Cổng dịch vụ công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó đăng ký đất đai, tài sản gắn liền với đất lần đầu.\n* * Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 28,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tuyến trên Cổng dịch vụ công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó cấp Giấy chứng nhận."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 48,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp trực tuyến trên Cổng dịch vụ công.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó đăng ký đất đai, tài sản gắn liền với đất lần đầu.\n* * Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 45,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 65,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu.\n* Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 42,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó đăng ký đất đai, tài sản gắn liền với đất lần đầu."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 62,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó đăng ký đất đai, tài sản gắn liền với đất lần đầu.\n* * Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 28,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó cấp Giấy chứng nhận."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 48,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích.\n* Đối với thu hồi Giấy chứng nhận đã cấp; thực hiện đăng ký, cấp lại Giấy chứng nhận sau thu hồi đối với trường hợp thu hồi Giấy chứng nhận đã cấp lần đầu trong đó đăng ký đất đai, tài sản gắn liền với đất lần đầu.\n* * Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn."
+    }
+  ],
+  "processing_cases": [],
+  "legal_basis": [
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "28/2026/QĐ-UBND",
+      "name": "Về việc phân cấp cho Chủ tịch Ủy ban nhân dân cấp xã thực hiện một số nhiệm vụ trong lĩnh vực Đất đai trên địa bàn tỉnh Lai Châu"
+    },
+    {
+      "code": "44/2026/QĐ-UBND",
+      "name": "Quy định trình tự, thủ tục hành chính về đất đai\ntrên địa bàn tỉnh Lai Châu"
+    },
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Bước 1:",
+      "text": "Người yêu cầu nộp hồ sơ đến Trung tâm Phục vụ hành chính công."
+    },
+    {
+      "name": "Bước 2: Cơ quan tiếp nhận hồ sơ có trách nhiệm:",
+      "text": "- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\nTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định. \n- Chuyển hồ sơ đến Ủy ban nhân dân cấp xã nơi có đất."
+    },
+    {
+      "name": "Bước 3: Cơ quan có chức năng quản lý đất đai cấp xã thực hiện:",
+      "text": "- Thông báo cho Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai chuyển hồ sơ cấp Giấy chứng nhận lần đầu để kiểm tra, xem xét và trình Chủ tịch Ủy ban nhân dân cấp xã quyết định thu hồi Giấy chứng nhận đã cấp không đúng quy định của pháp luật đất đai.\n- Kiểm tra hồ sơ, xác định lại thông tin quy định tại điểm d khoản 2 Điều 152 Luật Đất đai theo đúng quy định của pháp luật đất đai tại thời điểm cấp Giấy chứng nhận.\n- Trình Chủ tịch Ủy ban nhân dân cấp xã cấp Giấy chứng nhận."
+    },
+    {
+      "name": "Bước 3:",
+      "text": "Chủ tịch Ủy ban nhân dân cấp xã ký Quyết định thu hồi Giấy chứng nhận quyền sử dụng đất; Ký cấp Giấy chứng nhận quyền sử dụng đất."
+    },
+    {
+      "name": "Bước 4: Cơ quan có chức năng quản lý đất đai cấp xã:",
+      "text": "- Chuyển Giấy chứng nhận quyền sử dụng đất đến Trung tâm hành chính công cấp xã để trả kết quả cho người sử dụng đất. \n- Chuyển hồ sơ đã giải quyết đến Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai để thực hiện chỉnh lý hồ sơ địa chính, cơ sở dữ liệu đất đai."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": []
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f3a63-b50b-760d-9bba-ab74a5f62482",
+    "updated_at": "2026-07-13T07:08:38.863Z",
+    "created_at": "2026-07-13T07:08:38.863Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

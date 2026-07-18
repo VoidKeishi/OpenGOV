@@ -1,0 +1,343 @@
+{
+  "code": "1.115520",
+  "source_id": "019f1917-1fb6-72f2-ad9e-92a2ea21c2c0",
+  "name": "Đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất lần đầu đối với hộ gia đình, cá nhân, cộng đồng dân cư, người gốc Việt Nam định cư ở nước ngoài",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Thanh Hóa",
+  "executing_agency": "Cơ quan quản lý đất đai cấp xã",
+  "subject_types": [
+    "Người Việt Nam định cư ở nước ngoài",
+    "Công dân Việt Nam"
+  ],
+  "results": [
+    "Giấy chứng nhận",
+    "Thông báo xác nhận kết quả đăng ký đất đai"
+  ],
+  "requirements": "Không",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        }
+      ],
+      "processing": {
+        "qty": 13,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 13 ngày làm việc (thời gian thực hiện đăng ký đất đai không quá 10 ngày làm việc; thời gian thực hiện cấp giấy chứng nhận không quá 03 ngày làm việc)\nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 23 ngày làm việc (thời gian thực hiện đăng ký đất đai không quá 20 ngày làm việc; thời gian thực hiện cấp giấy chứng nhận không quá 03 ngày làm việc)."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        }
+      ],
+      "processing": {
+        "qty": 13,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 13 ngày làm việc (thời gian thực hiện đăng ký đất đai không quá 10 ngày làm việc; thời gian thực hiện cấp giấy chứng nhận không quá 03 ngày làm việc)\nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 23 ngày làm việc (thời gian thực hiện đăng ký đất đai không quá 20 ngày làm việc; thời gian thực hiện cấp giấy chứng nhận không quá 03 ngày làm việc)."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        }
+      ],
+      "processing": {
+        "qty": 13,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 13 ngày làm việc (thời gian thực hiện đăng ký đất đai không quá 10 ngày làm việc; thời gian thực hiện cấp giấy chứng nhận không quá 03 ngày làm việc)\nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 23 ngày làm việc (thời gian thực hiện đăng ký đất đai không quá 20 ngày làm việc; thời gian thực hiện cấp giấy chứng nhận không quá 03 ngày làm việc)."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115520.02",
+      "qty": 13,
+      "unit": "WORKING_DAY"
+    },
+    {
+      "case_code": "1.115520.01",
+      "qty": 13,
+      "unit": "WORKING_DAY"
+    },
+    {
+      "case_code": "1.115520.03",
+      "qty": 23,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "151/2025/NĐ-CP",
+      "name": "Quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai"
+    },
+    {
+      "code": "28/2024/NQ-HĐND",
+      "name": "Nghị quyết 28/2024/NQ-HĐND ngày 10/7/2024 của Hội đồng nhân dân tỉnh Thanh Hóa ban hành quy định mức thu, miễn, giảm, thu, nộp, quản lý và sử dụng các khoản phí, lệ phí thuộc thẩm quyền của Hội đồng nhân tỉnh"
+    },
+    {
+      "code": "190/2025/QH15",
+      "name": "Nghị quyết số 190/2025/QH15 của Quốc hội: Quy định về xử lý một số vấn đề liên quan đến sắp xếp tổ chức bộ máy nhà nước"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "102/2024/NĐ-CP",
+      "name": "Nghị định 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai."
+    },
+    {
+      "code": "Nghị định số 50/2026/NĐ-CP",
+      "name": "Quy định chi tiết một số điều của Nghị quyết số 254/2025/QH15 ngày 11 tháng 12 năm 2025 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn, vướng mắc trong tổ chức thi hành Luật Đất đai về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "12/2025/NQ-HĐND",
+      "name": "Nghị quyết số 12/2025/NQ-HĐND ngày 24/6/2025 của Hội đồng nhân dân tỉnh Thanh Hóa về việc sửa đổi một số điều của Quy định mức thu, miễn, giảm, thu, nộp, quản lý và sử dụng các khoản phí, lệ phí thuộc thẩm quyền của Hội đồng nhân dân tỉnh ban hành kèm theo Nghị quyết số 28/2024/NQ-HĐND ngày 10/7/2024 của Hội đồng nhân dân tỉnh."
+    },
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến Bộ phận Một cửa)\nKhi nộp các giấy tờ quy định, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực theo quy định của pháp luật.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định.\nBộ phận Một cửa tiếp nhận hồ sơ và chuyển hồ sơ đến Cơ quan có chức năng quản lý đất đai cấp xã.\nBước 2: Ủy ban nhân dân cấp xã tổ chức thực hiện các công việc sau:\t\n- Trích lục bản đồ địa chính đối với nơi đã có bản đồ địa chính;\nĐối với nơi chưa có bản đồ địa chính và trong hồ sơ đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất đã có mảnh trích đo bản đồ địa chính thì kiểm tra, ký xác nhận mảnh trích đo bản đồ địa chính theo quy định, trừ trường hợp mảnh trích đo bản đồ địa chính đã được Ủy ban nhân dân cấp xã xác nhận hoặc Chi nhánh Văn phòng đăng ký đất đai kiểm tra, ký duyệt trước ngày 01 tháng 7 năm 2025; trường hợp trong hồ sơ đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất chưa có mảnh trích đo bản đồ địa chính thì đề nghị đơn vị đo đạc có Giấy phép về hoạt động đo đạc, thành lập bản đồ địa chính thực hiện việc trích đo bản đồ địa chính; đơn vị đo đạc có trách nhiệm thực hiện trích đo bản đồ địa chính trong thời gian không quá 05 ngày làm việc kể từ ngày nhận được đề nghị của cấp xã, người sử dụng đất phải trả chi phí theo quy định;\n- Xác nhận hiện trạng sử dụng đất có hay không có nhà ở, công trình xây dựng; tình trạng tranh chấp đất đai, tài sản gắn liền với đất;\n- Trường hợp có giấy tờ về quyền sử dụng đất quy định tại khoản 7 Điều 137 Luật Đất đai thì thực hiện xác định đất sử dụng ổn định theo quy định tại khoản 38 Điều 3 Luật Đất đai;\n- Trường hợp không có giấy tờ về quyền sử dụng đất theo quy định tại Điều 137 Luật Đất đai thì xác định nguồn gốc sử dụng đất; xác định việc sử dụng đất ổn định theo quy định tại khoản 38 Điều 3 Luật Đất đai\n- Xác định sự phù hợp với quy hoạch\n- Trường hợp người sử dụng đất, chủ sở hữu tài sản gắn liền với đất đề nghị chứng nhận quyền sở hữu nhà ở, công trình xây dựng thuộc trường hợp phải xin phép xây dựng quy định tại khoản 3 Điều 148, khoản 3 Điều 149 Luật Đất đai mà không có giấy xác nhận của cơ quan có chức năng quản lý về xây dựng cấp huyện trước ngày 01 tháng 7 năm 2025 về đủ điều kiện tồn tại nhà ở, công trình xây dựng thì chủ sở hữu công trình chịu trách nhiệm việc đủ điều kiện tồn tại nhà ở, công trình xây dựng đó;\n- Niêm yết công khai các nội dung xác nhận theo Mẫu số 27 ban hành kèm theo Quyết định này tại trụ sở Ủy ban nhân dân cấp xã, khu dân cư nơi có đất, tài sản gắn liền với đất trong thời gian 15 ngày làm việc, đồng thời thực hiện xem xét giải quyết các ý kiến phản ánh về nội dung đã công khai (nếu có);\n- Xác nhận việc đủ điều kiện hay không đủ điều kiện được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất theo quy định của pháp luật về đất đai; \n- Trường hợp không có nhu cầu hoặc không đủ điều kiện cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất thì ban hành Thông báo xác nhận kết quả đăng ký đất đai theo Mẫu số 26 ban hành kèm theo Quyết định này và chuyển đến Bộ phận Một cửa để trả cho người yêu cầu đăng ký; chuyển hồ sơ đến Chi nhánh Văn phòng đăng ký đất đai để lập, cập nhật thông tin đăng ký đất đai, tài sản gắn liền với đất vào hồ sơ địa chính, cơ sở dữ liệu đất đai\n- Trường hợp có nhu cầu và đủ điều kiện cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất thì Cơ quan có chức năng quản lý đất đai cấp xã gửi Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai theo Mẫu số 15 ban hành kèm theo Quyết định, Thông báo xác nhận kết quả đăng ký đất đai và hồ sơ kê khai xác định nghĩa vụ tài chính đến cơ quan Thuế cơ sở.\nBước 3: Sau khi người sử dụng đất hoàn thành nghĩa vụ tài chính cơ quan có chức năng quản lý đai cấp xã trình Chủ tịch Ủy ban nhân dân cấp xã cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất; chuyển Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất đến Bộ phận Một cửa để trao cho người sử dụng đất, chủ sở hữu tài sản gắn liền với đất; chuyển hồ sơ kèm theo bản sao Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất đã cấp đến Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai để lập, cập nhật, chỉnh lý hồ sơ địa chính, cơ sở dữ liệu đất đai"
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Mẫu số 25\tĐơn đăng ký đất đai, tài sản gắn liền với đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000057",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f3a76-7d64-718a-abff-264680b87e36",
+              "fileName": "Mẫu số 25.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f3a76-7d64-718a-abff-264680b87e36/Mẫu số 25.docx"
+            }
+          ]
+        },
+        {
+          "name": "Một trong các loại giấy tờ quy định tại Điều 137, khoản 1, khoản 5 Điều 148, khoản 1, khoản 5 Điều 149 Luật Đất đai, sơ đồ nhà ở, công trình xây dựng",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000091",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Trường hợp thửa đất gốc có giấy tờ về quyền sử dụng đất quy định tại Điều 137 Luật Đất đai mà có phần diện tích đất tăng thêm đã được cấp Giấy chứng nhận thì nộp giấy tờ về việc chuyển quyền sử dụng đất và Giấy chứng nhận đã cấp cho phần diện tích tăng thêm",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000240",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản cam kết của người nhận thừa kế hoặc văn bản thỏa thuận của những người nhận thừa kế đối với trường hợp nhận thừa kế quyền sử dụng đất chưa được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất theo quy định của pháp luật về đất đai",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000242",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản cam kết của người nhận thừa kế hoặc văn bản thỏa thuận của những người nhận thừa kế không phải thực hiện công chứng, chứng thực, trừ trường hợp có nhu cầu. Người nhận thừa kế hoặc những người nhận thừa kế chịu trách nhiệm trước pháp luật về nội dung cam kết, thỏa thuận",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000092",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Giấy tờ về việc nhận thừa kế quyền sử dụng đất theo quy định của pháp luật về dân sự và giấy tờ về việc chuyển quyền sử dụng đất đối với trường hợp quy định tại khoản 4 Điều 45 Luật Đất đai",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000093",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Giấy tờ về giao đất không đúng thẩm quyền hoặc giấy tờ về việc mua, nhận thanh lý, hóa giá, phân phối nhà ở, công trình xây dựng gắn liền với đất theo quy định tại Điều 140 Luật Đất đai (nếu có)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000094",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Quyết định xử phạt vi phạm hành chính trong lĩnh vực đất đai đối với trường hợp có vi phạm hành chính trong lĩnh vực đất đai và giấy tờ chứng minh đã thực hiện quyết định xử phạt",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000095",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Hợp đồng hoặc văn bản thỏa thuận hoặc quyết định của Tòa án nhân dân về việc xác lập quyền đối với thửa đất liền kề kèm theo sơ đồ thể hiện vị trí, kích thước phần diện tích thửa đất liền kề được quyền sử dụng hạn chế đối với trường hợp có đăng ký quyền đối với thửa đất liền kề",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000096",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản xác định các thành viên có chung quyền sử dụng đất của hộ gia đình đang sử dụng đất đối với trường hợp hộ gia đình đang sử dụng đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000097",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Mảnh trích đo bản đồ địa chính thửa đất (nếu có)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000098",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Hồ sơ thiết kế xây dựng công trình đã được cơ quan chuyên môn về xây dựng thẩm định hoặc đã có văn bản chấp thuận kết quả nghiệm thu hoàn thành hạng mục công trình, công trình xây dựng theo quy định của pháp luật về xây dựng đối với trường hợp chứng nhận quyền sở hữu công trình xây dựng trên đất nông nghiệp mà chủ sở hữu công trình không có một trong các loại giấy tờ quy định tại Điều 149 Luật Đất đai hoặc công trình được miễn giấy phép xây dựng theo quy định của pháp luật về xây dựng",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000112",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Trường hợp quy định tại điểm a khoản 6 Điều 25 Nghị định số 101/2024/NĐ-CP thì nộp Quyết định xử phạt vi phạm hành chính trong lĩnh vực đất đai và giấy tờ chứng minh đã thực hiện quyết định xử phạt",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000100",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Tờ khai lệ phí trước bạ, tờ khai thuế phi nông nghiệp theo Mẫu do Bộ Tài chính quy định; Văn bản đề nghị miễn, giảm tiền thuê đất, tiền sử dụng đất theo Mẫu số 11 Phụ lục IV ban hành kèm theo Quyết định này; Giấy tờ chứng minh thuộc đối tượng được miễn, giảm nghĩa vụ tài chính theo quy định (nếu có)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000220",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f3bf4-2405-702d-9215-214a4fa2e68d",
+              "fileName": "Mẫu số 11.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f3bf4-2405-702d-9215-214a4fa2e68d/Mẫu số 11.docx"
+            }
+          ]
+        },
+        {
+          "name": "Trường hợp nhận chuyển quyền sử dụng đất, quyền sở hữu nhà ở, công trình xây dựng mà chưa thực hiện thủ tục chuyển quyền theo quy định của pháp luật thì nộp giấy tờ về việc chuyển quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất có chữ ký của bên chuyển quyền và bên nhận chuyển quyền",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000102",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Trường hợp hộ gia đình, cá nhân có nhu cầu cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất đối với nhà ở, công trình xây dựng thuộc trường hợp phải xin phép xây dựng quy định tại khoản 3 Điều 148, khoản 3 Điều 149 Luật Đất đai thì nộp giấy xác nhận của cơ quan có chức năng quản lý về xây dựng cấp huyện (cũ) trước ngày 01 tháng 7 năm 2025 về đủ điều kiện tồn tại nhà ở, công trình xây dựng đó theo quy định của pháp luật về xây dựng (nếu có)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000103",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Hồ sơ kê khai xác định nghĩa vụ tài chính trong trường hơp có nhu cầu cấp Giấy chứng nhận: Tờ khai lệ phí trước bạ, tờ khai thuế phi nông nghiệp theo Mẫu do Bộ Tài chính quy định; Văn bản đề nghị miễn, giảm theo Mẫu số 11 ban hành kèm theo Quyết định này và giấy tờ chứng minh thuộc đối tượng được miễn, giảm nghĩa vụ tài chính theo quy định (nếu có)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000104",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f3abd-0e64-750c-87f2-55ff30dc153f",
+              "fileName": "Mẫu số 11.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f3abd-0e64-750c-87f2-55ff30dc153f/Mẫu số 11.docx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f1917-1fb6-72f2-ad9e-92a2ea21c2c0",
+    "updated_at": "2026-07-08T09:15:59.275Z",
+    "created_at": "2026-07-08T09:15:59.275Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "code": "1.115539",
+  "source_id": "019f21ea-83a9-72ec-9e58-b33beec1f386",
+  "name": "Bán hoặc tặng cho hoặc để thừa kế hoặc góp vốn bằng tài sản gắn liền với đất thuê của Nhà nước theo hình thức thuê đất trả tiền hàng năm; chuyển nhượng quyền khai thác khoáng sản theo quy định của pháp luật về địa chất và khoáng sản",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Thanh Hóa",
+  "executing_agency": "Chi nhánh Văn phòng đăng ký đất đai khu vực",
+  "subject_types": [
+    "Doanh nghiệp Việt Nam",
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài",
+    "Công dân Việt Nam",
+    "Tổ chức nước ngoài",
+    "Doanh nghiệp",
+    "Hợp tác xã",
+    "Người nước ngoài"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": ""
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 10,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Không quá 05 ngày làm việc đối với trường hợp bán hoặc tặng cho hoặc để thừa kế hoặc góp vốn bằng tài sản gắn liền với đất thuê của Nhà nước theo hình thức thuê đất trả tiền hàng năm;\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 15 ngày làm việc.\n- Không quá 10 ngày làm việc đối với trường hợp chuyển nhượng quyền khai thác khoáng sản theo quy định của pháp luật về địa chất và khoáng sản;\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 20 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": ""
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 10,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Không quá 05 ngày làm việc đối với trường hợp bán hoặc tặng cho hoặc để thừa kế hoặc góp vốn bằng tài sản gắn liền với đất thuê của Nhà nước theo hình thức thuê đất trả tiền hàng năm;\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 15 ngày làm việc.\n- Không quá 10 ngày làm việc đối với trường hợp chuyển nhượng quyền khai thác khoáng sản theo quy định của pháp luật về địa chất và khoáng sản;\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 20 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": ""
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 10,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Không quá 05 ngày làm việc đối với trường hợp bán hoặc tặng cho hoặc để thừa kế hoặc góp vốn bằng tài sản gắn liền với đất thuê của Nhà nước theo hình thức thuê đất trả tiền hàng năm;\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 15 ngày làm việc.\n- Không quá 10 ngày làm việc đối với trường hợp chuyển nhượng quyền khai thác khoáng sản theo quy định của pháp luật về địa chất và khoáng sản;\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 20 ngày làm việc."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115539.02",
+      "qty": 10,
+      "unit": "WORKING_DAY"
+    },
+    {
+      "case_code": "1.115539.04",
+      "qty": 20,
+      "unit": "WORKING_DAY"
+    },
+    {
+      "case_code": "1.115539.01",
+      "qty": 5,
+      "unit": "WORKING_DAY"
+    },
+    {
+      "case_code": "1.115539.03",
+      "qty": 15,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "28/2024/NQ-HĐND",
+      "name": "Nghị quyết 28/2024/NQ-HĐND ngày 10/7/2024 của Hội đồng nhân dân tỉnh Thanh Hóa ban hành quy định mức thu, miễn, giảm, thu, nộp, quản lý và sử dụng các khoản phí, lệ phí thuộc thẩm quyền của Hội đồng nhân tỉnh"
+    },
+    {
+      "code": "190/2025/QH15",
+      "name": "Nghị quyết số 190/2025/QH15 của Quốc hội: Quy định về xử lý một số vấn đề liên quan đến sắp xếp tổ chức bộ máy nhà nước"
+    },
+    {
+      "code": "Nghị định số 50/2026/NĐ-CP",
+      "name": "Quy định chi tiết một số điều của Nghị quyết số 254/2025/QH15 ngày 11 tháng 12 năm 2025 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn, vướng mắc trong tổ chức thi hành Luật Đất đai về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "55/2026/QĐ",
+      "name": "Ban hành Quy định trình tự, thủ tục hành chính về đất đai trên địa bàn tỉnh Thanh Hóa"
+    },
+    {
+      "code": "102/2024/NĐ-CP",
+      "name": "Nghị định 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai."
+    },
+    {
+      "code": "151/2025/NĐ-CP",
+      "name": "Quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai"
+    },
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "12/2025/NQ-HĐND",
+      "name": "Nghị quyết số 12/2025/NQ-HĐND ngày 24/6/2025 của Hội đồng nhân dân tỉnh Thanh Hóa về việc sửa đổi một số điều của Quy định mức thu, miễn, giảm, thu, nộp, quản lý và sử dụng các khoản phí, lệ phí thuộc thẩm quyền của Hội đồng nhân dân tỉnh ban hành kèm theo Nghị quyết số 28/2024/NQ-HĐND ngày 10/7/2024 của Hội đồng nhân dân tỉnh."
+    },
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến Bộ phận Một cửa\nKhi nộp hồ sơ, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nĐối với trường hợp thực hiện xác nhận thay đổi trên Giấy chứng nhận đã cấp thì người yêu cầu đăng ký nộp bản gốc Giấy chứng nhận đã cấp.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định để cơ quan tiếp nhận hồ sơ chuyển đến cơ quan giải quyết hồ sơ.\nBước 2: Bộ phận Một cửa thực hiện:\n- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả. Trường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Chuyển hồ sơ đến Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai.\nBước 3: Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện:\n- Kiểm tra các điều kiện thực hiện quyền theo quy định của Luật Đất đai đối với trường hợp thực hiện quyền của người sử dụng đất, của chủ sở hữu tài sản gắn liền với đất; trường hợp không đủ điều kiện thực hiện quyền theo quy định của Luật Đất đai thì Văn phòng đăng ký đất đai thông báo lý do và trả hồ sơ cho người yêu cầu đăng ký;\n- Kiểm tra, ký duyệt mảnh trích đo bản đồ địa chính đối với trường hợp người sử dụng đất có nhu cầu xác định lại kích thước các cạnh, diện tích của thửa đất.\nTrích lục bản đồ địa chính hoặc trích đo bản đồ địa chính thửa đất đối với nơi chưa có bản đồ địa chính hoặc chỉ có bản đồ địa chính dạng giấy đã rách nát, hư hỏng đối với trường hợp Giấy chứng nhận đã cấp chưa sử dụng bản đồ địa chính hoặc chưa sử dụng trích đo bản đồ địa chính thửa đất hoặc người sử dụng đất có nhu cầu cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc thuộc trường hợp phải cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất.\n- Trình hồ sơ đến Sở Nông nghiệp và Môi trường hoặc chuyển hồ sơ đến UBND cấp xã nơi có đất để thực hiện ký hợp đồng thuê đất theo thẩm quyền.\nBước 4: Sở Nông nghiệp và Môi trường hoặc Chủ tịch UBND cấp xã ký hợp đồng thuê đất đối với bên nhận chuyển quyền sở hữu tài sản gắn liền với đất thuê trả tiền hàng năm, bên nhận chuyển nhượng quyền khai thác khoáng sản mà không phải ban hành lại quyết định cho thuê đất; chuyển hợp đồng thuê đất đến Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai.\nBước 5: Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện:\n- Gửi Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai theo Mẫu số 15 tại Phục lục IV ban hành kèm theo Quyết định này đến cơ quan thuế để xác định và thông báo thu nghĩa vụ tài chính đối với trường hợp phải thực hiện nghĩa vụ tài chính theo quy định của pháp luật; Thông báo bằng văn bản cho cơ quan thuế về việc hết hiệu lực của hợp đồng thuê đất đối với bên chuyển quyền sở hữu tàu sản gắn liền với đất, bên chuyển nhượng quyền khai thác khoáng sản.\n- Chỉnh lý, cập nhật biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai; cấp mới Giấy chứng nhận hoặc xác nhận thay đổi trên Giấy chứng nhận đã cấp đối với trường hợp sau khi có thông tin từ cơ sở dữ liệu được liên thông hoặc chứng từ hoặc giấy tờ chứng minh đã hoàn thành nghĩa vụ tài chính; chuyển Giấy chứng nhận đến Bộ phận Một cửa để trao cho người được cấp."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 29 tại Phụ lục IV ban hành kèm theo Quyết định này do người nhận chuyển nhượng quyền sử dụng đất, quyền sở hữu nhà ở, công trình xây dựng, hạng mục công trình xây dựng kê khai",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000156",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f3bb1-ee5d-723b-ae52-39e3e2d1e433",
+              "fileName": "Mẫu số 29.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f3bb1-ee5d-723b-ae52-39e3e2d1e433/Mẫu số 29.docx"
+            }
+          ]
+        },
+        {
+          "name": "Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 29 tại Phụ lục IV ban hành kèm theo Quyết định này  Trường hợp hộ gia đình có yêu cầu ghi đầy đủ tên thành viên có chung quyền sử dụng đất của hộ gia đình thì trong Đơn đăng ký biến động đất đai, tài sản gắn liền với đất phải thể hiện thông tin các thành viên có chung quyền sử dụng đất của hộ gia đình",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000241",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f3c14-cb51-70cd-87ef-57d369b282dd",
+              "fileName": "Mẫu số 29.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f3c14-cb51-70cd-87ef-57d369b282dd/Mẫu số 29.docx"
+            }
+          ]
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp (bản gốc)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000172",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Trường hợp bán hoặc tặng cho hoặc để thừa kế hoặc góp vốn bằng tài sản gắn liền với đất thuê của Nhà nước theo hình thức trả tiền thuê đất hằng năm thì nộp hợp đồng hoặc văn về giao dịch đó theo quy định của pháp luật về dân sự",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000195",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Trường hợp chuyển nhượng quyền khai thác khoáng sản theo quy định của pháp luật về địa chất và khoáng sản thì nộp văn bản của cơ quan có thẩm quyền về việc cho phép chuyển nhượng quyền khai thác khoáng sản",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000196",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản về việc đại diện theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất thông qua người đại diện",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000147",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Hồ sơ kê khai xác định nghĩa vụ tài chính: Tờ khai lệ phí trước bạ, tờ khai thuế phi nông nghiệp, tờ khai thuế thu nhập từ chuyển nhượng bất động sản theo mẫu do Bộ Tài chính quy định; Hóa đơn giá trị gia tăng đối với trường hợp tổ chức chuyển nhượng bất động sản; Văn bản đề nghị miễn, giảm tiền thuê đất, tiền sử dụng đất theo Mẫu số 11 ban hành kèm theo Quyết định này, giấy tờ chứng minh thuộc đối tượng được miễn, giảm nghĩa vụ tài chính theo quy định (nếu có)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000216",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f4b3e-a975-731e-9b37-9b3e74ee6c9b",
+              "fileName": "Mẫu số 11.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f4b3e-a975-731e-9b37-9b3e74ee6c9b/Mẫu số 11.docx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f21ea-83a9-72ec-9e58-b33beec1f386",
+    "updated_at": "2026-07-08T09:15:59.274Z",
+    "created_at": "2026-07-08T09:15:59.274Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

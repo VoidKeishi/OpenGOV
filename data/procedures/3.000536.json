@@ -1,0 +1,138 @@
+{
+  "code": "3.000536",
+  "source_id": "019d9450-f9fc-7117-a6da-0e16ffa162af",
+  "name": "Thủ tục chấp thuận địa điểm, quy mô xây dựng và thời gian tồn tại của công trình tạm phục vụ mục đích sử dụng cho việc tổ chức các sự kiện hoặc hoạt động khác",
+  "category": null,
+  "promulgating_agency": "UBND tỉnh Lai Châu",
+  "executing_agency": "Ủy ban nhân dân cấp xã",
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Doanh nghiệp",
+    "Công dân Việt Nam"
+  ],
+  "results": [
+    "Văn bản chấp thuận địa điểm, quy mô xây dựng và thời gian tồn tại của công trình tạm phục vụ mục đích sử dụng cho việc tổ chức các sự kiện hoặc hoạt động khác"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 15,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Nộp hồ sơ tại các Trung tâm Phục vụ hành chính công trên địa bàn tỉnh Lai Châu"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 15,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Chủ đầu tư nộp hồ sơ qua Cổng Dịch vụ công quốc gia tới Ủy ban nhân dân cấp xã nơi có công trình tạm phục vụ mục đích thi công xây dựng công trình chính đề nghị chấp thuận tiếp tục khai thác, sử dụng. Đối với công trình tạm được đầu tư xây dựng trên địa giới hành chính của 02 xã, phường trở lên, thẩm quyền chấp thuận của Ủy ban nhân dân xã có phần diện tích đất xây dựng công trình nhiều hơn."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 15,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Chủ đầu tư nộp hồ sơ qua dịch vụ bưu chính tới Ủy ban nhân dân cấp xã nơi có công trình tạm phục vụ mục đích thi công xây dựng công trình chính đề nghị chấp thuận tiếp tục khai thác, sử dụng. Đối với công trình tạm được đầu tư xây dựng trên địa giới hành chính của 02 xã, phường trở lên, thẩm quyền chấp thuận của Ủy ban nhân dân xã có phần diện tích đất xây dựng công trình nhiều hơn."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "3.000536.01",
+      "qty": 15,
+      "unit": "WORKING_DAY"
+    },
+    {
+      "case_code": "3.000536.02",
+      "qty": 7,
+      "unit": "DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "91/2025/QĐ-UBND",
+      "name": "ban hành Quy định về phân cấp cấp giấy phép xây dựng và quản lý trật tự xây dựng trên địa bàn tỉnh Lai Châu"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "1. Ủy ban nhân dân cấp xã chấp thuận về địa điểm, quy mô xây dựng công trình và thời gian tồn tại của công trình tạm phục vụ mục đích sử dụng cho việc tổ chức các sự kiện hoặc hoạt động khác tại điểm b khoản 1 Điều 131 Luật Xây dựng số 50/2014/QH13 được sửa đổi, bổ sung bởi Luật số 62/2020/QH14.\n2. Chủ đầu tư nộp hồ sơ tại Ủy ban nhân dân cấp xã nơi có công trình tạm phục vụ mục đích sử dụng cho việc tổ chức các sự kiện hoặc hoạt động khác dự kiến xây dựng. Đối với công trình tạm được đầu tư xây dựng trên địa giới hành chính của 02 xã, phường trở lên, thẩm quyền chấp thuận của Ủy ban nhân dân xã có phần diện tích đất xây dựng công trình nhiều hơn.\n3. Ủy ban nhân dân cấp xã có trách nhiệm tiếp nhận hồ sơ của chủ đầu tư đề nghị chấp thuận về địa điểm, quy mô xây dựng công trình và thời gian tồn tại của công trình tạm phục vụ mục đích sử dụng cho việc tổ chức các sự kiện hoặc hoạt động khác.\n4. Trong thời hạn 15 ngày làm việc kể từ ngày nhận được hồ sơ, Ủy ban nhân dân cấp xã phải tổ chức thẩm định hồ sơ, kiểm tra thực địa và xem xét chấp thuận về địa điểm, quy mô xây dựng công trình và thời gian tồn tại của công trình tạm phục vụ mục đích sử dụng cho việc tổ chức các sự kiện hoặc hoạt động khác.\n5. Khi thẩm định hồ sơ, Ủy ban nhân dân cấp xã phải xác định tài liệu còn thiếu, tài liệu không đúng theo quy định hoặc không đúng với thực tế, nội dung đề xuất không đảm bảo để thông báo một lần bằng văn bản cho chủ đầu tư bổ sung, hoàn chỉnh hồ sơ. Chủ đầu tư có trách nhiệm bổ sung, hoàn thiện hồ sơ theo văn bản thông báo. Trường hợp việc bổ sung hồ sơ vẫn không đáp ứng được các nội dung theo thông báo thì trong thời hạn 03 ngày làm việc, Ủy ban nhân dân cấp xã có trách nhiệm thông báo đến chủ đầu tư về lý do không chấp thuận."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Văn bản đề nghị chấp thuận địa điểm, quy mô xây dựng và thời gian tồn tại công trình tạm, trong đó cần đưa ra căn cứ pháp lý đề xuất, địa điểm xây dựng công trình, loại cấp công trình đề nghị và thời gian tồn tại của công trình",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H35-KQ000290",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Bản vẽ thiết kế xây dựng công trình tạm phục vụ mục đích sử dụng cho việc tổ chức các sự kiện hoặc hoạt động khác",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H35-KQ000291",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản cam kết tự tháo dỡ công trình sau khi hết thời hạn tồn tại",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H35-KQ000292",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Một trong các loại giấy tờ hợp pháp về đất đai theo quy định tại Điều 53 Nghị định số 175/2024/NĐ-CP",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H35-KQ000281",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Quyết định phê duyệt thiết kế, dự toán xây dựng của chủ đầu tư",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H35-KQ000286",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Báo cáo kết quả thẩm tra thiết kế xây dựng trong trường hợp công trình thuộc diện ảnh hưởng lớn đến an toàn, lợi ích cộng đồng",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H35-KQ000288",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019d9450-f9fc-7117-a6da-0e16ffa162af",
+    "updated_at": "2026-04-27T09:20:51.327Z",
+    "created_at": "2026-04-16T10:01:59.029Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

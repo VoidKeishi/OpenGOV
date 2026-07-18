@@ -1,0 +1,140 @@
+{
+  "code": "1.013235",
+  "source_id": "019d2bfe-909b-7759-a8bd-ac47f52197b7",
+  "name": "Cấp lại giấy phép xây dựng đối với công trình cấp đặc biệt, cấp I, cấp II (công trình không theo tuyến/theo tuyến trong đô thị/tín ngưỡng, tôn giáo/tượng đài, tranh hoành tráng/sửa chữa, cải tạo/theo giai đoạn cho công trình không theo tuyến/theo giai đoạn cho công trình theo tuyến trong đô thị/dự án)",
+  "category": {
+    "code": "G17-XD11",
+    "name": "Hoạt động xây dựng"
+  },
+  "promulgating_agency": "Bộ Xây dựng",
+  "executing_agency": null,
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Hợp tác xã",
+    "Cán bộ, công chức, viên chức"
+  ],
+  "results": [
+    "Giấy phép xây dựng được cấp lại theo quy định"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "WORKING_DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "WORKING_DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "WORKING_DAY"
+      },
+      "note": ""
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.013235.01",
+      "qty": 5,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "62/2020/QH14",
+      "name": "Luật số 62/2020/QH14 của Quốc hội: Luật sửa đổi, bổ sung một số điều của Luật Xây dựng"
+    },
+    {
+      "code": "105/2025/NĐ-CP",
+      "name": "quy định chi tiết một số điều và biện pháp thi hành luật phòng cháy, chữa cháy và cứu nạn, cứu hộ"
+    },
+    {
+      "code": "144/2025/NĐ-CP",
+      "name": "quy định về phân quyền, phân cấp trong lĩnh vực quản lý nhà nước của Bộ Xây dựng"
+    },
+    {
+      "code": "50/2014/QH13",
+      "name": "Luật Xây dựng"
+    },
+    {
+      "code": "175/2024/NĐ-CP",
+      "name": "Nghị định số 175/2024/NĐ-CP của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Xây dựng về quản lý hoạt động xây dựng"
+    },
+    {
+      "code": "14/2026/NĐ-CP",
+      "name": "sửa đổi, bổ sung một số điều của các Nghị định để cắt giảm, đơn giản hóa thủ tục hành chính liên quan đến hoạt động sản xuất, kinh doanh thuộc phạm vi quản lý của Bộ Xây dựng"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "- Chủ đầu tư nộp 02 bộ hồ sơ đề nghị cấp lại giấy phép xây dựng cho Trung tâm phục vụ hành chính công hoặc Bộ phận tiếp nhận và trả kết quả giải quyết thủ tục hành chính của Sở Xây dựng hoặc Ban Quản lý khu công nghiệp, khu chế xuất, khu công nghệ cao, khu kinh tế theo phân cấp, ủy quyền của Ủy ban nhân dân cấp tỉnh.\n- Trong thời hạn 05 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ, cơ quan có thẩm quyền có trách nhiệm xem xét cấp lại giấy phép xây dựng.\n"
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "- Bản chính giấy phép xây dựng đã được cấp (đối với trường hợp bị rách, nát).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G17-KQ1774",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Đơn đề nghị điều chỉnh, gia hạn, cấp lại giấy phép xây dựng, trong đó giải trình rõ lý do đề nghị cấp lại theo Mẫu số 02 Phụ lục II Nghị định số 175/2024/NĐ-CP;",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G17-KQ002827",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "UPDATED",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019d2bfe-909b-7759-a8bd-ac47f52197b7",
+    "updated_at": "2026-04-18T12:59:02.251Z",
+    "created_at": "2026-04-18T12:59:02.251Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "code": "1.115758",
+  "source_id": "019f4725-eda5-769f-bcbd-e5502ec06f35",
+  "name": "Thu hồi Giấy chứng nhận đã cấp lần đầu không đúng quy định của pháp luật đất đai do người sử dụng đất, chủ sở hữu tài sản gắn liền với đất phát hiện",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Đồng Tháp",
+  "executing_agency": "Ủy ban nhân dân cấp xã",
+  "subject_types": [
+    "Công dân Việt Nam",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài"
+  ],
+  "results": [
+    "Giấy chứng nhận",
+    "Quyết định thu hồi Giấy chứng nhận đã cấp sai quy định của pháp luật"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 20,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Đối với các xã, phường thông thường: Không quá 20 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 20,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Đối với các xã, phường thông thường: Không quá 20 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 20,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Đối với các xã, phường thông thường: Không quá 20 ngày làm việc."
+    },
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 25,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Đối với các xã biên giới, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn: Không quá 25 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 25,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Đối với các xã biên giới, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn: Không quá 25 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 25,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Đối với các xã biên giới, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn: Không quá 25 ngày làm việc."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115758.01",
+      "qty": 25,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    },
+    {
+      "code": "103/2024/NĐ-CP",
+      "name": "Nghị định số 103/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "73/2026/QĐ-UBND",
+      "name": "Về quy định trình tự, thủ tục hành chính lĩnh vực đất đai trên địa bàn tỉnh Đồng Tháp"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai ngày 18/01/2024;"
+    },
+    {
+      "code": "367/2025/NĐ-CP",
+      "name": "sửa đổi, bổ\nsung một số điều của Nghị định 118/2025/NĐ-CP thực hiện thủ tục hành chính\ntheo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ\ncông quốc gia"
+    },
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Người yêu cầu đăng ký nộp 1 bộ hồ sơ đến Trung tâm Phục vụ hành chính công các cấp hoặc Chi nhánh Văn phòng Đăng ký đất đai."
+    },
+    {
+      "name": "",
+      "text": "Bước 2: Cơ quan tiếp nhận hồ sơ có trách nhiệm:\nKiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\nTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\nChuyển hồ sơ đến Ủy ban nhân dân cấp xã nơi có đất."
+    },
+    {
+      "name": "",
+      "text": "Bước 3: Cơ quan có chức năng quản lý đất đai cấp xã thực hiện:\nThông báo cho Văn phòng đăng ký đất đai (đối với đối tượng là tổ chức) hoặc Chi nhánh văn phòng đăng ký đất đai (đối với đối tượng là cá nhân) chuyển hồ sơ cấp Giấy chứng nhận lần đầu để kiểm tra.\nKiểm tra hồ sơ, xác định lại thông tin quy định tại điểm d khoản 2 Điều 152 Luật Đất đai theo đúng quy định của pháp luật đất đai tại thời điểm cấp Giấy chứng nhận.\nTrình Chủ tịch Ủy ban nhân dân xã quyết định thu hồi Giấy chứng nhận đã cấp không đúng quy định của pháp luật đất đai (trừ trường hợp người được cấp Giấy chứng nhận đã thực hiện thủ tục chuyển quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất theo quy định của pháp luật)\nChuyển hồ sơ đã giải quyết đến Văn phòng đăng ký đất đai (đối với đối tượng là tổ chức) hoặc Chi nhánh văn phòng đăng ký đất đai (đối với đối tượng là cá nhân) để thực hiện cập nhật, chỉnh lý cơ sở dữ liệu đất đai, hồ sơ địa chính. Chuyển kết quả đến cơ quan tiếp nhận hồ sơ để trao cho người sử dụng đất. \nChuyển Quyết định thu hồi Giấy chứng nhận đến Trung tâm Phục vụ hành chính công cấp xã để trả kết quả."
+    },
+    {
+      "name": "",
+      "text": "Bước 4: Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai: Cập nhật, chỉnh lý cơ sở dữ liệu đất đai, hồ sơ địa chính.\nTrung tâm Phục vụ hành chính công hướng dẫn người sử dụng đất lập hồ sơ cấp giấy chứng nhận theo quy định tại Điều 47 (đối với đối tượng là tổ chức), Điều 48 (đối với đối tượng là cá nhân) Quyết định số 73/2026/QĐ-UBND ngày 03/7/2026 của Ủy ban nhân dân tỉnh"
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Văn bản kiến nghị việc cấp Giấy chứng nhận không đúng quy định của pháp luật đất đai (bản chính);",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "VBKiennghi_73_dd",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Bản gốc Giấy chứng nhận đã cấp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "BGocGCN_73_DD",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f4725-eda5-769f-bcbd-e5502ec06f35",
+    "updated_at": "2026-07-17T07:28:59.938Z",
+    "created_at": "2026-07-17T07:28:59.938Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "code": "1.115449",
+  "source_id": "019f1114-48d8-736a-8c3f-843de3cbbbac",
+  "name": "Tặng cho quyền sử dụng đất cho Nhà nước hoặc cộng đồng dân cư hoặc mở rộng đường giao thông đối với trường hợp thửa đất chưa được cấp Giấy chứng nhận",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Bắc Ninh",
+  "executing_agency": "Cơ quan chuyên môn về Nông nghiệp và Môi trường thuộc UBND cấp xã",
+  "subject_types": [
+    "Doanh nghiệp Việt Nam",
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Tổ chức nước ngoài",
+    "Tổ chức Đảng",
+    "Hợp tác xã",
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài"
+  ],
+  "results": [
+    "Chỉnh lý, cập nhật vào hồ sơ địa chính"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 10,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian giải quyết đối với trường hợp tặng cho quyền sử dụng đất là không quá 10 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 20 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 10,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian giải quyết đối với trường hợp tặng cho quyền sử dụng đất là không quá 10 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 20 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 10,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian giải quyết đối với trường hợp tặng cho quyền sử dụng đất là không quá 10 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 20 ngày làm việc."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115449.01",
+      "qty": 10,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Nộp hồ sơ",
+      "text": "Người sử dụng đất nộp hồ sơ tại Trung tâm Phục vụ hành chính công. Trường hợp có biên bản họp giữa Ủy ban nhân dân cấp xã với người sử dụng đất về việc tặng cho quyền sử dụng đất thì người sử dụng đất không phải nộp hồ sơ."
+    },
+    {
+      "name": "Bước 2: Phòng Kinh tế/Phòng Kinh tế Hạ tầng và Đô thị thực hiện:",
+      "text": "- Thực hiện trích lục bản đồ địa chính thửa đất đối với trường hợp khu đã có bản đồ địa chính; Hướng dẫn người nộp hồ sơ bổ sung trích đo địa chính, đo đạc chỉnh lý thửa đất đối với thửa đất tại nơi chưa có bản đồ địa chính hoặc thửa đất không phù hợp với bản đồ địa chính theo quy định\n- Chuyển hồ sơ đến Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai để chỉnh lý, cập nhật vào hồ hơ địa chính."
+    },
+    {
+      "name": "Bước 3:",
+      "text": "Người sử dụng đất, chủ sở hữu tài sản gắn liền với đất thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất, cấp Giấy chứng nhận lần đầu theo quy định đối với phần diện tích còn lại của thửa đất (nếu có)."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "a) Biên bản họp thôn, bản (Mẫu số 01 được quy định tại phụ lục kèm theo);",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H05-KQ000914",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f1114-48d8-736a-8c3f-843de3cbbbac",
+    "updated_at": "2026-07-06T01:35:07.084Z",
+    "created_at": "2026-07-06T01:35:07.084Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

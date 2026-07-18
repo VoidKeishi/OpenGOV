@@ -1,0 +1,169 @@
+{
+  "code": "1.115459",
+  "source_id": "019f1260-1849-74ca-8aa6-b42f7e46c586",
+  "name": "Thu hồi Giấy chứng nhận đã cấp không đúng quy định của pháp luật đất đai do người sử dụng đất, chủ sở hữu tài sản gắn liền với đất phát hiện và cấp lại Giấy chứng nhận sau khi thu hồi",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Bắc Ninh",
+  "executing_agency": "Văn phòng đăng ký đất đai Bắc Ninh",
+  "subject_types": [
+    "Người nước ngoài",
+    "Tổ chức nước ngoài",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "không",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 20,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian thu hồi Giấy chứng nhận đã cấp không quá 20 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 20,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian thu hồi Giấy chứng nhận đã cấp không quá 20 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 20,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian thu hồi Giấy chứng nhận đã cấp không quá 20 ngày làm việc."
+    },
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian thực hiện việc cấp Giấy chứng nhận sau thu hồi:  \n- Trường hợp thu hồi Giấy chứng nhận đã cấp do đăng ký biến động thời gian thực hiện cấp lại Giấy chứng nhận không quá 8 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian thực hiện việc cấp Giấy chứng nhận sau thu hồi:  \n- Trường hợp thu hồi Giấy chứng nhận đã cấp do đăng ký biến động thời gian thực hiện cấp lại Giấy chứng nhận không quá 8 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian thực hiện việc cấp Giấy chứng nhận sau thu hồi:  \n- Trường hợp thu hồi Giấy chứng nhận đã cấp do đăng ký biến động thời gian thực hiện cấp lại Giấy chứng nhận không quá 8 ngày làm việc."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115459.01",
+      "qty": 20,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Nộp hồ sơ",
+      "text": "Người yêu cầu đăng ký nộp hồ sơ đến một trong các cơ quan sau trên địa bàn tỉnh: Trung tâm Phục vụ hành chính công hoặc Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai."
+    },
+    {
+      "name": "Bước 2: Cơ quan tiếp nhận hồ sơ thực hiện:",
+      "text": "- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\nTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\nChuyển hồ sơ đến Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai đối với trường hợp thu hồi Giấy chứng nhận đã cấp khi thực hiện thủ tục đăng ký biến động đất đai, tài sản gắn liền với đất."
+    },
+    {
+      "name": "Bước 3:",
+      "text": "Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai kiểm tra, xem xét, quyết định thu hồi Giấy chứng nhận đã cấp không đúng quy định của pháp luật đất đai (trừ trường hợp người được cấp Giấy chứng nhận đã thực hiện thủ tục chuyển quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất theo quy định của pháp luật), đối với trường hợp giấy chứng nhận cấp lần đầu không đúng quy định pháp luật nhưng đã được cấp đổi Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện thu hồi sau khi có ý kiến bằng văn bản của cơ quan quản lý đất đai, UBND cấp xã về việc giấy chứng nhận cấp lần đầu không đúng quy định pháp luật, chuyển hồ sơ đến Cơ quan quản lý đất đai, UBND cấp xã để thực hiện cấp giấy chứng nhận lần đầu cho người sử dụng đất theo quy định pháp luật."
+    },
+    {
+      "name": "Bước 4: Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện:",
+      "text": "- Kiểm tra hồ sơ đã cấp Giấy chứng nhận để xác định lại thông tin quy định tại điểm d khoản 2 Điều 152 của Luật Đất đai theo đúng quy định của pháp luật đất đai tại thời điểm cấp Giấy chứng nhận. \n- Cấp Giấy chứng nhận; chỉnh lý hồ sơ địa chính, cơ sở dữ liệu đất đai; trao Giấy chứng nhận hoặc chuyển cơ quan tiếp nhận hồ sơ để trao cho người được cấp."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "- Đơn đề nghị hỗ trợ (Mẫu 1).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H05-KQ000330",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019d7c7a-31b7-7628-8e4b-794b4077d21f",
+              "fileName": "Mẫu 1..docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019d7c7a-31b7-7628-8e4b-794b4077d21f/Mẫu 1..docx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f1260-1849-74ca-8aa6-b42f7e46c586",
+    "updated_at": "2026-07-06T01:35:07.022Z",
+    "created_at": "2026-07-06T01:35:07.022Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

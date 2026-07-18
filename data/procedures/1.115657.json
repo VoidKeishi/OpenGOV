@@ -1,0 +1,128 @@
+{
+  "code": "1.115657",
+  "source_id": "019f45ac-8cb0-70ac-b409-f28661e56d31",
+  "name": "Đăng ký đất đai lần đầu đối với trường hợp được Nhà nước giao đất để quản lý",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Lào Cai",
+  "executing_agency": "Chi nhánh Văn phòng đăng ký đất đai khu vực",
+  "subject_types": [
+    "Công dân Việt Nam"
+  ],
+  "results": [
+    "Lập, cập nhật, chỉnh lý hồ sơ địa chính, cơ sở dữ liệu đất đai"
+  ],
+  "requirements": "Không",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 14,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 14 ngày làm việc"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 14,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 14 ngày làm việc"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 14,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 14 ngày làm việc"
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115657.01",
+      "qty": 7,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    },
+    {
+      "code": "47/2026/QĐ-UBND",
+      "name": "Quyết định số 47/2026/QĐ-UBND ngày 28/6/2026 của Ủy ban nhân dân tỉnh Lào Cai về ban hành Quy định trình tự, thủ tục hành chính về đất đai trên địa bàn tỉnh Lào Cai"
+    },
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Bước 1:",
+      "text": "Tổ chức, cá nhân có nhu cầu nộp hồ sơ trực tiếp tại Trung tâm Phục vụ hành chính công cấp tỉnh (hoặc cấp xã) hoặc qua dịch vụ bưu chính hoặc trực tuyến trên Cổng dịch vụ công."
+    },
+    {
+      "name": "Bước 2:",
+      "text": "Văn phòng Đăng ký đất đai, Chi nhánh Văn phòng Đăng ký đất đai thực hiện việc lập, cập nhật, chỉnh lý hồ sơ địa chính, cơ sở dữ liệu đất đai."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Đơn đăng ký đất đai, tài sản gắn liền với đất theo Mẫu số 21 ban hành kèm theo Quyết định số 47/2026/QĐ-UBND",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000306",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f598f-117d-734d-bc4b-1431116faf98",
+              "fileName": "mẫu số 21.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f598f-117d-734d-bc4b-1431116faf98/mẫu số 21.docx"
+            }
+          ]
+        },
+        {
+          "name": "Báo cáo kết quả rà soát hiện trạng sử dụng đất theo Mẫu số 21đ ban hành kèm theo Quyết định số 47/2026/QĐ-UBND",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H38-KQ000307",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f598f-828e-746f-a040-64e2079a6c80",
+              "fileName": "mẫu số 21d.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f598f-828e-746f-a040-64e2079a6c80/mẫu số 21d.docx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f45ac-8cb0-70ac-b409-f28661e56d31",
+    "updated_at": "2026-07-14T03:09:21.787Z",
+    "created_at": "2026-07-14T03:09:21.787Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "code": "1.115749",
+  "source_id": "019f6a17-f2dc-7338-b00a-4a92d18149f5",
+  "name": "Tổ chức kinh tế thỏa thuận nhận quyền sử dụng đất để thực hiện dự án (cấp xã)",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Lạng Sơn",
+  "executing_agency": "Cơ quan quản lý đất đai cấp xã",
+  "subject_types": [
+    "Doanh nghiệp Việt Nam"
+  ],
+  "results": [
+    "Mẫu số 17. Văn bản đề nghị chấp thuận cho tổ chức kinh tế nhận chuyển nhượng, thuê quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất để thực hiện dự án đầu tư"
+  ],
+  "requirements": "Không quy định",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        }
+      ],
+      "processing": {
+        "qty": "- Trong thời hạn 15 ngày kể từ ngày nhận được hồ sơ hợp lệ, cơ quan có chức năng quản lý đất đai cấp xã phải có văn bản thẩm định trình cấp có thẩm quyền xem xét. - Trong thời hạn không quá 05 ngày làm việc kể từ ngày nhận được văn bản thẩm định do cơ quan có chức năng quản lý đất đai cấp xã trình, cấp có thẩm quyền xem xét và có văn bản chấp thuận hoặc không chấp thuận.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công cấp xã"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        }
+      ],
+      "processing": {
+        "qty": "- Trong thời hạn 15 ngày kể từ ngày nhận được hồ sơ hợp lệ, cơ quan có chức năng quản lý đất đai cấp xã phải có văn bản thẩm định trình cấp có thẩm quyền xem xét. - Trong thời hạn không quá 05 ngày làm việc kể từ ngày nhận được văn bản thẩm định do cơ quan có chức năng quản lý đất đai cấp xã trình, cấp có thẩm quyền xem xét và có văn bản chấp thuận hoặc không chấp thuận.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp trực tuyến tại địa chỉ https://dichvucong.gov.vn"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": 0,
+          "text": "Theo quy định của Hội đồng nhân dân cấp tỉnh"
+        }
+      ],
+      "processing": {
+        "qty": "- Trong thời hạn 15 ngày kể từ ngày nhận được hồ sơ hợp lệ, cơ quan có chức năng quản lý đất đai cấp xã phải có văn bản thẩm định trình cấp có thẩm quyền xem xét. - Trong thời hạn không quá 05 ngày làm việc kể từ ngày nhận được văn bản thẩm định do cơ quan có chức năng quản lý đất đai cấp xã trình, cấp có thẩm quyền xem xét và có văn bản chấp thuận hoặc không chấp thuận.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích"
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115749.01",
+      "qty": 15,
+      "unit": "DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "84/2025/QH15",
+      "name": "Luật Thanh tra năm 2025"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "Luật số 146/2025/QH15",
+      "name": "Luật sửa đổi, bổ sung một số điều của 15 luật trong lĩnh vực nông nghiệp và môi trường"
+    },
+    {
+      "code": "147/2025/QH15",
+      "name": "Luật Địa chất và khoáng sản sửa đổi 2025"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "28/2026/QĐ-UBND.",
+      "name": "Quy định về phân cấp trong lĩnh vực đất đai theo quy định tại khoản 1 Điều 14 và quy định trình tự, thủ tục hành chính quy định tại khoản 1 Điều 15 Nghị định số 49/2026/NĐ-CP ngày 31 tháng 01 năm 2026 của Chính phủ"
+    },
+    {
+      "code": "93/2025/QH15",
+      "name": "Luật số 93/2025/QH15 của Quốc hội: Luật Khoa học, công nghệ và đổi mới sáng tạo"
+    },
+    {
+      "code": "71/2025/QH15",
+      "name": "LUẬT CÔNG NGHIỆP CÔNG NGHỆ SỐ"
+    },
+    {
+      "code": "95/2025/QH1",
+      "name": "Luật Đường sắt ngày 27 tháng 6 năm 2025"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Nộp, tiếp nhận và kiểm tra hồ sơ",
+      "text": "Người đề nghị nộp hồ sơ đến Trung tâm Phục vụ hành chính công.\nKhi nộp hồ sơ, người nộp hồ sơ được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra, đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực. Trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực. \nTrung tâm Phục vụ hành chính công chuyển hồ sơ đến cơ quan có chức năng quản lý đất đai cấp xã."
+    },
+    {
+      "name": "Bước 2: Cơ quan có chức năng quản lý đất đai cấp xã thực hiện",
+      "text": "Chủ trì, phối hợp với các đơn vị có liên quan thẩm định hồ sơ, có văn bản thẩm định trình cấp có thẩm quyền. Văn bản thẩm định gồm các nội dung theo quy định về trình tự, thủ tục hành chính về đất đai áp dụng trên địa bàn tỉnh Lạng Sơn ban hành tại Quyết định số 28/2026/QĐ-UBND ngày 20 tháng 6 năm 2026 của UBND tỉnh Lạng Sơn."
+    },
+    {
+      "name": "Bước 3:",
+      "text": "Cấp có thẩm quyền xem xét có văn bản chấp thuận hoặc không chấp thuận tổ chức kinh tế được nhận chuyển nhượng, thuê quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất để thực hiện dự án."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Mẫu số 17 - Văn bản đề nghị chấp thuận nhận chuyển nhượng, thuê, góp vốn bằng quyền sử dụng đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.000017",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f6654-c3b2-72f3-8e6e-5f0ba90b1dfd",
+              "fileName": "Mẫu số 17 - Văn bản đề nghị chấp thuận nhận chuyển nhượng, thuê, góp vốn bằng quyền sử dụng đất.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f6654-c3b2-72f3-8e6e-5f0ba90b1dfd/Mẫu số 17 - Văn bản đề nghị chấp thuận nhận chuyển nhượng, thuê, góp vốn bằng quyền sử dụng đất.docx"
+            }
+          ]
+        },
+        {
+          "name": "Bản trích lục bản đồ địa chính hoặc trích đo bản đồ địa chính vị trí khu đất mà nhà đầu tư đề xuất thực hiện dự án.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.0000024",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f6a17-f2dc-7338-b00a-4a92d18149f5",
+    "updated_at": "2026-07-17T02:13:09.128Z",
+    "created_at": "2026-07-17T02:13:09.128Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

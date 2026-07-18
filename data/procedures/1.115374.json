@@ -1,0 +1,131 @@
+{
+  "code": "1.115374",
+  "source_id": "019f1396-6a0b-773c-9e38-deb9c2f0b9b1",
+  "name": "Thẩm định, phê duyệt phương án sử dụng đất",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Gia Lai",
+  "executing_agency": "Sở Nông nghiệp và Môi trường",
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)"
+  ],
+  "results": [
+    "Văn bản phê duyệt phương án sử dụng đất của Công ty nông, lâm nghiệp"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 43,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 33 ngày làm việc.\n\tĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian được tăng thêm 10 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 43,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 33 ngày làm việc.\n\tĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian được tăng thêm 10 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 43,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 33 ngày làm việc.\nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian được tăng thêm 10 ngày làm việc."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115374.01",
+      "qty": 33,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "102/2024/NĐ-CP",
+      "name": "Nghị định 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai."
+    },
+    {
+      "code": "104/2026/QĐ-UBND",
+      "name": "Quy định trình tự, thủ tục hành chính về đất đai  trên địa bàn tỉnh Gia Lai"
+    },
+    {
+      "code": "151/2025/NĐ-CP",
+      "name": "Quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai"
+    },
+    {
+      "code": "Nghị định số 136/2025/NĐ-CP",
+      "name": "quy định phân quyền, phân cấp trong lĩnh vực nông nghiệp và môi trường"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai ngày 18/01/2024;"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "136/2025/TT-BTC",
+      "name": "Sửa đổi, bổ sung một số điều của Thông tư số 98/2020/TT-BTC ngày 16 tháng 11 năm 2020 của Bộ trưởng Bộ Tài chính hướng dẫn hoạt động và quản lý quỹ đầu tư chứng khoán"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Công ty nông, lâm nghiệp gửi hồ sơ đến Trung tâm Phục vụ hành chính công hoặc cơ quan có chức năng quản lý đất đai cấp tỉnh.\nKhi nộp hồ sơ, công ty nông, lâm nghiệp được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra, đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực. Trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nTrường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến cơ quan có chức năng quản lý đất đai cấp tỉnh.\nBước 2: Cơ quan có chức năng quản lý đất đai cấp tỉnh gửi hồ sơ phương án sử dụng đất đến các sở, ban, ngành có liên quan và Ủy ban nhân dân cấp xã nơi có đất để lấy ý kiến và trình Ủy ban nhân dân cấp tỉnh thành lập Hội đồng thẩm định trong thời hạn không quá 05 ngày làm việc kể từ ngày nhận đủ hồ sơ phương án sử dụng đất của công ty nông, lâm nghiệp.\nThành phần Hội đồng thẩm định bao gồm: Chủ tịch Ủy ban nhân dân cấp tỉnh hoặc 01 Phó Chủ tịch Ủy ban nhân dân cấp tỉnh làm Chủ tịch Hội đồng, Thủ trưởng cơ quan có chức năng quản lý đất đai cấp tỉnh làm Phó Chủ tịch Hội đồng, các thành viên là đại diện lãnh đạo các sở, ban, ngành có liên quan, đại điện lãnh đạo Ủy ban nhân dân cấp xã nơi có đất.\nBước 3: Các sở, ban, ngành có liên quan và Ủy ban nhân dân cấp xã nơi có đất gửi ý kiến bằng văn bản đến cơ quan có chức năng quản lý đất đai cấp tỉnh trong thời hạn không quá 10 ngày kể từ ngày nhận được hồ sơ lấy ý kiến.\nBước 4: Cơ quan có chức năng quản lý đất đai cấp tỉnh thực hiện như sau:\n-\tTổ chức họp Hội đồng để thẩm định trong thời hạn không quá 05 ngày làm việc kể từ ngày kết thúc thời hạn lấy ý kiến.\n-\tTrường hợp hồ sơ phương án sử dụng đất của công ty nông, lâm nghiệp không phải chỉnh sửa: trình Ủy ban nhân dân tỉnh phê duyệt trong thời hạn không quá 05 ngày làm việc kể từ ngày thẩm định.\n-\tTrường hợp hồ sơ phương án sử dụng đất của công ty nông, lâm nghiệp phải chỉnh sửa:\n+ Thông báo cho công ty nông, lâm nghiệp để hoàn thiện hoàn thiện hồ sơ trong thời hạn không quá 03 ngày làm việc kể từ ngày thẩm định, nếu hồ sơ phương án sử dụng đất phải chỉnh sửa, bổ sung.\n+ Trình Ủy ban nhân dân tỉnh phê duyệt phương án sử dụng đất trong thời hạn không quá 05 ngày làm việc kể từ ngày công ty nông, lâm nghiệp hoàn thiện hồ sơ.\nBước 5: Ủy ban nhân dân cấp tỉnh xem xét, phê duyệt phương án sử dụng đất trong thời hạn không quá 05 ngày làm việc kể từ ngày nhận được hồ sơ phương án sử dụng đất do cơ quan có chức năng quản lý đất đai cấp tỉnh trình."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Phương án sử dụng đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.H21.000040",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Bản đồ địa chính có thể hiện ranh giới sử dụng đất hoặc hồ sơ ranh giới sử dụng đất của công ty nông, lâm nghiệp; bản tổng hợp diện tích các loại đất của công ty nông, lâm nghiệp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.H21.000041",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản đề nghị thẩm định, phê duyệt phương án sử dụng đất theo Mẫu số 23 ban hành kèm theo Quyết định số 104/2026/QĐ-UBND ngày 29/6/2026",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.H21.000039",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f1396-6a0b-773c-9e38-deb9c2f0b9b1",
+    "updated_at": "2026-07-01T05:48:12.163Z",
+    "created_at": "2026-06-30T08:17:08.926Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "code": "1.115467",
+  "source_id": "019f1667-5ff6-76ba-aa01-f64e930ecbb8",
+  "name": "Đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất cho người nhận chuyển nhượng quyền sử dụng đất, quyền sở hữu nhà ở, công trình xây dựng trong dự án bất động sản",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Bắc Ninh",
+  "executing_agency": "Văn phòng đăng ký đất đai Bắc Ninh",
+  "subject_types": [
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "Chủ đầu tư dự án chịu trách nhiệm về việc nhà ở, công trình xây dựng, hạng mục công trình xây dựng đủ điều kiện đưa vào kinh doanh theo quy định của pháp luật về kinh doanh bất động sản và quy định khác của pháp luật có liên quan; Văn phòng đăng ký đất đai chịu trách nhiệm kiểm tra việc đủ điều kiện thực hiện quyền của người sử dụng đất theo quy định của pháp luật về đất đai.",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 08 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 08 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 08 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    }
+  ],
+  "processing_cases": [],
+  "legal_basis": [],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến một trong các địa điểm trên địa bàn cấp tỉnh: Trung tâm Phục vụ hành chính công hoặc Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai.",
+      "text": "Khi nộp hồ sơ, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định, trừ các giấy tờ là quyết định phê duyệt hoặc quyết định phê duyệt điều chỉnh quy hoạch xây dựng chi tiết, bản đồ điều chỉnh quy hoạch xây dựng chi tiết."
+    },
+    {
+      "name": "Bước 2: Cơ quan tiếp nhận hồ sơ thực hiện:",
+      "text": "- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\nTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Trường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến Văn phòng đăng ký đất đai."
+    },
+    {
+      "name": "Bước 3: Văn phòng đăng ký đất đai thực hiện:",
+      "text": "- Kiểm tra điều kiện thực hiện quyền của người sử dụng đất theo quy định của pháp luật về đất đai, tính đầy đủ của thành phần hồ sơ.\n- Trong thời gian không quá 03 ngày làm việc, thông báo cho chủ đầu tư cung cấp các giấy tờ theo quy định đối với trường hợp người nhận chuyển nhượng quyền sử dụng đất, quyền sở hữu nhà ở, công trình xây dựng, hạng mục công trình xây dựng trực tiếp thực hiện thủ tục đăng ký, cấp Giấy chứng nhận mà chủ đầu tư chưa nộp các giấy tờ theo quy định.\n- Gửi Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai theo Mẫu số 19 đến cơ quan thuế để xác định và thông báo nghĩa vụ tài chính cho người nhận chuyển nhượng quyền sử dụng đất, quyền sở hữu nhà ở, công trình xây dựng, hạng mục công trình xây dựng.\n- Cập nhật, chỉnh lý hồ sơ địa chính, cơ sở dữ liệu đất đai; Cấp Giấy chứng nhận cho người nhận chuyển nhượng quyền sử dụng đất, quyền sở hữu nhà ở, công trình xây dựng, hạng mục công trình xây dựng; xác nhận thay đổi trên Giấy chứng nhận đã cấp cho chủ đầu tư, trong đó phần diện tích thuộc quyền sử dụng chung với người khác thì được chỉnh lý biến động để chuyển sang hình thức sử dụng chung.\nTrường hợp phải thực hiện nghĩa vụ tài chính thì Văn phòng đăng ký đất đai thực hiện các công việc tại điểm này khi có thông tin từ cơ sở dữ liệu được liên thông hoặc chứng từ hoặc giấy tờ chứng minh đã hoàn thành nghĩa vụ tài chính. \n- Trao Giấy chứng nhận hoặc chuyển Giấy chứng nhận cho chủ đầu tư dự án để trao cho người được cấp đối với trường hợp chủ đầu tư dự án nộp hồ sơ thực hiện thủ tục."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "- Đơn đề nghị hỗ trợ (Mẫu 1).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H05-KQ000330",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019d7c7a-31b7-7628-8e4b-794b4077d21f",
+              "fileName": "Mẫu 1..docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019d7c7a-31b7-7628-8e4b-794b4077d21f/Mẫu 1..docx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f1667-5ff6-76ba-aa01-f64e930ecbb8",
+    "updated_at": "2026-07-06T01:35:07.030Z",
+    "created_at": "2026-07-06T01:35:07.030Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

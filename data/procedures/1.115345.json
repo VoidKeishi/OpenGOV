@@ -1,0 +1,251 @@
+{
+  "code": "1.115345",
+  "source_id": "019f128e-9b17-720c-a69f-07a5465e118e",
+  "name": "Cấp đổi Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Gia Lai",
+  "executing_agency": "Văn phòng Đăng ký đất đai tỉnh - tỉnh Gia Lai; Chi nhánh Văn phòng đăng ký đất đai Tuy Phước - tỉnh Gia Lai; Chi nhánh Văn phòng đăng ký đất đai Vân Canh - tỉnh Gia Lai; Chi nhánh Văn phòng đăng ký đất đai An Nhơn - tỉnh Gia Lai; Chi nhánh Văn phòng đăng ký đất đai Phù Cát - tỉnh Gia Lai; Chi nhánh Văn phòng đăng ký đất đai Phù Mỹ - tỉnh Gia Lai; Chi nhánh Văn phòng đăng ký đất đai Hoài Nhơn - tỉnh Gia Lai; Chi nhánh Văn phòng đăng ký đất đai Hoài Ân - tỉnh Gia Lai; Chi nhánh Văn phòng đăng ký đất đai An Lão - tỉnh Gia Lai; Chi nhánh Văn phòng đăng ký đất đai Tây Sơn - tỉnh Gia Lai; Chi nhánh Văn phòng đăng ký đất đai Vĩnh Thạnh - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Pleiku - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai An Khê - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Ayun Pa - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Chư Prông - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Chư Sê - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Chư Păh - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Chư Pưh - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Đức Cơ - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Đak Đoa - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Ia Grai - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Kông Chro - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Krông Pa - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Kbang - tỉnh Gia Lai; Chi nhánh Văn phòng Đăng ký đất đai Mang Yang - tỉnh Gia Lai",
+  "subject_types": [
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Hợp tác xã",
+    "Người nước ngoài",
+    "Tổ chức nước ngoài",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài",
+    "Doanh nghiệp có vốn đầu tư nước ngoài"
+  ],
+  "results": [
+    "Giấy chứng nhận quyền sử dụng đất; Giấy chứng nhận quyền sở hữu nhà ở và quyền sử dụng đất ở; Giấy chứng nhận quyền sở hữu nhà ở; Giấy chứng nhận quyền sở hữu công trình xây dựng; Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất; Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        }
+      ],
+      "processing": {
+        "qty": 12.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Trường hợp quy định tại các điểm a, b, c, d, đ, e và g khoản 1 Mục VII của “Phần C. TRÌNH TỰ, THỦ TỤC ĐĂNG KÝ ĐẤT ĐAI, TÀI SẢN GẮN\nLIỀN VỚI ĐẤT” Phần V Phụ lục I ban hành kèm theo Nghị định số 151/2025/NĐ-CP.\n- Thời gian thực hiện thủ tục hành chính này được tính kể từ ngày nhận được hồ sơ hợp lệ, không bao gồm thời gian giải quyết của các cơ quan sau đây:\na) Thời gian giải quyết của cơ quan có chức năng quản lý đất đai về xác định giá đất cụ thể theo quy định;\nb) Thời gian giải quyết của cơ quan có thẩm quyền về khoản được trừ vào tiền sử dụng đất, tiền thuê đất theo quy định;\nc) Thời gian giải quyết của cơ quan thuế về xác định đơn giá thuê đất, số tiền sử dụng đất, tiền thuê đất phải nộp, miễn, giảm, ghi nợ tiền sử dụng đất, tiền thuê đất, phí, lệ phí theo quy định;\nd) Thời gian thực hiện nghĩa vụ tài chính của người sử dụng đất;\nđ) Thời gian người sử dụng đất thỏa thuận để thực hiện tích tụ đất nông nghiệp, góp quyền sử dụng đất, điều chỉnh lại đất đai;\ne) Thời gian trích đo địa chính thửa đất;\ng) Thời gian xem xét xử lý đối với trường hợp sử dụng đất có vi phạm pháp luật, thời gian trưng cầu giám định, thời gian niêm yết công khai, đăng tin trên phương tiện thông tin đại chúng, thời gian thực hiện thủ tục chia thừa kế quyền sử dụng đất, tài sản gắn liền với đất đối với trường hợp thực hiện thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất mà người sử dụng đất, chủ sở hữu tài sản gắn liền với đất chết trước khi trao Giấy chứng nhận.\nh) Thời gian cơ quan có chức năng quản lý về xây dựng xác định chi phí xây dựng hạ tầng theo quy định pháp luật về xây dựng.\n- Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện đối với từng loại thủ tục quy định tại Quy định này được tăng thêm 10 ngày làm việc"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        }
+      ],
+      "processing": {
+        "qty": 12.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Trường hợp quy định tại các điểm a, b, c, d, đ, e và g khoản 1 Mục VII của “Phần C. TRÌNH TỰ, THỦ TỤC ĐĂNG KÝ ĐẤT ĐAI, TÀI SẢN GẮN LIỀN VỚI ĐẤT” Phần V Phụ lục I ban hành kèm theo Nghị định số 151/2025/NĐ-CP \n- Thời gian thực hiện thủ tục hành chính này được tính kể từ ngày nhận được hồ sơ hợp lệ, không bao gồm thời gian giải quyết của các cơ quan sau đây:\na) Thời gian giải quyết của cơ quan có chức năng quản lý đất đai về xác định giá đất cụ thể theo quy định;\nb) Thời gian giải quyết của cơ quan có thẩm quyền về khoản được trừ vào tiền sử dụng đất, tiền thuê đất theo quy định;\nc) Thời gian giải quyết của cơ quan thuế về xác định đơn giá thuê đất, số tiền sử dụng đất, tiền thuê đất phải nộp, miễn, giảm, ghi nợ tiền sử dụng đất, tiền thuê đất, phí, lệ phí theo quy định;\nd) Thời gian thực hiện nghĩa vụ tài chính của người sử dụng đất;\nđ) Thời gian người sử dụng đất thỏa thuận để thực hiện tích tụ đất nông nghiệp, góp quyền sử dụng đất, điều chỉnh lại đất đai;\ne) Thời gian trích đo địa chính thửa đất;\ng) Thời gian xem xét xử lý đối với trường hợp sử dụng đất có vi phạm pháp luật, thời gian trưng cầu giám định, thời gian niêm yết công khai, đăng tin trên phương tiện thông tin đại chúng, thời gian thực hiện thủ tục chia thừa kế quyền sử dụng đất, tài sản gắn liền với đất đối với trường hợp thực hiện thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất mà người sử dụng đất, chủ sở hữu tài sản gắn liền với đất chết trước khi trao Giấy chứng nhận.\nh) Thời gian cơ quan có chức năng quản lý về xây dựng xác định chi phí xây dựng hạ tầng theo quy định pháp luật về xây dựng.\n- Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện đối với từng loại thủ tục quy định tại Quy định này được tăng thêm 10 ngày làm việc"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        }
+      ],
+      "processing": {
+        "qty": 12.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Trường hợp quy định tại các điểm a, b, c, d, đ, e và g khoản 1 Mục VII của “Phần C. TRÌNH TỰ, THỦ TỤC ĐĂNG KÝ ĐẤT ĐAI, TÀI SẢN GẮN LIỀN VỚI ĐẤT” Phần V Phụ lục I ban hành kèm theo Nghị định số 151/2025/NĐ-CP \n- Thời gian thực hiện thủ tục hành chính này được tính kể từ ngày nhận được hồ sơ hợp lệ, không bao gồm thời gian giải quyết của các cơ quan sau đây:\na) Thời gian giải quyết của cơ quan có chức năng quản lý đất đai về xác định giá đất cụ thể theo quy định;\nb) Thời gian giải quyết của cơ quan có thẩm quyền về khoản được trừ vào tiền sử dụng đất, tiền thuê đất theo quy định;\nc) Thời gian giải quyết của cơ quan thuế về xác định đơn giá thuê đất, số tiền sử dụng đất, tiền thuê đất phải nộp, miễn, giảm, ghi nợ tiền sử dụng đất, tiền thuê đất, phí, lệ phí theo quy định;\nd) Thời gian thực hiện nghĩa vụ tài chính của người sử dụng đất;\nđ) Thời gian người sử dụng đất thỏa thuận để thực hiện tích tụ đất nông nghiệp, góp quyền sử dụng đất, điều chỉnh lại đất đai;\ne) Thời gian trích đo địa chính thửa đất;\ng) Thời gian xem xét xử lý đối với trường hợp sử dụng đất có vi phạm pháp luật, thời gian trưng cầu giám định, thời gian niêm yết công khai, đăng tin trên phương tiện thông tin đại chúng, thời gian thực hiện thủ tục chia thừa kế quyền sử dụng đất, tài sản gắn liền với đất đối với trường hợp thực hiện thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất mà người sử dụng đất, chủ sở hữu tài sản gắn liền với đất chết trước khi trao Giấy chứng nhận.\nh) Thời gian cơ quan có chức năng quản lý về xây dựng xác định chi phí xây dựng hạ tầng theo quy định pháp luật về xây dựng.\n- Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện đối với từng loại thủ tục quy định tại Quy định này được tăng thêm 10 ngày làm việc"
+    },
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        }
+      ],
+      "processing": {
+        "qty": 16.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Trường hợp quy định tại điểm h khoản 1 Mục VII của “Phần C. TRÌNHTỰ, THỦ TỤC ĐĂNG KÝ ĐẤT ĐAI, TÀI SẢN GẮN LIỀN VỚI ĐẤT” Phần V Phụ lục I ban hành kèm theo Nghị định số 151/2025/NĐ-CP \n- Thời gian thực hiện thủ tục hành chính này được tính kể từ ngày nhận được hồ sơ hợp lệ, không bao gồm thời gian giải quyết của các cơ quan sau đây:\na) Thời gian giải quyết của cơ quan có chức năng quản lý đất đai về xác định giá đất cụ thể theo quy định;\nb) Thời gian giải quyết của cơ quan có thẩm quyền về khoản được trừ vào tiền sử dụng đất, tiền thuê đất theo quy định;\nc) Thời gian giải quyết của cơ quan thuế về xác định đơn giá thuê đất, số tiền sử dụng đất, tiền thuê đất phải nộp, miễn, giảm, ghi nợ tiền sử dụng đất, tiền thuê đất, phí, lệ phí theo quy định;\nd) Thời gian thực hiện nghĩa vụ tài chính của người sử dụng đất;\nđ) Thời gian người sử dụng đất thỏa thuận để thực hiện tích tụ đất nông nghiệp, góp quyền sử dụng đất, điều chỉnh lại đất đai;\ne) Thời gian trích đo địa chính thửa đất;\ng) Thời gian xem xét xử lý đối với trường hợp sử dụng đất có vi phạm pháp luật, thời gian trưng cầu giám định, thời gian niêm yết công khai, đăng tin trên phương tiện thông tin đại chúng, thời gian thực hiện thủ tục chia thừa kế quyền sử dụng đất, tài sản gắn liền với đất đối với trường hợp thực hiện thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất mà người sử dụng đất, chủ sở hữu tài sản gắn liền với đất chết trước khi trao Giấy chứng nhận.\nh) Thời gian cơ quan có chức năng quản lý về xây dựng xác định chi phí xây dựng hạ tầng theo quy định pháp luật về xây dựng.\n- Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện đối với từng loại thủ tục quy định tại Quy định này được tăng thêm 10 ngày làm việc"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        }
+      ],
+      "processing": {
+        "qty": 16.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Trường hợp quy định tại điểm h khoản 1 Mục VII của “Phần C. TRÌNH TỰ, THỦ TỤC ĐĂNG KÝ ĐẤT ĐAI, TÀI SẢN GẮN LIỀN VỚI ĐẤT” Phần V\nPhụ lục I ban hành kèm theo Nghị định số 151/2025/NĐ-CP \n- Thời gian thực hiện thủ tục hành chính này được tính kể từ ngày nhận được hồ sơ hợp lệ, không bao gồm thời gian giải quyết của các cơ quan sau đây:\na) Thời gian giải quyết của cơ quan có chức năng quản lý đất đai về xác định giá đất cụ thể theo quy định;\nb) Thời gian giải quyết của cơ quan có thẩm quyền về khoản được trừ vào tiền sử dụng đất, tiền thuê đất theo quy định;\nc) Thời gian giải quyết của cơ quan thuế về xác định đơn giá thuê đất, số tiền sử dụng đất, tiền thuê đất phải nộp, miễn, giảm, ghi nợ tiền sử dụng đất, tiền thuê đất, phí, lệ phí theo quy định;\nd) Thời gian thực hiện nghĩa vụ tài chính của người sử dụng đất;\nđ) Thời gian người sử dụng đất thỏa thuận để thực hiện tích tụ đất nông nghiệp, góp quyền sử dụng đất, điều chỉnh lại đất đai;\ne) Thời gian trích đo địa chính thửa đất;\ng) Thời gian xem xét xử lý đối với trường hợp sử dụng đất có vi phạm pháp luật, thời gian trưng cầu giám định, thời gian niêm yết công khai, đăng tin trên phương tiện thông tin đại chúng, thời gian thực hiện thủ tục chia thừa kế quyền sử dụng đất, tài sản gắn liền với đất đối với trường hợp thực hiện thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất mà người sử dụng đất, chủ sở hữu tài sản gắn liền với đất chết trước khi trao Giấy chứng nhận.\nh) Thời gian cơ quan có chức năng quản lý về xây dựng xác định chi phí xây dựng hạ tầng theo quy định pháp luật về xây dựng.\n- Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện đối với từng loại thủ tục quy định tại Quy định này được tăng thêm 10 ngày làm việc"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 0,
+          "text": "Nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        }
+      ],
+      "processing": {
+        "qty": 16.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Trường hợp quy định tại điểm h khoản 1 Mục VII của “Phần C. TRÌNH TỰ, THỦ TỤC ĐĂNG KÝ ĐẤT ĐAI, TÀI SẢN GẮN LIỀN VỚI ĐẤT” Phần V\nPhụ lục I ban hành kèm theo Nghị định số 151/2025/NĐ-CP \n- Thời gian thực hiện thủ tục hành chính này được tính kể từ ngày nhận được hồ sơ hợp lệ, không bao gồm thời gian giải quyết của các cơ quan sau đây:\na) Thời gian giải quyết của cơ quan có chức năng quản lý đất đai về xác định giá đất cụ thể theo quy định;\nb) Thời gian giải quyết của cơ quan có thẩm quyền về khoản được trừ vào tiền sử dụng đất, tiền thuê đất theo quy định;\nc) Thời gian giải quyết của cơ quan thuế về xác định đơn giá thuê đất, số tiền sử dụng đất, tiền thuê đất phải nộp, miễn, giảm, ghi nợ tiền sử dụng đất, tiền thuê đất, phí, lệ phí theo quy định;\nd) Thời gian thực hiện nghĩa vụ tài chính của người sử dụng đất;\nđ) Thời gian người sử dụng đất thỏa thuận để thực hiện tích tụ đất nông nghiệp, góp quyền sử dụng đất, điều chỉnh lại đất đai;\ne) Thời gian trích đo địa chính thửa đất;\ng) Thời gian xem xét xử lý đối với trường hợp sử dụng đất có vi phạm pháp luật, thời gian trưng cầu giám định, thời gian niêm yết công khai, đăng tin trên phương tiện thông tin đại chúng, thời gian thực hiện thủ tục chia thừa kế quyền sử dụng đất, tài sản gắn liền với đất đối với trường hợp thực hiện thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất mà người sử dụng đất, chủ sở hữu tài sản gắn liền với đất chết trước khi trao Giấy chứng nhận.\nh) Thời gian cơ quan có chức năng quản lý về xây dựng xác định chi phí xây dựng hạ tầng theo quy định pháp luật về xây dựng.\n- Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện đối với từng loại thủ tục quy định tại Quy định này được tăng thêm 10 ngày làm việc"
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115345.01",
+      "qty": 6.5,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    },
+    {
+      "code": "10/2024/TT-BTNMT",
+      "name": "Thông tư 10/2024/TT-BTNMT ngày 31 tháng 7 năm 2024 của Bộ Tài nguyên và Môi trường quy định về hồ sơ địa chính, giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "151/2025/NĐ-CP",
+      "name": "Quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai"
+    },
+    {
+      "code": "Nghị định số 50/2026/NĐ-CP",
+      "name": "Quy định chi tiết một số điều của Nghị quyết số 254/2025/QH15 ngày 11 tháng 12 năm 2025 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn, vướng mắc trong tổ chức thi hành Luật Đất đai về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "104/2026/QĐ-UBND",
+      "name": "Quy định trình tự, thủ tục hành chính về đất đai  trên địa bàn tỉnh Gia Lai"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Mặc định",
+      "text": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến Trung tâm Phục vụ hành chính công tỉnh hoặc cấp xã.\nBước 2: Cơ quan tiếp nhận hồ sơ thực hiện:\n- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\nTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Trường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai.\nBước 3: Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện:\n- Đối với trường hợp cấp đổi Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất để ghi cả họ, tên vợ và họ, tên chồng thì khai thác, sử dụng thông tin về tình trạng hôn nhân trong Cơ sở dữ liệu quốc gia về dân cư.\nTrường hợp không khai thác được thông tin về tình trạng hôn nhân thì hướng dẫn người sử dụng đất, chủ sở hữu tài sản gắn liền với đất nộp bản sao giấy đăng ký kết hôn hoặc giấy tờ khác về tình trạng hôn nhân.\n- Đối với trường hợp vị trí thửa đất trên Giấy chứng nhận đã cấp không chính xác so với vị trí thực tế sử dụng đất tại thời điểm cấp Giấy chứng nhận thì thực hiện kiểm tra thực địa và đối chiếu với hồ sơ đăng ký, cấp Giấy chứng nhận đã cấp để xác định đúng vị trí thửa đất.\n- Kiểm tra, ký duyệt mảnh trích đo bản đồ địa chính đối với trường hợp người sử dụng đất có nhu cầu để xác định lại kích thước các cạnh, diện tích của thửa đất.\n- Trích lục bản đồ địa chính hoặc trích đo bản đồ địa chính thửa đất đối với nơi chưa có bản đồ địa chính hoặc chỉ có bản đồ địa chính dạng giấy đã rách nát, hư hỏng đối với trường hợp Giấy chứng nhận đã cấp chưa sử dụng bản đồ địa chính hoặc chưa sử dụng trích đo bản đồ địa chính thửa đất và người sử dụng đất có nhu cầu cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc thuộc trường hợp phải cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất.\n- Gửi Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai theo Mẫu số 19 ban hành kèm theo Nghị định số 151/2025/NĐ-CP đến cơ quan thuế để xác định và thông báo thu nghĩa vụ tài chính đối với trường hợp phải thực hiện nghĩa vụ tài chính theo quy định của pháp luật.\n- Chỉnh lý, cập nhật biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai.\n- Cấp Giấy chứng nhận; trao Giấy chứng nhận hoặc gửi cơ quan tiếp nhận hồ sơ để trao cho người được cấp.\nTrường hợp cấp đổi Giấy chứng nhận đã cấp do đo đạc lập bản đồ địa chính mà bên nhận thế chấp đang giữ Giấy chứng nhận thì thông báo danh sách các trường hợp làm thủ tục cấp Giấy chứng nhận cho bên nhận thế chấp; xác nhận việc đăng ký thế chấp vào Giấy chứng nhận được cấp. Việc trao Giấy chứng nhận được thực hiện đồng thời giữa ba bên gồm Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai, người sử dụng đất, chủ sở hữu tài sản gắn liền với đất và bên nhận thế chấp; người sử dụng đất, chủ sở hữu tài sản gắn liền với đất ký, nhận Giấy chứng nhận mới từ Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai để trao cho bên nhận thế chấp; bên nhận thế chấp có trách nhiệm nộp Giấy chứng nhận cũ đang thế chấp cho Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai để quản lý."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Giấy chứng nhận đã cấp (bản gốc)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.15",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Mảnh trích đo bản đồ địa chính thửa đất đối với trường hợp trích đo địa chính thửa đất mà ranh giới thửa đất không thay đổi hoặc trường hợp cấp đổi Giấy chứng nhận mà người sử dụng đất có nhu cầu đo đạc để xác định lại kích thước các cạnh, diện tích của thửa đất",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "TPHS.16",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 18 ban hành kèm theo Quyết định số 104/2026/QĐ-UBND của UBND tỉnh",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.H21.000010",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f12b1-fe36-754c-ab96-26c06beec501",
+              "fileName": "Mẫu số_ 18.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f12b1-fe36-754c-ab96-26c06beec501/Mẫu số_ 18.docx"
+            }
+          ]
+        },
+        {
+          "name": "Mảnh trích đo bản đồ địa chính thửa đất đối với trường hợp người sử dụng đất có nhu cầu đo đạc để xác định lại kích thước các cạnh, diện tích của thửa đất",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "TPHS.06",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f128e-9b17-720c-a69f-07a5465e118e",
+    "updated_at": "2026-07-01T11:08:46.129Z",
+    "created_at": "2026-06-30T08:17:07.415Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

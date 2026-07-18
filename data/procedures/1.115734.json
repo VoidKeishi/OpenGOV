@@ -1,0 +1,217 @@
+{
+  "code": "1.115734",
+  "source_id": "019f690a-9cd4-7218-809d-9e3c2953c32e",
+  "name": "Thẩm định, phê duyệt phương án sử dụng đất",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Lạng Sơn",
+  "executing_agency": "Sở Nông nghiệp và Môi trường - tỉnh Lạng Sơn",
+  "subject_types": [
+    "Doanh nghiệp Việt Nam"
+  ],
+  "results": [
+    "Văn bản phê duyệt phương án sử dụng đất của Công ty nông, lâm nghiệp"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Không quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Không quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Không quy định"
+        }
+      ],
+      "processing": {
+        "qty": "- Thời gian thực hiện Bước 2 không quá 05 ngày làm việc. - Thời gian thực hiện Bước 3 không quá 10 ngày. - Thời gian thực hiện Bước 4: + Thời gian tổ chức họp Hội đồng để thẩm định không quá 05 ngày làm việc. + Thời gian trình phê duyệt không quá 05 ngày làm việc. + Thời gian thông báo cho công ty nông, lâm nghiệp để hoàn thiện hoàn thiện hồ sơ không quá 03 ngày làm việc. - Thời gian thực hiện Bước 5 không quá 05 ngày làm việc. Các cơ quan liên quan đến quá trình thực hiện trình tự, thủ tục không được quy định thêm thủ tục và không được thực hiện thêm bất kỳ thủ tục nào khác ngoài thủ tục quy định nêu trên.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công tỉnh/xã"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Không quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Không quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Không quy định"
+        }
+      ],
+      "processing": {
+        "qty": "- Thời gian thực hiện Bước 2 không quá 05 ngày làm việc. - Thời gian thực hiện Bước 3 không quá 10 ngày. - Thời gian thực hiện Bước 4: + Thời gian tổ chức họp Hội đồng để thẩm định không quá 05 ngày làm việc. + Thời gian trình phê duyệt không quá 05 ngày làm việc. + Thời gian thông báo cho công ty nông, lâm nghiệp để hoàn thiện hoàn thiện hồ sơ không quá 03 ngày làm việc. - Thời gian thực hiện Bước 5 không quá 05 ngày làm việc. Các cơ quan liên quan đến quá trình thực hiện trình tự, thủ tục không được quy định thêm thủ tục và không được thực hiện thêm bất kỳ thủ tục nào khác ngoài thủ tục quy định nêu trên.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp trực tuyến tại địa chỉ https://dichvucong.gov.vn"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Không quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Không quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Không quy định"
+        }
+      ],
+      "processing": {
+        "qty": "- Thời gian thực hiện Bước 2 không quá 05 ngày làm việc. - Thời gian thực hiện Bước 3 không quá 10 ngày. - Thời gian thực hiện Bước 4: + Thời gian tổ chức họp Hội đồng để thẩm định không quá 05 ngày làm việc. + Thời gian trình phê duyệt không quá 05 ngày làm việc. + Thời gian thông báo cho công ty nông, lâm nghiệp để hoàn thiện hoàn thiện hồ sơ không quá 03 ngày làm việc. - Thời gian thực hiện Bước 5 không quá 05 ngày làm việc. Các cơ quan liên quan đến quá trình thực hiện trình tự, thủ tục không được quy định thêm thủ tục và không được thực hiện thêm bất kỳ thủ tục nào khác ngoài thủ tục quy định nêu trên.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích"
+    }
+  ],
+  "processing_cases": [],
+  "legal_basis": [
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "95/2025/QH1",
+      "name": "Luật Đường sắt ngày 27 tháng 6 năm 2025"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "28/2026/QĐ-UBND.",
+      "name": "Quy định về phân cấp trong lĩnh vực đất đai theo quy định tại khoản 1 Điều 14 và quy định trình tự, thủ tục hành chính quy định tại khoản 1 Điều 15 Nghị định số 49/2026/NĐ-CP ngày 31 tháng 01 năm 2026 của Chính phủ"
+    },
+    {
+      "code": "147/2025/QH15",
+      "name": "Luật Địa chất và khoáng sản sửa đổi 2025"
+    },
+    {
+      "code": "93/2025/QH15",
+      "name": "Luật số 93/2025/QH15 của Quốc hội: Luật Khoa học, công nghệ và đổi mới sáng tạo"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "84/2025/QH15",
+      "name": "Luật Thanh tra năm 2025"
+    },
+    {
+      "code": "Luật số 146/2025/QH15",
+      "name": "Luật sửa đổi, bổ sung một số điều của 15 luật trong lĩnh vực nông nghiệp và môi trường"
+    },
+    {
+      "code": "71/2025/QH15",
+      "name": "LUẬT CÔNG NGHIỆP CÔNG NGHỆ SỐ"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Bước 1",
+      "text": "Công ty nông, lâm nghiệp gửi hồ sơ đến Trung tâm Phục vụ hành chính công hoặc cơ quan có chức năng quản lý đất đai cấp tỉnh. Khi nộp hồ sơ, công ty nông, lâm nghiệp được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra, đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực. Trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nTrường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến cơ quan có chức năng quản lý đất đai cấp tỉnh."
+    },
+    {
+      "name": "Bước 2:",
+      "text": "Cơ quan có chức năng quản lý đất đai cấp tỉnh gửi hồ sơ phương án sử dụng đất đến các sở, ban, ngành có liên quan và Ủy ban nhân dân cấp xã nơi có đất để lấy ý kiến và trình Chủ tịch Ủy ban nhân dân cấp tỉnh thành lập Hội đồng thẩm định trong thời hạn không quá 05 ngày làm việc kể từ ngày nhận đủ hồ sơ phương án sử dụng đất của công ty nông, lâm nghiệp.\nThành phần Hội đồng thẩm định bao gồm: Chủ tịch Ủy ban nhân dân cấp tỉnh hoặc 01 Phó Chủ tịch Ủy ban nhân dân cấp tỉnh làm Chủ tịch Hội đồng, Thủ trưởng cơ quan có chức năng quản lý đất đai cấp tỉnh làm Phó Chủ tịch Hội đồng, các thành viên là đại diện lãnh đạo các sở, ban, ngành có liên quan, đại diện lãnh đạo Ủy ban nhân dân cấp xã nơi có đất."
+    },
+    {
+      "name": "Bước 3",
+      "text": "Các sở, ban, ngành có liên quan và Ủy ban nhân dân cấp xã nơi có đất gửi ý kiến bằng văn bản đến cơ quan có chức năng quản lý đất đai cấp tỉnh trong thời hạn không quá 10 ngày kể từ ngày nhận được hồ sơ lấy ý kiến."
+    },
+    {
+      "name": "Bước 4: Cơ quan có chức năng quản lý đất đai cấp tỉnh thực hiện như sau",
+      "text": "- Tổ chức họp Hội đồng để thẩm định trong thời hạn không quá 05 ngày làm việc kể từ ngày kết thúc thời hạn lấy ý kiến.\n- Trường hợp hồ sơ phương án sử dụng đất của công ty nông, lâm nghiệp không phải chỉnh sửa: trình Chủ tịch Ủy ban nhân dân tỉnh phê duyệt trong thời hạn không quá 05 ngày làm việc kể từ ngày thẩm định.\n- Trường hợp hồ sơ phương án sử dụng đất của công ty nông, lâm nghiệp phải chỉnh sửa:\n+ Thông báo cho công ty nông, lâm nghiệp để hoàn thiện hoàn thiện hồ sơ trong thời hạn không quá 03 ngày làm việc kể từ ngày thẩm định, nếu hồ sơ phương án sử dụng đất phải chỉnh sửa, bổ sung.\n+ Trình Chủ tịch Ủy ban nhân dân tỉnh phê duyệt phương án sử dụng đất trong thời hạn không quá 05 ngày làm việc kể từ ngày công ty nông, lâm nghiệp hoàn thiện hồ sơ."
+    },
+    {
+      "name": "Bước 5",
+      "text": "Chủ tịch Ủy ban nhân dân cấp tỉnh xem xét, phê duyệt phương án sử dụng đất trong thời hạn không quá 05 ngày làm việc kể từ ngày nhận được hồ sơ phương án sử dụng đất do cơ quan có chức năng quản lý đất đai cấp tỉnh trình."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Mẫu số 12. Văn bản đề nghị thẩm định, phê duyệt phương án sử dụng đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.000012",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f686e-47d4-705a-9b57-85d3461fd8f3",
+              "fileName": "Mẫu số 12 - Văn bản đề nghị thẩm định, phê duyệt phương án sử dụng đất.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f686e-47d4-705a-9b57-85d3461fd8f3/Mẫu số 12 - Văn bản đề nghị thẩm định, phê duyệt phương án sử dụng đất.docx"
+            }
+          ]
+        },
+        {
+          "name": "Bản đồ địa chính có thể hiện ranh giới sử dụng đất hoặc hồ sơ ranh giới sử dụng đất của công ty nông, lâm nghiệp; bản tổng hợp diện tích các loại đất của công ty nông, lâm nghiệp.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.00000109",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Tài liệu khác có liên quan (nếu có).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.00000110",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Phương án sử dụng đất; nội dung phương án sử dụng đất gồm: Căn cứ lập phương án sử dụng đất. Phân tích, đánh giá về điều kiện tự nhiên, kinh tế - xã hội, quốc phòng, an ninh. Định hướng sử dụng đất, phương hướng nhiệm vụ, phương án sản xuất, kinh doanh cụ thể của công ty nông, lâm nghiệp. Đánh giá tác động của phương án sử dụng đất đến kinh tế - xã hội, môi trường, quốc phòng, an ninh và phương án sản xuất, kinh doanh. Các giải pháp tổ chức thực hiện đối với phần diện tích đất công ty nông, lâm nghiệp giữ lại. Xác định vị trí, ranh giới, diện tích đất, hiện trạng sử dụng đất khu vực đất bàn giao cho địa phương theo quy định tại điểm d khoản 1 Điều 181 Luật Đất đai. Thuyết minh phương án sử dụng đất.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.00000108",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f690a-9cd4-7218-809d-9e3c2953c32e",
+    "updated_at": "2026-07-17T02:13:09.131Z",
+    "created_at": "2026-07-17T02:13:09.131Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

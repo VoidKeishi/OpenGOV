@@ -1,0 +1,139 @@
+{
+  "code": "1.013217",
+  "source_id": "019d2bfe-88fb-746f-9e8f-02beeafeaa1f",
+  "name": "Cấp lại chứng chỉ hành nghề hoạt động xây dựng",
+  "category": {
+    "code": "G17-XD11",
+    "name": "Hoạt động xây dựng"
+  },
+  "promulgating_agency": "Bộ Xây dựng",
+  "executing_agency": null,
+  "subject_types": [
+    "Người Việt Nam định cư ở nước ngoài",
+    "Công dân Việt Nam",
+    "Người nước ngoài"
+  ],
+  "results": [
+    "Chứng chỉ hành nghề hoạt động xây dựng"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 45,
+          "text": "Từ ngày 01/7/2025 đến hết ngày 31/12/2026 áp dụng theo quy định tại Thông tư số 64/2025/TT-BTC ngày 30/6/2025 của Bộ trưởng Bộ Tài chính quy định mức thu, miễn một số khoản phí, lệ phí nhằm hỗ trợ cho doanh nghiệp, người dân"
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 45,
+          "text": "Từ ngày 01/7/2025 đến hết ngày 31/12/2026 áp dụng theo quy định tại Thông tư số 64/2025/TT-BTC ngày 30/6/2025 của Bộ trưởng Bộ Tài chính quy định mức thu, miễn một số khoản phí, lệ phí nhằm hỗ trợ cho doanh nghiệp, người dân"
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 45,
+          "text": "Từ ngày 01/01/2026 áp dụng theo quy định tại Thông tư số 156/2025/TT-BTC ngày 31/12/2025 của Bộ trưởng Bộ Tài chính sửa đổi, bổ sung một số điều của Thông tư số 199/2016/TT-BTC ngày 08 tháng 11 năm 2016 của Bộ trưởng Bộ Tài chính quy định mức thu, chế độ thu, nộp, quản lý lệ phí cấp giấy chứng nhận bảo đảm chất lượng, an toàn kỹ thuật đối với máy, thiết bị, phương tiện giao thông vận tải có yêu cầu nghiêm ngặt về an toàn và Thông tư số 38/2022/TT-BTC ngày 24 tháng 6 năm 2022 của Bộ trưởng Bộ Tài chính quy định mức thu, chế độ thu, nộp lệ phí cấp giấy phép hoạt động xây dựng, lệ. phí cấp chứng chỉ hành nghề kiến trúc sư"
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "DAY"
+      },
+      "note": ""
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.013217.01",
+      "qty": 5,
+      "unit": "DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "144/2025/NĐ-CP",
+      "name": "quy định về phân quyền, phân cấp trong lĩnh vực quản lý nhà nước của Bộ Xây dựng"
+    },
+    {
+      "code": "175/2024/NĐ-CP",
+      "name": "Nghị định số 175/2024/NĐ-CP của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Xây dựng về quản lý hoạt động xây dựng"
+    },
+    {
+      "code": "14/2026/NĐ-CP",
+      "name": "sửa đổi, bổ sung một số điều của các Nghị định để cắt giảm, đơn giản hóa thủ tục hành chính liên quan đến hoạt động sản xuất, kinh doanh thuộc phạm vi quản lý của Bộ Xây dựng"
+    },
+    {
+      "code": "62/2020/QH14",
+      "name": "Luật số 62/2020/QH14 của Quốc hội: Luật sửa đổi, bổ sung một số điều của Luật Xây dựng"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "- Cá nhân nộp trực tiếp, qua dịch vụ bưu chính hoặc trực tuyến 01 bộ hồ sơ đề nghị cấp lại chứng chỉ hành nghề hoạt động xây dựng cho Trung tâm phục vụ hành chính công cấp tỉnh hoặc Tổ chức xã hội nghề nghiệp đủ điều kiện.\n- Trong thời hạn 05 ngày kể từ ngày tiếp nhận hồ sơ đề nghị, Sở Xây dựng hoặc Tổ chức xã hội nghề nghiệp đủ điều kiện có trách nhiệm kiểm tra hồ sơ, trường hợp hồ sơ không đầy đủ hoặc không hợp lệ, Sở Xây dựng hoặc Tổ chức xã hội nghề nghiệp phải thông báo một lần bằng văn bản tới cá nhân đề nghị cấp chứng chỉ hành nghề.\n- Trong thời hạn 05 ngày kể từ ngày nhận đủ hồ sơ hợp lệ, Sở Xây dựng hoặc Tổ chức xã hội nghề nghiệp cấp lại chứng chỉ hành nghề cho cá nhân đủ điều kiện. \n- Trong thời hạn không quá 05 ngày , kể từ ngày cấp chứng chỉ, Sở Xây dựng hoặc Tổ chức xã hội nghề nghiệp có trách nhiệm đăng tải thông tin về năng lực hoạt động xây dựng của cá nhân đã được cấp chứng chỉ hành nghề hoạt động xây dựng lên trang thông tin điện tử do mình quản lý, đồng thời tích hợp thông tin trên trang thông tin điện tử http://www.nangluchdxd.gov.vn.\n- Cá nhân đề nghị cấp lại chứng chỉ hành nghề thì không yêu cầu sát hạch.\n"
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "- Bản gốc chứng chỉ hành nghề đề nghị cấp lại. Trường hợp bị mất chứng chỉ hành nghề hoặc cấp lại chứng chỉ hành nghề đối với các lĩnh vực không bị thu hồi trên chứng chỉ hành nghề đã được cấp trước đó thì phải có cam kết của người đề nghị cấp lại;",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.G17-KQ002632",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Đơn đề nghị cấp chứng chỉ hành nghề theo Mẫu số 1 Phụ lục số IV Nghị định số 175/2024/NĐ-CP là bản gốc trong trường hợp nộp trực tiếp hoặc thông qua dịch vụ bưu chính; tệp tin chụp từ bản gốc trong trường hợp nộp trực tuyến.",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.G17-KQ002614",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Tệp tin ảnh màu cỡ 4x6 cm có nền màu trắng chân dung của người đề nghị cấp chứng chỉ hành nghề được chụp trong thời gian không quá 06 tháng.",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.G17-KQ002631",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "UPDATED",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019d2bfe-88fb-746f-9e8f-02beeafeaa1f",
+    "updated_at": "2026-04-18T12:59:01.187Z",
+    "created_at": "2026-04-18T12:59:01.187Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

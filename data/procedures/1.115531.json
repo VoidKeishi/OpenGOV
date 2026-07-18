@@ -1,0 +1,244 @@
+{
+  "code": "1.115531",
+  "source_id": "019f1cac-8a5d-715c-92ee-71d4c205def8",
+  "name": "Đăng ký đất đai đối với trường hợp chuyển nhượng dự án đầu tư có sử dụng đất (Dự án chưa được Giấy chứng nhận)",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Thanh Hóa",
+  "executing_agency": "Sở Nông nghiệp và Môi trường",
+  "subject_types": [
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Người nước ngoài cư trú tại Việt Nam",
+    "Người nước ngoài",
+    "Tổ chức nước ngoài",
+    "Hợp tác xã",
+    "Doanh nghiệp Việt Nam",
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài",
+    "Tổ chức Đảng"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "Đảm bảo các điều kiện về chuyển nhượng dự án có sử dụng đất theo quy định của pháp luật về đầu tư, pháp luật về kinh doanh bất động sản.",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Theo Quyết định số 2252/QĐ-VP ngày 02/7/2026 của Văn phòng Ủy ban nhân dân tỉnh Thanh Hóa"
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115531.01",
+      "qty": 18,
+      "unit": "WORKING_DAY"
+    },
+    {
+      "case_code": "1.115531.02",
+      "qty": 8,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    },
+    {
+      "code": "12/2025/NQ-HĐND",
+      "name": "Nghị quyết số 12/2025/NQ-HĐND ngày 24/6/2025 của Hội đồng nhân dân tỉnh Thanh Hóa về việc sửa đổi một số điều của Quy định mức thu, miễn, giảm, thu, nộp, quản lý và sử dụng các khoản phí, lệ phí thuộc thẩm quyền của Hội đồng nhân dân tỉnh ban hành kèm theo Nghị quyết số 28/2024/NQ-HĐND ngày 10/7/2024 của Hội đồng nhân dân tỉnh."
+    },
+    {
+      "code": "102/2024/NĐ-CP",
+      "name": "Nghị định 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai."
+    },
+    {
+      "code": "151/2025/NĐ-CP",
+      "name": "Quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai"
+    },
+    {
+      "code": "190/2025/QH15",
+      "name": "Nghị quyết số 190/2025/QH15 của Quốc hội: Quy định về xử lý một số vấn đề liên quan đến sắp xếp tổ chức bộ máy nhà nước"
+    },
+    {
+      "code": "Nghị định số 50/2026/NĐ-CP",
+      "name": "Quy định chi tiết một số điều của Nghị quyết số 254/2025/QH15 ngày 11 tháng 12 năm 2025 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn, vướng mắc trong tổ chức thi hành Luật Đất đai về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "28/2024/NQ-HĐND",
+      "name": "Nghị quyết 28/2024/NQ-HĐND ngày 10/7/2024 của Hội đồng nhân dân tỉnh Thanh Hóa ban hành quy định mức thu, miễn, giảm, thu, nộp, quản lý và sử dụng các khoản phí, lệ phí thuộc thẩm quyền của Hội đồng nhân tỉnh"
+    },
+    {
+      "code": "55/2026/QĐ",
+      "name": "Ban hành Quy định trình tự, thủ tục hành chính về đất đai trên địa bàn tỉnh Thanh Hóa"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến Bộ phận Một cửa để chuyển đến UBND cấp xã nơi có đất.\nKhi nộp hồ sơ, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định.\nBước 2: Bộ phận Một cửa thực hiện:\n- Kiểm tra tính đầy đủ của thành phần hồ sơ; cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả. Trường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Chuyển hồ sơ đến Sở Nông nghiệp và Môi trường\nBước 3: Sở Nông nghiệp và Môi trường thực hiện: \n- Kiểm tra hồ sơ, gửi Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai theo Mẫu số 15 tại Phụ lục IV ban hành kèm theo Quyết định này và hồ sơ kê khai xác định nghĩa vụ tài chính đến cơ quan thuế để xác định và thông báo thu nghĩa vụ tài chính.\n- Khi có thông tin từ cơ sở dữ liệu được liên thông hoặc chứng từ hoặc giấy tờ chứng minh đã hoàn thành nghĩa vụ tài chính thì ký cấp Giấy chứng nhận theo quy định.\n- Chuyển Giấy chứng nhận đến Bộ phận Một cửa để trả cho người sử dụng đất, chủ sở hữu tài sản gắn liền với đất; chuyển hồ sơ kèm theo bản sao Giấy chứng nhận đã cấp đến Văn phòng đăng ký đất đai để lập, cập nhật, chỉnh lý hồ sơ địa chính, cơ sở dữ liệu đất đai."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Mẫu số 25\tĐơn đăng ký đất đai, tài sản gắn liền với đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000057",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f3a76-7d64-718a-abff-264680b87e36",
+              "fileName": "Mẫu số 25.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f3a76-7d64-718a-abff-264680b87e36/Mẫu số 25.docx"
+            }
+          ]
+        },
+        {
+          "name": "Chứng từ chứng minh việc hoàn thành nghĩa vụ tài chính của bên chuyển nhượng và bên nhận chuyển nhượng dự án, quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất để thực hiện dự án",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000113",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản cho phép chuyển nhượng dự án hoặc một phần dự án của cơ quan có thẩm quyền theo quy định của pháp luật",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000167",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Hợp đồng chuyển nhượng dự án hoặc một phần dự án theo quy định của pháp luật",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000168",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Mảnh trích đo bản đồ địa chính đối với trường hợp chuyển nhượng một phần dự án đã được Văn phòng Đăng ký đất đai ký duyệt theo quy định",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000117",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Hồ sơ kê khai xác định nghĩa vụ tài chính: Tờ khai lệ phí trước bạ, tờ khai thuế phi nông nghiệp, tờ khai thuế thu nhập từ chuyển nhượng bất động sản (nếu có) theo mẫu do Bộ Tài chính quy định; Văn bản đề nghị miễn, giảm tiền thuê đất, tiền sử dụng đất theo Mẫu số 11 ban hành kèm theo Quyết định này và giấy tờ chứng minh thuộc đối tượng được miễn, giảm nghĩa vụ tài chính theo quy định (nếu có)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000179",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f3bc8-1a95-7681-bbc4-065d4c5f6965",
+              "fileName": "Mẫu số 11.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f3bc8-1a95-7681-bbc4-065d4c5f6965/Mẫu số 11.docx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f1cac-8a5d-715c-92ee-71d4c205def8",
+    "updated_at": "2026-07-08T09:15:59.270Z",
+    "created_at": "2026-07-08T09:15:59.270Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

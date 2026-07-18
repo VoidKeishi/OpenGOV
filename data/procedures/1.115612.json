@@ -1,0 +1,170 @@
+{
+  "code": "1.115612",
+  "source_id": "019f56e4-de5c-7284-b53d-9ec5e7b5cf06",
+  "name": "Đăng ký, cấp Giấy chứng nhận đối với thửa đất có diện tích tăng thêm do thay đổi ranh giới so với Giấy chứng nhận đã cấp đối với trường hợp thửa đất gốc đã có Giấy chứng nhận, phần diện tích tăng thêm do nhận chuyển quyền sử dụng một phần thửa đất đã được cấp Giấy chứng nhận",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND Thành phố Hải Phòng",
+  "executing_agency": "Chi nhánh Văn phòng đăng ký đất đai khu vực",
+  "subject_types": [
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Tổ chức nước ngoài",
+    "Người nước ngoài",
+    "Công dân Việt Nam",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Chi tiết tại biểu phí, lệ phí kèm theo"
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Không quá 05 ngày làm việc. Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 15 ngày làm việc.\n- Thời gian giải quyết được tính kể từ ngày nhận được hồ sơ đã đảm bảo tính đầy đủ, thống nhất; không tính thời gian đo đạc chỉnh lý bản đồ địa chính hoặc trích đo bản đồ địa chính, thời gian cơ quan có thẩm quyền xác định nghĩa vụ tài chính về đất đai, thời gian thực hiện nghĩa vụ tài chính của người sử dụng đất, thời gian xem xét xử lý đối với trường hợp sử dụng đất có vi phạm pháp luật, thời gian trưng cầu giám định, thời gian niêm yết công khai, đăng tin trên phương tiện thông tin đại chúng, thời gian thực hiện thủ tục chia thừa kế quyền sử dụng đất, tài sản gắn liền với đất đối với trường hợp thực hiện thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất mà người sử dụng đất, chủ sở hữu tài sản gắn liền với đất chết trước khi trao Giấy chứng nhận."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Chi tiết tại biểu phí, lệ phí kèm theo"
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Không quá 05 ngày làm việc. Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 15 ngày làm việc.\n- Thời gian giải quyết được tính kể từ ngày nhận được hồ sơ đã đảm bảo tính đầy đủ, thống nhất; không tính thời gian đo đạc chỉnh lý bản đồ địa chính hoặc trích đo bản đồ địa chính, thời gian cơ quan có thẩm quyền xác định nghĩa vụ tài chính về đất đai, thời gian thực hiện nghĩa vụ tài chính của người sử dụng đất, thời gian xem xét xử lý đối với trường hợp sử dụng đất có vi phạm pháp luật, thời gian trưng cầu giám định, thời gian niêm yết công khai, đăng tin trên phương tiện thông tin đại chúng, thời gian thực hiện thủ tục chia thừa kế quyền sử dụng đất, tài sản gắn liền với đất đối với trường hợp thực hiện thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất mà người sử dụng đất, chủ sở hữu tài sản gắn liền với đất chết trước khi trao Giấy chứng nhận."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Chi tiết tại biểu phí, lệ phí kèm theo"
+        }
+      ],
+      "processing": {
+        "qty": 5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Không quá 05 ngày làm việc. Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 15 ngày làm việc.\n- Thời gian giải quyết được tính kể từ ngày nhận được hồ sơ đã đảm bảo tính đầy đủ, thống nhất; không tính thời gian đo đạc chỉnh lý bản đồ địa chính hoặc trích đo bản đồ địa chính, thời gian cơ quan có thẩm quyền xác định nghĩa vụ tài chính về đất đai, thời gian thực hiện nghĩa vụ tài chính của người sử dụng đất, thời gian xem xét xử lý đối với trường hợp sử dụng đất có vi phạm pháp luật, thời gian trưng cầu giám định, thời gian niêm yết công khai, đăng tin trên phương tiện thông tin đại chúng, thời gian thực hiện thủ tục chia thừa kế quyền sử dụng đất, tài sản gắn liền với đất đối với trường hợp thực hiện thủ tục cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất mà người sử dụng đất, chủ sở hữu tài sản gắn liền với đất chết trước khi trao Giấy chứng nhận."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115612.01",
+      "qty": 5,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "43/2024/QH15",
+      "name": "Luật số 43/2024/QH15 ngày 29/6/2024"
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    },
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "52/2026/QĐ-UBND",
+      "name": "về việc phân cấp thực hiện một số nhiệm vụ trong lĩnh vực đất đai và trình tự, thủ tục hành chính về đất đai trên địa bàn thành phố Hải Phòng."
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ trực tuyến trên Cổng dịch vụ công quốc gia hoặc ứng dụng định danh quốc gia hoặc trực tiếp (hoặc thông qua dịch vụ bưu chính) Trung tâm Phục vụ hành chính công thành phố hoặc Trung tâm Phục vụ hành chính công cấp xã. \nKhi nộp các giấy tờ quy định, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực theo quy định của pháp luật.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định.\nBước 2: Trung tâm Phục vụ hành chính công thành phố hoặc Trung tâm Phục vụ hành chính công cấp xã:\n- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\nTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Chuyển hồ sơ đến Văn phòng Đăng ký đất đai hoặc Chi nhánh Văn phòng Đăng ký đất đai.\nBước 3. Văn phòng Đăng ký đất đai, Chi nhánh Văn phòng Đăng ký đất đai thực hiện các công việc sau:\n- Thông báo bằng văn bản cho bên chuyển quyền và niêm yết tại trụ sở Ủy ban nhân dân cấp xã nơi có đất về việc làm thủ tục cấp Giấy chứng nhận cho người nhận chuyển quyền. Trường hợp không rõ địa chỉ của người chuyển quyền để thông báo thì thực hiện đăng tin 03 lần trên phương tiện thông tin đại chúng ở địa phương, chi phí đăng tin do người đề nghị cấp Giấy chứng nhận trả.\n- Trường hợp có đơn đề nghị giải quyết tranh chấp thì hướng dẫn các bên nộp đơn đến cơ quan nhà nước có thẩm quyền giải quyết tranh chấp theo quy định.\n- Sau thời hạn 30 ngày, kể từ ngày thông báo hoặc đăng tin lần đầu tiên trên phương tiện thông tin đại chúng ở địa phương mà không có đơn đề nghị giải quyết tranh chấp thì thực hiện:\n+ Kiểm tra các điều kiện thực hiện quyền theo quy định của Luật Đất đai đối với trường hợp thực hiện quyền của người sử dụng đất, của chủ sở hữu tài sản gắn liền với đất; trường hợp không đủ điều kiện thực hiện quyền thì thông báo lý do và trả hồ sơ cho người yêu cầu đăng ký.\n+ Kiểm tra, ký duyệt mảnh trích đo bản đồ địa chính đối với trường hợp người sử dụng đất nộp mảnh trích đo bản đồ địa chính thửa đất để xác định lại kích thước các cạnh, diện tích của thửa đất.\n+ Trích lục bản đồ địa chính hoặc trích đo bản đồ địa chính thửa đất đối với nơi chưa có bản đồ địa chính hoặc chỉ có bản đồ địa chính dạng giấy đã rách nát, hư hỏng đối với trường hợp Giấy chứng nhận đã cấp chưa sử dụng bản đồ địa chính hoặc chưa sử dụng trích đo bản đồ địa chính thửa đất và người sử dụng đất có nhu cầu cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc thuộc trường hợp phải cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất.\n- Gửi Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai theo Mẫu số 25 Phụ lục số 04 ban hành kèm theo Quyết định số 52/2026/QĐ-UBND đến cơ quan thuế để xác định và thông báo thu nghĩa vụ tài chính đối với trường hợp phải thực hiện nghĩa vụ tài chính theo quy định của pháp luật.\n- Chỉnh lý, cập nhật biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai.\n- Cấp mới Giấy chứng nhận đối với toàn bộ diện tích đất;\n- Chuyển Giấy chứng nhận đến Trung tâm Phục vụ hành chính công thành phố hoặc Trung tâm Phục vụ hành chính công cấp xã để trao cho người được cấp.\nĐối với trường hợp phải thực hiện nghĩa vụ tài chính thì thực hiện các công việc quy định tại điểm này khi có thông tin từ cơ sở dữ liệu được liên thông hoặc chứng từ hoặc giấy tờ chứng minh đã hoàn thành nghĩa vụ tài chính."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 24 Phụ lục số 04 ban hành kèm theo Quyết định số 52/2026/QĐ-UBND",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000044",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f56d5-36b1-773f-90b8-ae5ab998156c",
+              "fileName": "Mẫu 24.pdf",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f56d5-36b1-773f-90b8-ae5ab998156c/Mẫu 24.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000002",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Giấy tờ về việc nhận chuyển quyền sử dụng đất của phần diện tích tăng thêm",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000052",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản về việc đại diện theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất thông qua người đại diện",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000053",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f56e4-de5c-7284-b53d-9ec5e7b5cf06",
+    "updated_at": "2026-07-13T10:17:12.836Z",
+    "created_at": "2026-07-13T10:17:12.836Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

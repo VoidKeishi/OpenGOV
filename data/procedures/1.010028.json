@@ -1,0 +1,136 @@
+{
+  "code": "1.010028",
+  "source_id": "019d2bf7-7f06-7316-a1c8-3255e08fe2f5",
+  "name": "Xóa đăng ký tạm trú",
+  "category": null,
+  "promulgating_agency": "Bộ Công an",
+  "executing_agency": "Công an cấp Xã",
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Hợp tác xã",
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Cán bộ, công chức, viên chức"
+  ],
+  "results": [
+    "Cập nhật thông tin trong Cơ sở dữ liệu quốc gia về dân cư",
+    "Thông báo kết quả giải quyết thủ tục về cư trú, hủy bỏ thủ tục về cư trú",
+    "Cập nhật thông tin trong Cơ sở dữ liệu về cư trú"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 2,
+        "unit": "WORKING_DAY"
+      },
+      "note": "-Nộp hồ sơ trực tuyến qua các cổng cung cấp dịch vụ công trực tuyến như: Trực tuyến qua Cổng dịch vụ công quốc gia, Cổng dịch vụ công Bộ Công an, ứng dụng VNeID hoặc dịch vụ công trực tuyến khác theo quy định của pháp luật. Thời gian tiếp nhận hồ sơ: Giờ hành chính các ngày làm việc từ thứ 2 đến thứ 6 và sáng thứ 7 hàng tuần (trừ các ngày nghỉ lễ, tết theo quy định của pháp luật)."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 2,
+        "unit": "WORKING_DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 2,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Nộp hồ sơ trực tiếp tại Công an cấp xã. Thời gian tiếp nhận hồ sơ: Giờ hành chính các ngày làm việc từ thứ 2 đến thứ 6 và sáng thứ 7 hàng tuần (trừ các ngày nghỉ lễ, tết theo quy định của pháp luật)."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.010028.01",
+      "qty": 2,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "56/2021/TT-BCA",
+      "name": "Thông tư 56/2021/TT-BCA"
+    },
+    {
+      "code": "54/2025/TT-BCA",
+      "name": "Thông tư số 54/2025/TT-BCA ngày 01/7/2025 của Bộ trưởng Bộ Công an quy định về quy trình đăng ký cư trú."
+    },
+    {
+      "code": "55/2021/TT-BCA",
+      "name": "Thông tư 55/2021/TT-BCA"
+    },
+    {
+      "code": "66/2023/TT-BCA",
+      "name": "Thông tư số 66/2023/TT-BCA Sửa đổi, bổ sung một số điều của Thông tư số 55/2021/TT-BCA ngày 15/5/2021 quy định chi tiết một số điều và biện pháp thi hành Luật Cư trú; Thông tư số 56/2021/TT-BCA ngày 15/5/2021 của Bộ trưởng Bộ Công an quy định về biểu mẫu trong đăng ký, quản lý cư trú; Thông tư số 57/2021/TT-BCA ngày 15/5/2021 của Bộ trưởng Bộ Công an quy định về quy trình đăng ký cư trú."
+    },
+    {
+      "code": "57/2021/TT-BCA",
+      "name": "Thông tư 57/2021/TT-BCA"
+    },
+    {
+      "code": "53/2025/TT-BCA",
+      "name": "Thông tư số 53/2025/TT-BCAngày 01/7/2025 của Bộ Công an sửa đổi, bổ sung một số điều của Thông tư số 55/2021/TT-BCA ngày 15 tháng 5 năm 2021 của Bộ trưởng Bộ Công an quy định chi tiết một số điều và biện pháp thi hành Luật Cư trú được sửa đổi, bổ sung bởi Thông tư số 66/2023/TT-BCA ngày 17 tháng 11 năm 2023; Thông tư số 56/2021/TT-BCA ngày 15 tháng 5 năm 2021 của Bộ trưởng Bộ Công an quy định về biểu mẫu trong đăng ký, quản lý cư trú được sửa đổi, bổ sung bởi Thông tư số 66/2023/TT-BCA ngày 17 tháng 11 năm 2023; Thông tư số 17/2024/TT-BCA ngày 15 tháng 5 năm 2024 của Bộ trưởng Bộ Công an quy định chi tiết một số điều và biện pháp thi hành Luật Căn cước."
+    },
+    {
+      "code": "68/2020/QH14",
+      "name": "Luật Cư trú 2020"
+    },
+    {
+      "code": "154/2024/NĐ-CP",
+      "name": "Nghị định quy định chi tiết một số điều và biện pháp thi hành Luật Cư trú"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Cá nhân, tổ chức chuẩn bị hồ sơ theo quy định của pháp luật.\n Bước 2: Cá nhân, tổ chức nộp hồ sơ đến Công an cấp xã.\n Bước 3: Khi tiếp nhận hồ sơ xóa đăng ký tạm trú, cơ quan đăng ký cư trú kiểm tra tính pháp lý và nội dung hồ sơ:\n- Trường hợp hồ sơ đã đầy đủ, hợp lệ thì tiếp nhận hồ sơ và cấp Phiếu tiếp nhận hồ sơ và hẹn trả kết quả (mẫu CT04 ban hành kèm theo Thông tư số 66/2023/TT-BCA) cho người đăng ký;\n- Trường hợp hồ sơ không đủ điều kiện thì từ chối và cấp Phiếu từ chối tiếp nhận, giải quyết hồ sơ (mẫu CT06 ban hành kèm theo Thông tư số 66/2023/TT-BCA) cho người đăng ký.\n Bước 4: Căn cứ theo ngày hẹn trên Phiếu tiếp nhận hồ sơ và hẹn trả kết quả để nhận thông báo kết quả giải quyết thủ tục đăng ký cư trú (nếu có).\n"
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Thông tin chứng minh thuộc trường hợp xóa đăng ký tạm trú của công dân trong Cơ sở dữ liệu quốc gia, cơ sở dữ liệu chuyên ngành và cơ sở dữ liệu khác được kết nối, chia sẻ với cơ quan đăng ký cư trú. Trường hợp thông tin chưa được kết nối, chia sẻ thì công dân xuất trình giấy tờ, tài liệu chứng minh thuộc một trong các trường hợp xóa đăng ký tạm trú quy định tại Điều 29 Luật Cư trú.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G01-KQ003643",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Tờ khai thay đổi thông tin cư trú (Mẫu CT01 ban hành kèm theo Thông  tư số 53/2025/TT-BCA).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.G01-KQ003642",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019dd01b-aa1c-71c0-9fe5-7c3cdde696e8",
+              "fileName": "1.MuCT01banhnhkmtheoThngts53 (5).doc",
+              "bucketName": "dvc",
+              "filePath": "configuring/019dd01b-aa1c-71c0-9fe5-7c3cdde696e8/1.MuCT01banhnhkmtheoThngts53 (5).doc"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "UPDATED",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019d2bf7-7f06-7316-a1c8-3255e08fe2f5",
+    "updated_at": "2026-04-27T18:03:14.066Z",
+    "created_at": "2026-03-26T21:05:33.446Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

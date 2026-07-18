@@ -1,0 +1,216 @@
+{
+  "code": "1.115336",
+  "source_id": "019f129d-7722-777f-9e28-df452409cb51",
+  "name": "Giao đất, cho thuê đất đối với trường hợp giao đất, cho thuê đất không đấu giá quyền sử dụng đất, không đấu thầu lựa chọn nhà đầu tư thực hiện dự án có sử dụng đất; trường hợp giao đất, cho thuê đất thông qua đấu thầu lựa chọn nhà đầu tư thực hiện dự án có sử dụng đất (Ban Quản lý Khu kinh tế tỉnh Gia Lai)",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Gia Lai",
+  "executing_agency": "Thuế tỉnh, thành phố",
+  "subject_types": [
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Doanh nghiệp",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)"
+  ],
+  "results": [
+    "Giấy chứng nhận quyền sử dụng đất; Giấy chứng nhận quyền sở hữu nhà ở và quyền sử dụng đất ở; Giấy chứng nhận quyền sở hữu nhà ở; Giấy chứng nhận quyền sở hữu công trình xây dựng; Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất; Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất",
+    "Quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất, giao đất và giao rừng, cho thuê đất và cho thuê rừng"
+  ],
+  "requirements": "- Ký quỹ hoặc các hình thức bảo đảm khác theo quy định của pháp luật về đầu tư.\n- Có năng lực tài chính để bảo đảm việc sử dụng đất theo tiến độ của dự án đầu tư và điều kiện khác theo quy định của pháp luật có liên quan.\n- Không vi phạm quy định của pháp luật về đất đai hoặc có vi phạm quy định của pháp luật về đất đai nhưng đã chấp hành xong quyết định, bản án đã có hiệu lực pháp luật của cơ quan có thẩm quyền tại thời điểm đề nghị giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất. Việc xác định người sử dụng đất vi phạm quy định của pháp luật về đất đai áp dụng đối với tất cả các thửa đất đang sử dụng trên địa bàn cả nước.",
+  "channels": [
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        }
+      ],
+      "processing": {
+        "qty": 6.25,
+        "unit": "WORKING_DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        }
+      ],
+      "processing": {
+        "qty": 6.25,
+        "unit": "WORKING_DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "nộp phí, lệ phí theo quy định của pháp luật về phí, lệ phí thì người sử dụng đất nộp phí, lệ phí cho cơ quan giải quyết thủ tục hành chính. Mức thu phí, lệ phí, việc quản lý, sử dụng phí, lệ phí thực hiện theo quy định của Chính phủ, Bộ trưởng Bộ Tài chính hoặc Hội đồng nhân dân cấp tỉnh đối với phí, lệ phí tương ứng"
+        }
+      ],
+      "processing": {
+        "qty": 6.25,
+        "unit": "WORKING_DAY"
+      },
+      "note": ""
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115336.01",
+      "qty": 6.25,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "102/2024/NĐ-CP",
+      "name": "Nghị định 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai."
+    },
+    {
+      "code": "103/2024/NĐ-CP",
+      "name": "Nghị định số 103/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "151/2025/NĐ-CP",
+      "name": "Quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai"
+    },
+    {
+      "code": "Nghị định số 50/2026/NĐ-CP",
+      "name": "Quy định chi tiết một số điều của Nghị quyết số 254/2025/QH15 ngày 11 tháng 12 năm 2025 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn, vướng mắc trong tổ chức thi hành Luật Đất đai về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "104/2026/QĐ-UBND",
+      "name": "Quy định trình tự, thủ tục hành chính về đất đai  trên địa bàn tỉnh Gia Lai"
+    },
+    {
+      "code": "16/2017/QH14",
+      "name": "Luật 16/2017/QH14"
+    },
+    {
+      "code": "2097/QĐ-UBND",
+      "name": "Về việc ủy quyền cho Trưởng ban Ban Quản lý Khu kinh tế tỉnh Gia Lai thực hiện một số nhiệm vụ trong lĩnh vực đất đai trong khu kinh tế trên địa bàn tỉnh Gia Lai"
+    },
+    {
+      "code": "156/2018/NĐ-CP",
+      "name": "Nghị định 156/2018/NĐ-CP"
+    },
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "291/2025/NĐ-CP",
+      "name": "Nghị định số 291/2025/NĐ-CP của Chính phủ: Sửa đổi, bổ sung một số điều của Nghị định số 103/2024/NĐ-CP ngày 30 tháng 7 năm 2024 của Chính phủ quy định về tiền sử dụng đất, tiền thuê đất và Nghị định số 104/2024/NĐ-CP ngày 31 tháng 7 năm 2024 của Chính phủ quy định về Quỹ phát triển đất"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "Nghị định số 131/2025/NĐ-CP",
+      "name": "Quy định phân định thẩm quyền của chính quyền địa phương 02 cấp trong lĩnh vực quản lý nhà nước của Bộ Nông nghiệp và Môi trường"
+    },
+    {
+      "code": "136/2025/NĐ-CP",
+      "name": "Nghị định Quy định phân quyền, phân cấp trong lĩnh vực nông nghiệp"
+    },
+    {
+      "code": "09./2025/NQ-HĐND",
+      "name": "Nghị quyết 09/2025/NQ-HĐND của Hội đồng nhân dân tỉnh Gia Lai quy định các loại phí và lệ phí trên địa bàn tỉnh Gia Lai thuộc thẩm quyền quyết định của Hội đồng nhân dân tỉnh"
+    },
+    {
+      "code": "72/2025/QH15",
+      "name": "Luật Tổ chức chính quyền địa phương"
+    },
+    {
+      "code": "2418/QĐ-BTNMT",
+      "name": "VỀ VIỆC ĐÍNH CHÍNH NGHỊ ĐỊNH SỐ 151/2025/NĐ-CP NGÀY 12 THÁNG 6 NĂM 2025 CỦA CHÍNH PHỦ QUY ĐỊNH VỀ PHÂN ĐỊNH THẨM QUYỀN CỦA CHÍNH QUYỀN ĐỊA PHƯƠNG 02 CẤP, PHÂN QUYỀN, PHÂN CẤP TRONG LĨNH VỰC ĐẤT ĐAI"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "* Trường hợp người sử dụng đất phải nộp tiền sử dụng đất, tiền thuê đất tính theo bảng giá đất",
+      "text": "Bước 1. Người đề nghị nộp hồ sơ đến Trung tâm Phục vụ hành chính công tỉnh hoặc xã\n- Khi nộp hồ sơ, người nộp hồ sơ được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra, đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực. Trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\n- Trường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường).\nBước 2: Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường)\n- Rà soát, kiểm tra hồ sơ; kiểm tra thực địa.\n- Chủ trì, phối hợp các cơ quan có liên quan xác định trường hợp được miễn tiền sử dụng đất, tiền thuê đất (nếu có).\n- Dự thảo các văn bản (Báo cáo thẩm tra giao đất, cho thuê đất của Phòng Quản lý Tài nguyên và Môi trường, Quyết định giao đất, cho thuê đất của Trưởng ban Ban Quản lý Khu kinh tế) trình Lãnh đạo Phòng Quản lý Tài nguyên và Môi trường thông qua, trình Lãnh đạo Ban Quản lý Khu kinh tế ký duyệt.\n- Ký duyệt Quyết định giao đất, cho thuê đất\nBước 3: Chuyển Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai cho Thuế tỉnh.\nBước 4:  Xác định nghĩa vụ tài chính về đất đai\n4.1. Thuế tỉnh Gia Lai\n- Xác định tiền sử dụng đất, tiền thuê đất phải nộp theo quy định; xác định tiền thuê đất phải nộp một số năm đối với trường hợp được miễn tiền thuê đất một số năm sau thời gian được miễn tiền thuê đất của thời gian xây dựng cơ bản; xác định tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa phải nộp theo quy định (nếu có).\n- Ban hành thông báo nộp tiền sử dụng đất, tiền thuê đất, tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa (nếu có) gửi cho người sử dụng đất.\n4.2. Người sử dụng đất: Nộp tiền sử dụng đất, tiền thuê đất theo quy định của pháp luật về tiền sử dụng đất, tiền thuê đất; nộp tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa (nếu có).\n4.3. Thuế tỉnh Gia Lai: Xác nhận hoàn thành việc nộp tiền sử dụng đất, tiền thuê đất, tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa (nếu có) và gửi thông báo kết quả cho Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường).\nBước 5: Phòng Quản lý Tài nguyên và Môi trường sau khi nhận được văn bản của Cơ quan Thuế xác nhận Người sử dụng đất hoàn thành nghĩa vụ tài chính.\n5.1. Chuyên viên xử lý hồ sơ chuyển hồ sơ đến Chi cục Quản lý đất đai.\n5.2. Chi cục Quản lý đất đai: In Giấy chứng nhận quyền sử dụng đất, trình Giám đốc Sở Nông nghiệp và Môi trường ký Giấy chứng nhận;  Chuyển hồ sơ đến Văn phòng đăng ký đất đai để thực hiện cập nhật, chỉnh lý cơ sở dữ liệu đất đai, hồ sơ địa chính; Chuyển Giấy chứng nhận quyền sử dụng đất cho Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường).\n5.3. Phòng Quản lý Tài nguyên và Môi trường:\n   - Chuyển kết quả đã giải quyết cho Trung tâm Phục vụ hành chính công tỉnh để trả kết quả: 0,25 ngày.\n   - Tổ chức bàn giao đất trên thực địa.\nBước 6: Trung tâm Phục vụ hành chính công tỉnh tiếp nhận và trả kết quả giải quyết."
+    },
+    {
+      "name": "* Trường hợp người sử dụng đất thuộc trường hợp giao đất không thu tiền sử dụng đất, nhưng phải nộp một khoản tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa (nếu có)",
+      "text": "Bước 1. Người đề nghị nộp hồ sơ đến Trung tâm Phục vụ hành chính công tỉnh hoặc xã\n- Khi nộp hồ sơ, người nộp hồ sơ được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra, đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực. Trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\n- Trường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường).\nBước 2: Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường)\n- Rà soát, kiểm tra hồ sơ; kiểm tra thực địa.\n- Chủ trì, phối hợp các cơ quan có liên quan xác định trường hợp được miễn tiền sử dụng đất, tiền thuê đất (nếu có).\n- Dự thảo các văn bản (Báo cáo thẩm tra giao đất, cho thuê đất của Phòng Quản lý Tài nguyên và Môi trường, Quyết định giao đất, cho thuê đất của Trưởng ban Ban Quản lý Khu kinh tế) trình Lãnh đạo Phòng Quản lý Tài nguyên và Môi trường thông qua, trình Lãnh đạo Ban Quản lý Khu kinh tế ký duyệt.\n- Ký duyệt Quyết định giao đất, cho thuê đất\nBước 3: Chuyển Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai cho Thuế tỉnh Gia Lai.\n\tBước 4: Xác định nghĩa vụ tài chính về đất đai\n4.1. Thuế tỉnh Gia Lai\n   - Xác định tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa phải nộp theo quy định (nếu có).\n   - Ban hành thông báo nộp tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa (nếu có) gửi cho người sử dụng đất.\n4.2. Người sử dụng đất: Nộp tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa (nếu có).\n4.3. Thuế tỉnh Gia Lai: Xác nhận hoàn thành việc nộp tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa (nếu có) và gửi thông báo kết quả cho Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường).\n\tBước 5. Phòng Quản lý Tài nguyên và Môi trường sau khi nhận được văn bản của Cơ quan Thuế xác nhận Người sử dụng đất hoàn thành nghĩa vụ tài chính.\n5.1. Chuyên viên xử lý hồ sơ chuyển hồ sơ đến Chi cục Quản lý đất đai.\n5.2. Chi cục Quản lý đất đai: In Giấy chứng nhận quyền sử dụng đất, trình Giám đốc Sở Nông nghiệp và Môi trường ký Giấy chứng nhận;  Chuyển hồ sơ đến Văn phòng đăng ký đất đai để thực hiện cập nhật, chỉnh lý cơ sở dữ liệu đất đai, hồ sơ địa chính; Chuyển Giấy chứng nhận quyền sử dụng đất cho Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường).\n5.3. Phòng Quản lý Tài nguyên và Môi trường\n   - Chuyển kết quả đã giải quyết cho Trung tâm Phục vụ hành chính công tỉnh để trả kết quả.\n   - Tổ chức bàn giao đất trên thực địa.\nBước 6. Trung tâm Phục vụ hành chính công tỉnh tiếp nhận và trả kết quả giải quyết."
+    },
+    {
+      "name": "* Trường hợp người sử dụng đất phải nộp tiền sử dụng đất, tiền thuê đất tính theo giá đất cụ thể",
+      "text": "Bước 1. Người đề nghị nộp hồ sơ đến Trung tâm Phục vụ hành chính công tỉnh hoặc xã\n- Khi nộp hồ sơ, người nộp hồ sơ được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra, đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực. Trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\n- Trường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường).\nBước 2: Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường)\n- Rà soát, kiểm tra hồ sơ; kiểm tra thực địa.\n- Chủ trì, phối hợp các cơ quan có liên quan xác định trường hợp được miễn tiền sử dụng đất, tiền thuê đất (nếu có).\n- Dự thảo các văn bản (Báo cáo thẩm tra giao đất, cho thuê đất của Phòng Quản lý Tài nguyên và Môi trường, Quyết định giao đất, cho thuê đất của Trưởng ban Ban Quản lý Khu kinh tế) trình Lãnh đạo Phòng Quản lý Tài nguyên và Môi trường thông qua, trình Lãnh đạo Ban Quản lý Khu kinh tế ký duyệt.\n- Ký duyệt Quyết định giao đất, cho thuê đất\nBước 3. Tổ chức việc xác định giá đất cụ thể\n3.1. Chuyên viên xử lý hồ sơ: Tham mưu việc xác định giá đất cụ thể, trình Chủ tịch Ủy ban nhân dân tỉnh ban hành quyết định phê duyệt giá đất cụ thể có nội dung về trách nhiệm của cơ quan thuế trong việc hướng dẫn người sử dụng đất nộp tiền sử dụng đất, tiền thuê đất.\n3.2. Văn phòng UBND tỉnh: Thẩm tra, trình Chủ tịch UBND tỉnh xem xét, ban hành Quyết định phê duyệt giá đất cụ thể; chuyển kết quả cho Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường).\n3.3. Phòng Quản lý Tài nguyên và Môi trường: Chuyển Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai cho Thuế tỉnh Gia Lai.\n3.4. Thuế Gia Lai\n  - Xác định tiền sử dụng đất, tiền thuê đất phải nộp theo quy định; xác định tiền thuê đất phải nộp một số năm đối với trường hợp được miễn tiền thuê đất một số năm sau thời gian được miễn tiền thuê đất của thời gian xây dựng cơ bản; xác định tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa phải nộp theo quy định (nếu có).\n  - Ban hành thông báo nộp tiền sử dụng đất, tiền thuê đất, tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa (nếu có) gửi cho người sử dụng đất.\n3.5. Người sử dụng đất: Nộp tiền sử dụng đất, tiền thuê đất theo quy định của pháp luật về tiền sử dụng đất, tiền thuê đất; nộp tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa (nếu có).\n3.6. Cơ quan Thuế: Xác nhận hoàn thành việc nộp tiền sử dụng đất, tiền thuê đất, tiền để nhà nước bổ sung diện tích đất chuyên trồng lúa bị mất hoặc tăng hiệu quả sử dụng đất trồng lúa (nếu có) và gửi thông báo kết quả cho Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường).\nBước 4. Phòng Quản lý Tài nguyên và Môi trường sau khi nhận được văn bản của Cơ quan Thuế xác nhận Người sử dụng đất hoàn thành nghĩa vụ tài chính.\n4.1. Chuyên viên xử lý hồ sơ chuyển hồ sơ đến Chi cục Quản lý đất đai.\n4.2. Chi cục Quản lý đất đai: In Giấy chứng nhận quyền sử dụng đất, trình Giám đốc Sở Nông nghiệp và Môi trường ký Giấy chứng nhận;  Chuyển hồ sơ đến Văn phòng đăng ký đất đai để thực hiện cập nhật, chỉnh lý cơ sở dữ liệu đất đai, hồ sơ địa chính; Chuyển Giấy chứng nhận quyền sử dụng đất cho Ban Quản lý Khu kinh tế (Phòng Quản lý Tài nguyên và Môi trường).\n4.3. Phòng Quản lý Tài nguyên và Môi trường\n - Chuyển kết quả đã giải quyết cho Trung tâm Phục vụ hành chính công tỉnh để trả kết quả.\n - Tổ chức bàn giao đất trên thực địa."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Trích lục bản đồ địa chính thửa đất hoặc trích đo địa chính thửa đất.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.BQL.0001",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Đơn theo Mẫu số 01 ban hành kèm theo Quyết định số 104/2026/QĐ-UBND ngày 29/6/2026",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.H21.000023",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f138b-d3b4-753a-a021-a66bd8ed590f",
+              "fileName": "Mẫu số 01.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f138b-d3b4-753a-a021-a66bd8ed590f/Mẫu số 01.docx"
+            }
+          ]
+        },
+        {
+          "name": "Chứng từ nộp tiền kỹ quỹ đầu tư theo quy định",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.BQL.0003",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Quyết định chuyển mục đích sử dụng rừng (nếu có)",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "TPHS.BQL.0004",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f129d-7722-777f-9e28-df452409cb51",
+    "updated_at": "2026-06-29T15:25:15.298Z",
+    "created_at": "2026-06-29T15:25:15.298Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

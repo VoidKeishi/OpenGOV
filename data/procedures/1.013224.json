@@ -1,0 +1,129 @@
+{
+  "code": "1.013224",
+  "source_id": "019d2bfe-9094-74d9-8a37-6cd6f710a627",
+  "name": "Cấp điều chỉnh giấy phép hoạt động xây dựng cho nhà thầu nước ngoài..",
+  "category": {
+    "code": "G17-XD11",
+    "name": "Hoạt động xây dựng"
+  },
+  "promulgating_agency": "Bộ Xây dựng",
+  "executing_agency": null,
+  "subject_types": [
+    "Người nước ngoài",
+    "Tổ chức nước ngoài"
+  ],
+  "results": [
+    "Quyết định điều chỉnh Giấy phép hoạt động xây dựng cho nhà thầu nước ngoài theo Nghị định số 175/2024/NĐ-CP."
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 500,
+          "text": "Từ ngày 01/01/2026 áp dụng theo quy định tại Thông tư số 156/2025/TT-BTC ngày 31/12/2025"
+        }
+      ],
+      "processing": {
+        "qty": 6,
+        "unit": "DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 500,
+          "text": "Từ ngày 01/01/2026 áp dụng theo quy định tại Thông tư số 156/2025/TT-BTC ngày 31/12/2025"
+        }
+      ],
+      "processing": {
+        "qty": 6,
+        "unit": "DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 500,
+          "text": "Từ ngày 01/01/2026 áp dụng theo quy định tại Thông tư số 156/2025/TT-BTC ngày 31/12/2025"
+        }
+      ],
+      "processing": {
+        "qty": 6,
+        "unit": "DAY"
+      },
+      "note": ""
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.013224.01",
+      "qty": 10,
+      "unit": "DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "144/2025/NĐ-CP",
+      "name": "quy định về phân quyền, phân cấp trong lĩnh vực quản lý nhà nước của Bộ Xây dựng"
+    },
+    {
+      "code": "175/2024/NĐ-CP",
+      "name": "Nghị định số 175/2024/NĐ-CP của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Xây dựng về quản lý hoạt động xây dựng"
+    },
+    {
+      "code": "31/2026/TT-BTC",
+      "name": "Thông tư quy định về phân cấp thực hiện một số nhiệm vụ, quyền hạn trong lĩnh vực  quản lý nhà nước của Bộ Tài chính"
+    },
+    {
+      "code": "62/2020/QH14",
+      "name": "Luật số 62/2020/QH14 của Quốc hội: Luật sửa đổi, bổ sung một số điều của Luật Xây dựng"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "- Nhà thầu nước ngoài nộp trực tiếp hoặc trực tuyến hoặc qua dịch vụ bưu chính 01 bộ hồ sơ đề nghị điều chỉnh giấy phép hoạt động xây dựng cho Trung tâm phục vụ hành chính công cấp tỉnh.\n\t\t- Trong thời hạn 06 ngày  kể từ ngày nhận đủ hồ sơ hợp lệ, Sở Xây dựng cấp Quyết định điều chỉnh giấy phép hoạt động xây dựng cho nhà thầu nước ngoài. Trường hợp không cấp, Sở Xây dựng phải trả lời bằng văn bản cho nhà thầu và nêu rõ lý do. \n\n"
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "- Các tài liệu chứng minh cho nội dung đề nghị điều chỉnh. Các tài liệu  phải được dịch ra tiếng Việt và được công chứng, chứng thực theo quy định của pháp luật Việt Nam.",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.G17-KQ002667",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Đơn đề nghị điều chỉnh giấy phép hoạt động xây dựng theo Mẫu số 08 Phụ lục số III Nghị định số 175/2024/NĐ-CP.",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.G17-KQ002666",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "UPDATED",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019d2bfe-9094-74d9-8a37-6cd6f710a627",
+    "updated_at": "2026-05-14T03:32:48.543Z",
+    "created_at": "2026-03-26T21:13:16.692Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

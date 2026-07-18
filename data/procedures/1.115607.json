@@ -1,0 +1,189 @@
+{
+  "code": "1.115607",
+  "source_id": "019f56bf-93da-72a4-b429-63d357eed18a",
+  "name": "Sử dụng đất kết hợp đa mục đích; gia hạn sử dụng đất kết hợp đa mục đích",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND Thành phố Hải Phòng",
+  "executing_agency": "Sở Nông nghiệp và Môi trường",
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài",
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Tổ chức nước ngoài"
+  ],
+  "results": [
+    "Phương án sử dụng đất kết hợp"
+  ],
+  "requirements": "Người đề nghị sử dụng đất kết hợp đa mục đích phải đảm bảo quy định tại Điều 99 Nghị định số 102/2024/NĐ-CP (được sửa đổi, bổ sung tại Nghị định số 226/2025/NĐ-CP).",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 7.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 7,5 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ đối với trường hợp phê duyệt phương án sử dụng đất kết hợp đa mục đích. Đối với khu vực miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 17,5 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ đối với trường hợp phê duyệt phương án sử dụng đất kết hợp đa mục đích"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 7.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 7,5 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ đối với trường hợp phê duyệt phương án sử dụng đất kết hợp đa mục đích. Đối với khu vực miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 17,5 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ đối với trường hợp phê duyệt phương án sử dụng đất kết hợp đa mục đích"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 7.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 7,5 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ đối với trường hợp phê duyệt phương án sử dụng đất kết hợp đa mục đích. Đối với khu vực miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 17,5 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ đối với trường hợp phê duyệt phương án sử dụng đất kết hợp đa mục đích"
+    },
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 3.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 3,5 ngày làm việc đối với trường hợp phê duyệt gia hạn phương án sử dụng đất kết hợp đa mục đích. Đối với khu vực miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 13,5 ngày làm việc đối với trường hợp phê duyệt gia hạn phương án sử dụng đất kết hợp đa mục đích."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 3.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 3,5 ngày làm việc đối với trường hợp phê duyệt gia hạn phương án sử dụng đất kết hợp đa mục đích. Đối với khu vực miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 13,5 ngày làm việc đối với trường hợp phê duyệt gia hạn phương án sử dụng đất kết hợp đa mục đích."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 3.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 3,5 ngày làm việc đối với trường hợp phê duyệt gia hạn phương án sử dụng đất kết hợp đa mục đích. Đối với khu vực miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 13,5 ngày làm việc đối với trường hợp phê duyệt gia hạn phương án sử dụng đất kết hợp đa mục đích."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115607.01",
+      "qty": 7.5,
+      "unit": "WORKING_DAY"
+    },
+    {
+      "case_code": "1.115607.02",
+      "qty": 3.5,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "52/2026/QĐ-UBND",
+      "name": "về việc phân cấp thực hiện một số nhiệm vụ trong lĩnh vực đất đai và trình tự, thủ tục hành chính về đất đai trên địa bàn thành phố Hải Phòng."
+    },
+    {
+      "code": "29/2023/QH15",
+      "name": "Luật Kinh doanh bất động sản"
+    },
+    {
+      "code": "27/2023/QH15",
+      "name": "Luật Nhà ở số 27/2023/QH15"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "102/2024/NĐ-CP",
+      "name": "Nghị định 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai."
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "43/2024/QH15",
+      "name": "Luật số 43/2024/QH15 ngày 29/6/2024"
+    },
+    {
+      "code": "Luật số 32/2024/QH15",
+      "name": "Luật Các tổ chức tín dụng"
+    },
+    {
+      "code": "2628/QĐ-UBND",
+      "name": "Ủy quyền thực hiện một số nhiệm vụ trong lĩnh vực đất đai theo quy định tại Điều 14 Nghị định số 49/2026/NĐ-CP ngày 31/01/2026 quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội."
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Trình tự, thủ tục sử dụng đất kết hợp với mục đích thương mại dịch vụ",
+      "text": "- Người sử dụng đất nộp 01 bộ hồ sơ quy định cho cơ quan tiếp nhận hồ sơ và trả kết quả.\n- Sở Nông nghiệp và Môi trường chủ trì, phối hợp với các sở, ngành, đơn vị có liên quan thẩm định phương án sử dụng đất kết hợp trình Chủ tịch Uỷ ban nhân dân thành phố.\n- Chủ tịch Ủy ban nhân dân thành phố xem xét, chấp thuận hoặc không chấp thuận phương án sử dụng đất kết hợp."
+    },
+    {
+      "name": "Gia hạn phương án sử dụng đất kết hợp với mục đích thương mại dịch vụ",
+      "text": "- Người sử dụng đất có nhu cầu gia hạn nộp 01 bộ hồ sơ cho cơ quan tiếp nhận hồ sơ và trả kết quả.\n- Sở Nông nghiệp và Môi trường chủ trì, phối hợp với các sở, ngành, đơn vị thẩm định hồ sơ, trình Chủ tịch Uỷ ban nhân dân thành phố.\n- Chủ tịch Ủy ban nhân dân thành phố xem xét, gia hạn phương án sử dụng đất kết hợp đa mục đích."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Đơn đề nghị sử dụng đất kết hợp đa mục đích hoặc gia hạn sử dụng đất kết hợp đa mục đích theo Mẫu số 20 Phụ lục số 04 ban hành kèm theo Quyết định số 52/2026/QĐ-UBND ngày 30/6/2026 của Ủy ban nhân dân thành phố (bản chính);",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000034",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f56bc-5891-7595-a3ca-1e0a69acb2f0",
+              "fileName": "Mẫu 20.pdf",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f56bc-5891-7595-a3ca-1e0a69acb2f0/Mẫu 20.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Phương án sử dụng đất kết hợp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000035",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp hoặc một trong các loại giấy tờ quy định tại Điều 137 Luật Đất đai số 31/2024/QH15",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "TP-H24.000036",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f56bf-93da-72a4-b429-63d357eed18a",
+    "updated_at": "2026-07-13T10:17:10.723Z",
+    "created_at": "2026-07-13T10:17:10.723Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

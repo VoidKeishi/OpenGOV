@@ -9,3 +9,6 @@ dist/
 .vercel/
 # HTML snapshots are large & only intermediate; screenshots + tokens are committed as evidence
 tools/capture/output/html/
+/notes
+# SQLite DB is a build artifact — rebuilt from committed data/ by backend/scripts/seed.ts
+backend/var/

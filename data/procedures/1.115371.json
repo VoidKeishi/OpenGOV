@@ -1,0 +1,156 @@
+{
+  "code": "1.115371",
+  "source_id": "019f1373-4d06-74e3-a1f3-a9f9817ef066",
+  "name": "Xác định lại diện tích đất ở của hộ gia đình, cá nhân đã được cấp Giấy chứng nhận trước ngày 01 tháng 7 năm 2004",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Gia Lai",
+  "executing_agency": "Ủy ban nhân dân cấp xã",
+  "subject_types": [
+    "Công dân Việt Nam"
+  ],
+  "results": [
+    "Giấy chứng nhận quyền sử dụng đất; Giấy chứng nhận quyền sở hữu nhà ở và quyền sử dụng đất ở; Giấy chứng nhận quyền sở hữu nhà ở; Giấy chứng nhận quyền sở hữu công trình xây dựng; Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất; Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Nghị quyết số 09/2025/NQ-HĐND ngày 27/10/2025."
+        }
+      ],
+      "processing": {
+        "qty": 21.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 11,5 ngày làm việc.\nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Nghị quyết số 09/2025/NQ-HĐND ngày 27/10/2025."
+        }
+      ],
+      "processing": {
+        "qty": 21.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 11,5 ngày làm việc.\nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Nghị quyết số 09/2025/NQ-HĐND ngày 27/10/2025."
+        }
+      ],
+      "processing": {
+        "qty": 21.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 11,5 ngày làm việc.\nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm 10 ngày làm việc."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115371.01",
+      "qty": 11.5,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai ngày 18/01/2024;"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "09/2025/NQ-HĐND",
+      "name": "quy định các loại phí và lệ phí trên địa bàn tỉnh Gia Lai thuộc thẩm quyền quyết định của Hội đồng nhân dân tỉnh"
+    },
+    {
+      "code": "151/2025/NĐ-CP",
+      "name": "Quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai"
+    },
+    {
+      "code": "Nghị định số 50/2026/NĐ-CP",
+      "name": "Quy định chi tiết một số điều của Nghị quyết số 254/2025/QH15 ngày 11 tháng 12 năm 2025 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn, vướng mắc trong tổ chức thi hành Luật Đất đai về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "104/2026/QĐ-UBND",
+      "name": "Quy định trình tự, thủ tục hành chính về đất đai  trên địa bàn tỉnh Gia Lai"
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến Trung tâm Phục vụ hành chính công cấp xã.\nKhi nộp các giấy tờ quy định, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực theo quy định của pháp luật.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định.\nBước 2: Cơ quan tiếp nhận hồ sơ thực hiện:\n-\tKiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\nTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n-\tChuyển hồ sơ đến cơ quan có chức năng quản lý đất đai cấp xã.\nBước 3: Cơ quan có chức năng quản lý đất đai cấp xã thực hiện:\n-\tThông báo cho Chi nhánh Văn phòng đăng ký đất đai cung cấp hồ sơ cấp giấy chứng nhận lần đầu.\n-\tKiểm tra hồ sơ cấp giấy chứng nhận trước đây, trường hợp đủ điều kiện xác định lại diện tích đất ở theo quy định tại khoản 6 Điều 141 Luật Đất đai thì trình Chủ tịch Ủy ban nhân dân cấp xã xác định lại diện tích đất ở và cấp Giấy chứng nhận cho người sử dụng đất.\n-\tChuyển Giấy chứng nhận đến cơ quan tiếp nhận hồ sơ để trao cho người được cấp.\n-\tChuyển hồ sơ kèm theo bản sao Giấy chứng nhận đã cấp đến Chi nhánh Văn phòng đăng ký đất đai để chỉnh lý, cập nhật biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 18 ban hành kèm theo Quyết định số 104/2026/QĐ-UBND của UBND tỉnh",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.H21.000010",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f12b1-fe36-754c-ab96-26c06beec501",
+              "fileName": "Mẫu số_ 18.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f12b1-fe36-754c-ab96-26c06beec501/Mẫu số_ 18.docx"
+            }
+          ]
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp (bản gốc)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.15",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản về việc đại diện theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất thông qua người đại diện",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TPHS.08",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f1373-4d06-74e3-a1f3-a9f9817ef066",
+    "updated_at": "2026-07-01T05:49:06.935Z",
+    "created_at": "2026-06-30T08:17:08.789Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

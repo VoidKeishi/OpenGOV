@@ -1,0 +1,23 @@
+{
+  "_draft": "DRAFT (agent-drafted, pending human approval — DATA.md §5). Colloquial search phrases per pilot procedure; seed loads these into the aliases table + FTS aliases column. Keys prefixed with '_' are ignored by the seeder.",
+  "1.001193": [
+    "làm giấy khai sinh",
+    "khai sinh cho con",
+    "khai sinh cho bé",
+    "đăng ký khai sinh online",
+    "làm khai sinh muộn"
+  ],
+  "1.004222": [
+    "nhập hộ khẩu",
+    "đăng ký hộ khẩu",
+    "chuyển hộ khẩu",
+    "nhập khẩu cho vợ",
+    "nhập khẩu cho con"
+  ],
+  "1.013225": [
+    "xin giấy phép xây nhà",
+    "giấy phép xây dựng nhà ở",
+    "xin phép xây nhà cấp 4",
+    "GPXD nhà ở riêng lẻ"
+  ]
+}

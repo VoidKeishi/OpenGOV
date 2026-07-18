@@ -1,0 +1,202 @@
+{
+  "code": "1.115730",
+  "source_id": "019f68db-7226-74cc-baef-7c72adbd8256",
+  "name": "Đăng ký biến động chuyển mục đích sử dụng đất không phải xin phép cơ quan nhà nước có thẩm quyền",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Lạng Sơn",
+  "executing_agency": "Chi nhánh Văn phòng đăng ký đất đai khu vực",
+  "subject_types": [
+    "Người Việt Nam định cư ở nước ngoài",
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Người nước ngoài",
+    "Tổ chức nước ngoài",
+    "Công dân Việt Nam",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)"
+  ],
+  "results": [
+    "Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất."
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        }
+      ],
+      "processing": {
+        "qty": "Không quá 10 ngày làm việc  \tĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm không quá 10 ngày làm việc so với tổng thời gian thực hiện thủ tục này.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công tỉnh/xã"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        }
+      ],
+      "processing": {
+        "qty": "Không quá 10 ngày làm việc  \tĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm không quá 10 ngày làm việc so với tổng thời gian thực hiện thủ tục này.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp trực tuyến tại địa chỉ https://dichvucong.gov.vn"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        }
+      ],
+      "processing": {
+        "qty": "Không quá 10 ngày làm việc  \tĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện được tăng thêm không quá 10 ngày làm việc so với tổng thời gian thực hiện thủ tục này.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích."
+    }
+  ],
+  "processing_cases": [],
+  "legal_basis": [
+    {
+      "code": "95/2025/QH1",
+      "name": "Luật Đường sắt ngày 27 tháng 6 năm 2025"
+    },
+    {
+      "code": "84/2025/QH15",
+      "name": "Luật Thanh tra năm 2025"
+    },
+    {
+      "code": "Luật số 146/2025/QH15",
+      "name": "Luật sửa đổi, bổ sung một số điều của 15 luật trong lĩnh vực nông nghiệp và môi trường"
+    },
+    {
+      "code": "71/2025/QH15",
+      "name": "LUẬT CÔNG NGHIỆP CÔNG NGHỆ SỐ"
+    },
+    {
+      "code": "93/2025/QH15",
+      "name": "Luật số 93/2025/QH15 của Quốc hội: Luật Khoa học, công nghệ và đổi mới sáng tạo"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "147/2025/QH15",
+      "name": "Luật Địa chất và khoáng sản sửa đổi 2025"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến Trung tâm phục vụ hành chính công cấp tỉnh, xã.",
+      "text": "- Khi nộp các giấy tờ quy định, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\n- Đối với trường hợp thực hiện xác nhận thay đổi trên Giấy chứng nhận đã cấp thì người yêu cầu đăng ký nộp bản gốc Giấy chứng nhận đã cấp.\n- Trường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định"
+    },
+    {
+      "name": "Bước 2: Cơ quan tiếp nhận hồ sơ thực hiện",
+      "text": "- Kiểm tra tính đầy đủ của thành phần hồ sơ; Trường hợp hồ sơ hợp lệ, đầy đủ thì tiếp nhận và lập Giấy tiếp nhận hồ sơ và hẹn ngày trả kết quả. Trường hợp hồ sơ chưa đầy đủ, chưa chính xác thì hướng dẫn bổ sung, hoàn thiện hồ sơ theo quy định, nêu rõ lý do theo mẫu Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ. Trường hợp từ chối nhận hồ sơ, phải nêu rõ lý do theo mẫu Phiếu từ chối giải quyết hồ sơ.\n\t- Tiếp nhận hồ sơ số hóa hồ sơ, ký số hồ sơ theo quy định và chuyển hồ sơ điện tử về cho cơ quan chủ trì giải quyết thủ tục hành chính theo quy trình nội bộ, quy trình điện tử; đồng thời chuyển hồ sơ giấy về cho cơ quan chủ trì giải quyết thủ tục hành chính.\n\t*Chuyển hồ sơ đến cơ quan có thẩm quyền giải quyết thủ tục hành chính như sau:\n\t- Đối với hồ sơ tổ chức trong nước, tổ chức tôn giáo, tổ chức tôn giáo trực thuộc, tổ chức nước ngoài có chức năng ngoại giao, người gốc Việt Nam định cư ở nước ngoài, tổ chức kinh tế có vốn đầu tư nước ngoài; tổ chức nước ngoài, cá nhân nước ngoài: Chuyển hồ sơ đến Văn phòng đăng ký đất đai.\n\t- Đối với hồ sơ của cá nhân, cộng đồng dân cư: Chuyển hồ sơ đến Chi nhánh Văn phòng đăng ký đất đai nơi có đất"
+    },
+    {
+      "name": "Bước 3:  Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai thực hiện",
+      "text": "- Kiểm tra hồ sơ, trường hợp không đủ điều kiện theo quy định của Luật Đất đai thì trong thời hạn 03 ngày làm việc kể từ ngày nhận đủ hồ sơ, trả hồ sơ cho người sử dụng đất và thông báo rõ lý do không đủ điều kiện\n\t- Kiểm tra, ký duyệt mảnh trích đo bản đồ địa chính đối với trường hợp người sử dụng đất có nhu cầu xác định lại kích thước các cạnh, diện tích của thửa đất hoặc Trích lục bản đồ địa chính hoặc trích đo bản đồ địa chính thửa đất đối với nơi chưa có bản đồ địa chính hoặc chỉ có bản đồ địa chính dạng giấy đã rách nát, hư hỏng đối với trường hợp Giấy chứng nhận đã cấp chưa sử dụng bản đồ địa chính hoặc chưa sử dụng trích đo bản đồ địa chính thửa đất hoặc người sử dụng đất có nhu cầu cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc thuộc trường hợp phải cấp mới Giấy chứng nhận (nếu có).\n\t- Gửi Phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai theo Mẫu số 11 ban hành kèm theo Quyết định số 28/2026/QĐ-UBND ngày 20/6/2026 của Ủy ban nhân dân tỉnh Lạng Sơn đến cơ quan thuế để xác định nghĩa vụ tài chính theo quy định.\n\t- Chỉnh lý, cập nhật biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai.\n\t- Cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc xác nhận thay đổi trên Giấy chứng nhận đã cấp khi có thông tin từ cơ sở dữ liệu được liên thông hoặc chứng từ hoặc giấy tờ chứng minh đã hoàn thành nghĩa vụ tài chính, chuyển hồ sơ đến Trung tâm Phục vụ hành chính công để trao cho người được cấp."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Mẫu số 24. Đơn đăng ký biến động đất đai, tài sản gắn liền với đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.000024",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f5f7f-576f-720f-b10f-bf423df71c4f",
+              "fileName": "Mẫu số 24.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f5f7f-576f-720f-b10f-bf423df71c4f/Mẫu số 24.docx"
+            }
+          ]
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp (bản gốc).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.0000035",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản về việc đại diện theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất thông qua người đại diện.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.0000003",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Tờ khai thuế theo quy định của pháp luật thuế hiện hành.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.0000085",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f68db-7226-74cc-baef-7c72adbd8256",
+    "updated_at": "2026-07-17T02:13:09.139Z",
+    "created_at": "2026-07-17T02:13:09.139Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

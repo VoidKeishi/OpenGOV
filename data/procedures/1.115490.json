@@ -1,0 +1,264 @@
+{
+  "code": "1.115490",
+  "source_id": "019f175c-f732-76f9-8861-94cc81ad0d8f",
+  "name": "Tách thửa hoặc hợp thửa đất",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Thanh Hóa",
+  "executing_agency": "Chi nhánh Văn phòng đăng ký đất đai khu vực",
+  "subject_types": [
+    "Doanh nghiệp Việt Nam",
+    "Doanh nghiệp có vốn đầu tư nước ngoài",
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Hợp tác xã",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài"
+  ],
+  "results": [
+    "Giấy chứng nhận hoặc bản vẽ tách thửa, hợp thửa đất đã được cơ quan có thẩm quyền xác nhận"
+  ],
+  "requirements": "Đảm bảo nguyên tắc, điều kiện tách thửa đất, hợp thửa đất theo quy định tại Điều 220 của Luật Đất đai; khoản 3 Điều 11 Nghị quyết số 254/2025/QH15 ngày 10/11/2025 của Quốc Hội ;điều kiện tách thửa đất, điều kiện hợp thửa đất theo từng loại đất và diện tích tối thiểu được tách thửa đối với từng loại đất theo quy định của Ủy ban nhân dân cấp tỉnh.",
+  "channels": [
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 320000,
+          "text": "Tra cứu tại Quyết định số 2252/QĐ-VP ngày 02/7/2026"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 28000,
+          "text": "Tra cứu tại Quyết định số 2252/QĐ-VP ngày 02/7/2026"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 430000,
+          "text": "Tra cứu tại Quyết định số 2252/QĐ-VP ngày 02/7/2026"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 510000,
+          "text": "Tra cứu tại Quyết định số 2252/QĐ-VP ngày 02/7/2026"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 850000,
+          "text": "Tra cứu tại Quyết định số 2252/QĐ-VP ngày 02/7/2026"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 1100000,
+          "text": "Tra cứu tại Quyết định số 2252/QĐ-VP ngày 02/7/2026"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 30000,
+          "text": "Tra cứu tại Quyết định số 2252/QĐ-VP ngày 02/7/2026"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 15000,
+          "text": "Tra cứu tại Quyết định số 2252/QĐ-VP ngày 02/7/2026"
+        }
+      ],
+      "processing": {
+        "qty": 7,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Trực tiếp hoặc qua dịch vụ bưu chính công ích hoặc trực tuyến. \n- Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 17 ngày làm việc."
+    },
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": ""
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 7,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Trực tiếp hoặc qua dịch vụ bưu chính công ích hoặc trực tuyến. \nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 17 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": ""
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 7,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Trực tiếp hoặc qua dịch vụ bưu chính công ích hoặc trực tuyến. \nĐối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 17 ngày làm việc."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115490.02",
+      "qty": 17,
+      "unit": "WORKING_DAY"
+    },
+    {
+      "case_code": "1.115490.01",
+      "qty": 7,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "102/2024/NĐ-CP",
+      "name": "Nghị định 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai."
+    },
+    {
+      "code": "151/2025/NĐ-CP",
+      "name": "Quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai"
+    },
+    {
+      "code": "28/2024/NQ-HĐND",
+      "name": "Nghị quyết 28/2024/NQ-HĐND ngày 10/7/2024 của Hội đồng nhân dân tỉnh Thanh Hóa ban hành quy định mức thu, miễn, giảm, thu, nộp, quản lý và sử dụng các khoản phí, lệ phí thuộc thẩm quyền của Hội đồng nhân tỉnh"
+    },
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    },
+    {
+      "code": "12/2025/NQ-HĐND",
+      "name": "Nghị quyết số 12/2025/NQ-HĐND ngày 24/6/2025 của Hội đồng nhân dân tỉnh Thanh Hóa về việc sửa đổi một số điều của Quy định mức thu, miễn, giảm, thu, nộp, quản lý và sử dụng các khoản phí, lệ phí thuộc thẩm quyền của Hội đồng nhân dân tỉnh ban hành kèm theo Nghị quyết số 28/2024/NQ-HĐND ngày 10/7/2024 của Hội đồng nhân dân tỉnh."
+    },
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "190/2025/QH15",
+      "name": "Nghị quyết số 190/2025/QH15 của Quốc hội: Quy định về xử lý một số vấn đề liên quan đến sắp xếp tổ chức bộ máy nhà nước"
+    },
+    {
+      "code": "Nghị định số 50/2026/NĐ-CP",
+      "name": "Quy định chi tiết một số điều của Nghị quyết số 254/2025/QH15 ngày 11 tháng 12 năm 2025 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn, vướng mắc trong tổ chức thi hành Luật Đất đai về tiền sử dụng đất, tiền thuê đất"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "55/2026/QĐ",
+      "name": "Ban hành Quy định trình tự, thủ tục hành chính về đất đai trên địa bàn tỉnh Thanh Hóa"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ Bộ phận Một cửa\nKhi nộp hồ sơ, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định để cơ quan tiếp nhận hồ sơ chuyển về cơ quan giải quyết hồ sơ, trừ các giấy tờ là giấy phép xây dựng, quyết định phê duyệt dự án đầu tư, quyết định đầu tư, giấy phép đầu tư, giấy chứng nhận đầu tư, quyết định phê duyệt hoặc quyết định phê duyệt điều chỉnh quy hoạch xây dựng chi tiết, bản đồ điều chỉnh quy hoạch xây dựng chi tiết.\n Bước 2: Bộ phận Một cửa thực hiện:\n- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả. Trường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Chuyển hồ sơ đến Văn phòng đăng ký đất đai, Chi nhánh Văn phòng Đăng ký đất đai\nBước 3: Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai kiểm tra hồ sơ, đối chiếu quy định tại Điều 220 Luật Đất đai, khoản 3 Điều 11 Nghị quyết số 254/2025/QH15 ngày 10/11/2025 của Quốc Hội và quy định điều kiện, diện tích tối thiểu của việc tách thửa đất, hợp thửa đất đối với từng loại đất trên địa bàn tỉnh Thanh Hóa để xác định điều kiện tách thửa đất, hợp thửa đất; kiểm tra các thông tin về người sử dụng đất, ranh giới, diện tích, loại đất của các thửa đất trên hồ sơ lưu trữ, hồ sơ do người sử dụng đất nộp và thực hiện như sau:\n- Trường hợp hồ sơ không đủ điều kiện tách thửa đất, hợp thửa đất hoặc trường hợp hồ sơ đủ điều kiện tách thửa đất, hợp thửa đất nhưng Giấy chứng nhận đã cấp không có sơ đồ thửa đất hoặc có sơ đồ thửa đất nhưng thiếu kích thước các cạnh hoặc diện tích và kích thước các cạnh không thống nhất thì trong thời hạn 03 ngày làm việc kể từ ngày nhận đủ hồ sơ, Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất trả hồ sơ cho người sử dụng đất và thông báo rõ lý do.\n- Trường hợp không thuộc quy định tại điểm a thì Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai xác nhận đủ điều kiện tách thửa đất, hợp thửa đất kèm các thông tin thửa đất vào Đơn đề nghị tách thửa đất, hợp thửa đất, đồng thời xác nhận vào Bản vẽ tách thửa đất, hợp thửa đất để hoàn thiện thủ tục đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất đối với các thửa đất sau tách thửa, hợp thửa, trừ trường hợp Bản vẽ tách thửa đất, hợp thửa đất do Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện.\n+ Trường hợp tách thửa đất, hợp thửa đất mà không thay đổi người sử dụng đất thì Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện việc chỉnh lý, cập nhật biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai; cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất cho các thửa đất sau khi tách thửa đất, hợp thửa đất; chuyển Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất đến Bộ phận Một cửa để trao cho người được cấp.\n+ Trường hợp người sử dụng đất thực hiện chuyển quyền sử dụng đất đối với các thửa đất sau khi tách thửa đất, hợp thửa đất thì trả kết quả là bản vẽ tách thửa, hợp thửa đã được xác nhận để người sử dụng đất thực hiện thủ tục đăng ký biến động đất đai, tài sản gắn liền với đất theo quy định."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Mẫu số 35\tĐơn đề nghị tách thửa đất, hợp thửa đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000074",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f3a80-277c-707f-9c1e-50e3e84ce7f9",
+              "fileName": "Mẫu số 35.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f3a80-277c-707f-9c1e-50e3e84ce7f9/Mẫu số 35.docx"
+            }
+          ]
+        },
+        {
+          "name": "Bản vẽ tách thửa đất, hợp thửa đất lập theo Mẫu số 34 tại Phụ lục IV ban hành kèm theo Quyết định này do Văn phòng Đăng ký đất đai, Chi nhánh Văn phòng Đăng ký đất đai thực hiện hoặc do đơn vị đo đạc có Giấy phép về hoạt động đo đạc, thành lập bản đồ địa chính thực hiện",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000148",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f3ba7-4e20-7588-aca5-eecaf10a2ad0",
+              "fileName": "Mẫu số 34.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f3ba7-4e20-7588-aca5-eecaf10a2ad0/Mẫu số 34.docx"
+            }
+          ]
+        },
+        {
+          "name": "Bản gốc Giấy chứng nhận đã cấp đối với trường hợp tách thửa đất, hợp thửa đất mà không thay đổi người sử dụng đất; Bản sao Giấy chứng nhận đã cấp đối với trường hợp người sử dụng đất thực hiện chuyển quyền sử dụng đất đối với các thửa đất sau khi tách thửa đất, hợp thửa đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000149",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Các văn bản của cơ quan có thẩm quyền có thể hiện nội dung tách thửa đất, hợp thửa đất (nếu có)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H56.0000150",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "group": "",
+      "items": []
+    },
+    {
+      "group": "",
+      "items": []
+    },
+    {
+      "group": "",
+      "items": []
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f175c-f732-76f9-8861-94cc81ad0d8f",
+    "updated_at": "2026-07-08T09:15:59.267Z",
+    "created_at": "2026-07-08T09:15:59.267Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

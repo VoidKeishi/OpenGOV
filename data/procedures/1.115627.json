@@ -1,0 +1,134 @@
+{
+  "code": "1.115627",
+  "source_id": "019f599a-699c-7187-88d5-176817e158d5",
+  "name": "Thu hồi Giấy chứng nhận đã cấp không đúng quy định của pháp luật đất đai do người sử dụng đất, chủ sở hữu tài sản gắn liền với đất phát hiện và cấp lại Giấy chứng nhận sau khi thu hồi.",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND Thành phố Hải Phòng",
+  "executing_agency": "Chi nhánh Văn phòng đăng ký đất đai khu vực",
+  "subject_types": [
+    "Công dân Việt Nam"
+  ],
+  "results": [
+    "Giấy chứng nhận quyền sử dụng đất (nếu có)"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Chi tiết tại văn bản kèm theo"
+        }
+      ],
+      "processing": {
+        "qty": 22.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian thu hồi Giấy chứng nhận đã cấp không quá 12,5 ngày làm việc. \n- Thời gian thực hiện việc cấp Giấy chứng nhận sau thu hồi:  \nTrường hợp thu hồi Giấy chứng nhận đã cấp lần đầu thì thời gian thực hiện đăng ký, cấp lại Giấy chứng nhận không quá 10 ngày làm việc. Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 20 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Chi tiết tại văn bản kèm theo"
+        }
+      ],
+      "processing": {
+        "qty": 22.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian thu hồi Giấy chứng nhận đã cấp không quá 12,5 ngày làm việc. \n- Thời gian thực hiện việc cấp Giấy chứng nhận sau thu hồi:  \nTrường hợp thu hồi Giấy chứng nhận đã cấp lần đầu thì thời gian thực hiện đăng ký, cấp lại Giấy chứng nhận không quá 10 ngày làm việc. Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 20 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Chi tiết tại văn bản kèm theo"
+        }
+      ],
+      "processing": {
+        "qty": 22.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian thu hồi Giấy chứng nhận đã cấp không quá 12,5 ngày làm việc. \n- Thời gian thực hiện việc cấp Giấy chứng nhận sau thu hồi:  \nTrường hợp thu hồi Giấy chứng nhận đã cấp lần đầu thì thời gian thực hiện đăng ký, cấp lại Giấy chứng nhận không quá 10 ngày làm việc. Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 20 ngày làm việc."
+    }
+  ],
+  "processing_cases": [],
+  "legal_basis": [
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "34/2025/NQ-HĐND",
+      "name": "Quy định mức thu, chế độ thu, nộp, quản lý và sử dụng các loại phí, lệ phí trong lĩnh vực đất đai trên địa bàn thành phố."
+    },
+    {
+      "code": "52/2026/QĐ-UBND",
+      "name": "về việc phân cấp thực hiện một số nhiệm vụ trong lĩnh vực đất đai và trình tự, thủ tục hành chính về đất đai trên địa bàn thành phố Hải Phòng."
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "43/2024/QH15",
+      "name": "Luật số 43/2024/QH15 ngày 29/6/2024"
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ trực tuyến trên Cổng dịch vụ công quốc gia hoặc ứng dụng định danh quốc gia hoặc trực tiếp (hoặc thông qua dịch vụ bưu chính) Trung tâm Phục vụ hành chính công thành phố hoặc Trung tâm Phục vụ hành chính công cấp xã. \nKhi nộp các giấy tờ quy định, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định.\nBước 2: Trung tâm Phục vụ hành chính công thành phố hoặc Trung tâm Phục vụ hành chính công cấp xã:\n- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\nTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Trường hợp hồ sơ là của cá nhân, cộng đồng dân cư, chuyển hồ sơ đến Ủy ban nhân dân cấp xã đối với trường hợp thu hồi giấy chứng nhận cấp lần đầu. \nBước 3: UBND cấp xã kiểm tra, xem xét, quyết định thu hồi Giấy chứng nhận đã cấp không đúng quy định của pháp luật đất đai (trừ trường hợp người được cấp Giấy chứng nhận đã thực hiện thủ tục chuyển quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất theo quy định của pháp luật).\nBước 4: Cơ quan có thẩm quyền thực hiện việc cấp Giấy chứng nhận sau khi thu hồi Giấy chứng nhận: \n- Trường hợp Giấy chứng nhận bị thu hồi do UBND cấp xã thực hiện:\n+ Kiểm tra hồ sơ đã cấp Giấy chứng nhận, xác định lại thông tin quy định tại điểm d khoản 2 Điều 152 của Luật Đất đai theo đúng quy định của pháp luật đất đai tại thời điểm cấp Giấy chứng nhận. \n+ Cấp lại Giấy chứng nhận;\n+ Chuyển bản sao Giấy chứng nhận kèm theo hồ sơ đã giải quyết đến Văn phòng Đăng ký đất đai để thực hiện cập nhật, chỉnh lý biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai;\n+ Chuyển Giấy chứng nhận đến Trung tâm Phục vụ hành chính công thành phố hoặc Trung tâm Phục vụ hành chính công cấp xã để trao cho người được cấp."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Văn bản kiến nghị việc cấp Giấy chứng nhận không đúng quy định của pháp luật đất đai (bản chính)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000114",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Bản gốc Giấy chứng nhận đã cấp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000058",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f599a-699c-7187-88d5-176817e158d5",
+    "updated_at": "2026-07-13T10:17:08.168Z",
+    "created_at": "2026-07-13T10:17:08.168Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

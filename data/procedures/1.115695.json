@@ -1,0 +1,226 @@
+{
+  "code": "1.115695",
+  "source_id": "019f6113-bc6b-71ff-bb8d-15d8d4ab28fc",
+  "name": "Góp quyền sử dụng đất, điều chỉnh lại đất đai",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Lạng Sơn",
+  "executing_agency": "Sở Nông nghiệp và Môi trường - tỉnh Lạng Sơn",
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Doanh nghiệp Việt Nam",
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Hợp tác xã",
+    "Công dân Việt Nam mà không xác định được nơi thường trú hoặc nơi tạm trú"
+  ],
+  "results": [
+    "Văn bản phê duyệt phương án góp quyền sử dụng đất, điều chỉnh lại đất đai"
+  ],
+  "requirements": "Thực hiện dự án chỉnh trang, phát triển đô thị; cải tạo nâng cấp xây dựng nhà chung cư; mở rộng, nâng cấp đường giao thông đô thị theo quy định tại điểm c khoản 2 Điều 219 Luật Đất đai.",
+  "channels": [
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        }
+      ],
+      "processing": {
+        "qty": "Không quá 30 ngày kể từ ngày nhận đủ hồ sơ hợp lệ.  Các cơ quan liên quan đến quá trình thực hiện trình tự, thủ tục không được  quy định thêm thủ tục và không được thực hiện thêm bất kỳ thủ tục nào khác ngoài  thủ tục quy định nêu trên.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp trực tuyến tại địa chỉ https://dichvucong.gov.vn"
+    },
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        }
+      ],
+      "processing": {
+        "qty": "Không quá 30 ngày kể từ ngày nhận đủ hồ sơ hợp lệ.  Các cơ quan liên quan đến quá trình thực hiện trình tự, thủ tục không được  quy định thêm thủ tục và không được thực hiện thêm bất kỳ thủ tục nào khác ngoài  thủ tục quy định nêu trên.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp trực tiếp tại Trung tâm Phục vụ hành chính công cấp xã"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        },
+        {
+          "type": "PRICE_LEVEL",
+          "value_vnd": null,
+          "text": "Do Hội đồng nhân dân tỉnh quy định"
+        }
+      ],
+      "processing": {
+        "qty": "Không quá 30 ngày kể từ ngày nhận đủ hồ sơ hợp lệ.  Các cơ quan liên quan đến quá trình thực hiện trình tự, thủ tục không được  quy định thêm thủ tục và không được thực hiện thêm bất kỳ thủ tục nào khác ngoài  thủ tục quy định nêu trên.",
+        "unit": "OTHER"
+      },
+      "note": "Nộp thông qua dịch vụ bưu chính công ích"
+    }
+  ],
+  "processing_cases": [],
+  "legal_basis": [
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "16/2017/QH14",
+      "name": "Luật Lâm nghiệp số 16/2017/QH14 ngày 15/11/2017 được sửa đổi, bổ sung một số điều bởi Luật số 16/2023/QH15"
+    },
+    {
+      "code": "95/2025/QH15",
+      "name": "Luật số 95/2025/QH15 của Quốc hội: Luật Đường sắt"
+    },
+    {
+      "code": "47/2024/QH15",
+      "name": "Luật Quy hoạch đô thị và nông thôn số 47/2024/QH15"
+    },
+    {
+      "code": "Luật số 146/2025/QH15",
+      "name": "Luật sửa đổi, bổ sung một số điều của 15 luật trong lĩnh vực nông nghiệp và môi trường"
+    },
+    {
+      "code": "Luật số 58/2024/QH15 của Quốc hội",
+      "name": "Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "Luật số 71/2025/QH15",
+      "name": "Luật số 71/2025/QH15 của Quốc hội: Luật Công nghiệp công nghệ số"
+    },
+    {
+      "code": "28/2026/QĐ-UBND.",
+      "name": "Quy định về phân cấp trong lĩnh vực đất đai theo quy định tại khoản 1 Điều 14 và quy định trình tự, thủ tục hành chính quy định tại khoản 1 Điều 15 Nghị định số 49/2026/NĐ-CP ngày 31 tháng 01 năm 2026 của Chính phủ"
+    },
+    {
+      "code": "147/2025/QH15",
+      "name": "Luật Địa chất và khoáng sản sửa đổi 2025"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "193/2025/QH15",
+      "name": "Nghị quyết số 193/2025/QH15 ngày 19/02/2025 của Quốc hội về thí điểm một số cơ chế, chính sách đặc biệt tạo đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia"
+    },
+    {
+      "code": "75/2025/NĐ-CP",
+      "name": "Nghị định số 75/2025/NĐ-CP ngày 01 tháng 4 năm 2025 của Chính phủ quy định chi tiết thi hành Nghị quyết số 171/2024/QH15 ngày 30 tháng 11 năm 2024 của Quốc hội về thí điểm thực hiện dự án nhà ở thương mại thông qua thỏa thuận về nhận quyền sử dụng đất hoặc đang có quyền sử dụng đất."
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Nộp, tiếp nhận và kiểm tra hồ sơ",
+      "text": "- Người đề nghị nộp hồ sơ đến Trung tâm Phục vụ hành chính công.\n- Khi nộp hồ sơ, người nộp hồ sơ được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra, đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực. \n- Trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực."
+    },
+    {
+      "name": "Bước 2: Cơ quan có chức năng quản lý đất đai cấp tỉnh thực hiện:",
+      "text": "- Rà soát, kiểm tra hồ sơ; hướng dẫn người nộp hồ sơ làm lại hồ sơ hoặc bổ sung hồ sơ đối với trường hợp hồ sơ không đầy đủ, không hợp lệ; \n- Thẩm định, trình UBND cấp tỉnh phê duyệt phương án Góp quyền sử dụng đất, điều chỉnh lại đất đai theo quy định tại khoản 4 Điều 219 Luật Đất đai."
+    },
+    {
+      "name": "Bước 3: UBND tỉnh xem xét ban hành văn bản phê duyệt phương án góp quyền sử dụng đất, điều chỉnh lại đất đai.",
+      "text": "UBND tỉnh xem xét ban hành văn bản phê duyệt phương án góp quyền sử dụng đất, điều chỉnh lại đất đai."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Mẫu số 24. Đơn đăng ký biến động đất đai, tài sản gắn liền với đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.000024",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f5f7f-576f-720f-b10f-bf423df71c4f",
+              "fileName": "Mẫu số 24.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f5f7f-576f-720f-b10f-bf423df71c4f/Mẫu số 24.docx"
+            }
+          ]
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp, trừ trường hợp thực hiện quyết định hoặc bản án của Tòa án nhân dân, quyết định thi hành án của cơ quan thi hành án đã có hiệu lực thi hành hoặc trường hợp đấu giá, giao quyền sử dụng đất, tài sản gắn liền với đất theo yêu cầu của Tòa án, cơ quan thi hành án mà không thu hồi được Giấy chứng nhận đã cấp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.0000001",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Phương án góp quyền sử dụng đất, điều chỉnh lại đất đai theo nội dung quy định tại khoản 4 Điều 219 Luật Đất đai",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.0000002",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản về việc đại diện theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất thông qua người đại diện.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H37.0000003",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f6113-bc6b-71ff-bb8d-15d8d4ab28fc",
+    "updated_at": "2026-07-17T02:13:09.128Z",
+    "created_at": "2026-07-17T02:13:09.128Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

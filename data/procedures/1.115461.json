@@ -1,0 +1,121 @@
+{
+  "code": "1.115461",
+  "source_id": "019f126b-6be2-738a-b0a4-1f1c78f7b293",
+  "name": "Xóa ghi nợ tiền sử dụng đất, lệ phí trước bạ trên Giấy chứng nhận đã cấp",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Bắc Ninh",
+  "executing_agency": "Văn phòng đăng ký đất đai Bắc Ninh",
+  "subject_types": [
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài",
+    "Công dân Việt Nam",
+    "Tổ chức nước ngoài",
+    "Người nước ngoài cư trú tại Việt Nam"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "Không",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 1,
+        "unit": "WORKING_DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 1,
+        "unit": "WORKING_DAY"
+      },
+      "note": ""
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 1,
+        "unit": "WORKING_DAY"
+      },
+      "note": ""
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115461.01",
+      "qty": 1,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến Trung tâm Phục vụ hành chính công hoặc Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai.",
+      "text": "Khi nộp hồ sơ, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nĐối với trường hợp thực hiện xác nhận thay đổi trên Giấy chứng nhận đã cấp thì người yêu cầu đăng ký nộp bản gốc Giấy chứng nhận đã cấp.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định."
+    },
+    {
+      "name": "Bước 2: Cơ quan tiếp nhận hồ sơ thực hiện:",
+      "text": "- Kiểm tra tính đầy đủ của thành phần hồ sơ và cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\nTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Trường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai."
+    },
+    {
+      "name": "Bước 3: Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai thực hiện:",
+      "text": "- Chỉnh lý, cập nhật biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai.\n- Cấp mới Giấy chứng nhận quyền hoặc xác nhận thay đổi trên Giấy chứng nhận đã cấp; trao Giấy chứng nhận hoặc gửi cơ quan tiếp nhận hồ sơ để trao cho người được cấp."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "- Đơn đề nghị hỗ trợ (Mẫu 1).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H05-KQ000330",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019d7c7a-31b7-7628-8e4b-794b4077d21f",
+              "fileName": "Mẫu 1..docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019d7c7a-31b7-7628-8e4b-794b4077d21f/Mẫu 1..docx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f126b-6be2-738a-b0a4-1f1c78f7b293",
+    "updated_at": "2026-07-06T01:35:07.081Z",
+    "created_at": "2026-07-06T01:35:07.081Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

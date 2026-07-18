@@ -4,3 +4,8 @@ packages:
   - backend
   - widget
   - tools/*
+# pnpm 11 hard-fails a fresh install (ERR_PNPM_IGNORED_BUILDS) unless every dependency
+# with a build script has a declared decision. better-sqlite3 needs its native build
+# (prebuild-install fetches a prebuilt binary) so the seed can open the DB at deploy time.
+allowBuilds:
+  better-sqlite3: true

@@ -1,0 +1,428 @@
+{
+  "code": "1.009122",
+  "source_id": "019dbd96-088e-74a9-9877-cf19204905ca",
+  "name": "Cấp giấy phép xây dựng có thời hạn đối với công trình, nhà ở riêng lẻ (công trình cấp III, cấp IV)",
+  "category": null,
+  "promulgating_agency": "UBND Thành phố Đà Nẵng",
+  "executing_agency": "Ủy ban nhân dân cấp xã",
+  "subject_types": [
+    "Doanh nghiệp",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)"
+  ],
+  "results": [
+    "Giấy phép."
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 100000,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 15,
+        "unit": "DAY"
+      },
+      "note": "+ Đối với công trình: Không quá 15 ngày kể từ ngày nhận đủ hồ sơ hợp lệ. \n"
+    },
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 50000,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 10,
+        "unit": "DAY"
+      },
+      "note": "Đối với nhà ở riêng lẻ tại đô thị: Không quá 10 ngày kể từ ngày nhận đủ hồ sơ hợp lệ.\n"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 100000,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 15,
+        "unit": "DAY"
+      },
+      "note": "+ Đối với công trình: Không quá 15 ngày kể từ ngày nhận đủ hồ sơ hợp lệ. \n"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 50000,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 10,
+        "unit": "DAY"
+      },
+      "note": "Đối với nhà ở riêng lẻ tại đô thị: Không quá 10 ngày kể từ ngày nhận đủ hồ sơ hợp lệ.\n"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 100000,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 15,
+        "unit": "DAY"
+      },
+      "note": "+ Đối với công trình: Không quá 15 ngày kể từ ngày nhận đủ hồ sơ hợp lệ. \n"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 50000,
+          "text": ""
+        }
+      ],
+      "processing": {
+        "qty": 10,
+        "unit": "DAY"
+      },
+      "note": "Đối với nhà ở riêng lẻ tại đô thị: Không quá 10 ngày kể từ ngày nhận đủ hồ sơ hợp lệ.\n"
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.009122.11",
+      "qty": 15,
+      "unit": "DAY"
+    },
+    {
+      "case_code": "1.009122.10",
+      "qty": 15,
+      "unit": "DAY"
+    },
+    {
+      "case_code": "1.009122.12",
+      "qty": 10,
+      "unit": "DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "06/2021/TT-BXD",
+      "name": "Thông tư số 06/2021/TT-BXD"
+    },
+    {
+      "code": "53/2017/NĐ-CP",
+      "name": "Nghị định 53/2017/NĐ-CP"
+    },
+    {
+      "code": "136/2020/NĐ-CP",
+      "name": "Nghị định 136/2020/NĐ-CP"
+    },
+    {
+      "code": "Luật 50/2014/QH13",
+      "name": "Luật 50/2014/QH13"
+    },
+    {
+      "code": "57/2016/NQ-HĐND",
+      "name": "Quy định mức thu, chế độ thu, nộp, quản lý và sử dụng lệ phí cấp giấy phép xây dựng trên địa bàn thành phố Đà Nẵng"
+    },
+    {
+      "code": "02/2016/QH14",
+      "name": "Tín ngưỡng, tôn giáo"
+    },
+    {
+      "code": "38/2021/QĐ-UBND",
+      "name": "Quy định chi tiết một số nội dung về cấp giấy phép xây dựng trên địa bàn thành phố Đà Nẵng."
+    },
+    {
+      "code": "72/2020/QH14",
+      "name": "Luật Bảo vệ môi trường số 72/2020/QH14 ngày 17 tháng 11 năm 2020"
+    },
+    {
+      "code": "40/2029/QH14",
+      "name": "Luật Kiến trúc"
+    },
+    {
+      "code": "06/2021/NĐ-CP",
+      "name": "Nghị định 06/2021/NĐ-CP hướng dẫn về quản lý chất lượng, thi công xây dựng và bảo trì công trình xây dựng"
+    },
+    {
+      "code": "15/2021/NĐ-CP",
+      "name": "Nghị định số 15/2021/NĐ-CP ngày 03/3/2021 của Chính phủ quy định chi tiết một số nội dung về quản lý dự án đầu tư xây dựng"
+    },
+    {
+      "code": "16/2022/NĐ-CP",
+      "name": "Nghị định số 16/2022/NĐ-CP ngày 28 tháng 01 năm 2022 của Chính phủ quy định xử phạt vi phạm hành chính về xây dựng;"
+    },
+    {
+      "code": "85/2020/NĐ-CP",
+      "name": "Nghị định 85/2020/NĐ-CP"
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Bước 1: Chủ đầu tư nộp hồ sơ tại Trung tâm Phục vụ hành chính công cấp xã\nBước 2: Trung tâm Phục vụ hành chính công cấp xã tiếp nhận hồ sơ; kiểm tra hồ sơ; ghi giấy biên nhận đối với trường hợp hồ sơ đáp ứng theo quy định hoặc hướng dẫn để chủ đầu tư hoàn thiện hồ sơ đối với trường hợp hồ sơ không đáp ứng theo quy định. Sau đó chuyển hồ sơ cho Phòng chuyên môn. \nBước 3: Phòng chuyên môn tham mưu xử lý hồ sơ và trình UBND cấp xã quyết định việc cấp giấy phép xây dựng có thời hạn công trình, nhà ở riêng lẻ; chuyển kết quả cho Trung tâm Phục vụ hành chính công cấp xã để trả cho chủ đầu tư."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "Đối với nhà ở riêng lẻ tại đô thị: ",
+      "items": [
+        {
+          "name": "2. Bản sao được công chứng hoặc chứng thực một trong những giấy tờ về quyền sử dụng đất theo quy định của pháp luật về đất đai hoặc giấy tờ về quyền quản lý, sử dụng công trình;",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2034",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "3. Bản sao hoặc tệp tin chứa bản chụp chính hai bộ bản vẽ thiết kế, mỗi bộ gồm:",
+          "original_qty": 2,
+          "copy_qty": 2,
+          "code": "000.00.00.H17-KQ2019",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "-  Bản vẽ mặt bằng công trình trên lô đất tỷ lệ 1/50 - 1/500, kèm theo sơ đồ vị trí công trình;",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2020",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Bản vẽ mặt bằng các tầng, các mặt đứng và mặt cắt chính của công trình, tỷ lệ 1/50 - 1/200;",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2021",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Bản vẽ mặt bằng móng tỷ lệ 1/50 - 1/200 và mặt cắt móng tỷ lệ 1/50, kèm theo sơ đồ đấu nối hệ thống thoát nước mưa, xử lý nước thải, cấp nước, cấp điện, thông tin tỷ lệ 1/50 - 1/200.",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2022",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Trường hợp thiết kế xây dựng của công trình đã được cơ quan chuyên môn về xây dựng thẩm định, các bản vẽ thiết kế quy định tại nêu trên là bản sao hoặc tệp tin chứa bản chụp các bản vẽ thiết kế xây dựng đã được cơ quan chuyên môn về xây dựng thẩm định.",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2023",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Đối với công trình xây chen có tầng hầm, ngoài các tài liệu quy định tại Khoản 1, 2, 3 Điều 11 Thông tư số 15/2016/TT-BXD, hồ sơ còn phải bổ sung bản sao hoặc tệp tin chứa bản chụp chính văn bản chấp thuận biện pháp thi công móng của chủ đầu tư đảm bảo an toàn cho công trình và công trình lân cận.",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2024",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Đối với công trình xây dựng có công trình liền kề phải có bản cam kết của chủ đầu tư bảo đảm an toàn đối với công trình liền kề.",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2043",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "* Tùy từng trường hợp phải bổ sung: Bản sao có chứng thực chứng chỉ hành nghề của chủ nhiệm, chủ trì thiết kế.",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2031",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "1. Đơn đề nghị cấp giấy phép xây dựng có thời hạn theo mẫu;",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H17-KQ2010",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019dbd76-12a6-73fc-a941-924ef45313ef",
+              "fileName": "MAU 01-Cap phep xay dung co thoi han su dung cho cong trinh.doc",
+              "bucketName": "dvc",
+              "filePath": "configuring/019dbd76-12a6-73fc-a941-924ef45313ef/MAU 01-Cap phep xay dung co thoi han su dung cho cong trinh.doc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Đối với công trình ",
+      "items": [
+        {
+          "name": "1. Đơn đề nghị cấp giấy phép xây dựng có thời hạn theo mẫu;",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H17-KQ2027",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019dbd78-70b0-714c-b82b-150c5c479c91",
+              "fileName": "MAU 01-Cap phep xay dung co thoi han su dung cho cong trinh.doc",
+              "bucketName": "dvc",
+              "filePath": "configuring/019dbd78-70b0-714c-b82b-150c5c479c91/MAU 01-Cap phep xay dung co thoi han su dung cho cong trinh.doc"
+            }
+          ]
+        },
+        {
+          "name": "- Bản sao được công chứng hoặc chứng thực một trong những giấy tờ về quyền sử dụng đất theo quy định của pháp luật vềđất đai hoặc Hợp đồng thuê lại đất.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H45-KQ0134",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "3. Bản sao hoặc tệp tin chứa bản chụp chính hai bộ bản vẽ thiết kế, mỗi bộ gồm:",
+          "original_qty": 2,
+          "copy_qty": 0,
+          "code": "000.00.00.H17-KQ2019",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Bản vẽ mặt bằng vị trí công trình trên lô đất tỷ lệ 1/100 - 1/500, kèm theo công trình vị trí công trình;",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H17-KQ2048",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Bản vẽ các mặt bằng, các mặt đứng và mặt cắt chủ yếu của công trình, tỷ lệ 1/50 - 1/200;",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H17-KQ2049",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "- Bản vẽ mặt bằng móng tỷ lệ 1/100 - 1/200 và mặt cắt móng tỷ lệ 1/50, kèm theo sơ đồ đấu nối với hệ thống hạ tầng kỹ thuật về giao thông; cấp nước; thoát nước mưa, nước bẩn; xử lý nước thải; cấp điện; thông tin liên lạc; các hệ thống hạ tầng kỹ thuật khác liên quan đến dự án, tỷ lệ 1/50 - 1/200.",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H17-KQ2015",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "* Tùy từng trường hợp phải bổ sung: Bản sao có chứng thực chứng chỉ hành nghề của chủ nhiệm, chủ trì thiết kế.",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2016",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "group": "Đối với trường hợp sửa chữa, cải tạo",
+      "items": [
+        {
+          "name": "1. Đơn đề nghị cấp giấy phép xây dựng có thời hạn theo mẫu;",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H17-KQ2010",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019dbd76-12a6-73fc-a941-924ef45313ef",
+              "fileName": "MAU 01-Cap phep xay dung co thoi han su dung cho cong trinh.doc",
+              "bucketName": "dvc",
+              "filePath": "configuring/019dbd76-12a6-73fc-a941-924ef45313ef/MAU 01-Cap phep xay dung co thoi han su dung cho cong trinh.doc"
+            }
+          ]
+        },
+        {
+          "name": "2. Bản sao hoặc tệp tin chứa bản chụp chính một trong những giấy tờ chứng minh về quyền sở hữu, quản lý, sử dụng công trình, nhà ở theo quy định của pháp luật hoặc bản sao giấy phép xây dựng đã được cơ quan nhà nước có thẩm quyền cấp;",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2028",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "3. Bản sao hoặc tệp tin chứa bản chụp chính bản vẽ hiện trạng của bộ phận, hạng Mục công trình sửa chữa, cải tạo đã được phê duyệt theo quy định có tỷ lệ tương ứng với tỷ lệ các bản vẽ của hồ sơ đề nghị cấp phép sửa chữa, cải tạo và ảnh chụp (10 x 15 cm) hiện trạng công trình và công trình lân cận trước khi sửa chữa, cải tạo;",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2029",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "4. Đối với các công trình di tích lịch sử, văn hóa và danh lam, thắng cảnh đã được xếp hạng, thì phải có bản sao hoặc tệp tin chứa bản chụp chính văn bản chấp thuận của cơ quan quản lý nhà nước có thẩm quyền theo phân cấp.",
+          "original_qty": 1,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2030",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "* Tùy từng trường hợp phải bổ sung: Bản sao có chứng thực chứng chỉ hành nghề của chủ nhiệm, chủ trì thiết kế.",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "000.00.00.H17-KQ2031",
+          "has_electronic_form": false,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019dbd96-088e-74a9-9877-cf19204905ca",
+    "updated_at": "2026-06-17T03:54:38.601Z",
+    "created_at": "2026-04-25T17:01:06.622Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

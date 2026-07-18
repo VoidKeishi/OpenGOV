@@ -1,0 +1,113 @@
+{
+  "code": "1.115476",
+  "source_id": "019f169e-c716-76a7-b47e-269721b1d9c2",
+  "name": "Đính chính Giấy chứng nhận đã cấp (Trường hợp Giấy chứng nhận đã đăng ký biến động có sai sót).",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Bắc Ninh",
+  "executing_agency": "Văn phòng đăng ký đất đai Bắc Ninh",
+  "subject_types": [
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Người Việt Nam định cư ở nước ngoài"
+  ],
+  "results": [
+    "Giấy chứng nhận"
+  ],
+  "requirements": "không quy định.",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "không quá 08 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "không quá 08 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "FEE",
+          "value_vnd": 0,
+          "text": "Theo quy định của Luật phí và lệ phí và các văn bản quy phạm pháp luật hướng dẫn Luật phí và lệ phí."
+        }
+      ],
+      "processing": {
+        "qty": 8,
+        "unit": "WORKING_DAY"
+      },
+      "note": "không quá 08 ngày làm việc.\nĐối với các xã miền núi, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 18 ngày làm việc."
+    }
+  ],
+  "processing_cases": [],
+  "legal_basis": [],
+  "steps_raw": [
+    {
+      "name": "Bước 1: Người yêu cầu đăng ký nộp hồ sơ đến một trong các địa điểm trên địa bàn cấp tỉnh.",
+      "text": "- Trường hợp tổ chức trong nước, tổ chức tôn giáo, tổ chức tôn giáo trực thuộc, tổ chức nước ngoài có chức năng ngoại giao, tổ chức kinh tế có vốn đầu tư nước ngoài, tổ chức nước ngoài, cá nhân nước ngoài nộp hồ sơ đến Trung tâm Phục vụ hành chính công hoặc Văn phòng đăng ký đất đai.\n- Trường hợp cá nhân, cộng đồng dân cư, người gốc Việt Nam định cư ở nước ngoài nộp hồ sơ đến Trung tâm Phục vụ hành chính công hoặc Chi nhánh Văn phòng đăng ký đất đai.\nKhi nộp hồ sơ, người yêu cầu đăng ký được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực; trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực.\nĐối với trường hợp thực hiện xác nhận thay đổi trên Giấy chứng nhận đã cấp thì người yêu cầu đăng ký nộp bản gốc Giấy chứng nhận đã cấp.\nTrường hợp nộp bản sao hoặc bản số hóa các loại giấy tờ thì khi nhận kết quả giải quyết thủ tục hành chính người yêu cầu đăng ký phải nộp bản chính các giấy tờ thuộc thành phần hồ sơ theo quy định."
+    },
+    {
+      "name": "Bước 2: Cơ quan tiếp nhận hồ sơ thực hiện:",
+      "text": "- Kiểm tra tính đầy đủ của thành phần hồ sơ; cấp Giấy tiếp nhận hồ sơ và hẹn trả kết quả.\nTrường hợp chưa đầy đủ thành phần hồ sơ thì trả hồ sơ kèm Phiếu yêu cầu bổ sung, hoàn thiện hồ sơ để người yêu cầu đăng ký hoàn thiện, bổ sung theo quy định.\n- Trường hợp Trung tâm Phục vụ hành chính công tiếp nhận hồ sơ chuyển hồ sơ đến Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai đối với trường hợp đính chính Giấy chứng nhận đã cấp khi thực hiện thủ tục đăng ký biến động đất đai, tài sản gắn liền với đất có sai sót."
+    },
+    {
+      "name": "Bước 3: Văn phòng đăng ký đất đai hoặc Chi nhánh Văn phòng đăng ký đất đai thực hiện:",
+      "text": "- Kiểm tra, lập biên bản kết luận về nội dung và nguyên nhân sai sót. \n- Xác nhận nội dung đính chính trên Giấy chứng nhận đã cấp hoặc cấp mới Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất.\nTrường hợp giấy chứng nhận được cấp đổi từ giấy chứng nhận cấp lần đầu có sai sót (nguyên nhân sai sót từ giấy chứng nhận lần đầu), giấy chứng nhận đã cấp có sai sót nhưng đã chuyển quyền 1 phần hoặc cả thửa mà chưa cấp mới giấy chứng nhận thì Văn phòng Đăng ký đất đai xác nhận nội dung đính chính sai sót sau  khi có ý kiến của cơ quan có thẩm quyền cấp giấy chứng nhận lần đầu về nội dung sai sót.\n- Chỉnh lý, cập nhật biến động vào hồ sơ địa chính, cơ sở dữ liệu đất đai; trao Giấy chứng nhận hoặc gửi cơ quan tiếp nhận hồ sơ để trao cho người được cấp.\nTrường hợp giấy chứng nhận cấp trước ngày 01 tháng 7 năm 2004 chưa xác định cụ thể diện tích đất ở (bao gồm giấy chứng nhận quyền sử dụng đất đã được xác nhận thay đổi trên giấy chứng nhận hoặc trường hợp người nhận chuyển quyền sử dụng toàn bộ thửa đất đã được cấp giấy chứng nhận mới từ ngày 01 tháng 7 năm 2004 trở về sau nhưng trên giấy chứng nhận chưa xác định cụ thể diện tích đất ở) thì Văn phòng Đăng ký đất đai gửi văn bản xin ý kiến và thực hiện các công việc trên sau khi có ý kiến về việc xác định lại diện tích đất ở trên giấy chứng nhận đã cấp của cơ quan có thẩm quyền cấp giấy chứng nhận lần đầu."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "- Đơn đăng ký biến động đất đai, tài sản gắn liền với đất theo Mẫu số 18. - Giấy chứng nhận đã cấp, trừ trường hợp thực hiện quyết định hoặc bản án của Toà án nhân dân, quyết định thi hành án của cơ quan thi hành án đã có hiệu lực thi hành hoặc trường hợp đấu giá, giao quyền sử dụng đất, tài sản gắn liền với đất theo yêu cầu của Toà án, cơ quan thi hành án mà không thu hồi được Giấy chứng nhận đã cấp. - Giấy tờ chứng minh sai sót thông tin của người được cấp Giấy chứng nhận so với thông tin tại thời điểm đề nghị đính chính (trường hợp không khai thác, sử dụng thông tin về người được cấp Giấy chứng nhận trong Cơ sở dữ liệu quốc gia về dân cư) hoặc Giấy tờ chứng minh sai sót thông tin về thửa đất, tài sản gắn liền với đất so với thông tin trên Giấy chứng nhận đã cấp. - Văn bản về việc ủy quyền theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục thông qua người đại diện. - Số lượng hồ sơ: 01 bộ.",
+      "items": [
+        {
+          "name": "- Đơn đề nghị hỗ trợ (Mẫu 1).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "000.00.00.H05-KQ000330",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019d7c7a-31b7-7628-8e4b-794b4077d21f",
+              "fileName": "Mẫu 1..docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019d7c7a-31b7-7628-8e4b-794b4077d21f/Mẫu 1..docx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f169e-c716-76a7-b47e-269721b1d9c2",
+    "updated_at": "2026-07-06T01:35:07.043Z",
+    "created_at": "2026-07-06T01:35:07.043Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

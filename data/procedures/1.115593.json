@@ -1,0 +1,330 @@
+{
+  "code": "1.115593",
+  "source_id": "019f5593-7498-74bc-a149-8010a16d3bc1",
+  "name": "Thủ tục xác nhận tiếp tục sử dụng đất nông nghiệp của cá nhân khi hết thời hạn sử dụng đất",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND Thành phố Hải Phòng",
+  "executing_agency": "Cơ quan chuyên môn về Nông nghiệp và Môi trường thuộc UBND cấp xã",
+  "subject_types": [
+    "Công dân Việt Nam"
+  ],
+  "results": [
+    "Giấy chứng nhận quyền sử dụng đất (nếu có)"
+  ],
+  "requirements": "Không có",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Cấp đổi, cấp lại Giấy chứng nhận (Đất)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Cấp đổi, cấp lại Giấy chứng nhận (Tài sản)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 30000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Cấp đổi, cấp lại Giấy chứng nhận (Đất+Tài sản)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Đăng ký biến động trên Giấy chứng nhận đã cấp (Tài sản))"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 30000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất+Tài sản))"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 100000,
+          "text": "Phí thẩm định hồ sơ: Cấp đổi, cấp lại Giấy chứng nhận (Đất)"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 100000,
+          "text": "Phí thẩm định hồ sơ: Cấp đổi, cấp lại Giấy chứng nhận (Tài sản))"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 115000,
+          "text": "Phí thẩm định hồ sơ: Cấp đổi, cấp lại Giấy chứng nhận (Đất+Tài sản))"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 125000,
+          "text": "Phí thẩm định hồ sơ: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất)"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 155000,
+          "text": "Phí thẩm định hồ sơ: Đăng ký biến động trên Giấy chứng nhận đã cấp (Tài sản)"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 170000,
+          "text": "Phí thẩm định hồ sơ: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất+Tài sản)"
+        }
+      ],
+      "processing": {
+        "qty": 3.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 3,5 ngày làm việc kể từ ngày nhận hồ sơ đầy đủ, chính xác, tính thống nhất về nội dung thông tin giữa các giấy tờ, tính đầy đủ của nội dung kê khai.  Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 13,5 ngày làm việc"
+    },
+    {
+      "method": "ONLINE",
+      "fees": [
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Cấp đổi, cấp lại Giấy chứng nhận (Đất)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Cấp đổi, cấp lại Giấy chứng nhận (Tài sản)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 30000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Cấp đổi, cấp lại Giấy chứng nhận (Đất+Tài sản)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Đăng ký biến động trên Giấy chứng nhận đã cấp (Tài sản))"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 30000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất+Tài sản))"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 100000,
+          "text": "Phí thẩm định hồ sơ: Cấp đổi, cấp lại Giấy chứng nhận (Đất)"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 100000,
+          "text": "Phí thẩm định hồ sơ: Cấp đổi, cấp lại Giấy chứng nhận (Tài sản))"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 115000,
+          "text": "Phí thẩm định hồ sơ: Cấp đổi, cấp lại Giấy chứng nhận (Đất+Tài sản))"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 125000,
+          "text": "Phí thẩm định hồ sơ: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất)"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 155000,
+          "text": "Phí thẩm định hồ sơ: Đăng ký biến động trên Giấy chứng nhận đã cấp (Tài sản)"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 170000,
+          "text": "Phí thẩm định hồ sơ: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất+Tài sản)"
+        }
+      ],
+      "processing": {
+        "qty": 3.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 3,5 ngày làm việc kể từ ngày nhận hồ sơ đầy đủ, chính xác, tính thống nhất về nội dung thông tin giữa các giấy tờ, tính đầy đủ của nội dung kê khai.  Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 13,5 ngày làm việc"
+    },
+    {
+      "method": "POSTAL",
+      "fees": [
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Cấp đổi, cấp lại Giấy chứng nhận (Đất)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Cấp đổi, cấp lại Giấy chứng nhận (Tài sản)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 30000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Cấp đổi, cấp lại Giấy chứng nhận (Đất+Tài sản)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất)"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 25000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Đăng ký biến động trên Giấy chứng nhận đã cấp (Tài sản))"
+        },
+        {
+          "type": "SERVICE_FEE",
+          "value_vnd": 30000,
+          "text": "Lệ phí cấp Giấy chứng nhận: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất+Tài sản))"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 100000,
+          "text": "Phí thẩm định hồ sơ: Cấp đổi, cấp lại Giấy chứng nhận (Đất)"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 100000,
+          "text": "Phí thẩm định hồ sơ: Cấp đổi, cấp lại Giấy chứng nhận (Tài sản))"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 115000,
+          "text": "Phí thẩm định hồ sơ: Cấp đổi, cấp lại Giấy chứng nhận (Đất+Tài sản))"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 125000,
+          "text": "Phí thẩm định hồ sơ: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất)"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 155000,
+          "text": "Phí thẩm định hồ sơ: Đăng ký biến động trên Giấy chứng nhận đã cấp (Tài sản)"
+        },
+        {
+          "type": "FEE",
+          "value_vnd": 170000,
+          "text": "Phí thẩm định hồ sơ: Đăng ký biến động trên Giấy chứng nhận đã cấp (Đất+Tài sản)"
+        }
+      ],
+      "processing": {
+        "qty": 3.5,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Không quá 3,5 ngày làm việc kể từ ngày nhận hồ sơ đầy đủ, chính xác, tính thống nhất về nội dung thông tin giữa các giấy tờ, tính đầy đủ của nội dung kê khai.  Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 13,5 ngày làm việc"
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115593.01",
+      "qty": 3.5,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "101/2024/NĐ-CP",
+      "name": "Nghị định quy định về điều tra cơ bản đất đai, đăng ký, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và Hệ thống thông tin đất đai."
+    },
+    {
+      "code": "254/2025/QH15",
+      "name": "Quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "49/2026/NĐ-CP",
+      "name": "quy định chi tiết và hướng dẫn một số điều của Nghị quyết số 254/2025/QH15 của Quốc hội quy định một số cơ chế, chính sách tháo gỡ khó khăn vướng mắc trong tổ chức thi hành Luật Đất đai"
+    },
+    {
+      "code": "52/2026/QĐ-UBND",
+      "name": "về việc phân cấp thực hiện một số nhiệm vụ trong lĩnh vực đất đai và trình tự, thủ tục hành chính về đất đai trên địa bàn thành phố Hải Phòng."
+    },
+    {
+      "code": "34/2025/NQ-HĐND",
+      "name": "Quy định mức thu, chế độ thu, nộp, quản lý và sử dụng các loại phí, lệ phí trong lĩnh vực đất đai trên địa bàn thành phố."
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "",
+      "text": "Người sử dụng đất nông nghiệp quy định tại điểm a khoản 1 Điều 172 và khoản 1 Điều 174 Luật Đất đai có nhu cầu xác nhận lại thời hạn sử dụng đất trên giấy chứng nhận đã cấp thì nộp hồ sơ tại Cơ quan tiếp nhận, trả kết quả.\n- Cơ quan chuyên môn về nông nghiệp và Môi trường cấp xã kiểm tra hồ sơ; xác nhận thời hạn được tiếp tục sử dụng đất theo thời hạn quy định tại khoản 1 Điều 172 Luật Đất đai vào giấy chứng nhận đã cấp hoặc cấp mới Giấy chứng nhận nếu người sử dụng đất có nhu cầu; chuyển bản sao Giấy chứng nhận đến chi nhánh Văn phòng đăng ký đất đai thực hiện cập nhật, chỉnh lý cơ sở dữ liệu đất đai, hồ sơ địa chính; chuyển giấy chứng nhận đến cơ quan tiếp nhận và trả kết quả để trả cho người sử dụng đất."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Văn bản đề nghị xác nhận lại thời hạn sử dụng đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000001",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f56a9-3911-7702-9896-13570e8623f8",
+              "fileName": "Mẫu 39 - Đơn xin xác nhận lại thời hạn sử dụng đất nông nghiệp.pdf",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f56a9-3911-7702-9896-13570e8623f8/Mẫu 39 - Đơn xin xác nhận lại thời hạn sử dụng đất nông nghiệp.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Giấy chứng nhận đã cấp",
+          "original_qty": 0,
+          "copy_qty": 1,
+          "code": "TP-H24.000002",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản thỏa thuận xác định các thành viên có chung quyền sử dụng đất của hộ gia đình đối với trường hợp giấy chứng nhận đã cấp cho hộ gia đình (trường hợp công dân có nhu cầu cấp đổi giấy chứng nhận hoặc giấy chứng nhận đã cấp không còn dòng trống để xác nhận)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000003",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản về việc ủy quyền theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục thông qua người đại diện (nếu có).",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "TP-H24.000004",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f5593-7498-74bc-a149-8010a16d3bc1",
+    "updated_at": "2026-07-13T10:17:09.967Z",
+    "created_at": "2026-07-13T10:17:09.967Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}

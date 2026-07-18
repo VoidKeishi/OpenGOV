@@ -1,0 +1,194 @@
+{
+  "code": "1.115318",
+  "source_id": "019f0415-ef73-77ed-8bfb-9c882671e6dd",
+  "name": "Sử dụng đất kết hợp đa mục đích, gia hạn phương án sử dụng đất kết hợp đa mục đích",
+  "category": {
+    "code": "G13-TN02",
+    "name": "Đất đai"
+  },
+  "promulgating_agency": "UBND tỉnh Đắk Lắk",
+  "executing_agency": "Sở Nông nghiệp và Môi trường - Tỉnh Đắk Lắk",
+  "subject_types": [
+    "Công dân Việt Nam",
+    "Doanh nghiệp",
+    "Tổ chức nước ngoài",
+    "Hợp tác xã",
+    "Tổ chức (không bao gồm doanh nghiệp, HTX)",
+    "Người Việt Nam định cư ở nước ngoài",
+    "Doanh nghiệp Việt Nam",
+    "Doanh nghiệp có vốn đầu tư nước ngoài"
+  ],
+  "results": [
+    "Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất"
+  ],
+  "requirements": "",
+  "channels": [
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 15,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian thực hiện thủ tục phê duyệt phương án sử dụng đất kết hợp không quá 15 ngày. Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 25 ngày."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 15,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian thực hiện thủ tục phê duyệt phương án sử dụng đất kết hợp không quá 15 ngày. Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 25 ngày."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 15,
+        "unit": "WORKING_DAY"
+      },
+      "note": "- Thời gian thực hiện thủ tục phê duyệt phương án sử dụng đất kết hợp không quá 15 ngày. Đối với các xã miền núi, hải đảo, vùng sâu, vùng xa, vùng có điều kiện kinh tế - xã hội khó khăn, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 25 ngày."
+    },
+    {
+      "method": "DIRECT",
+      "fees": [],
+      "processing": {
+        "qty": 17,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian gia hạn phương án sử dụng đất kết hợp là không quá 07 ngày làm việc. Đối với các xã miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 17 ngày làm việc."
+    },
+    {
+      "method": "ONLINE",
+      "fees": [],
+      "processing": {
+        "qty": 17,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian gia hạn phương án sử dụng đất kết hợp là không quá 07 ngày làm việc. Đối với các xã miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 17 ngày làm việc."
+    },
+    {
+      "method": "POSTAL",
+      "fees": [],
+      "processing": {
+        "qty": 17,
+        "unit": "WORKING_DAY"
+      },
+      "note": "Thời gian gia hạn phương án sử dụng đất kết hợp là không quá 07 ngày làm việc. Đối với các xã miền núi, biên giới; đảo; vùng có điều kiện kinh tế - xã hội khó khăn; vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì thời gian thực hiện không quá 17 ngày làm việc."
+    }
+  ],
+  "processing_cases": [
+    {
+      "case_code": "1.115318.01",
+      "qty": 25,
+      "unit": "WORKING_DAY"
+    }
+  ],
+  "legal_basis": [
+    {
+      "code": "102/2024/NĐ-CP",
+      "name": "Nghị định 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai."
+    },
+    {
+      "code": "151/2025/NĐ-CP",
+      "name": "Quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai"
+    },
+    {
+      "code": "43/2024/QH15",
+      "name": "Luật số 43/2024/QH15 ngày 29/6/2024"
+    },
+    {
+      "code": "226/2025/NĐ-CP",
+      "name": "Sửa đổi, bổ sung một số điều của các nghị định  quy định chi tiết thi hành Luật Đất đai"
+    },
+    {
+      "code": "31/2024/QH15",
+      "name": "Luật Đất đai số 31/2024/QH15 ngày 18/01/2024 được sửa đổi bổ sung  một số điều bởi Luật số 43/2024/QH15, Luật số 47/2024/QH15 và Luật số 58/2024/QH15 của Quốc hội."
+    },
+    {
+      "code": "118/2025/NĐ-CP",
+      "name": "Nghị định số 118/2025/NĐ-CP của Chính phủ: Về thực hiện thủ tục hành chính theo cơ chế một cửa, một cửa liên thông tại Bộ phận Một cửa và Cổng Dịch vụ công quốc gia"
+    },
+    {
+      "code": "57/2026/QĐ-UBND",
+      "name": "Quy định trình tự, thủ tục hành chính trong lĩnh vực đất đai trên địa bàn tỉnh Đắk Lắk."
+    }
+  ],
+  "steps_raw": [
+    {
+      "name": "Trường hợp sử dụng đất kết hợp vào mục đích thương mại, dịch vụ",
+      "text": "Bước 1: Người có nhu cầu nộp hồ sơ đến Bộ phận Một cửa. \nĐối với trường hợp đã có nội dung sử dụng đất lâm nghiệp kết hợp để xây dựng công trình phục vụ du lịch sinh thái, nghỉ dưỡng, giải trí theo quy định của pháp luật về lâm nghiệp được thể hiện ở phương án quản lý rừng bền vững và đề án du lịch sinh thái, nghỉ dưỡng, giải trí của khu rừng được cơ quan có thẩm quyền phê duyệt thì người sử dụng đất không phải lập phương án sử dụng đất kết hợp đa mục đích. \nKhi nộp hồ sơ, người sử dụng đất được lựa chọn nộp bản sao giấy tờ và xuất trình bản chính để cán bộ tiếp nhận hồ sơ kiểm tra, đối chiếu hoặc nộp bản chính giấy tờ hoặc nộp bản sao giấy tờ đã có công chứng hoặc chứng thực theo quy định của pháp luật về công chứng, chứng thực. Trường hợp nộp hồ sơ theo hình thức trực tuyến thì hồ sơ nộp phải được số hóa từ bản chính hoặc bản sao giấy tờ đã được công chứng, chứng thực. \nTrường hợp Bộ phận Một cửa tiếp nhận hồ sơ thì chuyển hồ sơ đến cơ quan có chức năng quản lý đất đai tỉnh.\nBước 2: Cơ quan có chức năng quản lý đất đai tỉnh chủ trì, phối hợp với các phòng, ban có liên quan thẩm định phương án sử dụng đất kết hợp trình Chủ tịch Ủy ban nhân dân tỉnh. \nBước 3: Chủ tịch Ủy ban nhân dân tỉnh chấp thuận hoặc không chấp thuận phương án sử dụng đất kết hợp; gửi cơ quan tiếp nhận hồ sơ để trả cho người có yêu cầu; trường hợp không chấp thuận thì có văn bản trả lời và nêu rõ lý do."
+    },
+    {
+      "name": "Trường hợp gia hạn phương án sử dụng đất kết hợp vào mục đích thương mại, dịch vụ",
+      "text": "Bước 1: Người có yêu cầu gia hạn gửi văn bản đề nghị đến Bộ phận Một cửa hoặc cơ quan có chức năng quản lý đất đai tỉnh trước khi hết thời gian sử dụng đất kết hợp 30 ngày. Trường hợp Bộ phận Một cửa hành chính công tiếp nhận hồ sơ thì chuyển hồ sơ đến cơ quan có chức năng quản lý đất đai tỉnh theo thẩm quyền quy định. \nBước 2: Cơ quan có chức năng quản lý đất đai tỉnh chủ trì, phối hợp với các phòng, ban có liên quan thẩm định gia hạn phương án sử dụng đất kết hợp trình Chủ tịch Ủy ban nhân dân tỉnh.\nBước 3: Chủ tịch Ủy ban nhân dân tỉnh chấp thuận hoặc không chấp thuận gia hạn phương án sử dụng đất kết hợp; gửi cơ quan tiếp nhận hồ sơ để trả cho người có yêu cầu; trường hợp không chấp thuận thì có văn bản trả lời và nêu rõ lý do."
+    }
+  ],
+  "checklist_raw": [
+    {
+      "group": "",
+      "items": [
+        {
+          "name": "Đơn đề nghị sử dụng đất kết hợp đa mục đích (theo Mẫu số 13)",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H15-KQ000279",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": [
+            {
+              "id": "019f1146-2a50-74c5-81b3-66abc4416620",
+              "fileName": "Mau don so 13. Don de nghi su dung dat ket hop da muc dich.docx",
+              "bucketName": "dvc",
+              "filePath": "configuring/019f1146-2a50-74c5-81b3-66abc4416620/Mau don so 13. Don de nghi su dung dat ket hop da muc dich.docx"
+            }
+          ]
+        },
+        {
+          "name": "Văn bản đề nghị gia hạn phương án sử dụng đất kết hợp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H15-KQ000281",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Phương án sử dụng đất kết hợp",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H15-KQ000280",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Văn bản về việc đại diện theo quy định của pháp luật về dân sự đối với trường hợp thực hiện thủ tục đăng ký đất đai, tài sản gắn liền với đất thông qua người đại diện",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H15-KQ000210",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        },
+        {
+          "name": "Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất",
+          "original_qty": 1,
+          "copy_qty": 0,
+          "code": "H15-KQ000301",
+          "has_electronic_form": true,
+          "is_processing_result": false,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "state": "ACTIVE",
+  "source": {
+    "url": "https://dichvucong.gov.vn/thu-tuc-hanh-chinh/019f0415-ef73-77ed-8bfb-9c882671e6dd",
+    "updated_at": "2026-07-10T08:01:15.375Z",
+    "created_at": "2026-07-10T08:01:15.375Z",
+    "crawled_at": "2026-07-18T09:13:46.134Z"
+  }
+}
