@@ -82,7 +82,7 @@ Widget keeps `session_id` in `sessionStorage` → survives page navigation.
 ### OpenRouter layer
 Two tiers behind one provider-agnostic interface:
 - Cheap model (Gemini Flash class): routing, rerank, facts extraction, llm_check.
-- Strong Vietnamese-capable model (Claude Sonnet class): answering, fix suggestions.
+- Strong model: answering, fix suggestions. Budget decision 19/07: both tiers default to Gemini Flash (Claude Sonnet-class answering exhausted the OpenRouter credit) with a `:free` fallback (`tencent/hy3:free`) so chat survives an empty balance; Sonnet-class remains an env override (`OPENROUTER_STRONG_MODEL`) when budget allows.
 Tool-calling support varies per model on OpenRouter — smoke-test the chosen main model's function calling at startup; configure a fallback model. PII rule from DESIGN.md §5 applies: values reaching external APIs for llm_check are masked first.
 
 ## 5. API surface
