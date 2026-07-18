@@ -1,0 +1,16 @@
+# Backend image is built with context = repo root (docker build -f backend/Dockerfile .)
+# Keep the context small and never leak secrets or the prebuilt DB into the image.
+**/node_modules
+**/dist
+**/.next
+backend/var
+**/.env
+**/.env.*
+.git
+.github
+*.log
+/notes
+dichvucong
+tools/capture/output
+.vercel
+.DS_Store

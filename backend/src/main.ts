@@ -21,8 +21,9 @@ async function bootstrap(): Promise<void> {
     log.warn('OPENROUTER_API_KEY not set — /chat runs in fail-closed degraded mode; /validate llm_check disabled.');
   }
 
-  await app.listen(cfg.port);
-  log.log(`OpenGOV backend listening on http://localhost:${cfg.port}`);
+  // Bind all interfaces so hosted platforms (Railway/Fly/Render) can route to it.
+  await app.listen(cfg.port, '0.0.0.0');
+  log.log(`OpenGOV backend listening on http://0.0.0.0:${cfg.port}`);
 }
 
 bootstrap().catch((err) => {
