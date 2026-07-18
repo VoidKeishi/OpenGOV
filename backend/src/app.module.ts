@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
+import { WidgetController } from './widget.controller';
 import { ConfigModule } from './config/config.module';
 import { DbModule } from './db/db.module';
 import { ErrorsModule } from './errors/errors.module';
@@ -20,6 +21,6 @@ import { ChatModule } from './chat/chat.module';
     ValidationModule,
     ChatModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, WidgetController],
 })
 export class AppModule {}

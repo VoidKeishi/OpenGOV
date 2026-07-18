@@ -7,6 +7,8 @@ export interface AppConfig {
   dataDir: string;
   schemasDir: string;
   errorsCatalogPath: string;
+  /** Where the built widget bundle lives — served at GET /widget/opengov.js (WIDGET.md R3). */
+  widgetDistDir: string;
   openRouter: OpenRouterConfig;
 }
 
@@ -33,6 +35,7 @@ export function loadConfig(): AppConfig {
     dataDir,
     schemasDir: process.env.OPENGOV_SCHEMAS_DIR ?? resolve(dataDir, 'schemas'),
     errorsCatalogPath: process.env.OPENGOV_ERRORS_PATH ?? resolve(dataDir, 'errors', 'catalog.json'),
+    widgetDistDir: process.env.OPENGOV_WIDGET_DIST ?? resolve(cwd, '..', 'widget', 'dist'),
     openRouter: {
       apiKey: process.env.OPENROUTER_API_KEY || undefined,
       baseUrl: process.env.OPENROUTER_BASE_URL ?? 'https://openrouter.ai/api/v1',

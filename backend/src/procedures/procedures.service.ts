@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { AppConfigService } from '../config/config.module';
 import { Dao } from '../db/dao';
@@ -32,4 +32,32 @@ export class ProceduresService {
     if (!existsSync(path)) return null;
     return JSON.parse(readFileSync(path, 'utf8')) as FormSchema;
   }
+
+  listSchemaIndex(): SchemaIndexEntry[] {
+    return listSchemaIndex(this.cfg.config.schemasDir);
+  }
+}
+
+export interface SchemaIndexEntry {
+  procedure_code: string;
+  form_ref: string;
+  field_keys: string[];
+}
+
+/**
+ * R1 (WIDGET.md §10): index of every authored form schema. The widget matches
+ * DOM field names against `field_keys` to detect which procedure's form is on
+ * the page. Read from disk each call, same rationale as getFormSchema.
+ */
+export function listSchemaIndex(schemasDir: string): SchemaIndexEntry[] {
+  if (!existsSync(schemasDir)) return [];
+  return readdirSync(schemasDir)
+    .filter((f) => f.endsWith('.form.json'))
+    .sort()
+    .map((f) => JSON.parse(readFileSync(join(schemasDir, f), 'utf8')) as FormSchema)
+    .map((s) => ({
+      procedure_code: s.procedure_code,
+      form_ref: s.form_ref,
+      field_keys: Object.keys(s.fields ?? {}),
+    }));
 }
