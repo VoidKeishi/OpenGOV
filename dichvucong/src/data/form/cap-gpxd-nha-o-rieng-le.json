@@ -1,0 +1,64 @@
+{
+  "slug": "cap-gpxd-nha-o-rieng-le",
+  "tenToKhai": "Đơn đề nghị cấp giấy phép xây dựng (nhà ở riêng lẻ)",
+  "canCuMau": "Mẫu số 01, Phụ lục II, Nghị định 175/2024/NĐ-CP",
+  "maHoSoPrefix": "XD",
+  "coQuanPrefix": "UBND",
+  "sections": [
+    {
+      "legend": "1. Chủ đầu tư (Chủ hộ)",
+      "fields": [
+        { "name": "ten_chu_dau_tu", "label": "Tên chủ đầu tư (Chủ hộ)", "type": "text", "required": true, "prefill": "user.hoTen" },
+        { "name": "so_dinh_danh_ca_nhan", "label": "Số định danh cá nhân", "type": "text", "required": true, "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric", "prefill": "user.soDinhDanh" },
+        { "name": "nguoi_dai_dien", "label": "Người đại diện", "type": "text" },
+        { "name": "chuc_vu", "label": "Chức vụ", "type": "text" },
+        { "name": "so_dien_thoai", "label": "Số điện thoại", "type": "tel", "required": true }
+      ]
+    },
+    {
+      "legend": "2. Địa điểm xây dựng",
+      "fields": [
+        { "name": "lo_dat_so", "label": "Lô đất số", "type": "text", "required": true },
+        { "name": "dien_tich", "label": "Diện tích (m²)", "type": "number", "required": true, "step": "any" },
+        { "name": "tai_so_nha_duong_pho", "label": "Tại số nhà, đường/phố", "type": "text", "required": true },
+        { "name": "phuong_xa", "label": "Phường/xã", "type": "select", "required": true, "optionsRef": "phuongXa", "prefill": "phuongXa" },
+        { "name": "tinh_thanh_pho", "label": "Tỉnh, thành phố", "type": "select", "required": true, "optionsRef": "tinh", "prefill": "tinh" }
+      ]
+    },
+    {
+      "legend": "3. Tổ chức/cá nhân lập, thẩm tra thiết kế xây dựng",
+      "fields": [
+        { "name": "ten_to_chuc_lap_thiet_ke", "label": "Tên tổ chức/cá nhân lập thiết kế", "type": "text", "required": true },
+        { "name": "ma_so_chung_chi_lap_thiet_ke", "label": "Mã số chứng chỉ năng lực/hành nghề", "type": "text" },
+        { "name": "chu_nhiem_chu_tri_thiet_ke", "label": "Chủ nhiệm, chủ trì thiết kế (họ tên, mã số CCHN)", "type": "textarea" },
+        { "name": "ten_to_chuc_tham_tra", "label": "Tên tổ chức/cá nhân thẩm tra thiết kế", "type": "text" },
+        { "name": "ma_so_chung_chi_tham_tra", "label": "Mã số chứng chỉ năng lực/hành nghề (thẩm tra)", "type": "text" },
+        { "name": "chu_tri_tham_tra", "label": "Chủ trì thẩm tra thiết kế (họ tên, mã số CCHN)", "type": "textarea" }
+      ]
+    },
+    {
+      "legend": "4. Nội dung đề nghị cấp phép (nhà ở riêng lẻ)",
+      "fields": [
+        { "name": "cap_cong_trinh", "label": "Cấp công trình", "type": "select", "required": true, "optionsRef": "capCongTrinh" },
+        { "name": "cot_xay_dung", "label": "Cốt xây dựng (m)", "type": "number", "required": true, "step": "any" },
+        { "name": "khoang_lui", "label": "Khoảng lùi (m)", "type": "number", "step": "any" },
+        { "name": "dien_tich_xay_dung_tang_1", "label": "Diện tích xây dựng tầng 1 (tầng trệt) (m²)", "type": "number", "required": true, "step": "any" },
+        { "name": "tong_dien_tich_san", "label": "Tổng diện tích sàn (m²)", "type": "number", "required": true, "step": "any" },
+        { "name": "dien_giai_tong_dien_tich_san", "label": "Diễn giải (tầng hầm, các tầng trên mặt đất, tầng lửng, tum)", "type": "textarea" },
+        { "name": "chieu_cao_cong_trinh", "label": "Chiều cao công trình (m)", "type": "number", "required": true, "step": "any" },
+        { "name": "dien_giai_chieu_cao", "label": "Diễn giải chiều cao (so với cốt xây dựng)", "type": "textarea" },
+        { "name": "so_tang", "label": "Số tầng", "type": "number", "required": true },
+        { "name": "dien_giai_so_tang", "label": "Diễn giải số tầng (số tầng hầm, tầng nổi, tầng lửng, tum)", "type": "textarea" }
+      ]
+    },
+    {
+      "legend": "5. Dự kiến thời gian hoàn thành và tài liệu kèm theo",
+      "fields": [
+        { "name": "du_kien_hoan_thanh_thang", "label": "Dự kiến thời gian hoàn thành công trình (… tháng)", "type": "number", "required": true },
+        { "name": "tai_lieu_gui_kem", "label": "Tài liệu gửi kèm", "type": "textarea", "defaultValue": "1 - Giấy tờ chứng minh quyền sử dụng đất;\n2 - 02 bộ bản vẽ thiết kế xây dựng" },
+        { "name": "lam_tai", "label": "Làm tại", "type": "text", "prefill": "phuongXa" },
+        { "name": "ngay_lam_don", "label": "Ngày", "type": "date", "prefill": "today" }
+      ]
+    }
+  ]
+}

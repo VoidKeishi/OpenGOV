@@ -1,0 +1,67 @@
+{
+  "slug": "dang-ky-thuong-tru",
+  "tenToKhai": "Tờ khai thay đổi thông tin cư trú (Mẫu CT01)",
+  "canCuMau": "Mẫu CT01 theo Thông tư 53/2025/TT-BCA",
+  "maHoSoPrefix": "TT",
+  "coQuanPrefix": "Công an",
+  "sections": [
+    {
+      "legend": "Thông tin người kê khai",
+      "fields": [
+        { "name": "ho_ten_khai_sinh", "label": "1. Họ, chữ đệm và tên khai sinh", "type": "text", "required": true, "prefill": "user.hoTen" },
+        { "name": "ngay_sinh", "label": "2. Ngày, tháng, năm sinh", "type": "date", "required": true, "prefill": "user.ngaySinh" },
+        { "name": "gioi_tinh", "label": "3. Giới tính", "type": "select", "required": true, "optionsRef": "gioiTinh" },
+        { "name": "so_dinh_danh_ca_nhan", "label": "4. Số định danh cá nhân", "type": "text", "required": true, "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric", "prefill": "user.soDinhDanh" },
+        { "name": "so_dien_thoai_lien_he", "label": "5. Số điện thoại liên hệ", "type": "tel" },
+        { "name": "email", "label": "6. Email", "type": "email" }
+      ]
+    },
+    {
+      "legend": "Thông tin chủ hộ nơi chuyển đến",
+      "fields": [
+        { "name": "ho_ten_chu_ho", "label": "7. Họ, chữ đệm và tên chủ hộ", "type": "text", "required": true },
+        { "name": "moi_quan_he_voi_chu_ho", "label": "8. Mối quan hệ với chủ hộ", "type": "select", "required": true, "optionsRef": "quanHeChuHo" },
+        { "name": "so_dinh_danh_ca_nhan_chu_ho", "label": "9. Số định danh cá nhân của chủ hộ", "type": "text", "required": true, "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric" }
+      ]
+    },
+    {
+      "legend": "Nội dung đề nghị",
+      "fields": [
+        { "name": "noi_dung_de_nghi", "label": "10. Nội dung đề nghị", "type": "textarea", "required": true, "placeholder": "Đăng ký thường trú tại: số nhà …, đường …, phường/xã …, tỉnh/TP …" }
+      ]
+    },
+    {
+      "legend": "11. Những thành viên trong hộ gia đình cùng thay đổi",
+      "fields": [
+        {
+          "name": "thanh_vien",
+          "label": "Danh sách thành viên",
+          "type": "member-table",
+          "columns": [
+            { "name": "ho_ten", "label": "Họ, chữ đệm và tên", "type": "text" },
+            { "name": "ngay_sinh", "label": "Ngày, tháng, năm sinh", "type": "date" },
+            { "name": "gioi_tinh", "label": "Giới tính", "type": "select", "optionsRef": "gioiTinh" },
+            { "name": "so_dinh_danh_ca_nhan", "label": "Số định danh cá nhân", "type": "text", "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric" },
+            { "name": "moi_quan_he_voi_chu_ho", "label": "Mối quan hệ với chủ hộ", "type": "text" }
+          ]
+        }
+      ]
+    },
+    {
+      "legend": "Ý kiến của chủ hộ",
+      "fields": [
+        { "name": "y_kien_chu_ho_dong_y", "label": "Đã đồng ý", "type": "checkbox" },
+        { "name": "y_kien_chu_ho_ho_ten", "label": "Họ và tên", "type": "text" },
+        { "name": "y_kien_chu_ho_so_dinh_danh", "label": "Số định danh cá nhân", "type": "text", "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric" }
+      ]
+    },
+    {
+      "legend": "Ý kiến của chủ sở hữu chỗ ở hợp pháp",
+      "fields": [
+        { "name": "y_kien_chu_so_huu_dong_y", "label": "Đã đồng ý", "type": "checkbox" },
+        { "name": "y_kien_chu_so_huu_ho_ten", "label": "Họ và tên", "type": "text" },
+        { "name": "y_kien_chu_so_huu_so_dinh_danh", "label": "Số định danh cá nhân", "type": "text", "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric" }
+      ]
+    }
+  ]
+}

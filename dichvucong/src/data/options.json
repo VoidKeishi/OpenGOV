@@ -1,0 +1,9 @@
+{
+  "gioiTinh": ["Nam", "Nữ"],
+  "danToc": ["Kinh", "Tày", "Thái", "Mường", "Khmer", "Hoa", "Nùng", "H'Mông", "Dao", "Gia Rai"],
+  "quocTich": ["Việt Nam", "Hoa Kỳ", "Nhật Bản", "Hàn Quốc", "Pháp", "Đức", "Úc", "Trung Quốc"],
+  "giayToTuyThan": ["Căn cước công dân", "Số định danh cá nhân", "Hộ chiếu"],
+  "quanHeKhaiSinh": ["Cha", "Mẹ", "Ông", "Bà", "Người thân thích khác", "Tổ chức đang nuôi dưỡng"],
+  "quanHeChuHo": ["Chủ hộ", "Vợ", "Chồng", "Con", "Cha", "Mẹ", "Khác"],
+  "capCongTrinh": ["Cấp III", "Cấp IV"]
+}

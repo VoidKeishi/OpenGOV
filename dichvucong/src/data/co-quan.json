@@ -1,0 +1,12 @@
+[
+  { "ten": "Thành phố Hà Nội", "phuongXa": ["Phường Hoàn Kiếm", "Phường Ba Đình", "Phường Đống Đa", "Phường Hai Bà Trưng", "Xã Ba Vì"] },
+  { "ten": "Thành phố Hồ Chí Minh", "phuongXa": ["Phường Sài Gòn", "Phường Bến Thành", "Phường Gia Định", "Phường Chợ Lớn", "Xã Củ Chi"] },
+  { "ten": "Thành phố Đà Nẵng", "phuongXa": ["Phường Hải Châu", "Phường Sơn Trà", "Phường Ngũ Hành Sơn", "Xã Hòa Vang"] },
+  { "ten": "Thành phố Huế", "phuongXa": ["Phường Thuận Hóa", "Phường Phú Xuân", "Xã Phú Vang"] },
+  { "ten": "Thành phố Hải Phòng", "phuongXa": ["Phường Hồng Bàng", "Phường Lê Chân", "Phường Ngô Quyền", "Xã Vĩnh Bảo"] },
+  { "ten": "Thành phố Cần Thơ", "phuongXa": ["Phường Ninh Kiều", "Phường Cái Răng", "Xã Phong Điền"] },
+  { "ten": "Tỉnh Quảng Ninh", "phuongXa": ["Phường Hạ Long", "Phường Cẩm Phả", "Xã Vân Đồn"] },
+  { "ten": "Tỉnh Thanh Hóa", "phuongXa": ["Phường Hạc Thành", "Phường Sầm Sơn", "Xã Hoằng Hóa"] },
+  { "ten": "Tỉnh Nghệ An", "phuongXa": ["Phường Thành Vinh", "Phường Cửa Lò", "Xã Nam Đàn"] },
+  { "ten": "Tỉnh Lâm Đồng", "phuongXa": ["Phường Xuân Hương - Đà Lạt", "Phường Lang Biang - Đà Lạt", "Xã Đức Trọng"] }
+]

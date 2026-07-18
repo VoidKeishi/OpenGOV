@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "dang-ky-khai-sinh",
+    "ten": "Thủ tục đăng ký khai sinh",
+    "linhVuc": "Hộ tịch",
+    "nhom": "cong-dan",
+    "coChiTiet": true
+  },
+  {
+    "slug": "dang-ky-thuong-tru",
+    "ten": "Đăng ký thường trú",
+    "linhVuc": "Đăng ký, quản lý cư trú",
+    "nhom": "cong-dan",
+    "coChiTiet": true
+  },
+  {
+    "slug": "cap-gpxd-nha-o-rieng-le",
+    "ten": "Cấp giấy phép xây dựng mới đối với công trình cấp III, cấp IV (Công trình không theo tuyến/Theo tuyến trong đô thị/Tín ngưỡng, tôn giáo/Tượng đài, tranh hoành tráng/Theo giai đoạn cho công trình không theo tuyến/Theo giai đoạn cho công trình theo tuyến trong đô thị/Dự án) và nhà ở riêng lẻ",
+    "linhVuc": "Hoạt động xây dựng",
+    "nhom": "cong-dan",
+    "coChiTiet": true
+  },
+  { "ten": "Liên thông các thủ tục hành chính về đăng ký khai sinh, cấp Thẻ bảo hiểm y tế cho trẻ em dưới 6 tuổi", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Liên thông thủ tục hành chính về đăng ký khai sinh, đăng ký thường trú, cấp thẻ bảo hiểm y tế cho trẻ em dưới 6 tuổi", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Thủ tục đăng ký khai sinh có yếu tố nước ngoài", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Thủ tục đăng ký khai sinh cho người đã có hồ sơ, giấy tờ cá nhân", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Thủ tục đăng ký khai sinh lưu động", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Thủ tục đăng ký khai sinh kết hợp đăng ký nhận cha, mẹ, con có yếu tố nước ngoài", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Thủ tục đăng ký khai sinh có yếu tố nước ngoài cho người đã có hồ sơ, giấy tờ cá nhân", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Thủ tục đăng ký khai sinh kết hợp đăng ký nhận cha, mẹ, con", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Thủ tục đăng ký khai sinh có yếu tố nước ngoài tại khu vực biên giới", "linhVuc": "Hộ tịch", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Cấp Giấy phép vận hành lò phản ứng hạt nhân nghiên cứu", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Cấp Giấy phép chấm dứt hoạt động lò phản ứng hạt nhân nghiên cứu", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Cấp Giấy phép vận hành thử lò phản ứng hạt nhân nghiên cứu", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Phê duyệt chương trình vận hành thử lò phản ứng hạt nhân nghiên cứu", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Phê duyệt địa điểm xây dựng lò phản ứng hạt nhân nghiên cứu", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Cấp Giấy phép vận hành nhà máy điện hạt nhân", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Cấp Giấy phép vận hành thử tổ máy điện hạt nhân", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Phê duyệt chương trình vận hành thử tổ máy điện hạt nhân", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Phê duyệt địa điểm xây dựng nhà máy điện hạt nhân", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Cấp Giấy phép xây dựng lò phản ứng hạt nhân nghiên cứu", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Cấp Giấy phép chấm dứt hoạt động nhà máy điện hạt nhân", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Cấp giấy phép xây dựng nhà máy điện hạt nhân", "linhVuc": "Năng lượng nguyên tử", "nhom": "cong-dan", "coChiTiet": false },
+  { "ten": "Đăng ký nhu cầu hỗ trợ của tổ hợp tác, hợp tác xã, liên hiệp hợp tác xã", "linhVuc": "Kinh tế hợp tác", "nhom": "doanh-nghiep", "coChiTiet": false },
+  { "ten": "Thông báo chấm dứt hoạt động của tổ hợp tác", "linhVuc": "Kinh tế hợp tác", "nhom": "doanh-nghiep", "coChiTiet": false },
+  { "ten": "Thủ tục hỗ trợ tư vấn, hướng dẫn hồ sơ, thủ tục chuyển đổi hộ kinh doanh thành doanh nghiệp", "linhVuc": "Thành lập và hoạt động doanh nghiệp", "nhom": "doanh-nghiep", "coChiTiet": false },
+  { "ten": "Thông báo thành lập/thay đổi tổ hợp tác", "linhVuc": "Kinh tế hợp tác", "nhom": "doanh-nghiep", "coChiTiet": false },
+  { "ten": "Thủ tục cấp Giấy phép xuất khẩu, nhập khẩu hàng hóa đã có quyết định tạm ngừng xuất khẩu, tạm ngừng nhập khẩu nhằm phục vụ mục đích đặc dụng, bảo hành, phân tích, kiểm nghiệm, nghiên cứu khoa học, y tế, sản xuất dược phẩm, bảo vệ quốc phòng, an ninh", "linhVuc": "Xuất nhập khẩu", "nhom": "doanh-nghiep", "coChiTiet": false },
+  { "ten": "Thủ tục xử lý đơn Madrid có chỉ định Việt Nam", "linhVuc": "Sở hữu trí tuệ", "nhom": "doanh-nghiep", "coChiTiet": false },
+  { "ten": "Thủ tục xử lý đơn La Hay có chỉ định Việt Nam", "linhVuc": "Sở hữu trí tuệ", "nhom": "doanh-nghiep", "coChiTiet": false },
+  { "ten": "Phát hành, phổ biến phim phục vụ nhiệm vụ chính trị có phát sinh doanh thu (cấp tỉnh)", "linhVuc": "Điện ảnh", "nhom": "doanh-nghiep", "coChiTiet": false }
+]

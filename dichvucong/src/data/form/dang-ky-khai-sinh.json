@@ -1,0 +1,78 @@
+{
+  "slug": "dang-ky-khai-sinh",
+  "tenToKhai": "Tờ khai đăng ký khai sinh",
+  "canCuMau": "Mẫu theo Thông tư 04/2024/TT-BTP",
+  "maHoSoPrefix": "KS",
+  "coQuanPrefix": "UBND",
+  "sections": [
+    {
+      "legend": "A. Người yêu cầu",
+      "fields": [
+        { "name": "ho_ten_nguoi_yeu_cau", "label": "Họ, chữ đệm, tên người yêu cầu", "type": "text", "required": true, "prefill": "user.hoTen" },
+        { "name": "ngay_sinh_nguoi_yeu_cau", "label": "Ngày, tháng, năm sinh", "type": "date", "required": true, "prefill": "user.ngaySinh" },
+        { "name": "giay_to_tuy_than_loai", "label": "Giấy tờ tùy thân: loại", "type": "select", "required": true, "optionsRef": "giayToTuyThan" },
+        { "name": "giay_to_tuy_than_so", "label": "Giấy tờ tùy thân: số", "type": "text", "required": true, "prefill": "user.soDinhDanh" },
+        { "name": "giay_to_tuy_than_ngay_cap", "label": "Giấy tờ tùy thân: ngày cấp", "type": "date" },
+        { "name": "giay_to_tuy_than_co_quan_cap", "label": "Giấy tờ tùy thân: cơ quan cấp", "type": "text" },
+        { "name": "noi_cu_tru_nguoi_yeu_cau", "label": "Nơi cư trú", "type": "textarea" },
+        { "name": "quan_he_voi_nguoi_duoc_khai_sinh", "label": "Quan hệ với người được khai sinh", "type": "select", "required": true, "optionsRef": "quanHeKhaiSinh" }
+      ]
+    },
+    {
+      "legend": "B. Người được khai sinh",
+      "note": "Đề nghị cơ quan đăng ký khai sinh cho người dưới đây:",
+      "fields": [
+        { "name": "ho_ten_nguoi_duoc_khai_sinh", "label": "Họ, chữ đệm, tên", "type": "text", "required": true },
+        { "name": "ngay_sinh_nguoi_duoc_khai_sinh", "label": "Ngày, tháng, năm sinh", "type": "date", "required": true },
+        { "name": "ngay_sinh_ghi_bang_chu", "label": "Ghi bằng chữ", "type": "text", "required": true, "placeholder": "Ví dụ: Ngày mười lăm tháng ba năm hai nghìn hai mươi sáu" },
+        { "name": "gioi_tinh", "label": "Giới tính", "type": "select", "required": true, "optionsRef": "gioiTinh" },
+        { "name": "dan_toc", "label": "Dân tộc", "type": "select", "required": true, "optionsRef": "danToc" },
+        { "name": "quoc_tich", "label": "Quốc tịch", "type": "select", "required": true, "optionsRef": "quocTich", "defaultValue": "Việt Nam" },
+        { "name": "noi_sinh", "label": "Nơi sinh", "type": "textarea", "required": true, "placeholder": "Tên cơ sở y tế và địa chỉ; hoặc địa danh hành chính nơi sinh" },
+        { "name": "que_quan", "label": "Quê quán", "type": "text", "required": true }
+      ]
+    },
+    {
+      "legend": "C. Người mẹ",
+      "note": "Ghi thông tin ít nhất của cha hoặc mẹ",
+      "fields": [
+        { "name": "ho_ten_me", "label": "Họ, chữ đệm, tên", "type": "text" },
+        { "name": "nam_sinh_me", "label": "Năm sinh", "type": "date" },
+        { "name": "dan_toc_me", "label": "Dân tộc", "type": "select", "optionsRef": "danToc" },
+        { "name": "quoc_tich_me", "label": "Quốc tịch", "type": "select", "optionsRef": "quocTich", "defaultValue": "Việt Nam" },
+        { "name": "noi_cu_tru_me", "label": "Nơi cư trú", "type": "textarea" },
+        { "name": "so_dinh_danh_ca_nhan_me", "label": "Giấy tờ tùy thân (số định danh cá nhân)", "type": "text", "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric" }
+      ]
+    },
+    {
+      "legend": "D. Người cha",
+      "note": "Ghi thông tin ít nhất của cha hoặc mẹ",
+      "fields": [
+        { "name": "ho_ten_cha", "label": "Họ, chữ đệm, tên", "type": "text" },
+        { "name": "nam_sinh_cha", "label": "Năm sinh", "type": "date" },
+        { "name": "dan_toc_cha", "label": "Dân tộc", "type": "select", "optionsRef": "danToc" },
+        { "name": "quoc_tich_cha", "label": "Quốc tịch", "type": "select", "optionsRef": "quocTich", "defaultValue": "Việt Nam" },
+        { "name": "noi_cu_tru_cha", "label": "Nơi cư trú", "type": "textarea" },
+        { "name": "so_dinh_danh_ca_nhan_cha", "label": "Giấy tờ tùy thân (số định danh cá nhân)", "type": "text", "pattern": "[0-9]{12}", "maxLength": 12, "inputMode": "numeric" }
+      ]
+    },
+    {
+      "legend": "E. Giấy chứng nhận kết hôn của cha, mẹ",
+      "fields": [
+        { "name": "gcn_ket_hon_so", "label": "Số", "type": "text" },
+        { "name": "gcn_ket_hon_quyen_so", "label": "Quyển số", "type": "text" },
+        { "name": "gcn_ket_hon_ngay_dang_ky", "label": "Đăng ký ngày", "type": "date" },
+        { "name": "gcn_ket_hon_tai", "label": "Tại", "type": "text" }
+      ]
+    },
+    {
+      "legend": "F. Đề nghị cấp bản sao và xác nhận",
+      "fields": [
+        { "name": "de_nghi_cap_ban_sao", "label": "Đề nghị cấp bản sao", "type": "radio", "required": true, "options": ["Có", "Không"] },
+        { "name": "so_luong_ban_sao", "label": "Số lượng … bản", "type": "number" },
+        { "name": "lam_tai", "label": "Làm tại", "type": "text", "prefill": "phuongXa" },
+        { "name": "ngay_khai", "label": "Ngày", "type": "date", "prefill": "today" }
+      ]
+    }
+  ]
+}
