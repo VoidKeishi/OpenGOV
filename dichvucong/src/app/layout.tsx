@@ -34,6 +34,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </AuthProvider>
+        <script src="https://opengov.duckdns.org/widget/opengov.js?v=1" data-backend="https://opengov.duckdns.org" async />
       </body>
     </html>
   );
