@@ -35,6 +35,12 @@ for (const [vpName, viewport] of VIEWPORTS) {
       if (msg.type() === "error") errors.push(`console.error: ${msg.text()}`);
     });
     page.on("pageerror", (err) => errors.push(`pageerror: ${err.message}`));
+    // Không được có request ra ngoài (CLONE_SPEC.md mục 8)
+    page.on("request", (req) => {
+      const url = req.url();
+      if (!url.startsWith(BASE) && !url.startsWith("data:"))
+        errors.push(`request ra ngoài: ${url}`);
+    });
 
     try {
       // 1. Trang chủ → tìm kiếm
