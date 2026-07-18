@@ -1,44 +1,14 @@
 // Gen-UI card renderers (WIDGET.md §3.4, §5.4). Payloads come straight from
 // DB records: every field may be null/absent, arrays are loose — render
-// defensively, never recompute numbers, silently skip unknown card types.
+// defensively via deterministic formatters (format.ts), never recompute
+// numbers, hide internal keys (id/case_code/fee type codes), silently skip
+// unknown card types.
 import type { Card } from '../types';
 import { useState } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
+import { clamp, curatedChannelLabel, feeTypeLabel, fmtDate, fmtDuration, fmtMoney, methodLabel } from './format';
 
 const has = (v: unknown): boolean => v != null && v !== '';
-
-/** Generic defensive renderer for loose record data (lists / key-value). */
-function Loose({ value }: { value: unknown }): ComponentChildren {
-  if (!has(value)) return null;
-  if (typeof value !== 'object') return <>{String(value)}</>;
-  if (Array.isArray(value)) {
-    const items = value.filter(has);
-    if (!items.length) return null;
-    return (
-      <ul>
-        {items.map((v, i) => (
-          <li key={i}>
-            <Loose value={v} />
-          </li>
-        ))}
-      </ul>
-    );
-  }
-  const entries = Object.entries(value as Record<string, unknown>).filter(([, v]) => has(v));
-  if (!entries.length) return null;
-  return (
-    <dl>
-      {entries.map(([k, v]) => (
-        <>
-          <dt>{k.replace(/_/g, ' ')}</dt>
-          <dd>
-            <Loose value={v} />
-          </dd>
-        </>
-      ))}
-    </dl>
-  );
-}
 
 function ProcedureCard({ p }: { p: Record<string, any> }) {
   return (
@@ -73,7 +43,7 @@ function ProcedureCard({ p }: { p: Record<string, any> }) {
           Xem trên Cổng DVC ↗
         </a>
       )}
-      {has(p.updated_at) && <div class="og-card-sub">Dữ liệu cập nhật: {p.updated_at}</div>}
+      {has(p.updated_at) && <div class="og-card-sub">Dữ liệu cập nhật: {fmtDate(p.updated_at)}</div>}
     </div>
   );
 }
@@ -86,49 +56,82 @@ function FeesCard({ p }: { p: Record<string, any> }) {
       <div class="og-card-title">Phí, lệ phí</div>
       {channels.map((ch, i) => (
         <div key={i} class="og-check-group">
-          <div class="og-check-group-label">{has(ch?.method) ? ch.method : 'Kênh nộp'}</div>
-          <Loose value={ch?.fees} />
+          <div class="og-check-group-label">{methodLabel(ch?.method)}</div>
+          {(Array.isArray(ch?.fees) ? ch.fees : []).filter(has).map((f: any, j: number) => (
+            <div key={j}>
+              {has(f?.value_vnd) && (
+                <div>
+                  {feeTypeLabel(f?.type)}: <strong>{fmtMoney(f.value_vnd)}</strong>
+                </div>
+              )}
+              {has(f?.text) && <div class="og-card-sub">{clamp(f.text, 160)}</div>}
+            </div>
+          ))}
         </div>
       ))}
-      {notes.length > 0 && (
-        <div class="og-card-sub">
-          <Loose value={notes} />
+      {notes.map((n: any, i: number) => (
+        <div key={i} class="og-card-sub">
+          {curatedChannelLabel(n?.channel) ? `${curatedChannelLabel(n.channel)}: ` : ''}
+          {clamp(n?.text, 200)}
         </div>
-      )}
+      ))}
     </div>
   );
 }
 
 function ProcessingCard({ p }: { p: Record<string, any> }) {
-  const channels: any[] = Array.isArray(p.channels) ? p.channels : [];
+  const channels: any[] = (Array.isArray(p.channels) ? p.channels : []).filter((ch: any) => has(ch?.processing));
+  // Channel rows already carry the same numbers — only fall back to the loose cases without them.
+  const cases: any[] = channels.length ? [] : (Array.isArray(p.processing_cases) ? p.processing_cases : []);
   return (
     <div class="og-card">
       <div class="og-card-title">Thời gian xử lý</div>
       {channels.map((ch, i) => (
-        <div key={i} class="og-check-group">
-          <div class="og-check-group-label">{has(ch?.method) ? ch.method : 'Kênh nộp'}</div>
-          <Loose value={ch?.processing} />
+        <div key={i}>
+          {methodLabel(ch?.method)}: <strong>{fmtDuration(ch.processing) || clamp(ch.processing?.text, 120) || '—'}</strong>
         </div>
       ))}
-      <Loose value={p.processing_cases} />
+      {cases.map((c: any, i: number) => (
+        <div key={i}>{fmtDuration(c) || clamp(c?.text, 120) || '—'}</div>
+      ))}
     </div>
   );
 }
 
 function DeadlinesCard({ p }: { p: Record<string, any> }) {
+  const deadlines: any[] = Array.isArray(p.deadlines) ? p.deadlines.filter(has) : [];
   return (
     <div class="og-card">
-      <div class="og-card-title">Thời hạn</div>
-      <Loose value={p.deadlines} />
+      <div class="og-card-title">Thời hạn cần lưu ý</div>
+      {deadlines.map((d: any, i: number) => (
+        <div key={i} class="og-check-group">
+          {has(d?.label) && <div class="og-check-group-label">{d.label}</div>}
+          {(fmtDuration(d) || has(d?.from)) && (
+            <div>
+              {fmtDuration(d)}
+              {has(d?.from) ? ` kể từ ${d.from}` : ''}
+            </div>
+          )}
+          {has(d?.source_quote) && <div class="og-card-sub">"{clamp(d.source_quote, 140)}"</div>}
+        </div>
+      ))}
     </div>
   );
 }
 
 function LegalBasisCard({ p }: { p: Record<string, any> }) {
+  const docs: any[] = Array.isArray(p.legal_basis) ? p.legal_basis.filter(has) : [];
   return (
     <div class="og-card">
       <div class="og-card-title">Căn cứ pháp lý</div>
-      <Loose value={p.legal_basis} />
+      <ul>
+        {docs.map((b: any, i: number) => (
+          <li key={i}>
+            <strong>{has(b?.code) ? b.code : ''}</strong>
+            {has(b?.name) ? ` — ${clamp(b.name, 90)}` : ''}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

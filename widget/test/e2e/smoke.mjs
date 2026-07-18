@@ -482,9 +482,11 @@ async function scCardsMocked(browser) {
     '{"type":"card","payload":{"type":"procedure","payload":{"code":"1.004222","name":"Đăng ký thường trú","executing_agency":"Công an cấp xã","source_url":"https://dichvucong.gov.vn/p/home/dvc-tthc-thu-tuc-hanh-chinh-chi-tiet.html?ma_thu_tuc=1.004222","updated_at":"2026-07-01"}}}',
     '{"type":"card","payload":{"type":"checklist","payload":{"code":"1.004222","groups":[{"id":"g1","label":"Giấy tờ bắt buộc","items":[{"id":"to-khai","label":"Tờ khai CT01","quantity":{"original":1,"copy":0}}]},{"id":"g2","label":"Giấy tờ chỗ ở hợp pháp","type":"ONE_OF","items":[{"id":"so-do","label":"Sổ đỏ","quantity":{"original":0,"copy":1}},{"id":"hd-thue","label":"Hợp đồng thuê nhà","quantity":{"original":1,"copy":0},"conditional":true}]}]}}}',
     '{"type":"card","payload":{"type":"legal_fragments","payload":{"code":"1.004222","fragments":[{"id":"f1","article":"Điều 21","doc_code":"68/2020/QH14","doc_title":"Luật Cư trú 2020","title":"Hồ sơ đăng ký thường trú","source_url":"https://vanban.chinhphu.vn/x"}]}}}',
+    '{"type":"card","payload":{"type":"fees","payload":{"code":"1.004222","channels":[{"method":"ONLINE","fees":[{"type":"FEE","value_vnd":10000,"text":"Thu 10.000 đồng/lần đăng ký qua cổng dịch vụ công trực tuyến."}]}],"fee_notes":[{"channel":"all","text":"Miễn lệ phí một số đối tượng theo Điều 4 Thông tư 75/2022/TT-BTC."}]}}}',
     '{"type":"token","text":"Bạn cần chuẩn bị "}',
-    '{"type":"token","text":"**Tờ khai CT01**. Chi tiết ở thẻ bên dưới."}',
-    '{"type":"done","cards_count":3}',
+    '{"type":"token","text":"**Tờ khai CT01**. Chi tiết ở thẻ bên dưới.\\n"}',
+    '{"type":"token","text":"## Lưu ý\\n---\\nNộp trực tuyến rẻ hơn."}',
+    '{"type":"done","cards_count":4}',
   ];
   const body = EVENTS.map((j) => `data: ${j}\n\n`).join('') + 'event: end\ndata: {}\n\n';
   const context = await browser.newContext();
@@ -497,10 +499,28 @@ async function scCardsMocked(browser) {
   await waitFor(async () => (await page.locator('.og-cards').count()) === 1);
 
   check(
-    (await page.locator('.og-prose strong').textContent().catch(() => '')) === 'Tờ khai CT01',
+    (await page.locator('.og-prose strong').first().textContent().catch(() => '')) === 'Tờ khai CT01',
     'mini-markdown bold in prose',
   );
-  check((await page.locator('.og-card').count()) === 3, 'cards revealed below prose after end');
+  const proseText = await page.locator('.og-prose').textContent();
+  check(!proseText.includes('##') && !proseText.includes('---'), 'heading/hr markdown never renders raw');
+  check(
+    (await page.locator('.og-prose strong', { hasText: 'Lưu ý' }).count()) === 1,
+    'heading degrades to bold line',
+  );
+  check((await page.locator('.og-card').count()) === 4, 'cards revealed below prose after end');
+  // Humanized fees card: enum/keys never leak, money formatted.
+  const feesCard = page.locator('.og-card', { hasText: 'Phí, lệ phí' });
+  check((await feesCard.count()) === 1, 'fees card rendered');
+  const feesText = await feesCard.textContent();
+  check(feesText.includes('Nộp trực tuyến'), 'fees channel label humanized');
+  check(feesText.includes('Lệ phí') && feesText.includes('10.000 đ'), 'fee type + money humanized');
+  check(!feesText.includes('ONLINE') && !feesText.includes('value'), 'raw enum/keys never leak');
+  // Procedure card date humanized.
+  check(
+    (await page.locator('.og-card', { hasText: 'Dữ liệu cập nhật: 01/07/2026' }).count()) === 1,
+    'updated_at formatted dd/mm/yyyy',
+  );
   check(
     (await page.locator('.og-card', { hasText: 'MỘT TRONG' }).count()) === 1,
     'ONE_OF group label',

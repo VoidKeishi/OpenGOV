@@ -2,7 +2,9 @@
 // Processing order is normative: (1) escape ALL HTML; (2) **bold**;
 // (3) [text](url) + bare URLs → <a> (http/https only); (4) `- `/`* ` → <ul>,
 // `1. ` → <ol>; (5) remaining newlines → <br>. No headings, no tables, no
-// code blocks — raw model HTML is NEVER rendered.
+// code blocks — raw model HTML is NEVER rendered. Tolerance for markdown the
+// prompt forbids but a model may still emit: `# heading` lines degrade to a
+// bold paragraph, `---`/`***`/`___` rules are dropped.
 
 function escapeHtml(s: string): string {
   return s
@@ -43,6 +45,18 @@ export function miniMarkdown(src: string): string {
   };
 
   for (const line of lines) {
+    if (/^\s*([-*_])\1{2,}\s*$/.test(line)) {
+      // Horizontal rule — dropped entirely (contributes no <br>).
+      flush();
+      continue;
+    }
+    const heading = /^\s*#{1,6}\s+(.*)$/.exec(line);
+    if (heading) {
+      // Heading — degrade to a bold line (non-list part so <br> joining applies).
+      flush();
+      parts.push({ list: false, html: `<strong>${inline(heading[1] ?? '')}</strong>` });
+      continue;
+    }
     const ul = /^\s*[-*] (.*)$/.exec(line);
     const ol = /^\s*\d+\. (.*)$/.exec(line);
     if (ul || ol) {

@@ -62,8 +62,34 @@ describe('miniMarkdown', () => {
     );
   });
 
-  it('no headings, no tables, no code blocks', () => {
-    expect(miniMarkdown('# tiêu đề')).toBe('# tiêu đề');
+  it('no tables, no code blocks', () => {
     expect(miniMarkdown('`code`')).toBe('`code`');
+  });
+
+  // Tolerance: the prompt forbids headings/rules, but a model slip must not render raw.
+  it('heading lines degrade to a bold standalone line', () => {
+    expect(miniMarkdown('# Tiêu đề')).toBe('<strong>Tiêu đề</strong>');
+    expect(miniMarkdown('## Hồ sơ cần chuẩn bị\nNội dung')).toBe(
+      '<strong>Hồ sơ cần chuẩn bị</strong><br>Nội dung',
+    );
+    expect(miniMarkdown('trước\n### Các bước\nsau')).toBe(
+      'trước<br><strong>Các bước</strong><br>sau',
+    );
+  });
+
+  it('#no-space stays literal text', () => {
+    expect(miniMarkdown('#hashtag')).toBe('#hashtag');
+  });
+
+  it('horizontal rules are dropped without a stray <br>', () => {
+    expect(miniMarkdown('trên\n---\ndưới')).toBe('trên<br>dưới');
+    expect(miniMarkdown('***')).toBe('');
+    expect(miniMarkdown('a\n___\n- x')).toBe('a<ul><li>x</li></ul>');
+  });
+
+  it('heading content is still escaped and inline-transformed', () => {
+    expect(miniMarkdown('## <b>x</b> **đậm**')).toBe(
+      '<strong>&lt;b&gt;x&lt;/b&gt; <strong>đậm</strong></strong>',
+    );
   });
 });
