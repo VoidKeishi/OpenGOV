@@ -4,11 +4,17 @@
 
 ## 1. Source data reality (drives everything below)
 
-Crawled from dichvucong.gov.vn into `backend/data/crawl/` (see `manifest.json` for provenance):
+Two source layers feed the knowledge base.
+
+**Layer 1 — DVC crawl**, in `backend/data/crawl/` (see `manifest.json` for provenance):
 
 - `catalog.jsonl` — 5,670 procedures, one JSON object per line. Well-structured metadata (code, name, categories, agencies, target type).
-- `details/<code>.json` — 500 full procedure records, selected pilot-first. Each file is an API envelope `{code, data, message}`; everything meaningful is under `.data` (~78 keys).
+- `details/<code>.json` — 502 full procedure records, selected pilot-first (500 tiered + 2 delta-crawled via `crawl-dvc.mjs --codes` when the pilot scope changed). Each file is an API envelope `{code, data, message}`; everything meaningful is under `.data` (~78 keys).
 - `provinces.json` — envelope containing the 34 post-merger provinces `{id, name, code, state}`.
+
+**Layer 2 — curated external sources**, in `notes/knowledge-base/` (teammate-authored, 18/07/2026): per-pilot procedure sheets (verbatim portal content + statutory additions), legal research with article-level citations and source URLs, a 35-entry error catalog, and a 30-item golden Q&A set. This layer exists because the crawl alone cannot answer "why"/"what if" questions — conditions, exemptions, and sanctions live in the underlying legal documents (Luật Cư trú 2020, NĐ 154/2024, Luật DN 2020, NĐ 168/2025, BLLĐ 2019, NĐ 145/2020, …). It is converted into `data/` artifacts (curated overlays, `data/legal/` fragments, error catalog, golden QA — see DATA.md) with mandatory per-fragment provenance (`source_url`, `retrieved_at`), plus targeted web gap-fill for articles the error catalog cites but the research files lack.
+
+Pilot scope (decided 18/07/2026): `1.004222` đăng ký thường trú, `2.001610` đăng ký thành lập DNTN, `2.001955` đăng ký nội quy lao động. (The earlier pilots 1.001193 khai sinh / 1.013225 GPXD stay in the KB as ordinary records.)
 
 Verified facts every consumer must respect:
 
@@ -28,7 +34,7 @@ Verified facts every consumer must respect:
 ## 2. Core principles
 
 1. **Two-track data.** Two artifacts with different trust requirements:
-   - **Knowledge base** (broad, for Q&A): full catalog + normalized details for all 500. Minor imperfections acceptable — answers always carry source links.
+   - **Knowledge base** (broad, for Q&A): full catalog + normalized details for all 502, enriched for the pilots with traceable legal fragments (`data/legal/`). Minor imperfections acceptable — answers always carry source links.
    - **Validation schemas** (narrow, pilot procedures only): hand-authored from the official form templates (tờ khai) — crawled data has NO field-level form information. Declarative JSON rules: required (conditional on case facts), format/regex, domain checks (quê quán validated against the province list — catches pre-merger province names), cross-field constraints, conditional documents ("chưa đăng ký kết hôn → cần văn bản cam đoan").
 2. **Structure offline, never at runtime.** All raw-text → structure conversion happens at build time with human review, committed to `data/`. Runtime never interprets raw text → deterministic, auditable.
 3. **Full-procedure grounding, not RAG chunking.** Chunk-similarity retrieval is the #1 source of incomplete/hallucinated answers. Since each procedure fits in context: first find the *right procedure*, then load its *entire* normalized record. Retrieval is only for discovery: SQLite FTS5 over the catalog + a hand-authored alias table ("làm giấy khai sinh", "nhập hộ khẩu", …) + LLM rerank of the top-20. No vector DB — also avoids a dependency OpenRouter can't serve (no embeddings endpoint).
@@ -101,9 +107,11 @@ Tables: `procedures` (merged record JSON + `structuring_level` 'raw'|'full'), `p
 ```
 BUILD-TIME
 backend/data/crawl/ (catalog.jsonl / details / provinces)
-  → tools/etl/parse.ts (deterministic, all 500)        → data/procedures/*.json, provinces current
-  → interactive LLM structuring + human review          → data/curated/*.json, schemas, errors,
-    (pilot only, per tools/etl/STRUCTURING.md)            aliases, golden-qa, provinces defunct
+  → tools/etl/parse.ts (deterministic, all 502)        → data/procedures/*.json, provinces current
+notes/knowledge-base/ (teammate KB) + web gap-fill
+  → agent conversion + human verification               → data/curated/*.json, data/legal/*.json,
+    (pilot only, per tools/etl/STRUCTURING.md)            schemas, errors, aliases, golden-qa,
+                                                          provinces defunct
   → backend/scripts/seed.ts                             → backend/var/opengov.db
 
 RUNTIME
@@ -117,8 +125,9 @@ widget (chat + DOM capture)
 **No batch pipeline.** The real LLM workload is 3 pilot documents, each needing careful human review — a pipeline costs more to build than it saves at 1 run × 3 documents. This is human-in-the-loop curation, not batch processing.
 
 Split:
-- **Deterministic parser** (`tools/etl/parse.ts`): normalizes the already-structured fields (identity, agencies, channels+fees, processing cases, legal basis trimmed, steps/checklist kept verbatim, epoch→ISO, source URL) for the ENTIRE 500-detail set. Plain TS, zero runtime deps, idempotent — rerun produces a byte-identical output (empty `git diff`).
-- **LLM structuring via Claude Code, interactively**: pilot procedures only — steps blob → numbered per-channel steps; messy checklist fragments → clean conditional checklist; deadlines extracted with verbatim source quotes. Rules and the committed session prompt live in `tools/etl/STRUCTURING.md`; outputs carry a `review` block (`reviewed_by`, `reviewed_at`, `method`).
+- **Deterministic parser** (`tools/etl/parse.ts`): normalizes the already-structured fields (identity, agencies, channels+fees, processing cases, legal basis trimmed, steps/checklist kept verbatim, epoch→ISO, source URL) for the ENTIRE 502-detail set. Plain TS, zero runtime deps, idempotent — rerun produces a byte-identical output (empty `git diff`).
+- **Stage A2 — KB ingest (delta, after the pilot-scope decision)**: an agent converts `notes/knowledge-base/` into the `data/` artifacts (curated overlays, `data/legal/` fragments, error catalog, golden QA, aliases) and gap-fills missing legal fragments via web research — every fragment with mandatory `source_url` + `retrieved_at`, official portals preferred. Outputs land as `_draft`-marked files.
+- **Structuring session via Claude Code, interactively**: pilot procedures only — verifies the converted artifacts against the sheets and raw details (every `when` condition, ONE_OF exclusivity, quantities, deadlines), numbers the steps per channel where the KB has not already. Rules and the committed session prompt live in `tools/etl/STRUCTURING.md`; outputs carry a `review` block (`reviewed_by`, `reviewed_at`, `method`).
 
 Reproducibility artifacts: `tools/etl/parse.ts` + `tools/etl/STRUCTURING.md` + reviewed `data/` outputs. Scaling story (if judges ask): structuring currently runs semi-automated with 100% human review for the pilot; STRUCTURING.md's prompt + target schema wrap directly into a batch job (add JSON-schema validation + sampled review) when scaling to thousands of procedures.
 

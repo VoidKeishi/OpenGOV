@@ -20,6 +20,9 @@
 //     sampled procedure; the download logic below is defensive for when it does.
 //
 // Run: node backend/scripts/crawl-dvc.mjs   (Node >= 18, built-in fetch, no deps)
+// Delta mode: node backend/scripts/crawl-dvc.mjs --codes 2.001610,2.001955
+//   fetches ONLY those codes (uuid looked up in the existing catalog.jsonl),
+//   skips provinces/selection, and merges the run into manifest.json.
 // Resumable: an existing valid details/<code>.json is skipped; an existing
 // catalog.jsonl is reused instead of re-crawled.
 
@@ -484,6 +487,39 @@ async function main() {
   const { items: catalog, apiTotal } = await crawlCatalog();
   if (catalog.length < 2000) {
     log(`WARNING: catalog has only ${catalog.length} items (expected >= 2000)`);
+  }
+
+  // Delta mode: --codes a,b — fetch only those details, merge manifest, exit.
+  const codesIdx = process.argv.indexOf('--codes');
+  const codesArg = codesIdx > -1 ? process.argv[codesIdx + 1] : null;
+  if (codesArg) {
+    const wanted = codesArg.split(',').map((s) => s.trim()).filter(Boolean);
+    const byCode = new Map(catalog.map((it) => [it.code, it]));
+    const missing = wanted.filter((c) => !byCode.has(c));
+    if (missing.length) throw new Error(`--codes not found in catalog: ${missing.join(', ')}`);
+    const selected = wanted.map((c) => {
+      const it = byCode.get(c);
+      return { id: it.id, code: it.code, name: it.name, tier: 'A' };
+    });
+    const { detailOk, detailFail } = await crawlDetails(selected);
+
+    const manifestPath = path.join(OUT, 'manifest.json');
+    const prev = existsSync(manifestPath) ? JSON.parse(await readFile(manifestPath, 'utf8')) : {};
+    const okSet = new Set([...(prev.detailOk || []), ...detailOk]);
+    const manifest = {
+      ...prev,
+      finishedAt: new Date().toISOString(),
+      selectedCount: okSet.size,
+      detailOk: [...okSet],
+      detailFail: [...(prev.detailFail || []).filter((f) => !okSet.has(f.code)), ...detailFail],
+      deltaRuns: [
+        ...(prev.deltaRuns || []),
+        { at: startedAt, codes: wanted, ok: detailOk.length, fail: detailFail.length },
+      ],
+    };
+    await writeFile(manifestPath, JSON.stringify(manifest, null, 2));
+    log(`=== DVC delta crawl done: ok=${detailOk.length} fail=${detailFail.length} ===`);
+    return;
   }
 
   const provincesCount = await crawlProvinces();
