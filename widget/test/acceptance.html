@@ -1,0 +1,129 @@
+<!doctype html>
+<!-- Acceptance harness (WIDGET.md §11): blank page + sample form covering every
+     field type, names matching schema 1.004222. %BACKEND% is replaced by serve.mjs. -->
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trang thử nghiệm — Tờ khai CT01</title>
+  <style>
+    body { font-family: sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+    fieldset { margin-bottom: 1.5rem; }
+    label { display: block; margin-top: .75rem; }
+    input, select, textarea { display: block; margin-top: .25rem; width: 100%; max-width: 24rem; box-sizing: border-box; }
+    input[type="checkbox"], input[type="radio"] { display: inline-block; width: auto; }
+    table input, table select { max-width: 100%; }
+    td, th { border: 1px solid #ccc; padding: .25rem; }
+  </style>
+</head>
+<body>
+  <h1>Tờ khai thay đổi thông tin cư trú (CT01)</h1>
+
+  <!-- Decoy form: must NOT be picked as the main form (no schema fields) -->
+  <form id="search-form" action="#">
+    <input type="search" name="tim_kiem" placeholder="Tìm kiếm…">
+  </form>
+
+  <form id="to-khai" action="#">
+    <fieldset>
+      <legend>Thông tin người kê khai</legend>
+      <label for="f-ho-ten">Họ, chữ đệm và tên</label>
+      <input id="f-ho-ten" type="text" name="ho_ten_khai_sinh">
+
+      <label for="f-ngay-sinh">Ngày, tháng, năm sinh</label>
+      <input id="f-ngay-sinh" type="date" name="ngay_sinh">
+
+      <span>Giới tính</span>
+      <label><input type="radio" name="gioi_tinh" value="Nam"> Nam</label>
+      <label><input type="radio" name="gioi_tinh" value="Nữ"> Nữ</label>
+
+      <label for="f-so-dinh-danh">Số định danh cá nhân</label>
+      <input id="f-so-dinh-danh" type="text" name="so_dinh_danh_ca_nhan" maxlength="12" inputmode="numeric">
+
+      <label for="f-sdt">Số điện thoại liên hệ</label>
+      <input id="f-sdt" type="tel" name="so_dien_thoai_lien_he">
+
+      <label for="f-email">Email</label>
+      <input id="f-email" type="email" name="email">
+    </fieldset>
+
+    <fieldset>
+      <legend>Thông tin chủ hộ nơi chuyển đến</legend>
+      <label for="f-ho-ten-chu-ho">Họ, chữ đệm và tên chủ hộ</label>
+      <input id="f-ho-ten-chu-ho" type="text" name="ho_ten_chu_ho">
+
+      <label for="f-quan-he">Mối quan hệ với chủ hộ</label>
+      <select id="f-quan-he" name="moi_quan_he_voi_chu_ho">
+        <option value="">-- Chọn --</option>
+        <option value="Vợ">Vợ</option>
+        <option value="Chồng">Chồng</option>
+        <option value="Con">Con</option>
+        <option value="Khác">Khác</option>
+      </select>
+
+      <label for="f-so-dinh-danh-chu-ho">Số định danh cá nhân của chủ hộ</label>
+      <input id="f-so-dinh-danh-chu-ho" type="text" name="so_dinh_danh_ca_nhan_chu_ho" maxlength="12" inputmode="numeric">
+    </fieldset>
+
+    <fieldset>
+      <legend>Nội dung đề nghị</legend>
+      <label for="f-noi-dung">Nội dung đề nghị</label>
+      <textarea id="f-noi-dung" name="noi_dung_de_nghi" rows="3"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Những thành viên trong hộ gia đình cùng thay đổi</legend>
+      <table>
+        <thead>
+          <tr><th>Họ tên</th><th>Ngày sinh</th><th>Giới tính</th><th>Số định danh</th><th>Quan hệ với chủ hộ</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="thanh_vien_0_ho_ten"></td>
+            <td><input type="date" name="thanh_vien_0_ngay_sinh"></td>
+            <td><select name="thanh_vien_0_gioi_tinh"><option value="">--</option><option>Nam</option><option>Nữ</option></select></td>
+            <td><input type="text" name="thanh_vien_0_so_dinh_danh_ca_nhan"></td>
+            <td><input type="text" name="thanh_vien_0_moi_quan_he_voi_chu_ho"></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="thanh_vien_1_ho_ten"></td>
+            <td><input type="date" name="thanh_vien_1_ngay_sinh"></td>
+            <td><select name="thanh_vien_1_gioi_tinh"><option value="">--</option><option>Nam</option><option>Nữ</option></select></td>
+            <td><input type="text" name="thanh_vien_1_so_dinh_danh_ca_nhan"></td>
+            <td><input type="text" name="thanh_vien_1_moi_quan_he_voi_chu_ho"></td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>Ý kiến của chủ hộ</legend>
+      <label><input type="checkbox" name="y_kien_chu_ho_dong_y" value="Đã đồng ý"> Đồng ý cho đăng ký thường trú</label>
+      <label for="f-yk-chu-ho-ten">Họ và tên chủ hộ</label>
+      <input id="f-yk-chu-ho-ten" type="text" name="y_kien_chu_ho_ho_ten">
+      <label for="f-yk-chu-ho-sdd">Số định danh cá nhân</label>
+      <input id="f-yk-chu-ho-sdd" type="text" name="y_kien_chu_ho_so_dinh_danh" maxlength="12">
+    </fieldset>
+
+    <fieldset>
+      <legend>Ý kiến của chủ sở hữu chỗ ở hợp pháp</legend>
+      <label><input type="checkbox" name="y_kien_chu_so_huu_dong_y" value="Đã đồng ý"> Đồng ý cho đăng ký thường trú</label>
+      <label for="f-yk-csh-ten">Họ và tên chủ sở hữu</label>
+      <input id="f-yk-csh-ten" type="text" name="y_kien_chu_so_huu_ho_ten">
+      <label for="f-yk-csh-sdd">Số định danh cá nhân</label>
+      <input id="f-yk-csh-sdd" type="text" name="y_kien_chu_so_huu_so_dinh_danh" maxlength="12">
+    </fieldset>
+
+    <fieldset>
+      <legend>Giấy tờ kèm theo</legend>
+      <label for="f-giay-to">Tệp đính kèm</label>
+      <input id="f-giay-to" type="file" name="giay_to">
+      <input type="hidden" name="ma_ho_so" value="HS-2026-000123">
+    </fieldset>
+
+    <button type="submit" name="nop">Nộp hồ sơ</button>
+  </form>
+
+  <script src="/dist/opengov.js" data-backend="%BACKEND%"></script>
+</body>
+</html>

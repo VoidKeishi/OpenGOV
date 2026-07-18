@@ -14,17 +14,32 @@
 | Review dữ liệu | Duyệt từng điều kiện `when`/ONE_OF (43 item truy vết được về nguồn); viết `data/schemas/` ×3; catalog 44 mã lỗi; điền 29 tỉnh giải thể (NQ 202/2025/QH15) → rule sáp nhập tỉnh hoạt động | `18ebbdd` |
 | Backend service | NestJS + better-sqlite3: `POST /chat` (SSE, agent loop 4 tool, card số liệu không qua LLM), `POST /validate` (engine 10 rule + llm_check che PII), `/sessions`, `/health`; unit tests; runner golden-QA. Key LLM là tùy chọn (degrade có chủ đích) | `1c4c97b` → `170b1b3` |
 | Hệ thống tài liệu | README, PROBLEM (đề bài gốc), docs/DESIGN, docs/WIDGET, CLAUDE.md gốc | `9e1a58b` |
-| Thiết kế chi tiết widget | docs/WIDGET.md thành spec build-ready (capture DOM bước hiện tại, detect DOM-match, card checklist, UX states, acceptance, yêu cầu backend R1–R4); đồng bộ SOLUTION/DESIGN | (commit này) |
+| Thiết kế chi tiết widget | docs/WIDGET.md thành spec build-ready (capture DOM bước hiện tại, detect DOM-match, card checklist, UX states, acceptance, yêu cầu backend R1–R4); đồng bộ SOLUTION/DESIGN | `cb03fcd` |
+| **Widget Pha 1** | `widget/` — Preact + Vite, 1 file IIFE `dist/opengov.js` **14.8KB gzip** (gate 60KB trong build), Shadow DOM, SSE client + 6 card + checklist, detect DOM-match, validate + scroll-to-field, transcript cache; 46 unit (vitest) + 69 check e2e (Playwright, tự spawn backend degraded) ALL PASS; harness `widget/test/` gồm shim `GET /schemas` = reference cho R1 | (commit này) |
+
+### Tự chấm acceptance widget §11 (docs/WIDGET.md)
+
+| Dòng | Kết quả | Bằng chứng |
+|---|---|---|
+| Nhúng 1 thẻ script → bubble + chat degraded + banner | ✅ | e2e `mount/no-leak`, `degraded-chat` |
+| (Cần OPENROUTER key) prose → reveal cards, số trong card, fragments mở nguồn | ◐ | Cơ chế reveal/fragments/tick pass qua SSE replay đúng wire (`cards-mocked`); lượt live chờ deploy + key (mục 2–3 dưới) |
+| Form mẫu 3 lỗi → click cuộn+focus → sửa → hộp xanh + dòng phạm vi | ✅ | e2e `validate-flow` (8 lỗi 1 cảnh báo, E_DINH_DANH_12 / E_REQUIRED / E_TINH_SAP_NHAP) |
+| Checkbox gated: bỏ tick → lỗi, tick → hết (unchecked = `""`) | ✅ | e2e `gated-checkbox` trên engine thật (case_facts seed qua mock `GET /sessions/:id`) + unit capture |
+| Nút check ẩn / disabled+tooltip / enabled + badge | ✅ | e2e `detect-states` |
+| Reload khôi phục cards+tick+kết quả; 2 tab độc lập; Cuộc mới | ✅ | e2e `restore/new-session`, tick trong `cards-mocked` |
+| 422 nguyên văn không retry; đứt mạng → Thử lại | ✅ | e2e `validate-422`, `network-error-retry`, `offline` |
+| CSS reset mạnh không vỡ; không đổi giao diện host | ✅ | e2e `hostile-reset` + assert stylesheet/font host |
+| 1 file, không request ngoài data-backend, ≤60KB gzip | ✅ | gate build (14.8KB) + assert request-origin |
+| 375px: sheet full màn, thu nhỏ, click lỗi tự thu rồi cuộn | ✅ | e2e `mobile-375` |
 
 ## Còn lại (thứ tự phụ thuộc)
 
-1. **Widget Pha 1** — build `widget/` theo spec [docs/WIDGET.md](docs/WIDGET.md) (Preact + Vite IIFE, ≤60KB gz); acceptance = mục §11 của spec, chạy với backend local trên trang HTML trắng. Không chờ mục 2 — widget tự degrade khi backend thiếu R1–R3.
-2. **Backend bổ sung cho widget** — R1 `GET /schemas`, R2 card `checklist` từ curated lọc theo case_facts, R3 serve `/widget/opengov.js` (contract: [docs/WIDGET.md](docs/WIDGET.md) §10; R4 stream token thật = backlog, không chặn). Làm song song được với mục 1.
-3. **Deploy backend public** (Railway/Fly…) + cấu hình `OPENROUTER_API_KEY` → `/chat` chạy live; chạy `pnpm --dir backend golden-qa`, tune prompt/alias tới khi pass-rate ≥ 90% (30 câu trong `data/golden-qa.json`).
-4. **Tích hợp Pha 1** — commit **một dòng** thẻ script vào `dichvucong/` (bằng chứng chi phí tích hợp — xem [docs/DESIGN.md](docs/DESIGN.md) §4); chụp diff cho tài liệu.
-5. **Tích hợp Pha 2** — web components + prefill có xác nhận (map `prefill` trong `data/schemas/`, preview tick từng dòng) trên ít nhất 1 trang form; mức 3 = chỉ dẫn lời + scroll/highlight; toggle "Phase 2 preview" trong clone để xem cả hai mức ([docs/WIDGET.md](docs/WIDGET.md) §12).
-6. **One-pager** — `docs/ONE_PAGER.md` (vấn đề, giải pháp, người dùng mục tiêu, lộ trình triển khai) + kịch bản demo (khung 5 hồi: [docs/WIDGET.md](docs/WIDGET.md) §9); viết sau khi chốt URL public.
-7. **Gia cố dữ liệu** (không chặn demo): review từng item theo checklist đầy đủ `tools/etl/STRUCTURING.md` §4; tinh chỉnh `expect` từng câu golden-QA; tách sub-fact nhóm giấy tờ tín ngưỡng (thường trú).
+1. **Backend bổ sung cho widget** — R1 `GET /schemas` (reference implementation sẵn trong `widget/test/serve.mjs`), R2 card `checklist` từ curated lọc theo case_facts, R3 serve `/widget/opengov.js` từ `widget/dist/` (contract: [docs/WIDGET.md](docs/WIDGET.md) §10; R4 stream token thật = backlog, không chặn). Xong R1–R3 → chạy lại `pnpm --dir widget e2e` + chấm nốt dòng ◐ acceptance §11.
+2. **Deploy backend public** (Railway/Fly…) + cấu hình `OPENROUTER_API_KEY` → `/chat` chạy live; chạy `pnpm --dir backend golden-qa`, tune prompt/alias tới khi pass-rate ≥ 90% (30 câu trong `data/golden-qa.json`).
+3. **Tích hợp Pha 1** — commit **một dòng** thẻ script vào `dichvucong/` (bằng chứng chi phí tích hợp — xem [docs/DESIGN.md](docs/DESIGN.md) §4); chụp diff cho tài liệu.
+4. **Tích hợp Pha 2** — web components + prefill có xác nhận (map `prefill` trong `data/schemas/`, preview tick từng dòng) trên ít nhất 1 trang form; mức 3 = chỉ dẫn lời + scroll/highlight; toggle "Phase 2 preview" trong clone để xem cả hai mức ([docs/WIDGET.md](docs/WIDGET.md) §12).
+5. **One-pager** — `docs/ONE_PAGER.md` (vấn đề, giải pháp, người dùng mục tiêu, lộ trình triển khai) + kịch bản demo (khung 5 hồi: [docs/WIDGET.md](docs/WIDGET.md) §9); viết sau khi chốt URL public.
+6. **Gia cố dữ liệu** (không chặn demo): review từng item theo checklist đầy đủ `tools/etl/STRUCTURING.md` §4; tinh chỉnh `expect` từng câu golden-QA; tách sub-fact nhóm giấy tờ tín ngưỡng (thường trú).
 
 ## Definition of done (map "What We Need to Deliver" trong PROBLEM.md)
 

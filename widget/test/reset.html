@@ -1,0 +1,18 @@
+<!doctype html>
+<!-- Hostile host CSS: aggressive reset must not break the widget (Shadow DOM). -->
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trang thử nghiệm — CSS reset mạnh</title>
+  <style>
+    * { all: unset; display: revert; }
+    html, body { margin: 0; padding: 0; }
+  </style>
+</head>
+<body>
+  <h1>Trang có CSS reset mạnh</h1>
+  <p>Widget phải hiển thị bình thường dù trang chủ nhà unset toàn bộ style.</p>
+  <script src="/dist/opengov.js" data-backend="%BACKEND%"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- Served at a path containing "dang-ky-thuong-tru" (see serve.mjs): right page,
+     wrong wizard step → detect DETECTED_NOFIELDS (button disabled + tooltip). -->
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nộp trực tuyến — Bước 1</title>
+</head>
+<body>
+  <h1>Đăng ký thường trú — Bước 1: Chọn cơ quan tiếp nhận</h1>
+  <form action="#">
+    <label>Tỉnh/Thành phố
+      <select name="chon_tinh"><option value="">-- Chọn --</option><option>Tỉnh Tuyên Quang</option></select>
+    </label>
+    <label>Phường/Xã
+      <select name="chon_phuong_xa"><option value="">-- Chọn --</option></select>
+    </label>
+  </form>
+  <script src="/dist/opengov.js" data-backend="%BACKEND%"></script>
+</body>
+</html>
