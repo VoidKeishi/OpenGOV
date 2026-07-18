@@ -18,7 +18,8 @@
 | **Widget Pha 1** | `widget/` — Preact + Vite, 1 file IIFE `dist/opengov.js` **14.8KB gzip** (gate 60KB trong build), Shadow DOM, SSE client + 6 card + checklist, detect DOM-match, validate + scroll-to-field, transcript cache; 46 unit (vitest) + 72 check e2e (Playwright, tự spawn backend degraded) ALL PASS | `80b4a76` |
 | Backend R1 + R3 | `GET /schemas` (index cho detect DOM-match) + serve `GET /widget/opengov.js` từ `widget/dist` (build trong Docker image) — 1 deploy cho cả API + bundle; 25 unit test | `c71dc4e` |
 | **Tích hợp Pha 1** | Commit **1 file, +1 dòng** thẻ script vào `dichvucong/src/app/layout.tsx` — bằng chứng chi phí tích hợp theo DESIGN.md §4; verify e2e trên clone dev với backend prod (`opengov.duckdns.org`): detect NOFIELDS→READY theo bước wizard, validate form thật (E_DINH_DANH_12 + E_TINH_SAP_NHAP), scroll-to-field, chat LLM live + cards | `5a8d40f` |
-| Deploy backend VPS | `https://opengov.duckdns.org` — Docker sau aaPanel, LLM live (`llm_available:true`), đủ /health /chat /validate /sessions /schemas /widget/opengov.js; runbook vận hành trong `notes/` (local) | (hạ tầng ngoài repo) |
+| Deploy backend VPS | `https://opengov.duckdns.org` — Docker sau aaPanel, LLM live (`llm_available:true`), đủ /health /chat /validate /sessions /schemas /widget/opengov.js; quy trình update: `backend/CLAUDE.md` §Deploy | (hạ tầng ngoài repo) |
+| **Strengthen harness chat + R2** | Backend: system prompt v2 (persona người dân, ngắn gọn ~120 từ, clarify-first, cấm markdown ngoài tập widget), model chọn card qua tail `[[CARDS:]]` (parse+strip, resolver theo mã cho lượt nối tiếp, fail-safe + warning), **card `checklist` tất định (R2)** lọc theo case_facts, projection record cho LLM, `maxTokens` 700, fix `structuring_level` không vào record. Widget: formatter tiếng Việt cho mọi card (hết leak `qty/unit/id/ONLINE`), mini-markdown chịu lỗi heading/`---`. Data: 2 gap-fill legal có provenance (Đ.118k4 BLLĐ, Đ.74k1-2 LDN). 36 unit backend + 61 unit widget + e2e ALL PASS | (phiên 19/07) |
 
 ### Tự chấm acceptance widget §11 (docs/WIDGET.md)
 
@@ -38,11 +39,10 @@
 ## Còn lại (thứ tự phụ thuộc)
 
 1. **Push + Vercel deploy clone** — `git push` để Vercel build lại `dichvucong/` (giờ đã có thẻ script); kiểm tra widget trên URL Vercel công khai.
-2. **Backend R2** — card `checklist` trong `/chat` từ curated lọc theo case_facts (contract: [docs/WIDGET.md](docs/WIDGET.md) §10; R4 stream token thật = backlog). Xong → chấm nốt dòng ◐ acceptance §11.
-3. **Golden QA live** — `BASE_URL=https://opengov.duckdns.org pnpm --dir backend golden-qa`, tune prompt/alias tới khi pass-rate ≥ 90% (30 câu trong `data/golden-qa.json`).
-4. **Tích hợp Pha 2** — web components + prefill có xác nhận (map `prefill` trong `data/schemas/`, preview tick từng dòng) trên ít nhất 1 trang form; mức 3 = chỉ dẫn lời + scroll/highlight; toggle "Phase 2 preview" trong clone để xem cả hai mức ([docs/WIDGET.md](docs/WIDGET.md) §12).
-5. **One-pager** — `docs/ONE_PAGER.md` (vấn đề, giải pháp, người dùng mục tiêu, lộ trình triển khai) + kịch bản demo (khung 5 hồi: [docs/WIDGET.md](docs/WIDGET.md) §9); viết sau khi chốt URL public.
-6. **Gia cố dữ liệu** (không chặn demo): review từng item theo checklist đầy đủ `tools/etl/STRUCTURING.md` §4; tinh chỉnh `expect` từng câu golden-QA; tách sub-fact nhóm giấy tờ tín ngưỡng (thường trú).
+2. **Golden QA ≥ 90%** — runner đã nâng cấp (session theo khối thủ tục như hội thoại thật, gate `GOLDEN_QA_MIN`, fix đọc payload card); pass-rate 63% → 70% qua 3 vòng tune (prompt v2.2 + 2 gap-fill legal + resolver tail); vòng đo tiếp theo chờ quota OpenRouter reset (key chạm daily limit 19/07) — chạy `GOLDEN_QA_MIN=90 BASE_URL=https://opengov.duckdns.org pnpm --dir backend golden-qa`. Xong → chấm nốt dòng ◐ acceptance §11 (manual replay kịch bản intake).
+3. **Tích hợp Pha 2** — web components + prefill có xác nhận (map `prefill` trong `data/schemas/`, preview tick từng dòng) trên ít nhất 1 trang form; mức 3 = chỉ dẫn lời + scroll/highlight; toggle "Phase 2 preview" trong clone để xem cả hai mức ([docs/WIDGET.md](docs/WIDGET.md) §12).
+4. **One-pager** — `docs/ONE_PAGER.md` (vấn đề, giải pháp, người dùng mục tiêu, lộ trình triển khai) + kịch bản demo (khung 5 hồi: [docs/WIDGET.md](docs/WIDGET.md) §9); viết sau khi chốt URL public.
+5. **Gia cố dữ liệu** (không chặn demo): review từng item theo checklist đầy đủ `tools/etl/STRUCTURING.md` §4; tinh chỉnh `expect` từng câu golden-QA; tách sub-fact nhóm giấy tờ tín ngưỡng (thường trú).
 
 ## Definition of done (map "What We Need to Deliver" trong PROBLEM.md)
 

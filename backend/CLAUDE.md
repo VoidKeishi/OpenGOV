@@ -11,3 +11,26 @@ Hard rules:
 - `data/curated/`, `data/schemas/`, `data/errors/`, `data/aliases.json`, `data/golden-qa.json`, `data/provinces.json` `defunct[]` are human-reviewed — never regenerate or bulk-rewrite them.
 - `backend/data/crawl/` is read-only raw input. `backend/var/` is a build artifact (gitignored).
 - PII: values sent to external LLM APIs for `llm_check` are masked first.
+
+## Deploying backend updates (VPS — opengov.duckdns.org)
+
+The VPS copy is synced by tar-over-SSH (no git on the server); the Docker build runs `pnpm build` + `pnpm seed`, so `data/` changes deploy the same way. SSH alias `vps` must exist in the local `~/.ssh/config`.
+
+```bash
+# 1. [local] sync sources (overwrites changed files; does NOT delete removed ones)
+cd /home/lesky/Code/OpenGOV
+tar czf - --exclude=node_modules --exclude=.git --exclude=dichvucong \
+  --exclude='tools/capture/output' --exclude=dist --exclude=.next \
+  --exclude=.env --exclude='backend/var' . \
+  | ssh vps 'tar xzf - -C /opt/vaic/opengov/repo'
+
+# 2. [vps] keep a rollback image, rebuild + recreate
+ssh vps 'cd /opt/vaic/opengov && docker tag opengov-backend:latest opengov-backend:rollback && docker compose up -d --build'
+
+# 3. verify
+curl -s https://opengov.duckdns.org/health   # expect llm_available: true
+```
+
+- Env-only change (e.g. new `OPENROUTER_API_KEY`): edit `/opt/vaic/opengov/.env` on the VPS, then `docker compose up -d` (no `--build`; plain `restart` does NOT reload env).
+- Revert: `ssh vps 'docker tag opengov-backend:rollback opengov-backend:latest && cd /opt/vaic/opengov && docker compose up -d'`.
+- Deleted files need a wipe first: `ssh vps 'rm -rf /opt/vaic/opengov/repo && mkdir -p /opt/vaic/opengov/repo'`, then re-run step 1.

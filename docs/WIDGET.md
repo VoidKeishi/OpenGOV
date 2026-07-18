@@ -83,6 +83,8 @@ type ChatEvent =
 
 **Thứ tự thật của một lượt thành công**: `session` → `tool`×n (phát trong lúc agent loop chạy — đây là feedback duy nhất suốt 5–20s) → `card`×n → `token`×n (stream giả lập: cả answer đã có sẵn rồi mới chunk theo từ) → `done` → `event: end`.
 
+**Chọn card**: model kết thúc câu trả lời bằng một dòng máy-đọc `[[CARDS: <mã>=<type,...>]]`; backend parse dòng này để quyết định emit card nào rồi **strip khỏi answer trước khi** stream token, chạy guard số liệu và lưu history — widget và `GET /sessions/:id` không bao giờ thấy tail này. `procedure` luôn được kèm cho mỗi mã được chọn; `legal_fragments` tự thêm khi bản ghi có trích đoạn. Mã trong tail không cần `get_procedure` trong cùng lượt — lượt nối tiếp trả lời từ history vẫn ra card (backend tự đọc record từ DB theo mã). Tail thiếu/hỏng (mà đã tra thủ tục) → fallback `procedure` + `legal_fragments` của mã tra cuối + event `warning: cards_tail_missing`.
+
 Hệ quả UI: (a) trạng thái chờ sống bằng event `tool`; (b) cards đến trước token — **buffer cards, render prose trước, reveal cards bên dưới bubble sau khi stream xong** (quyết định #8); (c) không có event nào trong 30s → coi như treo: abort fetch, hiện bubble lỗi + nút "Thử lại" (gửi lại message cũ).
 
 Nhãn tiếng Việt cho event `tool` (hiện trong bubble chờ, thay thế nhau):
@@ -97,19 +99,17 @@ Nhãn tiếng Việt cho event `tool` (hiện trong bubble chờ, thay thế nha
 
 ### 3.4 Card types & payload (từ `cards.ts`)
 
-`Card = { type: string, payload: Record<string, any> }`. **Card type lạ → bỏ qua im lặng** (forward-compat). Payload đọc thẳng từ CSDL — widget hiển thị nguyên trạng, không tính lại số liệu. Mọi field payload đều có thể `null`/vắng — render phòng thủ.
+`Card = { type: string, payload: Record<string, any> }`. **Card type lạ → bỏ qua im lặng** (forward-compat). Payload đọc thẳng từ CSDL — widget **không tính lại số liệu**, chỉ format hiển thị bằng formatter tất định (`src/ui/format.ts`): enum → nhãn tiếng Việt (`ONLINE`→"Nộp trực tuyến", `DIRECT`→"Nộp trực tiếp", `POSTAL`→"Nộp qua bưu chính"; `WORKING_DAY`→"ngày làm việc", `DAY`→"ngày", `HOUR`→"giờ", `MONTH`→"tháng"; `FEE`→"Lệ phí", `SERVICE_FEE`→"Phí dịch vụ", `PRICE_LEVEL`→"Mức giá"), tiền `10000`→"10.000 đ", ngày ISO→"dd/mm/yyyy". Enum/field lạ → fallback hiển thị nguyên trạng hoặc bỏ qua, không bao giờ ném lỗi; key nội bộ (`id`, `case_code`, `type` của fee, `source_component_code`) không hiển thị. Mọi field payload đều có thể `null`/vắng — render phòng thủ.
 
 | type | payload (rút gọn) | Render |
 |---|---|---|
-| `procedure` | `{code, name, executing_agency, promulgating_agency, category, source_url, updated_at, structuring_level}` — biến thể out-of-scope: `{code, name, executing_agency, source_url, limited: true}` | Tên + mã + cơ quan + nút "Xem trên Cổng DVC" (`source_url`); dòng "Dữ liệu cập nhật: {updated_at}"; `limited` → badge "chỉ có thông tin cơ bản" |
-| `fees` | `{code, channels: [{method, fees: [...]}], fee_notes: [...]}` | Bảng phí theo kênh nộp; ghi chú dưới bảng |
-| `processing` | `{code, processing_cases: [...], channels: [{method, processing}]}` | Thời gian xử lý theo kênh/trường hợp |
-| `deadlines` | `{code, deadlines: [...]}` | Danh sách thời hạn |
-| `legal_basis` | `{code, legal_basis: [...]}` | Danh sách văn bản căn cứ |
+| `procedure` | `{code, name, executing_agency, promulgating_agency, category, source_url, updated_at, structuring_level}` — biến thể out-of-scope: `{code, name, executing_agency, source_url, limited: true}` | Tên + mã + cơ quan + nút "Xem trên Cổng DVC" (`source_url`); dòng "Dữ liệu cập nhật: {dd/mm/yyyy}"; `limited` → badge "chỉ có thông tin cơ bản" |
+| `fees` | `{code, channels: [{method, fees: [{type, value_vnd, text}]}], fee_notes: [{channel, text}]}` | Nhóm theo nhãn kênh; mỗi dòng "Lệ phí: 10.000 đ" + `text` nguồn thu gọn; `fee_notes` prefix tên kênh khi ≠ `all` |
+| `processing` | `{code, processing_cases: [...], channels: [{method, processing: {qty, unit}}]}` | "Nộp trực tuyến: 7 ngày làm việc" theo kênh; `processing_cases` chỉ render khi không có `channels` (tránh lặp số), ẩn `case_code`; unit `OTHER` → dùng `text` nguồn |
+| `deadlines` | `{code, deadlines: [{id, label, qty, unit, from, source_quote}]}` | `label` đậm + "60 ngày kể từ {from}" + trích `source_quote` thu gọn; ẩn `id` |
+| `legal_basis` | `{code, legal_basis: [{code, name}]}` | Mỗi dòng "{mã} — {tên rút gọn}" |
 | `legal_fragments` | `{code, fragments: [{id, article, doc_code, doc_title, title, source_url, retrieved_at}]}` | **Thu gọn mặc định** ("Căn cứ pháp lý — n trích đoạn ▸"); mở ra từng đoạn có nút mở `source_url` |
-| `checklist` (R2 — chưa có phía backend) | xem §10 R2 | Checklist tick được (§5.4) |
-
-Mảng `fees/processing_cases/deadlines/legal_basis` là dữ liệu lỏng từ record — render key-value/list chung chung, không giả định schema con; field không hiểu thì bỏ qua.
+| `checklist` (R2) | `{code, groups: [...]}` — xem §10 R2 | Checklist tick được (§5.4) |
 
 ### 3.5 `POST /validate`
 
@@ -236,11 +236,13 @@ IDLE ──user gửi──▶ WAITING ──token đầu──▶ STREAMING ─
 
 Tự viết, thứ tự xử lý: (1) escape toàn bộ HTML entity; (2) `**bold**`; (3) `[text](url)` + URL trần → `<a target="_blank" rel="noopener noreferrer">` (chỉ nhận `http/https`); (4) dòng bắt đầu `- `/`* ` → `<ul>`, `1. ` → `<ol>`; (5) xuống dòng còn lại → `<br>`. Không heading, không bảng, không code block, **không bao giờ render HTML thô từ model**.
 
+Chịu lỗi khi model lỡ dùng markdown ngoài tập hỗ trợ (system prompt đã cấm nhưng render không được vỡ): dòng `#`–`######` + khoảng trắng → đoạn văn **in đậm** riêng; dòng chỉ gồm `---`/`***`/`___` (≥3 ký tự) → bỏ hẳn, không sinh `<br>`. `#khongcach` (không có khoảng trắng) giữ nguyên là text.
+
 ### 5.4 Card checklist (khi backend có R2)
 
 - Nhóm theo `groups`; group `type: "ONE_OF"` hiện nhãn phụ "MỘT TRONG các giấy tờ sau".
 - Mỗi item: checkbox tick được (state chỉ ở client, lưu trong transcript cache — không gửi server), nhãn + `quantity` ("1 bản chính, 1 bản sao" — chỉ hiện phần >0), item `conditional: true` → badge "ⓘ tùy trường hợp".
-- Widget chưa thấy card `checklist` nào (backend chưa nâng cấp) → không sao: mọi thứ khác chạy bình thường, checklist đến qua prose.
+- Card `checklist` đến khi model chọn nó trong tail `[[CARDS:]]` (khi người dùng hỏi về giấy tờ/hồ sơ hoặc đã rõ tình huống) — backend build từ curated, lọc theo case_facts (§10 R2). Thủ tục không có curated checklist → không có card, checklist đến qua prose như cũ.
 
 ### 5.5 Độ bền
 
@@ -337,7 +339,7 @@ Chạy lúc bấm nút, trên schema đã detect:
 | # | Yêu cầu | Contract đề xuất | Widget khi thiếu |
 |---|---|---|---|
 | R1 | `GET /schemas` — index schema | `[{ "procedure_code": "1.004222", "form_ref": "dang-ky-thuong-tru", "field_keys": ["ho_ten_khai_sinh", …] }]` — đọc từ `data/schemas/*.form.json` | Tính năng check ẩn |
-| R2 | Card type `checklist` trong `/chat` | Sau `get_procedure` thủ tục có curated checklist: build card từ `data/curated/<code>.json` lọc theo case_facts session — item `when` không thỏa → loại; **thiếu fact → giữ, đánh `conditional: true`** (fail-open); payload: `{code, groups: [{id, label, type?: 'ONE_OF', items: [{id, label, quantity: {original, copy}, kind, conditional}]}]}`. Số lượng nằm trong card → thoát guard `numbers_not_in_cards` | Checklist qua prose như hiện tại |
+| R2 *(đã build)* | Card type `checklist` trong `/chat` | Model chọn `checklist` trong tail `[[CARDS:]]` → backend build card từ `data/curated/<code>.json` (đã merge vào record) lọc theo case_facts session (đọc lại **sau** agent turn để `update_case_facts` cùng lượt có hiệu lực): điều kiện `when` (`eq`/`in`) không thỏa → loại group/item; **thiếu fact → giữ, đánh `conditional: true`** (fail-open, cờ group truyền xuống item); group rỗng sau lọc → bỏ; payload: `{code, groups: [{id, label, type?: 'ONE_OF', items: [{id, label, quantity: {original, copy}, kind, conditional}]}]}` — strip `when`/`source_component_code`. Số lượng nằm trong card → thoát guard `numbers_not_in_cards` | Checklist qua prose như hiện tại |
 | R3 | Serve bundle: `GET /widget/opengov.js` | Static từ `widget/dist/`, `Cache-Control: public, max-age=300`; embed dùng `?v=` cache-bust | Dev dùng `vite build --watch` + file local |
 | R4 | (Backlog, không chặn) Stream token thật từ LLM | Pipe delta OpenRouter → bớt độ trễ cảm nhận | Đã bù bằng trạng thái tool |
 
