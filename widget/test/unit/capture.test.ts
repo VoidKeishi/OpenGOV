@@ -1,6 +1,6 @@
 // Capture contract table (WIDGET.md §6.3).
 import { beforeEach, describe, expect, it } from 'vitest';
-import { captureFields, fieldLabel, pickMainForm } from '../../src/core/capture';
+import { captureFields, fieldLabel, findSubmit, pickMainForm } from '../../src/core/capture';
 
 function dom(html: string): Document {
   document.body.innerHTML = html;
@@ -144,5 +144,27 @@ describe('fieldLabel', () => {
     const doc = dom(`<input name="khong_nhan">`);
     expect(fieldLabel(doc, 'khong_nhan')).toBeNull();
     expect(fieldLabel(doc, 'khong_ton_tai')).toBeNull();
+  });
+});
+
+describe('findSubmit (guide anchor, §12.2)', () => {
+  it('prefers a form-associated button (the clone wizard shape)', () => {
+    const doc = dom(`
+      <form id="wizard-form"><input name="x"></form>
+      <button type="submit">Trang trí</button>
+      <button form="wizard-form" type="submit">Tiếp tục</button>
+    `);
+    expect(findSubmit(doc)?.textContent).toBe('Tiếp tục');
+  });
+
+  it('falls back to an in-form submit, then any submit control', () => {
+    const doc = dom(`<form><button type="submit">Nộp hồ sơ</button></form>`);
+    expect(findSubmit(doc)?.textContent).toBe('Nộp hồ sơ');
+    const doc2 = dom(`<input type="submit" value="Gửi">`);
+    expect((findSubmit(doc2) as HTMLInputElement)?.value).toBe('Gửi');
+  });
+
+  it('none → null', () => {
+    expect(findSubmit(dom(`<button type="button">Không</button>`))).toBeNull();
   });
 });

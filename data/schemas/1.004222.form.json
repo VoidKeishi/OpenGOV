@@ -1,5 +1,5 @@
 {
-  "_note": "(DATA.md §4 — approved 18/07/2026, B-lite session; reviewed_by Nguyễn Văn A.) Field keys = name attrs in dichvucong/src/data/form/dang-ky-thuong-tru.json. Closed rule set only. member-table thanh_vien and checkbox-only fields without rules are omitted; y_kien_chu_so_huu_dong_y required gates on case fact truong_hop (Điều 20 khoản 2, khoản 3 Luật Cư trú: cần sự đồng ý của chủ sở hữu chỗ ở).",
+  "_note": "(DATA.md §4 — approved 18/07/2026, B-lite session; reviewed_by Nguyễn Văn A. Amended 19/07/2026: prefill section added per DATA.md §4 prefill contract, pending human review.) Field keys = name attrs in dichvucong/src/data/form/dang-ky-thuong-tru.json. Closed rule set only. member-table thanh_vien and checkbox-only fields without rules are omitted; y_kien_chu_so_huu_dong_y required gates on case fact truong_hop (Điều 20 khoản 2, khoản 3 Luật Cư trú: cần sự đồng ý của chủ sở hữu chỗ ở). prefill maps string facts from case_facts_schema (curated overlay) to form fields — widget-only consumer, user-confirmed writes.",
   "procedure_code": "1.004222",
   "form_ref": "dang-ky-thuong-tru",
   "fields": {
@@ -32,5 +32,11 @@
     "y_kien_chu_so_huu_so_dinh_danh": { "label": "Số định danh cá nhân (chủ sở hữu — mục ý kiến)",
       "rules": [ { "rule": "pattern", "value": "^[0-9]{12}$", "error": "E_DINH_DANH_12" } ] }
   },
-  "cross_field": []
+  "cross_field": [],
+  "prefill": {
+    "ho_ten_chu_ho": { "fact": "ho_ten_chu_ho" },
+    "moi_quan_he_voi_chu_ho": { "fact": "moi_quan_he_voi_chu_ho" },
+    "so_dinh_danh_ca_nhan_chu_ho": { "fact": "so_dinh_danh_chu_ho" },
+    "y_kien_chu_ho_so_dinh_danh": { "fact": "so_dinh_danh_chu_ho" }
+  }
 }

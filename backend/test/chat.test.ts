@@ -53,7 +53,8 @@ async function run(chat: ChatService, message: string) {
   const done = events.find((e) => e.type === 'done') as any;
   const sessionId = (events.find((e) => e.type === 'session') as any)?.session_id as string;
   const warnings = events.filter((e) => e.type === 'warning').map((e: any) => e.message);
-  return { events, prose, cards, done, sessionId, warnings };
+  const chips = (events.find((e) => e.type === 'chips') as any)?.items as string[] | undefined;
+  return { events, prose, cards, done, sessionId, warnings, chips };
 }
 
 // --- pure card guard ---
@@ -202,6 +203,65 @@ test('projection — LLM record drops raw blobs and review, cards keep the full 
       JSON.stringify(projected).length < JSON.stringify(full).length,
       'projection never exceeds the full record',
     );
+  } finally {
+    close();
+  }
+});
+
+// --- Phase 2: chips + guide directives, form_path CTAs ---
+
+test('/chat chips + guide — chips event emitted, guide card built, directives stripped everywhere', async () => {
+  const { chat, sessions, close } = harness(
+    scriptedLlm([
+      { role: 'assistant', content: null, tool_calls: [{ id: 'c1', name: 'get_procedure', arguments: { code: '1.004222' } }] },
+      {
+        role: 'assistant',
+        content:
+          'Anh/chị điền Số định danh cá nhân ở bước Tờ khai. Nộp trực tuyến hay trực tiếp?\n' +
+          '[[CARDS: 1.004222=procedure]]\n' +
+          '[[CHIPS: Tôi nộp trực tuyến | Tôi nộp trực tiếp]]\n' +
+          '[[GUIDE: 1.004222=so_dinh_danh_ca_nhan]]',
+      },
+    ]),
+  );
+  try {
+    const { events, prose, cards, chips, sessionId } = await run(chat, 'điền số định danh ở đâu?');
+    assert.deepEqual(chips, ['Tôi nộp trực tuyến', 'Tôi nộp trực tiếp']);
+    const guide = cards.find((c: any) => c.type === 'guide') as any;
+    assert.ok(guide, 'guide card emitted');
+    assert.equal(guide.payload.target, 'so_dinh_danh_ca_nhan');
+    assert.equal(guide.payload.label, 'Số định danh cá nhân');
+    assert.equal(guide.payload.form_path, '/nop-truc-tuyen/dang-ky-thuong-tru');
+    // form_path CTA rides on the procedure card for pilot codes
+    const proc = cards.find((c: any) => c.type === 'procedure') as any;
+    assert.equal(proc.payload.form_path, '/nop-truc-tuyen/dang-ky-thuong-tru');
+    // chips come after cards, before the first token
+    const kinds = events.map((e) => e.type);
+    assert.ok(kinds.indexOf('chips') > kinds.indexOf('card'), 'chips after cards');
+    assert.ok(kinds.indexOf('chips') < kinds.indexOf('token'), 'chips before tokens');
+    // no directive leaks into the stream or history
+    assert.doesNotMatch(prose, /\[\[/);
+    const lastAssistant = sessions.get(sessionId)!.messages.filter((m) => m.role === 'assistant').pop();
+    assert.doesNotMatch(lastAssistant!.content, /\[\[/);
+  } finally {
+    close();
+  }
+});
+
+test('/chat guide with unknown target — dropped + guide_target_unknown warning', async () => {
+  const { chat, close } = harness(
+    scriptedLlm([
+      { role: 'assistant', content: null, tool_calls: [{ id: 'c1', name: 'get_procedure', arguments: { code: '1.004222' } }] },
+      {
+        role: 'assistant',
+        content: 'Anh/chị bấm vào ô đó nhé.\n[[CARDS: 1.004222=procedure]]\n[[GUIDE: 1.004222=o_khong_ton_tai]]',
+      },
+    ]),
+  );
+  try {
+    const { cards, warnings } = await run(chat, 'bấm ở đâu?');
+    assert.equal(cards.some((c: any) => c.type === 'guide'), false);
+    assert.ok(warnings.includes('guide_target_unknown'));
   } finally {
     close();
   }

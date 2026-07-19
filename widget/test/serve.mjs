@@ -36,6 +36,9 @@ function schemasIndex() {
         procedure_code: s.procedure_code,
         form_ref: s.form_ref,
         field_keys: Object.keys(s.fields ?? {}),
+        // Pha 2 (R1 extension): relative wizard path + verbatim prefill map
+        form_path: `/nop-truc-tuyen/${s.form_ref}`,
+        ...(s.prefill ? { prefill: s.prefill } : {}),
       };
     });
 }

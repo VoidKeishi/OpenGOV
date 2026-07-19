@@ -14,6 +14,13 @@ export interface TurnActions {
   onRecheck(): void;
   fieldOnDom(field: string): boolean;
   labelFor(field: string): string;
+  /** Pha 2: quick-reply chip clicked — sends the text as a user message. */
+  onChip(text: string): void;
+  /** Pha 2: guide card button — scroll + spotlight the target. */
+  onGuide(target: string): void;
+  guideOnDom(target: string): boolean;
+  /** Pha 2: undo a whole confirmed-prefill turn. */
+  onUndoPrefill(turnIndex: number): void;
 }
 
 const SEV_ICON: Record<ValidationError['severity'], { icon: string; cls: string }> = {
@@ -110,6 +117,7 @@ export function TurnView({
   streaming,
   actions,
   prevCards = [],
+  showChips = false,
 }: {
   turn: Turn;
   turnIndex: number;
@@ -118,6 +126,8 @@ export function TurnView({
   actions: TurnActions;
   /** Cards of the nearest earlier assistant turn — identical cards are not re-rendered. */
   prevCards?: Card[];
+  /** Pha 2: chips render only on the LAST assistant turn while idle (§5.2). */
+  showChips?: boolean;
 }) {
   if (turn.role === 'user') {
     return <div class="og-turn-user">{turn.prose}</div>;
@@ -129,6 +139,31 @@ export function TurnView({
     return (
       <div class="og-turn-assistant">
         <CheckResultView res={turn.check} actions={actions} />
+      </div>
+    );
+  }
+  if (turn.role === 'prefill' && turn.prefill) {
+    const pf = turn.prefill;
+    return (
+      <div class="og-turn-assistant">
+        <div class="og-card">
+          <div class="og-result-head">📝 Đã điền {pf.rows.length} trường từ hội thoại</div>
+          {pf.rows.map((r, i) => (
+            <div key={i} class="og-card-sub">
+              {r.label}: {r.value}
+            </div>
+          ))}
+          <div class="og-result-scope">
+            Anh/chị kiểm tra lại trước khi nộp — ô được điền hộ có viền màu.
+          </div>
+          {pf.undone ? (
+            <div class="og-card-sub">Đã hoàn tác.</div>
+          ) : (
+            <button class="og-link-btn" onClick={() => actions.onUndoPrefill(turnIndex)}>
+              Hoàn tác toàn bộ
+            </button>
+          )}
+        </div>
       </div>
     );
   }
@@ -167,7 +202,18 @@ export function TurnView({
               cardIndex={ci}
               ticks={turn.ticks}
               onTick={(key) => actions.onTick(turnIndex, key)}
+              onGuide={actions.onGuide}
+              guideOnDom={actions.guideOnDom}
             />
+          ))}
+        </div>
+      )}
+      {showChips && turn.revealed && (turn.chips?.length ?? 0) > 0 && (
+        <div class="og-chips">
+          {turn.chips!.map((c) => (
+            <button key={c} class="og-chip" onClick={() => actions.onChip(c)}>
+              {c}
+            </button>
           ))}
         </div>
       )}

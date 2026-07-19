@@ -2,6 +2,7 @@
 // Reads its own data attributes, guards against double mount, creates the
 // Shadow DOM host on document.body. Must never throw into the host page.
 import { mountApp } from './ui/App';
+import { defineComponents } from './components';
 import type { EmbedConfig } from './types';
 
 declare global {
@@ -38,6 +39,7 @@ function boot(): void {
   const shadow = host.attachShadow({ mode: 'open' });
   document.body.appendChild(host);
 
+  defineComponents(config); // Pha 2 custom elements — inert until the portal writes markup
   mountApp(shadow, config);
 }
 

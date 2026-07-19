@@ -10,6 +10,16 @@ import { clamp, curatedChannelLabel, feeTypeLabel, fmtDate, fmtDuration, fmtMone
 
 const has = (v: unknown): boolean => v != null && v !== '';
 
+/** On-portal CTA (Pha 2): relative form_path link, hidden when already on that page. */
+function FormCta({ path, label }: { path: unknown; label: string }) {
+  if (!has(path) || location.pathname === path) return null;
+  return (
+    <a class="og-cta" href={String(path)}>
+      {label} →
+    </a>
+  );
+}
+
 function ProcedureCard({ p }: { p: Record<string, any> }) {
   return (
     <div class="og-card">
@@ -38,6 +48,7 @@ function ProcedureCard({ p }: { p: Record<string, any> }) {
           </>
         )}
       </dl>
+      <FormCta path={p.form_path} label="Nộp trực tuyến tại cổng này" />
       {has(p.source_url) && (
         <a class="og-link-btn" href={p.source_url} target="_blank" rel="noopener noreferrer">
           Xem trên Cổng DVC ↗
@@ -208,6 +219,44 @@ function ChecklistCard({
           })}
         </div>
       ))}
+      <FormCta path={p.form_path} label="Bắt đầu điền hồ sơ" />
+    </div>
+  );
+}
+
+/** Pha 2 guide card (WIDGET.md §3.4): button-triggered spotlight on the target. */
+function GuideCard({
+  p,
+  onGuide,
+  guideOnDom,
+}: {
+  p: Record<string, any>;
+  onGuide: (target: string) => void;
+  guideOnDom: (target: string) => boolean;
+}) {
+  const target = typeof p.target === 'string' ? p.target : '';
+  const resolvable = !!target && guideOnDom(target);
+  return (
+    <div class="og-card">
+      <div class="og-card-title">Thao tác trên trang</div>
+      {has(p.label) && <div>{p.label}</div>}
+      {resolvable ? (
+        <button class="og-link-btn" onClick={() => onGuide(target)}>
+          👁 Chỉ vị trí trên trang
+        </button>
+      ) : (
+        <div class="og-card-sub">
+          (ở bước/trang khác)
+          {has(p.form_path) && location.pathname !== p.form_path && (
+            <>
+              {' '}
+              <a class="og-link-btn" href={String(p.form_path)}>
+                Mở trang biểu mẫu →
+              </a>
+            </>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -217,11 +266,15 @@ export function CardView({
   cardIndex,
   ticks,
   onTick,
+  onGuide,
+  guideOnDom,
 }: {
   card: Card;
   cardIndex: number;
   ticks: Record<string, boolean>;
   onTick: (key: string) => void;
+  onGuide?: (target: string) => void;
+  guideOnDom?: (target: string) => boolean;
 }): ComponentChildren {
   const p = card?.payload ?? {};
   switch (card?.type) {
@@ -239,6 +292,8 @@ export function CardView({
       return <LegalFragmentsCard p={p} />;
     case 'checklist':
       return <ChecklistCard p={p} cardIndex={cardIndex} ticks={ticks} onTick={onTick} />;
+    case 'guide':
+      return <GuideCard p={p} onGuide={onGuide ?? (() => {})} guideOnDom={guideOnDom ?? (() => false)} />;
     default:
       return null; // unknown card type → silently ignored (§3.4 forward-compat)
   }

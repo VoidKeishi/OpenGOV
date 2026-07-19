@@ -5,17 +5,22 @@ import { useEffect, useRef, useState } from 'preact/hooks';
 import styles from './styles.css?inline';
 import type {
   ChatEvent,
+  CheckTurnResult,
   DetectState,
   EmbedConfig,
   Health,
+  PrefillRow,
   SchemaIndexEntry,
   Turn,
   ValidationError,
 } from '../types';
-import { captureFields, fieldLabel, findField, pickMainForm } from '../core/capture';
+import { captureFields, fieldLabel, findField, findSubmit, pickMainForm } from '../core/capture';
 import { detect } from '../core/detect';
 import { startDetectLoop } from '../core/scheduler';
 import { postChat } from '../core/sse';
+import { initOverlay, spotlight } from '../core/overlay';
+import { EV_PANEL_CHECK, on as busOn } from '../core/bus';
+import { buildPrefillCandidates, writeField, type PrefillCandidate } from '../core/prefill';
 import {
   clearCurrentSession,
   getOpen,
@@ -80,6 +85,7 @@ export function mountApp(shadow: ShadowRoot, config: EmbedConfig): void {
   const style = document.createElement('style');
   style.textContent = styles;
   shadow.appendChild(style);
+  initOverlay(shadow); // spotlight overlay lives in the same shadow root (§12.1)
   const root = document.createElement('div');
   shadow.appendChild(root);
   render(<App config={config} />, root);
@@ -97,6 +103,12 @@ function App({ config }: { config: EmbedConfig }) {
   const [det, setDet] = useState<DetectState>({ kind: 'NONE' });
   const [placeholder, setPlaceholder] = useState<string | null>(null);
   const [draft, setDraft] = useState('');
+  // Pha 2: confirmed-prefill preview (per-row checkboxes) — null when closed.
+  const [prefillPreview, setPrefillPreview] = useState<{
+    schema: SchemaIndexEntry;
+    rows: PrefillCandidate[];
+    checked: Record<string, boolean>;
+  } | null>(null);
 
   const sidRef = useRef<string | null>(getSid());
   const schemasRef = useRef<SchemaIndexEntry[] | null>(null);
@@ -230,6 +242,9 @@ function App({ config }: { config: EmbedConfig }) {
             case 'card':
               updateLast((t) => ({ ...t, cards: [...t.cards, evt.payload] }));
               break;
+            case 'chips':
+              updateLast((t) => ({ ...t, chips: evt.items }));
+              break;
             case 'token':
               setPhase('streaming');
               updateLast((t) => ({ ...t, prose: t.prose + evt.text }));
@@ -344,25 +359,17 @@ function App({ config }: { config: EmbedConfig }) {
     });
   };
 
-  // --- scroll-to-field with transient highlight (§6.4) ---
-  const scrollToField = (field: string): void => {
-    const el = findField(document, field) as HTMLElement | null;
-    if (!el) return;
-    const accent = config.accent ?? '#ce7a58';
+  // --- spotlight an element (scroll + dim overlay, §12.1); minimize the mobile sheet first ---
+  const reveal = (el: HTMLElement, focus = true): void => {
     const go = (): void => {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      try {
-        el.focus({ preventScroll: true });
-      } catch {
-        /* non-focusable */
+      spotlight(el);
+      if (focus) {
+        try {
+          el.focus({ preventScroll: true });
+        } catch {
+          /* non-focusable */
+        }
       }
-      el.animate(
-        [
-          { outline: `3px solid ${accent}`, outlineOffset: '2px' },
-          { outline: '3px solid transparent', outlineOffset: '2px' },
-        ],
-        { duration: 2000, easing: 'ease-out' },
-      );
     };
     if (isMobile() && open) {
       setOpen(false); // full-screen sheet covers the form: minimize first
@@ -371,6 +378,116 @@ function App({ config }: { config: EmbedConfig }) {
       go();
     }
   };
+
+  // --- scroll-to-field (§6.4) — spotlight upgrade of the Pha-1 outline flash ---
+  const scrollToField = (field: string): void => {
+    const el = findField(document, field) as HTMLElement | null;
+    if (el) reveal(el);
+  };
+
+  // --- guide card (§12.2): resolve field key / `submit` anchor on the live DOM ---
+  const resolveGuide = (target: string): HTMLElement | null =>
+    target === 'submit'
+      ? (findSubmit(document) as HTMLElement | null)
+      : (findField(document, target) as HTMLElement | null);
+  const onGuide = (target: string): void => {
+    const el = resolveGuide(target);
+    if (el) reveal(el, target !== 'submit');
+  };
+
+  // --- confirmed prefill (§12.4) ---
+  const openPrefill = async (): Promise<void> => {
+    if (det.kind !== 'DETECTED_READY' || !det.schema.prefill || busyRef.current) return;
+    const sid = sidRef.current;
+    const facts = sid ? ((await fetchSession(backend, sid))?.case_facts ?? {}) : {};
+    const rows = buildPrefillCandidates(det.schema.prefill, facts, document);
+    if (!rows.length) {
+      setTurns((prev) => [
+        ...prev,
+        {
+          role: 'notice',
+          prose: 'Chưa có thông tin nào từ hội thoại phù hợp để điền vào trang này.',
+          cards: [],
+          ticks: {},
+          revealed: true,
+        },
+      ]);
+      return;
+    }
+    setPrefillPreview({
+      schema: det.schema,
+      rows,
+      checked: Object.fromEntries(rows.map((r) => [r.field, true])),
+    });
+  };
+
+  const applyPrefill = (): void => {
+    const pv = prefillPreview;
+    if (!pv) return;
+    const accent = config.accent ?? '#ce7a58';
+    const applied: PrefillRow[] = [];
+    let firstEl: HTMLElement | null = null;
+    for (const row of pv.rows) {
+      if (!pv.checked[row.field]) continue;
+      const el = findField(document, row.field) as HTMLElement | null;
+      if (!el || !writeField(el, row.value)) continue;
+      // Tracked host-style write: the accent outline marks assisted fields and is
+      // removed on undo (§12.4 safety: every write is reviewed and reversible).
+      el.style.outline = `2px solid ${accent}`;
+      el.style.outlineOffset = '1px';
+      firstEl ??= el;
+      applied.push({
+        field: row.field,
+        label: fieldLabel(document, row.field) ?? row.field,
+        value: row.value,
+        fact: row.fact,
+        prev: row.current,
+      });
+    }
+    setPrefillPreview(null);
+    if (!applied.length) return;
+    setTurns((prev) => [
+      ...prev,
+      {
+        role: 'prefill',
+        prose: '',
+        cards: [],
+        ticks: {},
+        revealed: true,
+        prefill: { procedure_code: pv.schema.procedure_code, rows: applied, undone: false },
+      },
+    ]);
+    if (firstEl) reveal(firstEl, false);
+  };
+
+  const undoPrefill = (turnIndex: number): void =>
+    setTurns((prev) =>
+      prev.map((t, i) => {
+        if (i !== turnIndex || t.role !== 'prefill' || !t.prefill || t.prefill.undone) return t;
+        for (const row of t.prefill.rows) {
+          const el = findField(document, row.field) as HTMLElement | null;
+          if (el && writeField(el, row.prev)) {
+            el.style.outline = '';
+            el.style.outlineOffset = '';
+          }
+        }
+        return { ...t, prefill: { ...t.prefill, undone: true } };
+      }),
+    );
+
+  // --- <opengov-check-button> fallback: errors with no inline hint land here (§12.3) ---
+  useEffect(
+    () =>
+      busOn(EV_PANEL_CHECK, (data) => {
+        const res = data as CheckTurnResult;
+        setOpen(true);
+        setTurns((prev) => [
+          ...prev,
+          { role: 'check', prose: '', cards: [], ticks: {}, revealed: true, check: res },
+        ]);
+      }),
+    [],
+  );
 
   const actions: TurnActions = {
     onTick: (turnIndex, key) =>
@@ -392,6 +509,10 @@ function App({ config }: { config: EmbedConfig }) {
     onRecheck: () => void runCheck(),
     fieldOnDom: (field) => !!findField(document, field),
     labelFor: (field) => fieldLabel(document, field) ?? field,
+    onChip: (text) => send(text),
+    onGuide,
+    guideOnDom: (target) => !!resolveGuide(target),
+    onUndoPrefill: undoPrefill,
   };
 
   const checkReady = det.kind === 'DETECTED_READY';
@@ -450,6 +571,7 @@ function App({ config }: { config: EmbedConfig }) {
             streaming={phase === 'streaming' && i === turns.length - 1}
             actions={actions}
             prevCards={prevAssistantCards(turns, i)}
+            showChips={idle && i === turns.length - 1}
           />
         ))}
         {turns.length === 0 && idle && (
@@ -474,6 +596,42 @@ function App({ config }: { config: EmbedConfig }) {
         )}
       </div>
 
+      {prefillPreview && (
+        <div class="og-prefill">
+          <div class="og-prefill-title">Điền từ hội thoại — anh/chị duyệt từng dòng trước khi ghi:</div>
+          {prefillPreview.rows.map((r) => (
+            <label key={r.field} class="og-prefill-row" data-field={r.field}>
+              <input
+                type="checkbox"
+                checked={!!prefillPreview.checked[r.field]}
+                onChange={() =>
+                  setPrefillPreview(
+                    (pv) =>
+                      pv && { ...pv, checked: { ...pv.checked, [r.field]: !pv.checked[r.field] } },
+                  )
+                }
+              />
+              <span>
+                <strong>{fieldLabel(document, r.field) ?? r.field}</strong> ← {r.value}
+                <span class="og-prefill-src"> từ hội thoại ({r.fact})</span>
+              </span>
+            </label>
+          ))}
+          <div class="og-prefill-actions">
+            <button
+              class="og-checkbtn"
+              disabled={!Object.values(prefillPreview.checked).some(Boolean)}
+              onClick={applyPrefill}
+            >
+              Điền giúp tôi
+            </button>
+            <button class="og-checkbtn" onClick={() => setPrefillPreview(null)}>
+              Đóng
+            </button>
+          </div>
+        </div>
+      )}
+
       {det.kind !== 'NONE' && (
         <div class="og-checkrow">
           <button
@@ -484,6 +642,11 @@ function App({ config }: { config: EmbedConfig }) {
           >
             ✓ Kiểm tra hồ sơ
           </button>
+          {checkReady && det.schema.prefill && sidRef.current && (
+            <button class="og-prefillbtn" disabled={!idle} onClick={() => void openPrefill()}>
+              📝 Điền giúp tôi
+            </button>
+          )}
         </div>
       )}
 

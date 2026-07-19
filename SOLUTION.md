@@ -8,7 +8,7 @@ Mục tiêu sản phẩm: người dân nộp hồ sơ hành chính **đúng và
 |---|---|---|---|
 | **1. Dữ liệu thủ tục máy-đọc-được** | Câu trả lời và kết quả kiểm tra đúng quy định hiện hành, có trích dẫn | Không | Hoàn thành (502 thủ tục, 3 pilot mức đầy đủ) |
 | **2. Widget chatbot nhúng** | Hỏi đáp, checklist theo tình huống, kiểm tra hồ sơ trước khi nộp — trong cửa sổ chat | Một thẻ `<script>` (~1 giờ) | Backend hoàn thành; widget đang build ([docs/WIDGET.md](docs/WIDGET.md)) |
-| **3. Overlay sâu + thao tác giao diện hộ** | Lỗi hiện ngay trên form, được điền hộ, được dẫn từng bước trên giao diện | Web components + mapping field→schema (nhỏ, khai báo) | Thiết kế xong, hiện thực sau trụ 2 |
+| **3. Overlay sâu + thao tác giao diện hộ** | Lỗi hiện ngay trên form, được điền hộ, được dẫn từng bước trên giao diện | Web components + mapping field→schema (nhỏ, khai báo) | Đã build phạm vi demo (19/07): field-hint + check-button + prefill có xác nhận + spotlight — toggle "Phase 2 preview" trên clone ([docs/WIDGET.md](docs/WIDGET.md) §12) |
 
 ## 1. Giải pháp dữ liệu — nền móng của độ chính xác
 

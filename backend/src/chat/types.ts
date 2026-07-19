@@ -4,6 +4,7 @@ export type ChatEvent =
   | { type: 'session'; session_id: string }
   | { type: 'token'; text: string }
   | { type: 'card'; payload: Card }
+  | { type: 'chips'; items: string[] }
   | { type: 'tool'; name: string; args: any }
   | { type: 'warning'; message: string }
   | { type: 'done'; cards_count: number }

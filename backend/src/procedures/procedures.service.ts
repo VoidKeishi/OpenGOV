@@ -34,7 +34,16 @@ export class ProceduresService {
   }
 
   listSchemaIndex(): SchemaIndexEntry[] {
-    return listSchemaIndex(this.cfg.config.schemasDir);
+    return listSchemaIndex(this.cfg.config.schemasDir, this.cfg.config.formPathPrefix);
+  }
+
+  /**
+   * Relative on-portal wizard path for codes that have a form schema; null otherwise.
+   * Gates every Phase-2 on-portal affordance (CTA, guide) to the pilot procedures.
+   */
+  getFormPath(code: string): string | null {
+    const schema = this.getFormSchema(code);
+    return schema ? this.cfg.config.formPathPrefix + schema.form_ref : null;
   }
 }
 
@@ -42,14 +51,19 @@ export interface SchemaIndexEntry {
   procedure_code: string;
   form_ref: string;
   field_keys: string[];
+  /** Phase 2: relative wizard path on the embedding portal (prefix + form_ref). */
+  form_path: string;
+  /** Phase 2: conversation→form mapping, verbatim from the schema file (may be absent). */
+  prefill?: Record<string, { fact: string; transform?: { enum?: Record<string, string> } }>;
 }
 
 /**
  * R1 (WIDGET.md §10): index of every authored form schema. The widget matches
  * DOM field names against `field_keys` to detect which procedure's form is on
- * the page. Read from disk each call, same rationale as getFormSchema.
+ * the page; `form_path`/`prefill` power the Phase-2 CTA and confirmed-prefill
+ * flows. Read from disk each call, same rationale as getFormSchema.
  */
-export function listSchemaIndex(schemasDir: string): SchemaIndexEntry[] {
+export function listSchemaIndex(schemasDir: string, formPathPrefix = '/nop-truc-tuyen/'): SchemaIndexEntry[] {
   if (!existsSync(schemasDir)) return [];
   return readdirSync(schemasDir)
     .filter((f) => f.endsWith('.form.json'))
@@ -59,5 +73,7 @@ export function listSchemaIndex(schemasDir: string): SchemaIndexEntry[] {
       procedure_code: s.procedure_code,
       form_ref: s.form_ref,
       field_keys: Object.keys(s.fields ?? {}),
+      form_path: formPathPrefix + s.form_ref,
+      ...(s.prefill ? { prefill: s.prefill } : {}),
     }));
 }

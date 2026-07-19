@@ -61,6 +61,20 @@ export function captureFields(root: ParentNode): Record<string, string> {
   return out;
 }
 
+/**
+ * The portal's submit/next button — resolution target for the `submit` guide
+ * anchor (WIDGET.md §12.2). Tried most-specific first: a button explicitly
+ * associated to a form (the clone's shared "Tiếp tục/Nộp hồ sơ" button), then
+ * any submit button inside a form, then any submit control.
+ */
+export function findSubmit(doc: ParentNode): Element | null {
+  return (
+    doc.querySelector('button[form]') ??
+    doc.querySelector('form button[type="submit"]') ??
+    doc.querySelector('button[type="submit"], input[type="submit"]')
+  );
+}
+
 /** First element carrying this field name (used for labels and scroll-to-field). */
 export function findField(doc: ParentNode, fieldName: string): Element | null {
   const esc = fieldName.replace(/\\/g, '\\\\').replace(/"/g, '\\"');

@@ -37,11 +37,19 @@ export interface FieldSchema {
   rules: Rule[];
 }
 
+/** Phase-2 conversation→form mapping (DATA.md §4 prefill): form field ← case_facts key. */
+export interface PrefillEntry {
+  fact: string;
+  transform?: { enum?: Record<string, string> };
+}
+
 export interface FormSchema {
   procedure_code: string;
   form_ref: string;
   fields: Record<string, FieldSchema>;
   cross_field?: Rule[];
+  /** Optional; served verbatim in GET /schemas — the engine never reads it. */
+  prefill?: Record<string, PrefillEntry>;
 }
 
 export interface RuleHit {

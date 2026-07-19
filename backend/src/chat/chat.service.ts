@@ -5,7 +5,8 @@ import type { LlmClient, LlmMessage } from '../openrouter/types';
 import { ProceduresService } from '../procedures/procedures.service';
 import { SessionsService } from '../sessions/sessions.service';
 import { AgentTools, runChatTurn } from './agent';
-import { Card, numbersCoveredByCards, parseCardsTail, selectCards } from './cards';
+import { buildGuideCard, Card, numbersCoveredByCards, parseDirectiveTail, selectCards } from './cards';
+import { FactDef, normalizeCaseFacts } from './facts';
 import { projectRecordForLlm } from './projection';
 import { PORTAL_URL, SYSTEM_PROMPT, TOOL_DEFS } from './prompt';
 import type { Emit } from './types';
@@ -59,11 +60,24 @@ export class ChatService {
         return projectRecordForLlm(rec);
       },
       get_form_schema: async ({ code }) => this.procedures.getFormSchema(code) ?? { available: false, code },
-      update_case_facts: async ({ facts }) => this.sessions.updateCaseFacts(session.id, facts),
+      update_case_facts: async ({ facts }) => {
+        // Validate against the pilot case_facts_schema union — invented keys /
+        // paraphrased enums are rejected back to the model instead of poisoning
+        // the checklist filter and prefill (facts.ts).
+        const { accepted, rejected } = normalizeCaseFacts(facts ?? {}, this.pilotFactsSchema());
+        if (Object.keys(accepted).length) this.sessions.updateCaseFacts(session.id, accepted);
+        if (Object.keys(rejected).length) {
+          this.log.warn(`case_facts rejected: ${JSON.stringify(rejected)}`);
+          return { ok: true, accepted, rejected };
+        }
+        return { ok: true, accepted };
+      },
     };
 
     let answer: string;
-    let selections: ReturnType<typeof parseCardsTail>['selections'];
+    let selections: ReturnType<typeof parseDirectiveTail>['selections'];
+    let chips: string[];
+    let guide: ReturnType<typeof parseDirectiveTail>['guide'];
     try {
       const res = await runChatTurn({
         llm: this.llm,
@@ -74,10 +88,12 @@ export class ChatService {
         userMessage: message,
         onToolCall: (name, args) => emit({ type: 'tool', name, args }),
       });
-      // Strip the [[CARDS:]] tail before the guard, the stream, and persistence.
-      const parsed = parseCardsTail(res.answer ?? '');
+      // Strip every [[KEY:]] directive before the guard, the stream, and persistence.
+      const parsed = parseDirectiveTail(res.answer ?? '');
       answer = parsed.cleaned || DEGRADED_MSG;
       selections = parsed.selections;
+      chips = parsed.chips;
+      guide = parsed.guide;
     } catch (err) {
       this.log.error(`chat turn failed: ${(err as Error).message}`);
       this.streamProse(ERROR_MSG, emit);
@@ -89,12 +105,32 @@ export class ChatService {
     // Re-read case_facts so update_case_facts calls from this very turn filter the checklist.
     const caseFacts = this.sessions.get(session.id)?.case_facts ?? {};
     // Resolver covers follow-up turns answered from history (no get_procedure this turn).
-    const cards: Card[] = selectCards(visited, selections, caseFacts, (code) =>
-      this.procedures.getProcedure(code),
+    const cards: Card[] = selectCards(
+      visited,
+      selections,
+      caseFacts,
+      (code) => this.procedures.getProcedure(code),
+      (code) => this.procedures.getFormPath(code),
     );
     if (!selections && visited.size) {
       this.log.warn('model omitted the [[CARDS:]] tail — lean fail-safe cards emitted');
       emit({ type: 'warning', message: 'cards_tail_missing' });
+    }
+
+    // [[GUIDE:]] → guide card, gated on the target existing in the form schema.
+    if (guide) {
+      const guideCard = buildGuideCard(
+        guide.code,
+        guide.target,
+        this.procedures.getFormSchema(guide.code),
+        this.procedures.getFormPath(guide.code),
+      );
+      if (guideCard) {
+        cards.push(guideCard);
+      } else {
+        this.log.warn(`guide target rejected: ${guide.code}=${guide.target}`);
+        emit({ type: 'warning', message: 'guide_target_unknown' });
+      }
     }
 
     const guard = numbersCoveredByCards(answer, cards);
@@ -105,9 +141,24 @@ export class ChatService {
     }
 
     for (const c of cards) emit({ type: 'card', payload: c });
+    if (chips.length) emit({ type: 'chips', items: chips });
     this.streamProse(answer, emit);
     emit({ type: 'done', cards_count: cards.length });
     this.persist(session.id, message, answer);
+  }
+
+  /** Union of the pilot records' case_facts_schema (keys are distinct per pilot). */
+  private factsSchemaCache: Record<string, FactDef> | null = null;
+  private pilotFactsSchema(): Record<string, FactDef> {
+    if (!this.factsSchemaCache) {
+      const union: Record<string, FactDef> = {};
+      for (const { procedure_code } of this.procedures.listSchemaIndex()) {
+        const rec = this.procedures.getProcedure(procedure_code) as any;
+        Object.assign(union, rec?.case_facts_schema ?? {});
+      }
+      this.factsSchemaCache = union;
+    }
+    return this.factsSchemaCache;
   }
 
   private persist(id: string, userMsg: string, answer: string): void {

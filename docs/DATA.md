@@ -149,13 +149,14 @@ Human-owned, pilots only. A separate file merged over the base record at seed ti
 
 Contract rules:
 
+- **Fact types — exactly `enum`, `boolean`, `string`.** `enum`/`boolean` facts drive `when` conditions and conditional validation. `string` facts (identity data the user states in conversation: tên chủ hộ, số định danh…) exist for **prefill only** (§4 `prefill`) — they never appear in `when` conditions. Every fact carries a `question` (Vietnamese, verbatim usable by the bot) or `null`.
 - **Condition mini-language — exactly two operators**, both over `case_facts` only: `{"fact": F, "eq": v}` and `{"fact": F, "in": [v, ...]}`. No other operators, no nesting, no field references.
 - **Group types — exactly `ALL_OF` and `ONE_OF`**, each with optional `when`; items with optional `when`. `kind` is `nop` (submit) or `xuat_trinh` (present).
 - **Missing fact → fail-open on display**: show the item with badge "tùy trường hợp". A checklist that hides documents is worse than one that over-shows.
 - **Traceability is mandatory**: every item carries `source_component_code` (the raw component `code`) or a `source_quote` (verbatim sentence from `steps_raw`). Every `deadlines[]` entry carries `source_quote`. No untraceable content.
 - Quantities are copied from `original_qty`/`copy_qty`, never invented. Document/legal names stay verbatim Vietnamese.
 - Per-procedure mapping notes (facts from the knowledge-base decision trees):
-  - **1.004222 thường trú**: the 6 hồ sơ cases map to one enum fact `truong_hop` (so_huu | nhan_than | thue_muon_o_nho | tin_nguong_ton_giao | tro_giup_xa_hoi | don_vi_dong_quan) plus boolean `song_tren_phuong_tien`; extra facts: `chua_thanh_nien`, `viet_kieu_khong_ho_chieu` (→ CT02 instead of CT01), fee-exemption group (TT 75/2022 Điều 4).
+  - **1.004222 thường trú**: the 6 hồ sơ cases map to one enum fact `truong_hop` (so_huu | nhan_than | thue_muon_o_nho | tin_nguong_ton_giao | tro_giup_xa_hoi | don_vi_dong_quan) plus boolean `song_tren_phuong_tien`; extra facts: `chua_thanh_nien`, `viet_kieu_khong_ho_chieu` (→ CT02 instead of CT01), fee-exemption group (TT 75/2022 Điều 4). Prefill string facts (mirror tờ khai CT01 fields, TT 53/2025/TT-BCA): `ho_ten_chu_ho`, `moi_quan_he_voi_chu_ho`, `so_dinh_danh_chu_ho`.
   - **2.001610 DNTN**: facts `loai_dang_ky` (co_ban | dn_xa_hoi | chuyen_doi_hkd | chuyen_doi_btxh_quy), `co_so_dinh_danh` (true → skip bản sao giấy tờ pháp lý, khoản 1 Điều 11 NĐ 168/2025), `uy_quyen` (khong | ca_nhan | to_chuc | buu_chinh_cong_ich | buu_chinh_khac), `co_tai_khoan_dddt`, `kenh_nop` (online → miễn lệ phí 50k, chỉ 100k phí công bố).
   - **2.001955 nội quy lao động**: facts `so_lao_dong` (≥10 → registration required at all, Điều 119 BLLĐ), `co_to_chuc_dai_dien` (→ văn bản góp ý required), `co_van_ban_ky_luat_rieng`, `co_chi_nhanh_khac_tinh` (→ post-registration obligation).
 
@@ -202,9 +203,16 @@ Field keys are the portal form's snake_case `name` attributes (see `dichvucong/s
       "attach_to": "ho_ten_me" },                                // which field the error renders on
     { "rule": "date_before", "field": "nam_sinh_me", "before": "ngay_sinh_nguoi_duoc_khai_sinh",
       "error": "E_ME_SINH_SAU_CON" }
-  ]
+  ],
+  "prefill": {                                                   // OPTIONAL — Phase-2 conversation→form mapping
+    "ho_ten_me": { "fact": "ho_ten_me" },                        // form field ← case_facts key (usually a string fact, §3)
+    "kenh_nhan_kq": { "fact": "kenh_nop",                        // enum fact → form label via declarative transform
+                      "transform": { "enum": { "truc_tuyen": "Trực tuyến", "truc_tiep": "Trực tiếp" } } }
+  }
 }
 ```
+
+**`prefill` contract** (Phase 2, optional per schema): keys are form field names (must exist in `fields` or on the clone form); `fact` references a `case_facts_schema` key of the same procedure; optional `transform.enum` maps fact values to display labels — the only transform kind (no expressions, no concatenation; anything beyond enum→label stays out of scope). The backend serves this section verbatim in the `GET /schemas` index; the widget is the only consumer and every write requires explicit user confirmation (WIDGET.md §12). Multiple form fields may reference the same fact.
 
 **Closed rule set — exactly 10 rules.** The engine implements these and nothing else; a schema referencing an unknown rule fails loudly at load time. `int_range` and `date_before` are usable in both `fields` and `cross_field`:
 

@@ -590,6 +590,193 @@ async function scCardsMocked(browser) {
   await context.close();
 }
 
+async function scChipsGuide(browser) {
+  current = 'chips-guide';
+  // SSE replay with the Pha-2 directives already resolved server-side:
+  // chips event + guide card + form_path CTA on the procedure card.
+  const EVENTS = [
+    '{"type":"session","session_id":"e2e-chips"}',
+    '{"type":"card","payload":{"type":"procedure","payload":{"code":"1.004222","name":"Đăng ký thường trú","executing_agency":"Công an cấp xã","source_url":"https://dichvucong.gov.vn/x","updated_at":"2026-07-01","form_path":"/nop-truc-tuyen/dang-ky-thuong-tru"}}}',
+    '{"type":"card","payload":{"type":"guide","payload":{"code":"1.004222","target":"so_dinh_danh_ca_nhan","label":"Số định danh cá nhân","form_path":"/nop-truc-tuyen/dang-ky-thuong-tru"}}}',
+    '{"type":"chips","items":["Tôi nộp trực tuyến","Tôi nộp trực tiếp"]}',
+    '{"type":"token","text":"Anh/chị điền Số định danh ở bước Tờ khai. Nộp trực tuyến hay trực tiếp?"}',
+    '{"type":"done","cards_count":2}',
+  ];
+  const body = EVENTS.map((j) => `data: ${j}\n\n`).join('') + 'event: end\ndata: {}\n\n';
+  const context = await browser.newContext();
+  await context.route('**/chat', (route) =>
+    route.fulfill({ contentType: 'text/event-stream', body }),
+  );
+  const page = await newPage(context, '/');
+  await openPanel(page);
+  await sendChat(page, 'điền số định danh ở đâu?');
+  await waitFor(async () => (await page.locator('.og-cards').count()) === 1);
+
+  // CTA rides the procedure card (relative form_path, not the current path)
+  const cta = page.locator('.og-cta', { hasText: 'Nộp trực tuyến tại cổng này' });
+  check((await cta.count()) === 1, 'form_path CTA on the procedure card');
+  check(
+    (await cta.getAttribute('href')) === '/nop-truc-tuyen/dang-ky-thuong-tru',
+    'CTA href is the relative wizard path',
+  );
+
+  // chips render under the last assistant turn while idle
+  check((await page.locator('.og-chip').count()) === 2, 'two quick-reply chips rendered');
+
+  // guide card button → spotlight overlay + focus, then self-removes
+  const guideBtn = page.locator('.og-link-btn', { hasText: 'Chỉ vị trí trên trang' });
+  check((await guideBtn.count()) === 1, 'guide button enabled (target on DOM)');
+  await guideBtn.click();
+  await waitFor(async () => (await page.locator('.og-spotlight').count()) === 1);
+  check(true, 'spotlight overlay appears');
+  const focused = await waitFor(async () =>
+    page.evaluate(() => document.activeElement?.name === 'so_dinh_danh_ca_nhan'),
+  );
+  check(focused, 'guide focuses the target field');
+  const gone = await waitFor(async () => (await page.locator('.og-spotlight').count()) === 0, 7000);
+  check(gone, 'spotlight fades out and removes itself');
+
+  // clicking a chip sends its text as the next user message
+  await page.locator('.og-chip', { hasText: 'Tôi nộp trực tuyến' }).click();
+  await waitFor(async () => (await page.locator('.og-turn-user').count()) === 2);
+  check(
+    (await page.locator('.og-turn-user').last().textContent()) === 'Tôi nộp trực tuyến',
+    'chip click sends its text verbatim',
+  );
+  await context.close();
+}
+
+async function scPrefill(browser) {
+  current = 'prefill';
+  const context = await browser.newContext();
+  // Session with conversation facts (identity string facts, Pha 2 data);
+  // /schemas is the real shim which now serves the 1.004222 prefill map.
+  await context.route('**/sessions/e2e-prefill', (route) =>
+    route.fulfill({
+      contentType: 'application/json',
+      body: JSON.stringify({
+        messages: [],
+        case_facts: {
+          truong_hop: 'nhan_than',
+          ho_ten_chu_ho: 'Trần Văn B',
+          moi_quan_he_voi_chu_ho: 'Con',
+          so_dinh_danh_chu_ho: '001099000111',
+        },
+      }),
+    }),
+  );
+  const page = await context.newPage();
+  await page.addInitScript(() => sessionStorage.setItem('og.sid', 'e2e-prefill'));
+  await page.goto(`${ORIGIN}/`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#opengov-widget', { state: 'attached' });
+  await openPanel(page);
+
+  const prefillBtn = page.locator('.og-prefillbtn');
+  await waitFor(async () => (await prefillBtn.count()) === 1);
+  check(true, 'prefill chip appears next to the check button');
+  await prefillBtn.click();
+  await waitFor(async () => (await page.locator('.og-prefill-row').count()) >= 1);
+
+  // 3 facts → 4 candidate fields (so_dinh_danh_chu_ho feeds two inputs)
+  check((await page.locator('.og-prefill-row').count()) === 4, 'per-row preview (1 fact → 2 fields incl.)');
+  const rowTexts = await page.locator('.og-prefill-row').allTextContents();
+  check(
+    rowTexts.some((t) => t.includes('Trần Văn B') && t.includes('ho_ten_chu_ho')),
+    'row shows value + fact provenance',
+  );
+
+  // untick one row → it must not be written
+  const skipRow = page.locator('.og-prefill-row[data-field="y_kien_chu_ho_so_dinh_danh"]');
+  await skipRow.locator('input[type="checkbox"]').uncheck();
+  await page.locator('.og-prefill-actions .og-checkbtn', { hasText: 'Điền giúp tôi' }).click();
+  await waitFor(async () => (await page.locator('.og-result-head', { hasText: 'Đã điền' }).count()) === 1);
+
+  check(
+    (await page.inputValue('[name="ho_ten_chu_ho"]')) === 'Trần Văn B',
+    'text input written through the native setter',
+  );
+  check(
+    (await page.inputValue('[name="moi_quan_he_voi_chu_ho"]')) === 'Con',
+    'select written + change dispatched',
+  );
+  check(
+    (await page.inputValue('[name="so_dinh_danh_ca_nhan_chu_ho"]')) === '001099000111',
+    'second field of the shared fact written',
+  );
+  check(
+    (await page.inputValue('[name="y_kien_chu_ho_so_dinh_danh"]')) === '',
+    'unticked row NOT written (write needs per-row consent)',
+  );
+  check(
+    (await page
+      .locator('[name="ho_ten_chu_ho"]')
+      .evaluate((el) => el.style.outline)).includes('solid'),
+    'assisted field marked with the accent outline',
+  );
+  check(
+    (await page.locator('.og-result-head', { hasText: 'Đã điền 3 trường' }).count()) === 1,
+    'prefill turn logged in the transcript (3 rows)',
+  );
+
+  // undo restores every previous value and clears the outlines
+  await page.locator('.og-link-btn', { hasText: 'Hoàn tác toàn bộ' }).click();
+  await waitFor(async () => (await page.locator('.og-card', { hasText: 'Đã hoàn tác' }).count()) === 1);
+  check((await page.inputValue('[name="ho_ten_chu_ho"]')) === '', 'undo restores the text input');
+  check((await page.inputValue('[name="moi_quan_he_voi_chu_ho"]')) === '', 'undo restores the select');
+  check(
+    (await page.locator('[name="ho_ten_chu_ho"]').evaluate((el) => el.style.outline)) === '',
+    'undo clears the outline',
+  );
+  await context.close();
+}
+
+async function scFieldHint(browser) {
+  current = 'field-hint';
+  // phase2.html carries the two web components; validate runs against the REAL
+  // degraded backend (rule engine fully functional without a key).
+  const context = await browser.newContext();
+  const page = await newPage(context, '/test/phase2.html');
+  await page.waitForTimeout(800);
+
+  // static hint shows before any validation
+  check(
+    (await page.getByText('Ghi rõ đề nghị đăng ký thường trú').count()) === 1,
+    'static hint attribute renders',
+  );
+
+  // blur with a bad value → inline error from the hint next to the field
+  await page.fill('[name="so_dinh_danh_ca_nhan"]', '123');
+  await page.locator('[name="so_dinh_danh_ca_nhan"]').blur();
+  await waitFor(async () => (await page.getByText('12 chữ số').count()) >= 1);
+  check(true, 'blur validates and shows the inline error');
+
+  // fixing the value clears the error on the next blur
+  await page.fill('[name="so_dinh_danh_ca_nhan"]', '012345678901');
+  await page.locator('[name="so_dinh_danh_ca_nhan"]').blur();
+  const cleared = await waitFor(async () => (await page.getByText('12 chữ số').count()) === 0);
+  check(cleared, 'inline error clears after the fix');
+
+  // check-button: hinted fields get inline errors, the rest falls back to the panel
+  await page.locator('opengov-check-button button').click();
+  await waitFor(async () => (await page.locator('.og-panel').count()) === 1);
+  await waitFor(async () => (await page.locator('.og-result-head').count()) >= 1);
+  check(true, 'leftover errors open the chat panel');
+  const hintText = await page
+    .locator('opengov-field-hint[field="noi_dung_de_nghi"]')
+    .evaluate((el) => el.shadowRoot?.textContent ?? '');
+  check(hintText.includes('bắt buộc'), 'hinted field shows its error inline');
+  const panelItems = await page.locator('.og-result-item').allTextContents();
+  check(
+    panelItems.some((t) => t.includes('Họ, chữ đệm và tên khai sinh')),
+    'un-hinted error listed in the panel',
+  );
+  check(
+    !panelItems.some((t) => t.includes('Nội dung đề nghị')),
+    'hinted error NOT duplicated in the panel',
+  );
+  await context.close();
+}
+
 // ---------- main ----------
 
 console.log('[e2e] starting backend (degraded) + serve.mjs…');
@@ -636,6 +823,9 @@ const scenarios = [
   scHostileReset,
   scDirectBackend,
   scCardsMocked,
+  scChipsGuide,
+  scPrefill,
+  scFieldHint,
 ];
 
 for (const sc of scenarios) {

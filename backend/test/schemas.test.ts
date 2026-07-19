@@ -26,6 +26,20 @@ test('1.004222 entry matches the clone form contract', () => {
   assert.ok(tt.field_keys.includes('noi_dung_de_nghi'));
 });
 
+test('Phase 2: every entry carries form_path; 1.004222 serves its prefill map verbatim', () => {
+  const index = listSchemaIndex(schemasDir);
+  for (const entry of index) {
+    assert.equal(entry.form_path, `/nop-truc-tuyen/${entry.form_ref}`);
+  }
+  const tt = index.find((s) => s.procedure_code === '1.004222')!;
+  assert.ok(tt.prefill);
+  assert.equal(tt.prefill!['ho_ten_chu_ho']!.fact, 'ho_ten_chu_ho');
+  assert.equal(tt.prefill!['y_kien_chu_ho_so_dinh_danh']!.fact, 'so_dinh_danh_chu_ho');
+  // custom prefix flows through
+  const custom = listSchemaIndex(schemasDir, '/wizard/');
+  assert.equal(custom.find((s) => s.procedure_code === '1.004222')!.form_path, '/wizard/dang-ky-thuong-tru');
+});
+
 test('missing directory degrades to an empty index', () => {
   assert.deepEqual(listSchemaIndex(join(schemasDir, 'khong-ton-tai')), []);
 });

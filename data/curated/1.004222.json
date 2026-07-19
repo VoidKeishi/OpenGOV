@@ -14,7 +14,13 @@
     "viet_kieu_khong_ho_chieu": { "type": "boolean",
       "question": "Anh/chị là người Việt Nam định cư ở nước ngoài không có hộ chiếu Việt Nam còn giá trị sử dụng phải không?" },
     "thuoc_dien_mien_phi": { "type": "boolean",
-      "question": null }
+      "question": null },
+    "ho_ten_chu_ho": { "type": "string",
+      "question": "Chủ hộ nơi anh/chị chuyển đến tên đầy đủ là gì?" },
+    "moi_quan_he_voi_chu_ho": { "type": "string",
+      "question": "Anh/chị có quan hệ gì với chủ hộ (ví dụ: con, vợ/chồng, cháu)?" },
+    "so_dinh_danh_chu_ho": { "type": "string",
+      "question": "Số định danh cá nhân của chủ hộ là gì (12 chữ số, nếu anh/chị biết)?" }
   },
   "steps": [
     { "n": 1, "title": "Chuẩn bị hồ sơ", "channel": "all",
@@ -126,6 +132,10 @@
   "review": {
     "reviewed_by": "Nguyễn Văn A",
     "reviewed_at": "2026-07-18",
-    "method": "Stage A2 KB ingest (agent) + B-lite interactive review (Claude Code per tools/etl/STRUCTURING.md §2, bảng gộp per-procedure; script đối chiếu source_component_code/quantity + schema-vs-form pass)"
+    "method": "Stage A2 KB ingest (agent) + B-lite interactive review (Claude Code per tools/etl/STRUCTURING.md §2, bảng gộp per-procedure; script đối chiếu source_component_code/quantity + schema-vs-form pass)",
+    "amendments": [
+      { "date": "2026-07-19", "by": "agent (Phase-2 session), pending human review",
+        "change": "case_facts_schema += 3 string facts (ho_ten_chu_ho, moi_quan_he_voi_chu_ho, so_dinh_danh_chu_ho) for confirmed prefill only — mirror tờ khai CT01 mục 'Thông tin chủ hộ' (TT 53/2025/TT-BCA); not used in any when condition" }
+    ]
   }
 }

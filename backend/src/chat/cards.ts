@@ -76,7 +76,7 @@ export function buildCards(record: ProcedureRecord): Card[] {
   return cards;
 }
 
-// --- card selection (answer tail [[CARDS: <code>=<types>]], DESIGN.md §6) ---
+// --- directive tail ([[CARDS/CHIPS/GUIDE: ...]], DESIGN.md §6) ---
 
 const SELECTABLE_TYPES = new Set([
   'procedure',
@@ -91,25 +91,50 @@ const SELECTABLE_TYPES = new Set([
 /** Emission order is canonical and independent of the order the model wrote. */
 const EMIT_ORDER = ['procedure', 'checklist', 'fees', 'processing', 'deadlines', 'legal_basis', 'legal_fragments'];
 
-const CARDS_TAIL_RE = /\[\[CARDS:[^\]]*\]\]/gi;
+/** Any [[KEY: ...]] directive line — unknown KEYs are stripped too (forward-compat). */
+const DIRECTIVE_RE = /\[\[([A-Z_]+):([^\]]*)\]\]/gi;
 
-export interface ParsedCardsTail {
+const MAX_CHIPS = 3;
+const MAX_CHIP_LEN = 60;
+
+export interface ParsedDirectiveTail {
   cleaned: string;
-  /** null = no parseable tail found (caller falls back + warns). */
+  /** null = no parseable CARDS tail found (caller falls back + warns). */
   selections: Map<string, Set<string>> | null;
+  /** Quick-reply suggestions ([[CHIPS: a | b]]); empty when absent. */
+  chips: string[];
+  /** UI guide target ([[GUIDE: <code>=<target>]]); null when absent. */
+  guide: { code: string; target: string } | null;
 }
 
 /**
- * Extract the model's card selections from the answer tail and strip every
- * [[CARDS:...]] occurrence from the prose. Must run before the number guard,
- * streaming, and history persistence — the tail never reaches the wire.
+ * Extract every model directive from the answer tail and strip ALL [[KEY:...]]
+ * occurrences from the prose (including unknown KEYs). Must run before the
+ * number guard, streaming, and history persistence — no directive ever reaches
+ * the wire. Last occurrence wins per directive.
  */
-export function parseCardsTail(answer: string): ParsedCardsTail {
-  const matches = answer.match(CARDS_TAIL_RE) ?? [];
-  const cleaned = answer.replace(CARDS_TAIL_RE, '').replace(/\s+$/, '').trim();
-  if (!matches.length) return { cleaned, selections: null };
+export function parseDirectiveTail(answer: string): ParsedDirectiveTail {
+  let cardsBody: string | null = null;
+  let chipsBody: string | null = null;
+  let guideBody: string | null = null;
+  for (const m of answer.matchAll(DIRECTIVE_RE)) {
+    const key = m[1]!.toUpperCase();
+    if (key === 'CARDS') cardsBody = m[2]!;
+    else if (key === 'CHIPS') chipsBody = m[2]!;
+    else if (key === 'GUIDE') guideBody = m[2]!;
+    // unknown KEY: stripped below, otherwise ignored
+  }
+  const cleaned = answer.replace(DIRECTIVE_RE, '').replace(/\s+$/, '').trim();
 
-  const body = matches[matches.length - 1]!.replace(/^\[\[CARDS:/i, '').replace(/\]\]$/, '');
+  return {
+    cleaned,
+    selections: cardsBody != null ? parseCardsBody(cardsBody) : null,
+    chips: chipsBody != null ? parseChipsBody(chipsBody) : [],
+    guide: guideBody != null ? parseGuideBody(guideBody) : null,
+  };
+}
+
+function parseCardsBody(body: string): Map<string, Set<string>> | null {
   const selections = new Map<string, Set<string>>();
   for (const part of body.split(';')) {
     const eq = part.indexOf('=');
@@ -125,7 +150,48 @@ export function parseCardsTail(answer: string): ParsedCardsTail {
     );
     if (types.size) selections.set(code, types);
   }
-  return { cleaned, selections: selections.size ? selections : null };
+  return selections.size ? selections : null;
+}
+
+function parseChipsBody(body: string): string[] {
+  return body
+    .split('|')
+    .map((c) => c.trim())
+    .filter(Boolean)
+    .slice(0, MAX_CHIPS)
+    .map((c) => (c.length > MAX_CHIP_LEN ? c.slice(0, MAX_CHIP_LEN - 1).trimEnd() + '…' : c));
+}
+
+function parseGuideBody(body: string): { code: string; target: string } | null {
+  const eq = body.indexOf('=');
+  if (eq < 0) return null;
+  const code = body.slice(0, eq).trim();
+  const target = body.slice(eq + 1).trim();
+  return code && target ? { code, target } : null;
+}
+
+/**
+ * Guide card (WIDGET.md §3.4): validated against the procedure's form schema —
+ * target must be a schema field key or the `submit` anchor. Invalid target or no
+ * schema → null (caller warns `guide_target_unknown`). The label lets the widget
+ * render a meaningful line even when the target is on another wizard step.
+ */
+export function buildGuideCard(
+  code: string,
+  target: string,
+  schema: { fields: Record<string, { label: string }> } | null,
+  formPath: string | null,
+): Card | null {
+  if (!schema) return null;
+  let label: string;
+  if (target === 'submit') {
+    label = 'Nút Nộp hồ sơ / Tiếp tục';
+  } else if (schema.fields?.[target]?.label) {
+    label = schema.fields[target]!.label;
+  } else {
+    return null;
+  }
+  return { type: 'guide', payload: { code, target, label, form_path: formPath } };
 }
 
 /**
@@ -143,6 +209,7 @@ export function selectCards(
   selections: Map<string, Set<string>> | null,
   caseFacts: Record<string, unknown>,
   resolveRecord?: (code: string) => ProcedureRecord | null,
+  resolveFormPath?: (code: string) => string | null,
 ): Card[] {
   const records = new Map(visited);
   let effective: Map<string, Set<string>> | null = null;
@@ -178,10 +245,16 @@ export function selectCards(
     const wanted = new Set(types);
     wanted.add('procedure');
     if (Array.isArray(record.legal_fragments) && record.legal_fragments.length) wanted.add('legal_fragments');
+    // Phase 2: on-portal CTA path rides on the cards the widget renders CTAs from.
+    const formPath = resolveFormPath?.(code) ?? null;
     for (const type of EMIT_ORDER) {
       if (!wanted.has(type)) continue;
       const card = buildCardOfType(record, type, caseFacts);
-      if (card) cards.push(card);
+      if (!card) continue;
+      if (formPath && (card.type === 'procedure' || card.type === 'checklist')) {
+        card.payload.form_path = formPath;
+      }
+      cards.push(card);
     }
   }
   return cards;

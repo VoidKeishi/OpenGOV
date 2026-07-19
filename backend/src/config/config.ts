@@ -9,6 +9,12 @@ export interface AppConfig {
   errorsCatalogPath: string;
   /** Where the built widget bundle lives — served at GET /widget/opengov.js (WIDGET.md R3). */
   widgetDistDir: string;
+  /**
+   * Relative wizard path prefix on the embedding portal: form_path = prefix + form_ref
+   * (Phase 2 CTAs/guide; WIDGET.md §12.5). Relative on purpose — only meaningful when
+   * the widget runs on the portal itself.
+   */
+  formPathPrefix: string;
   openRouter: OpenRouterConfig;
 }
 
@@ -43,6 +49,7 @@ export function loadConfig(): AppConfig {
     schemasDir: process.env.OPENGOV_SCHEMAS_DIR ?? resolve(dataDir, 'schemas'),
     errorsCatalogPath: process.env.OPENGOV_ERRORS_PATH ?? resolve(dataDir, 'errors', 'catalog.json'),
     widgetDistDir: process.env.OPENGOV_WIDGET_DIST ?? resolve(cwd, '..', 'widget', 'dist'),
+    formPathPrefix: process.env.OPENGOV_FORM_PATH_PREFIX ?? '/nop-truc-tuyen/',
     openRouter: {
       apiKey: process.env.OPENROUTER_API_KEY || undefined,
       baseUrl: process.env.OPENROUTER_BASE_URL ?? 'https://openrouter.ai/api/v1',

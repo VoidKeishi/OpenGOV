@@ -4,8 +4,8 @@
 
 ## 0. Phạm vi & bảng quyết định
 
-- **Pha 1 (buildable ngay)**: một bundle JS duy nhất nhúng bằng một thẻ script → bong bóng chat + panel, hỏi đáp SSE với gen-UI card, nút "Kiểm tra hồ sơ" đọc DOM form → `/validate`.
-- **Pha 2 (outline buildable ở §12, làm sau khi Pha 1 tích hợp xong)**: web components + prefill có xác nhận.
+- **Pha 1 (đã ship)**: một bundle JS duy nhất nhúng bằng một thẻ script → bong bóng chat + panel, hỏi đáp SSE với gen-UI card, nút "Kiểm tra hồ sơ" đọc DOM form → `/validate`.
+- **Pha 2 (as-built ở §12)**: web components (`<opengov-field-hint>`, `<opengov-check-button>`) + prefill có xác nhận từ hội thoại + overlay spotlight chỉ vị trí trên trang + quick-reply chips.
 
 | # | Quyết định | Lý do ngắn |
 |---|---|---|
@@ -75,15 +75,20 @@ type ChatEvent =
   | { type: 'session'; session_id: string } // luôn là event đầu — ghi lại nếu chưa có
   | { type: 'tool';    name: string; args: any }
   | { type: 'card';    payload: Card }
+  | { type: 'chips';   items: string[] }    // gợi ý trả lời nhanh (≤3) cho câu hỏi làm rõ của lượt này
   | { type: 'token';   text: string }
-  | { type: 'warning'; message: string }    // guard nội bộ (numbers_not_in_cards) → console.debug, KHÔNG hiện UI
+  | { type: 'warning'; message: string }    // guard nội bộ (numbers_not_in_cards, guide_target_unknown) → console.debug, KHÔNG hiện UI
   | { type: 'done';    cards_count: number }
   | { type: 'error';   message: string };   // 'internal_error' → bubble lỗi chung
 ```
 
-**Thứ tự thật của một lượt thành công**: `session` → `tool`×n (phát trong lúc agent loop chạy — đây là feedback duy nhất suốt 5–20s) → `card`×n → `token`×n (stream giả lập: cả answer đã có sẵn rồi mới chunk theo từ) → `done` → `event: end`.
+**Thứ tự thật của một lượt thành công**: `session` → `tool`×n (phát trong lúc agent loop chạy — đây là feedback duy nhất suốt 5–20s) → `card`×n → `chips` (nếu có) → `token`×n (stream giả lập: cả answer đã có sẵn rồi mới chunk theo từ) → `done` → `event: end`.
 
-**Chọn card**: model kết thúc câu trả lời bằng một dòng máy-đọc `[[CARDS: <mã>=<type,...>]]`; backend parse dòng này để quyết định emit card nào rồi **strip khỏi answer trước khi** stream token, chạy guard số liệu và lưu history — widget và `GET /sessions/:id` không bao giờ thấy tail này. `procedure` luôn được kèm cho mỗi mã được chọn; `legal_fragments` tự thêm khi bản ghi có trích đoạn. Mã trong tail không cần `get_procedure` trong cùng lượt — lượt nối tiếp trả lời từ history vẫn ra card (backend tự đọc record từ DB theo mã). Tail thiếu/hỏng (mà đã tra thủ tục) → fallback `procedure` + `legal_fragments` của mã tra cuối + event `warning: cards_tail_missing`.
+**Directive tail**: model kết thúc câu trả lời bằng các dòng máy-đọc dạng `[[KEY: ...]]` (mỗi directive một dòng, thứ tự tùy ý); backend parse rồi **strip toàn bộ khỏi answer trước khi** stream token, chạy guard số liệu và lưu history — widget và `GET /sessions/:id` không bao giờ thấy tail. Dòng `[[KEY lạ]]` cũng bị strip im lặng (forward-compat). Ba directive hiện có:
+
+- `[[CARDS: <mã>=<type,...>]]` — chọn card. `procedure` luôn được kèm cho mỗi mã được chọn; `legal_fragments` tự thêm khi bản ghi có trích đoạn. Mã trong tail không cần `get_procedure` trong cùng lượt — lượt nối tiếp trả lời từ history vẫn ra card (backend tự đọc record từ DB theo mã). Tail thiếu/hỏng (mà đã tra thủ tục) → fallback `procedure` + `legal_fragments` của mã tra cuối + event `warning: cards_tail_missing`.
+- `[[CHIPS: lựa chọn 1 | lựa chọn 2]]` — khi lượt này là câu hỏi làm rõ trắc nghiệm: tối đa 3 lựa chọn, mỗi cái ≤60 ký tự (backend clamp), là câu người dùng gửi-nguyên-văn được → event `chips`. Thiếu → không có chips, không sao (progressive enhancement).
+- `[[GUIDE: <mã>=<target>]]` — khi answer hướng dẫn thao tác trên trang. `target` ∈ khóa field của form schema mã đó ∪ `{submit}` (nút Nộp/Tiếp tục). Hợp lệ → card `guide` (§3.4); sai mã/khóa → drop + `warning: guide_target_unknown`.
 
 Hệ quả UI: (a) trạng thái chờ sống bằng event `tool`; (b) cards đến trước token — **buffer cards, render prose trước, reveal cards bên dưới bubble sau khi stream xong** (quyết định #8); (c) không có event nào trong 30s → coi như treo: abort fetch, hiện bubble lỗi + nút "Thử lại" (gửi lại message cũ).
 
@@ -103,13 +108,14 @@ Nhãn tiếng Việt cho event `tool` (hiện trong bubble chờ, thay thế nha
 
 | type | payload (rút gọn) | Render |
 |---|---|---|
-| `procedure` | `{code, name, executing_agency, promulgating_agency, category, source_url, updated_at, structuring_level}` — biến thể out-of-scope: `{code, name, executing_agency, source_url, limited: true}` | Tên + mã + cơ quan + nút "Xem trên Cổng DVC" (`source_url`); dòng "Dữ liệu cập nhật: {dd/mm/yyyy}"; `limited` → badge "chỉ có thông tin cơ bản" |
+| `procedure` | `{code, name, executing_agency, promulgating_agency, category, source_url, updated_at, structuring_level, form_path?}` — biến thể out-of-scope: `{code, name, executing_agency, source_url, limited: true}` | Tên + mã + cơ quan + nút "Xem trên Cổng DVC" (`source_url`); dòng "Dữ liệu cập nhật: {dd/mm/yyyy}"; `limited` → badge "chỉ có thông tin cơ bản"; `form_path` (chỉ 3 pilot) → CTA "Nộp trực tuyến tại cổng này" (ẩn khi `location.pathname` đã là form_path) |
 | `fees` | `{code, channels: [{method, fees: [{type, value_vnd, text}]}], fee_notes: [{channel, text}]}` | Nhóm theo nhãn kênh; mỗi dòng "Lệ phí: 10.000 đ" + `text` nguồn thu gọn; `fee_notes` prefix tên kênh khi ≠ `all` |
 | `processing` | `{code, processing_cases: [...], channels: [{method, processing: {qty, unit}}]}` | "Nộp trực tuyến: 7 ngày làm việc" theo kênh; `processing_cases` chỉ render khi không có `channels` (tránh lặp số), ẩn `case_code`; unit `OTHER` → dùng `text` nguồn |
 | `deadlines` | `{code, deadlines: [{id, label, qty, unit, from, source_quote}]}` | `label` đậm + "60 ngày kể từ {from}" + trích `source_quote` thu gọn; ẩn `id` |
 | `legal_basis` | `{code, legal_basis: [{code, name}]}` | Mỗi dòng "{mã} — {tên rút gọn}" |
 | `legal_fragments` | `{code, fragments: [{id, article, doc_code, doc_title, title, source_url, retrieved_at}]}` | **Thu gọn mặc định** ("Căn cứ pháp lý — n trích đoạn ▸"); mở ra từng đoạn có nút mở `source_url` |
-| `checklist` (R2) | `{code, groups: [...]}` — xem §10 R2 | Checklist tick được (§5.4) |
+| `checklist` (R2) | `{code, groups: [...], form_path?}` — xem §10 R2 | Checklist tick được (§5.4); `form_path` → CTA "Bắt đầu điền hồ sơ" cuối card (một CTA duy nhất, ẩn khi đang ở trang form) |
+| `guide` (Pha 2) | `{code, target, label, form_path?}` — `target` = khóa field schema hoặc `submit` | Dòng chỉ dẫn "{label}" + nút "👁 Chỉ vị trí trên trang" (enabled khi target resolve được trên DOM → cuộn + overlay spotlight §12); target chưa có trên DOM → chú thích "(ở bước/trang khác)" + link "Mở trang biểu mẫu" khi có `form_path` |
 
 **Dedup khi render** (`src/core/dedup.ts`): backend force-include card `procedure` (+ `legal_fragments`) mỗi lượt để answer trên wire tự chứa; widget **không render lại** card giống hệt (so sánh JSON) card ở lượt assistant gần nhất phía trước — hết cảnh procedure card lặp sau mỗi câu hỏi. Lượt assistant không có card (lỗi, fail-closed) reset cửa sổ so sánh → hỏi lại sau một quãng thì card hiện lại. Card có payload khác (vd checklist lọc lại theo case_facts mới) luôn render. Index card gốc được giữ khi lọc để khóa tick `"<cardIndex>:<itemId>"` không lệch. Wire + transcript cache không đổi.
 
@@ -230,9 +236,10 @@ IDLE ──user gửi──▶ WAITING ──token đầu──▶ STREAMING ─
 
 ### 5.2 Màn chào & chips
 
-- 3 chip tĩnh: "Tôi muốn đăng ký thường trú", "Phí thành lập doanh nghiệp tư nhân?", "Thủ tục này cần giấy tờ gì?".
-- Chip ngữ cảnh "✓ Kiểm tra hồ sơ trang này" chỉ hiện khi nút check đang enabled (§6.2) — bấm = bấm nút check.
-- Bấm chip = gửi text đó như tin nhắn người dùng. Chips ẩn sau lượt chat đầu tiên.
+- 3 chip tĩnh màn chào: "Tôi muốn đăng ký thường trú", "Phí thành lập doanh nghiệp tư nhân?", "Thủ tục này cần giấy tờ gì?".
+- Chip ngữ cảnh "✓ Kiểm tra hồ sơ trang này" chỉ hiện khi nút check đang enabled (§6.2) — bấm = bấm nút check. Chip "📝 Điền giúp tôi từ hội thoại" hiện khi prefill khả dụng (§12).
+- **Chips động theo lượt** (event `chips`, Pha 2): render dưới prose của **lượt assistant cuối cùng**, chỉ khi state IDLE; bấm = gửi text đó như tin nhắn người dùng. Lượt mới bắt đầu → chips lượt cũ không render nữa (vẫn nằm trong transcript cache, vô hại).
+- Bấm chip = gửi text đó như tin nhắn người dùng. Chips tĩnh ẩn sau lượt chat đầu tiên.
 
 ### 5.3 Mini-markdown (prose)
 
@@ -301,7 +308,7 @@ Chạy lúc bấm nút, trên schema đã detect:
 
 - Header đếm theo severity: "n lỗi, m cảnh báo" (info không vào đếm header). Sắp xếp error → warning → info; trong cùng mức giữ thứ tự backend.
 - Mỗi item: icon severity, **label field** (tra từ DOM: `<label for>` hoặc text label gần nhất; không tìm được → dùng `errors[].field`), `message`, `suggestion` (tiền tố "→ Gợi ý:"), item `source: 'llm'` → badge nhỏ "AI".
-- Item có `field` và field đang có trên DOM → click: `scrollIntoView({behavior:'smooth', block:'center'})` + `focus()` + highlight bằng `element.animate()` (outline accent phai dần 2s — tự hết, không đụng class/style host). Field không còn trên DOM (đã chuyển bước) → item không click được, kèm chú thích "(ở bước khác)".
+- Item có `field` và field đang có trên DOM → click: `scrollIntoView({behavior:'smooth', block:'center'})` + `focus()` + **overlay spotlight** (§12 — phủ mờ trang, làm sáng phần tử, tự phai ~4s; nâng cấp từ flash outline Pha 1, vẫn không đụng class/style host). Field không còn trên DOM (đã chuyển bước) → item không click được, kèm chú thích "(ở bước khác)".
 - Mobile (sheet full màn): click item → tự thu nhỏ panel rồi mới scroll.
 - Sau kết quả, nút check thành "Kiểm tra lại" trong chính card kết quả (re-run, thêm lượt mới).
 - `case_facts` rỗng lúc validate → dòng phạm vi + chip "Kể thêm tình huống để kiểm tra sâu hơn" → bấm = focus ô nhập với placeholder gợi ý ("VD: Tôi thuê nhà, muốn đăng ký vào nhà thuê").
@@ -340,7 +347,7 @@ Chạy lúc bấm nút, trên schema đã detect:
 
 | # | Yêu cầu | Contract đề xuất | Widget khi thiếu |
 |---|---|---|---|
-| R1 | `GET /schemas` — index schema | `[{ "procedure_code": "1.004222", "form_ref": "dang-ky-thuong-tru", "field_keys": ["ho_ten_khai_sinh", …] }]` — đọc từ `data/schemas/*.form.json` | Tính năng check ẩn |
+| R1 *(mở rộng Pha 2)* | `GET /schemas` — index schema | `[{ "procedure_code": "1.004222", "form_ref": "dang-ky-thuong-tru", "field_keys": ["ho_ten_khai_sinh", …], "form_path": "/nop-truc-tuyen/dang-ky-thuong-tru", "prefill": { "<field>": { "fact": "<fact_key>", "transform?": {"enum": {…}} } } }]` — đọc từ `data/schemas/*.form.json` (mục `prefill` theo [DATA.md](DATA.md) §4); `form_path` = `OPENGOV_FORM_PATH_PREFIX` (default `/nop-truc-tuyen/`) + `form_ref` | Tính năng check ẩn; thiếu `prefill`/`form_path` → prefill/CTA tự tắt |
 | R2 *(đã build)* | Card type `checklist` trong `/chat` | Model chọn `checklist` trong tail `[[CARDS:]]` → backend build card từ `data/curated/<code>.json` (đã merge vào record) lọc theo case_facts session (đọc lại **sau** agent turn để `update_case_facts` cùng lượt có hiệu lực): điều kiện `when` (`eq`/`in`) không thỏa → loại group/item; **thiếu fact → giữ, đánh `conditional: true`** (fail-open, cờ group truyền xuống item); group rỗng sau lọc → bỏ; payload: `{code, groups: [{id, label, type?: 'ONE_OF', items: [{id, label, quantity: {original, copy}, kind, conditional}]}]}` — strip `when`/`source_component_code`. Số lượng nằm trong card → thoát guard `numbers_not_in_cards` | Checklist qua prose như hiện tại |
 | R3 | Serve bundle: `GET /widget/opengov.js` | Static từ `widget/dist/`, `Cache-Control: public, max-age=300`; embed dùng `?v=` cache-bust | Dev dùng `vite build --watch` + file local |
 | R4 | (Backlog, không chặn) Stream token thật từ LLM | Pipe delta OpenRouter → bớt độ trễ cảm nhận | Đã bù bằng trạng thái tool |
@@ -360,24 +367,52 @@ Hạ tầng thử: trang HTML trắng `widget/test/acceptance.html` chỉ có th
 - [ ] Bundle 1 file, không request nào ngoài `data-backend`; kích thước gzip ≤60KB (build in ra số).
 - [ ] Viewport 375px: sheet full màn, thu nhỏ được; click lỗi tự thu nhỏ rồi cuộn.
 
+### Acceptance Pha 2 (bổ sung 19/07)
+
+- [ ] Lượt trả lời có `[[CHIPS:]]` → hàng chip hiện dưới prose lượt cuối, bấm chip gửi đúng text; lượt mới → chips cũ biến mất.
+- [ ] Card `guide` với target đang có trên DOM → nút "Chỉ vị trí trên trang" bấm ra overlay spotlight (phủ mờ + viền accent) rồi tự phai; target ở bước khác → chú thích + link mở trang biểu mẫu.
+- [ ] Prefill: có case_facts map được + đang ở trang form → chip "Điền giúp tôi"; preview từng dòng tick được; "Điền giúp tôi" chỉ ghi dòng tick, ô được điền viền accent, giá trị vào đúng React state (submit wizard thấy giá trị); "Hoàn tác" trả lại giá trị cũ + gỡ viền; lượt `prefill` được ghi vào transcript.
+- [ ] `<opengov-field-hint>`: blur field sai → lỗi inline đúng field (debounce, không spam validate); sửa xong blur lại → lỗi biến mất.
+- [ ] `<opengov-check-button>`: bấm → lỗi đổ vào các field-hint có mặt; lỗi không có hint (hoặc trang không gắn hint) → mở panel chat hiện kết quả check như Pha 1.
+- [ ] Toggle "Phase 2 preview" trong clone OFF → trang không render bất kỳ element opengov-* nào (bằng Pha 1 thuần).
+
 ## QA
 
 - **Unit (vitest)**: capture (`captureFields`) và detect (`detect`) là hàm thuần nhận danh sách phần tử/DOM stub — test đủ bảng §6.3 (radio chưa chọn, checkbox on/off, member-table, file bị bỏ, chọn form chính) và §6.1 (ngưỡng 3, tie-break URL). Mini-markdown: test escape HTML/XSS.
 - **Playwright smoke** trên `acceptance.html` + backend local degraded: mount, chat degrade, check ra đúng lỗi, session sống qua reload, style không leak.
 - Trước demo: chạy tay kịch bản §9 trên clone (checklist trong spec này là script).
 
-## 12. Pha 2 (outline buildable — làm sau tích hợp Pha 1)
+## 12. Pha 2 (as-built 19/07)
 
-Nguyên tắc an toàn (bất biến, từ [SOLUTION.md](../SOLUTION.md) §3): đọc (highlight/cuộn/focus) tự động; **ghi phải được người dùng duyệt**; không bao giờ tự nộp; thao tác hộ ghi lại trong phiên.
+Nguyên tắc an toàn (bất biến, từ [SOLUTION.md](../SOLUTION.md) §3): đọc (highlight/cuộn/focus) tự động nhưng chỉ chạy khi người dùng bấm; **ghi phải được người dùng duyệt**; không bao giờ tự nộp; thao tác hộ ghi lại trong phiên (turn `prefill` trong transcript).
 
-- **`<opengov-field-hint field="<schema_key>">`**: custom element cổng đặt cạnh field; hiện hint từ schema, lỗi inline khi blur (debounce 400ms, `POST /validate` cả form hiện có, lọc kết quả theo field mình).
-- **`<opengov-check-button>`**: đặt cạnh nút nộp của cổng; chạy validate toàn form, đổ lỗi vào các field-hint tương ứng (không có hint → fallback panel chat).
-- **Prefill có xác nhận**: nguồn = `case_facts` session (agent đã ghi cả fact danh tính lẫn tình huống). Mapping khai báo trong `data/schemas/<code>.form.json`, mục mới:
-  ```json
-  "prefill": { "ho_ten_khai_sinh": { "fact": "ho_ten" },
-               "so_dinh_danh_ca_nhan": { "fact": "so_dinh_danh" } }
-  ```
-  (data được review như mọi thay đổi `data/` — thêm `transform` khai báo khi cần đổi enum→nhãn). UX: panel preview liệt kê **từng dòng** field ← giá trị ← nguồn (câu người dùng đã nói), checkbox từng dòng mặc định bật; "Điền giúp tôi" chỉ ghi các dòng đang tick; ô được điền hộ viền accent + nút hoàn tác toàn bộ. **Gotcha React (clone dùng controlled input)**: set qua native value setter (`Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set`) rồi `dispatchEvent(new Event('input', {bubbles:true}))`.
-  Cổng thật có `name` lệch khóa schema → file map selector riêng của cổng (roadmap, không build demo — clone trùng name).
-- **Mức 3 "dẫn thao tác"** trong demo = chỉ dẫn bằng lời + scroll/highlight phần tử đang có trên DOM ("Bấm **Tiếp tục** để sang bước Giấy tờ"); không click hộ, không overlay đánh số (wizard step là React state — không điều khiển được từ ngoài; overlay đánh số để roadmap).
-- Demo bằng toggle "Phase 2 preview" trong clone (commit tích hợp Pha 2 riêng, theo [DESIGN.md](DESIGN.md) §4).
+### 12.1 Overlay spotlight (`src/core/overlay.ts`)
+
+Một div duy nhất trong Shadow DOM của widget: `position:fixed` đặt theo `getBoundingClientRect()` của phần tử đích, viền 3px accent + bo góc, phủ mờ phần còn lại của trang bằng `box-shadow: 0 0 0 200vmax rgba(15,23,42,.5)`, `pointer-events:none` (người dùng vẫn thao tác được trang bên dưới), `z-index` dưới bubble/panel. Vòng đời: `scrollIntoView({block:'center'})` → đo rect → hiện, bám theo scroll/resize → tự phai sau ~4s và remove; gọi spotlight mới hủy overlay cũ. Dùng chung cho: click lỗi validate (§6.4), nút card `guide`, đánh dấu ô vừa prefill. Không đụng class/inline-style của host (trừ ô prefill — có track + hoàn tác). Overlay đánh số nhiều bước / click hộ vẫn là roadmap (wizard step là React state — không điều khiển được từ ngoài).
+
+### 12.2 Guide — mức 3 "dẫn thao tác" phạm vi demo
+
+Chỉ dẫn bằng lời trong prose + card `guide` (§3.4) do model chọn qua `[[GUIDE: <mã>=<target>]]` (§3.3). Kích hoạt bằng **nút bấm** trong chat (không auto-spotlight khi answer hiện — tránh giật màn hình và tránh phát lại khi restore transcript). Target hợp lệ do backend gác: khóa field schema hoặc `submit`.
+
+### 12.3 Web components
+
+Được define sẵn trong bundle Pha 1 lúc mount (`customElements.define`, guard định nghĩa đôi); cổng chỉ cần đặt markup — không thêm script nào khác. Giao tiếp components ↔ panel qua bus pub/sub nội bộ bundle (`src/core/bus.ts`).
+
+- **`<opengov-field-hint field="<schema_key>" hint?="<text>">`**: shadow root riêng; tìm field theo `name`; lỗi inline khi blur (debounce 400ms, `POST /validate` cả form hiện có, lọc kết quả theo field mình) + nhận lỗi phân phối từ check-button qua bus; `hint` tĩnh (tùy chọn, cổng tự đặt) hiện khi chưa có lỗi.
+- **`<opengov-check-button>`**: đặt cạnh nút nộp của cổng; validate toàn form → lỗi đổ vào các field-hint tương ứng; lỗi không có hint (hoặc trang không gắn hint nào) → fallback mở panel chat render kết quả check như Pha 1.
+
+### 12.4 Prefill có xác nhận
+
+Nguồn = `case_facts` session (prompt đã dặn model ghi cả fact danh tính/chủ hộ). Mapping khai báo trong `data/schemas/<code>.form.json` mục `prefill` ([DATA.md](DATA.md) §4), phân phối tới widget qua `GET /schemas` (R1 mở rộng). UX: chip "📝 Điền giúp tôi từ hội thoại" (hiện khi DETECTED_READY + ≥1 fact map được); panel preview **từng dòng** `field ← giá trị ← fact nguồn`, checkbox mặc định bật, dòng có giá trị DOM trùng sẵn thì ẩn; "Điền giúp tôi" chỉ ghi các dòng đang tick; ô được điền viền accent + turn `prefill` trong transcript kèm nút **Hoàn tác toàn bộ** (trả giá trị cũ, gỡ viền).
+
+*Deviation so outline cũ*: cột "nguồn" hiển thị tên fact (vd `moi_quan_he_voi_chu_ho`) chứ không trích câu gốc hội thoại — backend không track provenance fact→message; nâng cấp thuộc roadmap.
+
+**Gotcha React (clone dùng controlled input)**: set qua native value setter (`Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set`) rồi `dispatchEvent(new Event('input', {bubbles:true}))`; select thêm `change`. Cổng thật có `name` lệch khóa schema → file map selector riêng của cổng (roadmap, không build demo — clone trùng name).
+
+### 12.5 Demo grounding
+
+Widget chạy ngay trên cổng demo → system prompt hướng dẫn thao tác tại chỗ cho 3 pilot (không đẩy người dùng sang dichvucong.gov.vn); CTA `form_path` trên card procedure/checklist dẫn thẳng vào wizard của cổng đang nhúng (đường dẫn tương đối). Thủ tục ngoài phạm vi giữ fail-closed + link Cổng DVC quốc gia.
+
+### 12.6 Tích hợp phía cổng (clone)
+
+Toggle "Phase 2 preview" trong banner demo (localStorage `dvc-phase2`, default OFF, đọc sau mount). ON → bước Tờ khai render `<opengov-field-hint>` dưới từng field + `<opengov-check-button>` cạnh nút "Tiếp tục/Nộp hồ sơ". Commit tích hợp Pha 2 riêng, theo [DESIGN.md](DESIGN.md) §4.
