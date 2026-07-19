@@ -67,10 +67,12 @@ for (const [vpName, viewport] of VIEWPORTS) {
       if (msg.type() === "error") errors.push(`console.error: ${msg.text()}`);
     });
     page.on("pageerror", (err) => errors.push(`pageerror: ${err.message}`));
-    // Không được có request ra ngoài (CLONE_SPEC.md mục 8)
+    // Không được có request ra ngoài (CLONE_SPEC.md mục 8) — trừ trợ lý OpenGOV
+    // (ngoại lệ tích hợp có chủ đích, CLONE_SPEC.md mục 6.6; host qua env khi đổi)
+    const OPENGOV_ORIGIN = process.env.QA_OPENGOV_ORIGIN ?? "https://opengov.duckdns.org";
     page.on("request", (req) => {
       const url = req.url();
-      if (!url.startsWith(BASE) && !url.startsWith("data:"))
+      if (!url.startsWith(BASE) && !url.startsWith("data:") && !url.startsWith(OPENGOV_ORIGIN))
         errors.push(`request ra ngoài: ${url}`);
     });
 

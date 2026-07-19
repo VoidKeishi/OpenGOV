@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
+import { usePhase2 } from "@/lib/phase2";
 import StepBar from "./StepBar";
 import FieldInput, { RequiredMark } from "./FieldInput";
 import MemberTable from "./MemberTable";
@@ -33,6 +34,8 @@ const showDate = (v: string) =>
 export default function Wizard({ slug, tenThuTuc, schema, giayTo }: Props) {
   const router = useRouter();
   const { user, ready, openModal } = useAuth();
+  // Phase 2 preview (CLONE_SPEC.md 6.6): nút kiểm tra của trợ lý cạnh nút nộp.
+  const phase2 = usePhase2();
 
   const [step, setStep] = useState(1);
   const [tinh, setTinh] = useState("");
@@ -457,13 +460,16 @@ export default function Wizard({ slug, tenThuTuc, schema, giayTo }: Props) {
           ) : (
             <span />
           )}
-          <button
-            type="submit"
-            form={FORM_ID}
-            className="rounded bg-brand px-8 py-2.5 font-semibold text-white hover:bg-brand-dark"
-          >
-            {step === 4 ? "Nộp hồ sơ" : "Tiếp tục"}
-          </button>
+          <div className="flex items-center gap-3">
+            {phase2 && step === 2 && <opengov-check-button />}
+            <button
+              type="submit"
+              form={FORM_ID}
+              className="rounded bg-brand px-8 py-2.5 font-semibold text-white hover:bg-brand-dark"
+            >
+              {step === 4 ? "Nộp hồ sơ" : "Tiếp tục"}
+            </button>
+          </div>
         </div>
       </div>
     </div>

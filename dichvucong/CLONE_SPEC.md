@@ -350,6 +350,9 @@ Căn cứ: hồ sơ theo Điều 120 Bộ luật Lao động 2019 (45/2019/QH14)
 3. **Không gửi dữ liệu đi đâu** — mọi thứ client-side.
 4. Chỉ 5 thủ tục có trang chi tiết + form (3 gốc + 2 bổ sung mục 3.4); thủ tục "vỏ" khác chỉ để list trông thật, hiển thị theo quy tắc mục 3.2.
 5. Asset tự vẽ (mục 7) — nhìn "giống", không cần giống từng pixel.
+6. **Tích hợp trợ lý OpenGOV** (các commit tích hợp có chủ đích, nằm ngoài phạm vi "clone mù" ban đầu):
+   - **Pha 1**: một thẻ `<script>` trong `layout.tsx` nạp widget từ backend ngoài — bong bóng chat góc màn hình. Đây là ngoại lệ duy nhất của quy tắc "không fetch ra ngoài" mục 8 (script + API của trợ lý).
+   - **Pha 2 (6.6)**: toggle "Phase 2 preview" trong banner demo (localStorage `dvc-phase2`, mặc định TẮT — tắt thì trang y hệt bản clone thuần). Khi BẬT: bước Tờ khai render `<opengov-field-hint field="...">` dưới mỗi field và `<opengov-check-button>` cạnh nút "Tiếp tục" — hai custom element do bundle widget định nghĩa, clone chỉ đặt markup (không import code, không thêm dependency). Khai báo JSX: `src/types/opengov-elements.d.ts`; state toggle: `src/lib/phase2.ts`.
 
 ## 7. Asset tự vẽ
 
