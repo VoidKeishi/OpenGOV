@@ -156,15 +156,16 @@ Panel desktop 380×min(640px, 85vh), neo góc phải-dưới:
 │ ⚠ Chế độ giới hạn: hỏi đáp AI tạm nghỉ,     │  ← banner chỉ khi degraded
 │   kiểm tra hồ sơ vẫn hoạt động.             │
 │                                             │
-│  Chào anh/chị! Tôi giúp gì được về thủ      │
-│  tục hành chính?                            │
+│  Chào anh/chị! Anh/chị cần làm thủ tục      │
+│  cho cá nhân hay cho doanh nghiệp?          │
 │  ┌──────────────────────────────┐           │
-│  │ Tôi muốn đăng ký thường trú  │  (chip)   │
-│  │ Phí thành lập doanh nghiệp?  │  (chip)   │
-│  │ Thủ tục này cần giấy tờ gì?  │  (chip)   │
+│  │ 👤 Cá nhân                   │  (chip)   │
+│  │ 🏢 Doanh nghiệp              │  (chip)   │
 │  │ ✓ Kiểm tra hồ sơ trang này   │  (chip —  │
 │  └──────────────────────────────┘  chỉ khi  │
 │                                    detect)  │
+│  — chọn nhánh → câu dẫn + chips kịch bản    │
+│    của nhánh đó + chip "↩ Chọn lại" (§5.2)  │
 ├─────────────────────────────────────────────┤
 │ [ ✓ Kiểm tra hồ sơ ]              ← nút cố định; ẩn/disabled/enabled
 ├─────────────────────────────────────────────┤
@@ -236,10 +237,11 @@ IDLE ──user gửi──▶ WAITING ──token đầu──▶ STREAMING ─
 
 ### 5.2 Màn chào & chips
 
-- 3 chip tĩnh màn chào: "Tôi muốn đăng ký thường trú", "Phí thành lập doanh nghiệp tư nhân?", "Thủ tục này cần giấy tờ gì?".
-- Chip ngữ cảnh "✓ Kiểm tra hồ sơ trang này" chỉ hiện khi nút check đang enabled (§6.2) — bấm = bấm nút check. Chip "📝 Điền giúp tôi từ hội thoại" hiện khi prefill khả dụng (§12).
+- **Intake phân nhánh hai bước** (client-only, `src/core/intake.ts`): màn chào hỏi "cá nhân hay doanh nghiệp?" với 2 chip phân loại — bấm chỉ đổi state cục bộ, **không** gọi `/chat`. Chọn xong → câu dẫn + chips kịch bản của nhánh đó (cá nhân: đăng ký thường trú; doanh nghiệp: thành lập DNTN + nội quy lao động) + chip "↩ Chọn lại". Mỗi chip kịch bản tự chứa ngữ cảnh nên LLM không cần biết segment (trade-off ghi ở DESIGN.md §6).
+- **Tự thu hẹp theo trang**: đang trên trang thủ tục đã detect (READY hoặc NOFIELDS) → suy nhánh từ `procedure_code` qua map tường minh 3 pilot (không đoán theo prefix mã) và bỏ qua câu phân loại. "Cuộc mới" reset lựa chọn; segment không persist (transcript rỗng thì hỏi lại sau reload).
+- Chip ngữ cảnh "✓ Kiểm tra hồ sơ trang này" chỉ hiện khi nút check đang enabled (§6.2) — bấm = bấm nút check, hiện ở cả hai bước intake. Chip "📝 Điền giúp tôi từ hội thoại" hiện khi prefill khả dụng (§12).
 - **Chips động theo lượt** (event `chips`, Pha 2): render dưới prose của **lượt assistant cuối cùng**, chỉ khi state IDLE; bấm = gửi text đó như tin nhắn người dùng. Lượt mới bắt đầu → chips lượt cũ không render nữa (vẫn nằm trong transcript cache, vô hại).
-- Bấm chip = gửi text đó như tin nhắn người dùng. Chips tĩnh ẩn sau lượt chat đầu tiên.
+- Bấm chip kịch bản/chip động = gửi text đó như tin nhắn người dùng. Toàn bộ chips màn chào ẩn sau lượt chat đầu tiên.
 
 ### 5.3 Mini-markdown (prose)
 
@@ -337,7 +339,7 @@ Chạy lúc bấm nút, trên schema đã detect:
 
 ## 9. Kịch bản demo end-to-end (5 hồi)
 
-1. **UC-1 — intake**: mở clone → bubble → chip "Tôi muốn đăng ký thường trú" (hoặc gõ "chuyển hộ khẩu về nhà vợ") → agent hỏi làm rõ tình huống → trả lời → checklist card lọc theo tình huống, tick vài mục chuẩn bị xong.
+1. **UC-1 — intake**: mở clone → bubble → màn chào hỏi cá nhân/doanh nghiệp → chọn "👤 Cá nhân" → chip "Tôi muốn đăng ký thường trú" (hoặc gõ "chuyển hộ khẩu về nhà vợ") → agent hỏi làm rõ tình huống → trả lời → checklist card lọc theo tình huống, tick vài mục chuẩn bị xong.
 2. **UC-2 — trích dẫn**: hỏi "lệ phí bao nhiêu, nộp online được không?" → prose định tính + cards `fees`/`processing`, mở `source_url` một trích đoạn luật.
 3. **UC-3 + UC-5 — check**: vào Nộp trực tuyến, tới bước Tờ khai, điền sẵn lỗi: số định danh 11 số, bỏ trống trường bắt buộc, địa chỉ "huyện X, tỉnh Hà Giang" → bấm ✓ → lỗi nhóm theo field (E_DINH_DANH_12, E_REQUIRED, E_TINH_SAP_NHAP + gợi ý "đã hợp nhất vào Tuyên Quang") → click lỗi scroll-to-field → sửa → "Kiểm tra lại" → hộp xanh.
 4. **Pha 2 preview** (khi đã build §12): bật toggle → field-hint inline + prefill có xác nhận từ hội thoại.
@@ -377,6 +379,7 @@ Hạ tầng thử: trang HTML trắng `widget/test/acceptance.html` chỉ có th
 - [ ] `<opengov-field-hint>`: blur field sai → lỗi inline đúng field (debounce, không spam validate); sửa xong blur lại → lỗi biến mất.
 - [ ] `<opengov-check-button>`: bấm → lỗi đổ vào các field-hint có mặt; lỗi không có hint (hoặc trang không gắn hint) → mở panel chat hiện kết quả check như Pha 1.
 - [ ] Toggle "Phase 2 preview" trong clone OFF → trang không render bất kỳ element opengov-* nào (bằng Pha 1 thuần).
+- [ ] Intake phân nhánh (bổ sung 19/07): màn chào hỏi cá nhân/doanh nghiệp — bấm chip phân loại **không** tạo request `/chat`, chips kịch bản thu hẹp theo nhánh; mở trên trang thủ tục pilot → nhánh tự suy ra, bỏ câu phân loại; "↩ Chọn lại" quay về câu phân loại; "Cuộc mới" reset lựa chọn.
 
 ## QA
 

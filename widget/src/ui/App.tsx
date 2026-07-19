@@ -38,6 +38,14 @@ import {
   postValidate,
 } from '../core/api';
 import { prevAssistantCards } from '../core/dedup';
+import {
+  BRANCH_CHIPS,
+  BRANCH_LEAD,
+  GREETING_ASK,
+  SEGMENT_CHIPS,
+  inferSegment,
+  type Segment,
+} from '../core/intake';
 import { TurnView, type TurnActions } from './Turn';
 
 const TOOL_LABELS: Record<string, string> = {
@@ -47,12 +55,6 @@ const TOOL_LABELS: Record<string, string> = {
   update_case_facts: 'Đang ghi nhớ tình huống của bạn…',
 };
 const TOOL_FALLBACK = 'Đang tra cứu…';
-
-const STATIC_CHIPS = [
-  'Tôi muốn đăng ký thường trú',
-  'Phí thành lập doanh nghiệp tư nhân?',
-  'Thủ tục này cần giấy tờ gì?',
-];
 
 const SEV_ORDER: Record<ValidationError['severity'], number> = { error: 0, warning: 1, info: 2 };
 
@@ -103,6 +105,9 @@ function App({ config }: { config: EmbedConfig }) {
   const [det, setDet] = useState<DetectState>({ kind: 'NONE' });
   const [placeholder, setPlaceholder] = useState<string | null>(null);
   const [draft, setDraft] = useState('');
+  // Segment-first intake (§5.2): null = unset (page inference applies),
+  // 'ask' = user hit "Chọn lại" and wants the classification question back.
+  const [segment, setSegment] = useState<Segment | 'ask' | null>(null);
   // Pha 2: confirmed-prefill preview (per-row checkboxes) — null when closed.
   const [prefillPreview, setPrefillPreview] = useState<{
     schema: SchemaIndexEntry;
@@ -350,6 +355,7 @@ function App({ config }: { config: EmbedConfig }) {
     sidRef.current = null;
     caseCodeRef.current = null;
     setTurns([]);
+    setSegment(null);
     // failure is fine: /chat mints an id via its `session` event
     void createSession(backend).then((id) => {
       if (id && !sidRef.current) {
@@ -514,6 +520,12 @@ function App({ config }: { config: EmbedConfig }) {
   const checkReady = det.kind === 'DETECTED_READY';
   const idle = phase === 'idle';
   const degraded = typeof health === 'object' && health !== null && !health.llm_available;
+  // Welcome branch: explicit choice wins; on a detected procedure page the
+  // branch is implied by the page, so the classification question is skipped.
+  const activeSegment: Segment | null =
+    segment === 'ask'
+      ? null
+      : (segment ?? (det.kind === 'NONE' ? null : inferSegment(det.schema.procedure_code)));
 
   if (!open) {
     return (
@@ -556,7 +568,7 @@ function App({ config }: { config: EmbedConfig }) {
       <div class="og-transcript" ref={transcriptRef}>
         {turns.length === 0 && (
           <div class="og-turn-assistant">
-            <div class="og-prose">Chào anh/chị! Tôi giúp gì được về thủ tục hành chính?</div>
+            <div class="og-prose">{activeSegment ? BRANCH_LEAD[activeSegment] : GREETING_ASK}</div>
           </div>
         )}
         {turns.map((turn, i) => (
@@ -572,11 +584,24 @@ function App({ config }: { config: EmbedConfig }) {
         ))}
         {turns.length === 0 && idle && (
           <div class="og-chips">
-            {STATIC_CHIPS.map((chip) => (
-              <button key={chip} class="og-chip" onClick={() => send(chip)}>
-                {chip}
-              </button>
-            ))}
+            {activeSegment === null ? (
+              SEGMENT_CHIPS.map((s) => (
+                <button key={s.key} class="og-chip" onClick={() => setSegment(s.key)}>
+                  {s.label}
+                </button>
+              ))
+            ) : (
+              <>
+                {BRANCH_CHIPS[activeSegment].map((chip) => (
+                  <button key={chip} class="og-chip" onClick={() => send(chip)}>
+                    {chip}
+                  </button>
+                ))}
+                <button class="og-chip" onClick={() => setSegment('ask')}>
+                  ↩ Chọn lại
+                </button>
+              </>
+            )}
             {checkReady && (
               <button class="og-chip" onClick={() => void runCheck()}>
                 ✓ Kiểm tra hồ sơ trang này

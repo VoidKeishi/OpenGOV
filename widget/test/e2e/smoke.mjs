@@ -147,14 +147,19 @@ async function scDetectStates(browser) {
   check((await page.locator('.og-badge').count()) === 1, 'badge on form page (READY)');
   await openPanel(page);
   check(await page.locator('.og-checkbtn').isEnabled(), 'check button enabled on form page');
-  check((await page.locator('.og-chip').count()) === 4, 'context chip joins the 3 static chips');
+  // detected 1.004222 → segment inferred (cá nhân): 3 branch chips + chọn lại + context chip
+  check((await page.locator('.og-chip').count()) === 5, 'inferred branch chips + chọn lại + context chip');
+  check(
+    (await page.locator('.og-chip', { hasText: 'thường trú' }).count()) === 3,
+    'branch narrowed to the detected procedure audience',
+  );
 
   const blank = await newPage(context, '/test/blank.html');
   await blank.waitForTimeout(1000);
   check((await blank.locator('.og-badge').count()) === 0, 'no badge on blank page');
   await openPanel(blank);
   check((await blank.locator('.og-checkrow').count()) === 0, 'check button hidden (NONE)');
-  check((await blank.locator('.og-chip').count()) === 3, 'only static chips on blank page');
+  check((await blank.locator('.og-chip').count()) === 2, 'classification chips only on blank page');
 
   const nofields = await newPage(context, '/nop-truc-tuyen/dang-ky-thuong-tru');
   await nofields.waitForTimeout(1000);
@@ -165,6 +170,10 @@ async function scDetectStates(browser) {
   check(
     (await btn.getAttribute('title')) === 'Mở bước Tờ khai để kiểm tra',
     'NOFIELDS tooltip text',
+  );
+  check(
+    (await nofields.locator('.og-chip').count()) === 4,
+    'NOFIELDS page still infers the branch (3 chips + chọn lại, no context chip)',
   );
   await context.close();
 }
@@ -314,7 +323,10 @@ async function scRestoreAndNewSession(browser) {
   // Cuộc mới
   await page.locator('button[title="Cuộc mới"]').click();
   await waitFor(async () => (await page.locator('.og-turn-user').count()) === 0);
-  check((await page.locator('.og-chip').count()) >= 3, 'back to welcome chips');
+  check(
+    (await page.locator('.og-chip').count()) === 5,
+    'back to welcome chips (branch re-inferred from the form page)',
+  );
   const sid2 = await waitFor(async () =>
     page.evaluate((old) => sessionStorage.getItem('og.sid') !== old, sid),
   );
@@ -771,6 +783,58 @@ async function scPrefill(browser) {
   await ctx2.close();
 }
 
+async function scSegmentIntake(browser) {
+  current = 'segment-intake';
+  // Welcome classification is client-only: picking a segment swaps the chips
+  // locally; only a branch chip actually sends a /chat message.
+  const REPLY = [
+    '{"type":"session","session_id":"e2e-segment"}',
+    '{"type":"token","text":"Dạ, tôi sẽ hướng dẫn anh/chị thành lập doanh nghiệp tư nhân."}',
+    '{"type":"done","cards_count":0}',
+  ];
+  const context = await browser.newContext();
+  let chatCalls = 0;
+  await context.route('**/chat', (route) => {
+    chatCalls++;
+    route.fulfill({
+      contentType: 'text/event-stream',
+      body: REPLY.map((j) => `data: ${j}\n\n`).join('') + 'event: end\ndata: {}\n\n',
+    });
+  });
+  const page = await newPage(context, '/test/blank.html');
+  await openPanel(page);
+
+  check((await page.locator('.og-chip').count()) === 2, 'welcome asks cá nhân vs doanh nghiệp');
+  check(
+    (await page.locator('.og-prose').first().textContent()).includes('cá nhân hay'),
+    'greeting carries the classification question',
+  );
+
+  await page.locator('.og-chip', { hasText: 'Doanh nghiệp' }).click();
+  await waitFor(
+    async () => (await page.locator('.og-chip', { hasText: 'nội quy lao động' }).count()) === 1,
+  );
+  check(chatCalls === 0, 'segment choice is client-only (no /chat request)');
+  check((await page.locator('.og-turn-user').count()) === 0, 'no user turn from the classification');
+  check(
+    (await page.locator('.og-prose').first().textContent()).includes('một số việc thường gặp'),
+    'greeting narrows to the branch lead',
+  );
+
+  await page.locator('.og-chip', { hasText: 'Chọn lại' }).click();
+  check((await page.locator('.og-chip').count()) === 2, 'chọn lại returns to the classification');
+
+  await page.locator('.og-chip', { hasText: 'Doanh nghiệp' }).click();
+  await page.locator('.og-chip', { hasText: 'Tôi muốn thành lập doanh nghiệp tư nhân' }).click();
+  await waitFor(async () => (await page.locator('.og-turn-user').count()) === 1);
+  check(
+    (await page.locator('.og-turn-user').textContent()) === 'Tôi muốn thành lập doanh nghiệp tư nhân',
+    'branch chip sends its text verbatim',
+  );
+  check(chatCalls === 1, 'exactly one /chat call — from the branch chip');
+  await context.close();
+}
+
 async function scFieldHint(browser) {
   current = 'field-hint';
   // phase2.html carries the two web components; validate runs against the REAL
@@ -866,6 +930,7 @@ const scenarios = [
   scCardsMocked,
   scChipsGuide,
   scPrefill,
+  scSegmentIntake,
   scFieldHint,
 ];
 
