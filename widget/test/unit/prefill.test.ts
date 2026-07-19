@@ -1,7 +1,7 @@
 // Confirmed-prefill logic (WIDGET.md §12.4): fact→value resolution, candidate
 // filtering against the live DOM, and the native-setter write path.
 import { beforeEach, describe, expect, it } from 'vitest';
-import { buildPrefillCandidates, prefillValue, writeField } from '../../src/core/prefill';
+import { buildPrefillCandidates, prefillValue, resolveSelectValue, writeField } from '../../src/core/prefill';
 
 beforeEach(() => {
   document.body.innerHTML = '';
@@ -71,6 +71,54 @@ describe('buildPrefillCandidates', () => {
   it('no facts → no rows', () => {
     document.body.innerHTML = `<input name="ho_ten_chu_ho" value="">`;
     expect(buildPrefillCandidates(MAP, {}, document)).toEqual([]);
+  });
+
+  it('select rows resolve the fact onto an option; unresolvable rows are dropped', () => {
+    document.body.innerHTML = `
+      <select name="moi_quan_he_voi_chu_ho">
+        <option value="">--</option><option value="Vợ">Vợ</option><option value="Con">Con</option>
+      </select>`;
+    const map = { moi_quan_he_voi_chu_ho: { fact: 'moi_quan_he_voi_chu_ho' } };
+    // model wrote a snake_case token — still resolves onto the "Con" option
+    expect(
+      buildPrefillCandidates(map, { moi_quan_he_voi_chu_ho: 'con_de' }, document)[0]?.value,
+    ).toBe('Con');
+    // nothing matches → no row (the preview never promises a dead write)
+    expect(buildPrefillCandidates(map, { moi_quan_he_voi_chu_ho: 'hàng xóm' }, document)).toEqual([]);
+  });
+});
+
+describe('resolveSelectValue', () => {
+  const select = (): HTMLSelectElement => {
+    document.body.innerHTML = `
+      <select name="moi_quan_he_voi_chu_ho">
+        <option value="">-- Chọn --</option>
+        <option value="Chủ hộ">Chủ hộ</option><option value="Vợ">Vợ</option>
+        <option value="Chồng">Chồng</option><option value="Con">Con</option>
+        <option value="Cha">Cha</option><option value="Mẹ">Mẹ</option>
+        <option value="Khác">Khác</option>
+      </select>`;
+    return document.querySelector('select')!;
+  };
+
+  it('exact option value passes through', () => {
+    expect(resolveSelectValue(select(), 'Con')).toBe('Con');
+  });
+
+  it('case/diacritics-insensitive exact match', () => {
+    expect(resolveSelectValue(select(), 'chồng')).toBe('Chồng');
+    expect(resolveSelectValue(select(), 'chong')).toBe('Chồng');
+  });
+
+  it('unique word-boundary containment snaps ("con_de" → "Con", "chủ hộ mới" → "Chủ hộ")', () => {
+    expect(resolveSelectValue(select(), 'con_de')).toBe('Con');
+    expect(resolveSelectValue(select(), 'chủ hộ mới')).toBe('Chủ hộ');
+  });
+
+  it('ambiguous or unknown values → null (never guesses)', () => {
+    expect(resolveSelectValue(select(), 'cha mẹ')).toBeNull();
+    expect(resolveSelectValue(select(), 'hàng xóm')).toBeNull();
+    expect(resolveSelectValue(select(), '')).toBeNull();
   });
 });
 

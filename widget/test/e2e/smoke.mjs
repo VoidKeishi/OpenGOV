@@ -728,6 +728,47 @@ async function scPrefill(browser) {
     'undo clears the outline',
   );
   await context.close();
+
+  // empty session → the button hands off to chat intake (no dead-end notice)
+  const ctx2 = await browser.newContext();
+  await ctx2.route('**/sessions/e2e-prefill-empty', (route) =>
+    route.fulfill({
+      contentType: 'application/json',
+      body: JSON.stringify({ messages: [], case_facts: {} }),
+    }),
+  );
+  const ASK = [
+    '{"type":"session","session_id":"e2e-prefill-empty"}',
+    '{"type":"token","text":"Chủ hộ nơi anh/chị chuyển đến tên đầy đủ là gì?"}',
+    '{"type":"done","cards_count":0}',
+  ];
+  await ctx2.route('**/chat', (route) =>
+    route.fulfill({
+      contentType: 'text/event-stream',
+      body: ASK.map((j) => `data: ${j}\n\n`).join('') + 'event: end\ndata: {}\n\n',
+    }),
+  );
+  const page2 = await ctx2.newPage();
+  await page2.addInitScript(() => sessionStorage.setItem('og.sid', 'e2e-prefill-empty'));
+  await page2.goto(`${ORIGIN}/`, { waitUntil: 'networkidle' });
+  await page2.waitForSelector('#opengov-widget', { state: 'attached' });
+  await openPanel(page2);
+  const btn2 = page2.locator('.og-prefillbtn');
+  await waitFor(async () => (await btn2.count()) === 1);
+  await btn2.click();
+  await waitFor(async () => (await page2.locator('.og-turn-user').count()) === 1);
+  check(
+    (await page2.locator('.og-turn-user').last().textContent()).includes(
+      'Hỏi tôi từng thông tin còn thiếu',
+    ),
+    'empty prefill sends the step-by-step ask to the assistant',
+  );
+  check((await page2.locator('.og-notice').count()) === 0, 'no dead-end notice turn');
+  const asked = await waitFor(async () =>
+    (await page2.locator('.og-prose').last().textContent().catch(() => '')).includes('Chủ hộ'),
+  );
+  check(asked, 'assistant replies with the first single question');
+  await ctx2.close();
 }
 
 async function scFieldHint(browser) {

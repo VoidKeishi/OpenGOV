@@ -19,6 +19,41 @@ export function prefillValue(entry: PrefillMapEntry, caseFacts: Record<string, u
   return mapped ?? s;
 }
 
+/** Strip diacritics/case/punctuation so user phrasing matches option labels. */
+function norm(s: string): string {
+  return s
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[đĐ]/g, 'd')
+    .toLowerCase()
+    .replace(/[_\W]+/g, ' ')
+    .trim();
+}
+
+const escapeRe = (s: string): string => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/**
+ * Resolve a free-text fact value onto one of a select's options: exact
+ * normalized match first, then a unique word-boundary containment either way
+ * ("con_de" → "Con"). Ambiguous or no match → null (the row is not offered).
+ */
+export function resolveSelectValue(el: HTMLSelectElement, value: string): string | null {
+  const v = norm(value);
+  if (!v) return null;
+  const opts = Array.from(el.options).filter((o) => o.value.trim() !== '');
+  const exact = opts.find((o) => norm(o.value) === v || norm(o.text) === v);
+  if (exact) return exact.value;
+  const hits = opts.filter((o) => {
+    const ov = norm(o.text) || norm(o.value);
+    if (!ov) return false;
+    return (
+      new RegExp(`(^| )${escapeRe(ov)}( |$)`).test(v) ||
+      new RegExp(`(^| )${escapeRe(v)}( |$)`).test(ov)
+    );
+  });
+  return hits.length === 1 ? hits[0]!.value : null;
+}
+
 export interface PrefillCandidate {
   field: string;
   fact: string;
@@ -38,10 +73,16 @@ export function buildPrefillCandidates(
 ): PrefillCandidate[] {
   const out: PrefillCandidate[] = [];
   for (const [field, entry] of Object.entries(prefillMap)) {
-    const value = prefillValue(entry, caseFacts);
+    let value = prefillValue(entry, caseFacts);
     if (value == null) continue;
     const el = findField(doc, field);
     if (!el) continue;
+    // Selects only accept their own option values — resolve the conversational
+    // fact onto one (or drop the row) so the preview never promises a dead write.
+    if (el instanceof HTMLSelectElement) {
+      value = resolveSelectValue(el, value);
+      if (value == null) continue;
+    }
     const current = (el as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement).value ?? '';
     if (current === value) continue;
     out.push({ field, fact: entry.fact, value, current });
@@ -69,7 +110,7 @@ export function writeField(el: Element, value: string): boolean {
     else el.value = value;
     el.dispatchEvent(new Event('input', { bubbles: true }));
     el.dispatchEvent(new Event('change', { bubbles: true }));
-    return true;
+    return el.value === value; // no matching option → the select rejected the write
   }
   return false;
 }

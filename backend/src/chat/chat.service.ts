@@ -74,6 +74,20 @@ export class ChatService {
       },
     };
 
+    // Recorded facts ride along as a system note: history persists prose only, so
+    // without this a follow-up turn would re-ask what update_case_facts already stored.
+    const knownFacts = this.sessions.get(session.id)?.case_facts ?? {};
+    const history = toLlmHistory(session.messages);
+    if (Object.keys(knownFacts).length) {
+      history.push({
+        role: 'system',
+        content:
+          `Case facts đã ghi nhận trong phiên (không hỏi lại các mục này): ${JSON.stringify(knownFacts)}. ` +
+          'CHỈ các mục trong danh sách này là đã được lưu — thông tin khác người dùng đã kể trong hội thoại ' +
+          'nhưng chưa có ở đây thì PHẢI gọi update_case_facts để lưu ngay.',
+      });
+    }
+
     let answer: string;
     let selections: ReturnType<typeof parseDirectiveTail>['selections'];
     let chips: string[];
@@ -84,12 +98,34 @@ export class ChatService {
         tools,
         system: SYSTEM_PROMPT,
         toolDefs: TOOL_DEFS,
-        history: toLlmHistory(session.messages),
+        history,
         userMessage: message,
         onToolCall: (name, args) => emit({ type: 'tool', name, args }),
       });
       // Strip every [[KEY:]] directive before the guard, the stream, and persistence.
-      const parsed = parseDirectiveTail(res.answer ?? '');
+      let parsed = parseDirectiveTail(res.answer ?? '');
+      // Live-observed (deepseek): the model claims "đã ghi nhận" without calling
+      // update_case_facts — the fact silently vanishes and prefill stays empty.
+      // One deterministic corrective pass forces the call.
+      if (/ghi nhận/i.test(parsed.cleaned) && !res.toolTrace.some((t) => t.name === 'update_case_facts')) {
+        this.log.warn('answer claims "ghi nhận" without update_case_facts — corrective pass');
+        emit({ type: 'warning', message: 'facts_claim_without_call' });
+        const retry = await runChatTurn({
+          llm: this.llm,
+          tools,
+          system: SYSTEM_PROMPT,
+          toolDefs: TOOL_DEFS,
+          history: [
+            ...history,
+            { role: 'user', content: message },
+            { role: 'assistant', content: parsed.cleaned },
+          ],
+          userMessage:
+            '[HỆ THỐNG — không phải người dùng] Lượt vừa rồi bạn nói "đã ghi nhận" nhưng KHÔNG gọi update_case_facts — thông tin CHƯA được lưu. Gọi get_procedure (nếu cần xem case_facts_schema) rồi update_case_facts NGAY với thông tin người dùng vừa cung cấp, sau đó trả lời lại đúng quy tắc (kèm dòng [[CARDS:]]).',
+          onToolCall: (name, args) => emit({ type: 'tool', name, args }),
+        });
+        parsed = parseDirectiveTail(retry.answer ?? '');
+      }
       answer = parsed.cleaned || DEGRADED_MSG;
       selections = parsed.selections;
       chips = parsed.chips;

@@ -10,7 +10,7 @@ import { ChatService } from '../src/chat/chat.service';
 import { buildCards, numbersCoveredByCards } from '../src/chat/cards';
 import { projectRecordForLlm } from '../src/chat/projection';
 import type { ChatEvent } from '../src/chat/types';
-import type { LlmAssistantMessage, LlmClient } from '../src/openrouter/types';
+import type { LlmAssistantMessage, LlmClient, LlmMessage } from '../src/openrouter/types';
 
 // --- stubs ---
 function scriptedLlm(responses: LlmAssistantMessage[]): LlmClient {
@@ -262,6 +262,67 @@ test('/chat guide with unknown target — dropped + guide_target_unknown warning
     const { cards, warnings } = await run(chat, 'bấm ở đâu?');
     assert.equal(cards.some((c: any) => c.type === 'guide'), false);
     assert.ok(warnings.includes('guide_target_unknown'));
+  } finally {
+    close();
+  }
+});
+
+test('/chat — "ghi nhận" claim without update_case_facts triggers the corrective pass', async () => {
+  const { chat, sessions, close } = harness(
+    scriptedLlm([
+      { role: 'assistant', content: null, tool_calls: [{ id: 'c1', name: 'get_procedure', arguments: { code: '1.004222' } }] },
+      // claims to have recorded, never calls the tool → guard must fire
+      { role: 'assistant', content: 'Đã ghi nhận: anh/chị là con của chủ hộ.\n[[CARDS: 1.004222=procedure]]' },
+      // corrective pass: the model now actually records, then answers again
+      {
+        role: 'assistant',
+        content: null,
+        tool_calls: [{ id: 'c2', name: 'update_case_facts', arguments: { facts: { moi_quan_he_voi_chu_ho: 'con' } } }],
+      },
+      { role: 'assistant', content: 'Đã lưu. Tiếp theo, chủ hộ tên là gì?\n[[CARDS: 1.004222=procedure]]' },
+    ]),
+  );
+  try {
+    const { prose, warnings, sessionId } = await run(chat, 'tôi là con của chủ hộ');
+    assert.ok(warnings.includes('facts_claim_without_call'), 'guard surfaced as a warning');
+    assert.match(prose, /chủ hộ tên là gì/, 'the corrected answer is the one streamed');
+    assert.equal(
+      sessions.get(sessionId)!.case_facts.moi_quan_he_voi_chu_ho,
+      'con',
+      'the fact ends up stored',
+    );
+  } finally {
+    close();
+  }
+});
+
+test('/chat — recorded case_facts injected as a system note; absent when the session has none', async () => {
+  const captured: LlmMessage[][] = [];
+  const llm: LlmClient = {
+    available: true,
+    async complete(opts: any) {
+      captured.push(opts.messages);
+      return { role: 'assistant', content: 'Dạ vâng.\n[[CARDS: 1.004222=procedure]]' };
+    },
+    async smokeTestToolCalling() {
+      return { ok: true, detail: 'stub' };
+    },
+  };
+  const { chat, sessions, close } = harness(llm);
+  try {
+    const s = sessions.create();
+    sessions.updateCaseFacts(s.id, { truong_hop: 'nhan_than', ho_ten_chu_ho: 'Trần Văn B' });
+    await chat.handleChat(s.id, 'điền giúp tôi tờ khai', () => undefined);
+    const withFacts = captured[0]!;
+    const notes = withFacts.filter((m) => m.role === 'system');
+    assert.equal(notes.length, 2, 'facts note is a second system message');
+    assert.match(String(notes[1]!.content), /không hỏi lại/);
+    assert.match(String(notes[1]!.content), /"ho_ten_chu_ho":"Trần Văn B"/);
+    assert.equal(withFacts[withFacts.length - 1]!.role, 'user', 'note precedes the user turn');
+
+    await chat.handleChat(undefined, 'xin chào', () => undefined);
+    const fresh = captured[1]!;
+    assert.equal(fresh.filter((m) => m.role === 'system').length, 1, 'no empty note on fact-less sessions');
   } finally {
     close();
   }

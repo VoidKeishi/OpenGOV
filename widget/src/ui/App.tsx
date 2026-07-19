@@ -402,16 +402,12 @@ function App({ config }: { config: EmbedConfig }) {
     const facts = sid ? ((await fetchSession(backend, sid))?.case_facts ?? {}) : {};
     const rows = buildPrefillCandidates(det.schema.prefill, facts, document);
     if (!rows.length) {
-      setTurns((prev) => [
-        ...prev,
-        {
-          role: 'notice',
-          prose: 'Chưa có thông tin nào từ hội thoại phù hợp để điền vào trang này.',
-          cards: [],
-          ticks: {},
-          revealed: true,
-        },
-      ]);
+      // Nothing usable in the session yet → hand off to the assistant, which
+      // collects the missing facts one question per turn (prompt rule 13).
+      send(
+        `Điền giúp tôi tờ khai trên trang này (thủ tục ${det.schema.procedure_code}). ` +
+          'Hỏi tôi từng thông tin còn thiếu nhé.',
+      );
       return;
     }
     setPrefillPreview({
