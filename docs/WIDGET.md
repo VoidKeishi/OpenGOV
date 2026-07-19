@@ -343,6 +343,8 @@ Chạy lúc bấm nút, trên schema đã detect:
 4. **Pha 2 preview** (khi đã build §12): bật toggle → field-hint inline + prefill có xác nhận từ hội thoại.
 5. **Fail-closed**: hỏi câu ngoài KB ("thủ tục nuôi con nuôi?") → "không có trong dữ liệu" + link Cổng DVC. (Dự phòng: demo degraded bằng backend không key — validate vẫn chạy.)
 
+Kịch bản chi tiết từng bước theo 3 thủ tục pilot, kèm bảng năng lực + kỳ vọng pass/fail để test bằng tay: [DEMO.md](DEMO.md).
+
 ## 10. Yêu cầu backend (phiên backend riêng — widget không chờ, tự degrade khi thiếu)
 
 | # | Yêu cầu | Contract đề xuất | Widget khi thiếu |
