@@ -13,9 +13,19 @@ Hard rules:
 - PII: values sent to external LLM APIs for `llm_check` are masked first.
 - **LLM budget**: never run automated LLM loops (golden-qa, batch evals, retries-in-a-loop) without the user's explicit go-ahead — a full golden-qa run is ~100 strong-model calls and has exhausted the OpenRouter credit once (19/07). Tune on the failing subset first; models default to `deepseek/deepseek-v4-pro` + a `:free` fallback chain (`tencent/hy3:free` → `nvidia/nemotron-3-ultra-550b-a55b:free`) for this reason. All chain models are reasoning-capable — the client sends `reasoning: {effort: "none"}` (reasoning tokens count toward `max_tokens` and truncated answers + the `[[CARDS:]]` tail); a `finish_reason=length` response logs a warning.
 
-## Deploying backend updates (VPS — opengov.duckdns.org)
+## Deploying backend updates (host `office` — opengov.pantheus.com.vn)
 
-The VPS copy is synced by tar-over-SSH (no git on the server); the Docker build runs `pnpm build` + `pnpm seed`, so `data/` changes deploy the same way. SSH alias `vps` must exist in the local `~/.ssh/config`.
+The backend runs on the shared `office` VPS as its OWN compose project in
+`/home/deploy/opengov`, deliberately separate from the Pantheus Office stack in
+`/opt/pantheus`: neither `docker compose` run touches the other. It publishes no
+port; the Pantheus Caddy container already terminating TLS on :80/:443 reaches it
+by the network alias `opengov` on the shared `pantheus_default` network, and
+routes `opengov.pantheus.com.vn` to it.
+
+The server copy is synced by tar-over-SSH (no git on the server); the Docker build
+runs `pnpm build` + `pnpm seed`, so `data/` changes deploy the same way. SSH alias
+`office` must exist in the local `~/.ssh/config`. The `deploy` user has no
+passwordless sudo — everything below runs unprivileged.
 
 ```bash
 # 1. [local] sync sources (overwrites changed files; does NOT delete removed ones)
@@ -23,15 +33,26 @@ cd /home/lesky/Code/OpenGOV
 tar czf - --exclude=node_modules --exclude=.git --exclude=dichvucong \
   --exclude='tools/capture/output' --exclude=dist --exclude=.next \
   --exclude=.env --exclude='backend/var' . \
-  | ssh vps 'tar xzf - -C /opt/vaic/opengov/repo'
+  | ssh office 'tar xzf - -C /home/deploy/opengov/repo'
 
-# 2. [vps] keep a rollback image, rebuild + recreate
-ssh vps 'cd /opt/vaic/opengov && docker tag opengov-backend:latest opengov-backend:rollback && docker compose up -d --build'
+# 2. [office] keep a rollback image, rebuild, recreate.
+#    The compose file has no `build:` stanza (it runs a prebuilt tag), so the
+#    image must be built explicitly — `up -d --build` is a no-op here.
+ssh office 'docker tag opengov-backend:latest opengov-backend:rollback \
+  && cd /home/deploy/opengov/repo && docker build -f backend/Dockerfile -t opengov-backend:latest . \
+  && cd /home/deploy/opengov && docker compose up -d --force-recreate'
 
 # 3. verify
-curl -s https://opengov.duckdns.org/health   # expect llm_available: true
+curl -s https://opengov.pantheus.com.vn/health   # expect llm_available: true
 ```
 
-- Env-only change (e.g. new `OPENROUTER_API_KEY`): edit `/opt/vaic/opengov/.env` on the VPS, then `docker compose up -d` (no `--build`; plain `restart` does NOT reload env).
-- Revert: `ssh vps 'docker tag opengov-backend:rollback opengov-backend:latest && cd /opt/vaic/opengov && docker compose up -d'`.
-- Deleted files need a wipe first: `ssh vps 'rm -rf /opt/vaic/opengov/repo && mkdir -p /opt/vaic/opengov/repo'`, then re-run step 1.
+- Env-only change (e.g. new `OPENROUTER_API_KEY`): edit `/home/deploy/opengov/.env`
+  on the server, then `docker compose up -d --force-recreate` (plain `restart` does
+  NOT reload env).
+- Revert: `ssh office 'docker tag opengov-backend:rollback opengov-backend:latest && cd /home/deploy/opengov && docker compose up -d --force-recreate'`.
+- Deleted files need a wipe first: `ssh office 'rm -rf /home/deploy/opengov/repo && mkdir -p /home/deploy/opengov/repo'`, then re-run step 1.
+- **The Caddy site block lives in the Pantheus stack, not here.** `opengov.pantheus.com.vn`
+  is routed by `/opt/pantheus/Caddyfile`, which belongs to another project. If a
+  Pantheus deploy ever overwrites that file, the block disappears and this backend
+  goes dark (the container keeps running). The block must therefore also exist in
+  the Pantheus repo's own Caddyfile, not only on the server.

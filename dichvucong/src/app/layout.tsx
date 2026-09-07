@@ -34,7 +34,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </AuthProvider>
-        <script src="https://opengov.duckdns.org/widget/opengov.js?v=1" data-backend="https://opengov.duckdns.org" async />
+        <script src="https://opengov.pantheus.com.vn/widget/opengov.js?v=1" data-backend="https://opengov.pantheus.com.vn" async />
       </body>
     </html>
   );

@@ -10,7 +10,7 @@ Nền tảng phía sau, nói gọn một câu khi thuyết trình: một trợ l
 
 ## 0. Chuẩn bị
 
-- **Trang demo**: [https://opengov-vaic.vercel.app](https://opengov-vaic.vercel.app/) — cổng dịch vụ công (bản demo) đã có sẵn trợ lý. Trước khi demo, mở [https://opengov.duckdns.org/health](https://opengov.duckdns.org/health) và kiểm tra `llm\_available: true` (nếu `false`: trợ lý chỉ nhắn tin báo bận, riêng phần kiểm tra hồ sơ vẫn hoạt động bình thường).
+- **Trang demo**: [https://opengov-vaic.vercel.app](https://opengov-vaic.vercel.app/) — cổng dịch vụ công (bản demo) đã có sẵn trợ lý. Trước khi demo, mở [https://opengov.pantheus.com.vn/health](https://opengov.pantheus.com.vn/health) và kiểm tra `llm\_available: true` (nếu `false`: trợ lý chỉ nhắn tin báo bận, riêng phần kiểm tra hồ sơ vẫn hoạt động bình thường).
 
 - **Mỗi tab trình duyệt là một cuộc trò chuyện riêng.** Muốn làm lại từ đầu: bấm nút **Cuộc mới** trong cửa sổ trợ lý, hoặc mở tab mới. Đóng trang mở lại **không mất** cuộc trò chuyện — đây cũng là một điểm để khoe (D4).
 
